@@ -1,0 +1,15 @@
+DevExpress.Patch.InMemoryPatch, DevExpress.Patch.Common, Version=6.2.0.0, Culture=neutral, PublicKeyToken=87f9927a37ac6066
+DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevComponents.DotNetBar.DotNetBarManager, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevComponents.DotNetBar.SideBarPanelItem, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit, DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevComponents.DotNetBar.ControlContainerItem, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevComponents.DotNetBar.TabItem, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevComponents.DotNetBar.Bar, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevExpress.XtraNavBar.NavBarControl, DevExpress.XtraNavBar.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevComponents.DotNetBar.TabControlPanel, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevComponents.DotNetBar.SideBar, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevComponents.DotNetBar.TabControl, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
+DevComponents.DotNetBar.DockSite, DevComponents.DotNetBar2, Version=8.3.0.7, Culture=neutral, PublicKeyToken=null
