@@ -167,6 +167,12 @@
     <Compile Include="FavorableAreaMatrixFrm.Designer.cs">
       <DependentUpon>FavorableAreaMatrixFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GradingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradingFrm.Designer.cs">
+      <DependentUpon>GradingFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProspectAreaMatrixFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FavorableAreaMatrixFrm.resx">
       <DependentUpon>FavorableAreaMatrixFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradingFrm.resx">
+      <DependentUpon>GradingFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProspectAreaMatrixFrm.resx">
       <DependentUpon>ProspectAreaMatrixFrm.cs</DependentUpon>
