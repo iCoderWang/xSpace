@@ -146,44 +146,7 @@ namespace EsofaModel
         public string tgt_Mkt_Para_Sg { get; set; }
 
 
-
-
-
-
-
-
-
-
-
-
         //定义字段 富有机质页岩厚度(m) shale Thickness Riching Organic Matters
         //public string Para_Strom { get; set; }
-
-
-
-
-
-
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-        
-
-       
-
-        
     }
 }
