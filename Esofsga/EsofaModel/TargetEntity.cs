@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EsofaModel
 {
-    //目标区数据实体（Target: Core Area）
+    //目标数据实体（Target: Core Area）
     public partial class TargetEntity
     {
         //盆地（远景区） 关联参数 Basin Attribution Params

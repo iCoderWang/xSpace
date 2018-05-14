@@ -16,5 +16,10 @@ namespace EsofaUI
         {
             InitializeComponent();
         }
+
+        private void treeViewGrad_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }
