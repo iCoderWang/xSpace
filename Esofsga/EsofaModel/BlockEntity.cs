@@ -47,7 +47,10 @@ namespace EsofaModel
          */
         //定义字段 富有机质页岩平均厚度(m) Average Shale Thickness Riching Organic Matters 
         //public string Para_StromAt { get; set; }
-        public string blk_Geo_Para_Astrom { get; set; }
+        //public string blk_Geo_Para_Astrom { get; set; }
+
+        //定义字段 富有机质页岩厚度范围(m) Thinckness Range Riching Organic Matters Shale
+        public string blk_Geo_Para_TrRoms { get; set; }
 
         //定义字段 Toc 总有机碳
         //public string Para_Toc { get; set; }
@@ -100,7 +103,10 @@ namespace EsofaModel
          */
         //定义字段 埋深范围均值(m) Average Depth 
         // public string Para_Dr { get; set; }
-        public string blk_Eng_Para_Ad { get; set; }
+        //public string blk_Eng_Para_Ad { get; set; }
+
+        //定义字段 埋深范围(m)  Depth Range 
+        public string blk_Eng_Para_Dr { get; set; }
 
         //定义字段 压力系数 Pressure Coefficient (Factor)
         //public string Para_Pf { get; set; }

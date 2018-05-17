@@ -13,8 +13,8 @@ namespace EsofaUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login_Form());
-            Application.Run(new GradingFrm());
+            Application.Run(new Login_Form());
+            //Application.Run(new GradingFrm());
         }
     }
 }

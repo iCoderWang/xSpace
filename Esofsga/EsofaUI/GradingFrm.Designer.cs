@@ -247,7 +247,7 @@
             treeNode27});
             this.treeViewGrad.Size = new System.Drawing.Size(184, 553);
             this.treeViewGrad.TabIndex = 0;
-            this.treeViewGrad.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewGrad_AfterSelect);
+           // this.treeViewGrad.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewGrad_AfterSelect);
             // 
             // GradingFrm
             // 
