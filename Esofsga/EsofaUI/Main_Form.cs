@@ -229,11 +229,28 @@ namespace EsofaUI
         /// <param name="filePath"></param>
         public void LoadList(RawDataFrm rawDataFrm,ImportingRawDataBLL ird,string filePath)
         {
+            TestFrm testFrm = new TestFrm();
             //RawDataBLL rawDataBLL = new RawDataBLL();
            List<SortedBlocksParas> listSbp = new List<SortedBlocksParas>();
             List<RawData> rawDataList = new List<RawData>();
             rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
             rawDataList = ird.ReadfromExcel(filePath);
+
+
+
+            
+            // For testing..............................
+
+
+            testFrm.dataGridView1.DataSource = rawDataList;
+            testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+
+            //For testing............................
+
+
+
+
+
             BlockGrade(rawDataList, listSbp);
             //if (rawDataFrm.rawDataGridView.Columns[0].HeaderText != rawDataList[0].para_Blk)
             //{
@@ -241,7 +258,7 @@ namespace EsofaUI
             //    // rawDataFrm.rawDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0, 0);
             //}
             rawDataFrm.rawDataGridView.DataSource = ird.ReadfromExcel(filePath);
-            
+            testFrm.Show();
         }
 
         public void BlockGrade( List<RawData> rawDataList,  List<SortedBlocksParas> tempListSbp)
@@ -477,6 +494,12 @@ namespace EsofaUI
             //RawDataImport(@"C:\Users\wangg\Desktop\南方海相页岩18个有利区块评价参数表 - Copy.xlsx");
 
         }
+        /*
+        private void Test(string filepath)
+        {
+            MessageBox.Show("This is test");
+        }
+        */
 
         /// <summary>
         /// 
@@ -484,6 +507,7 @@ namespace EsofaUI
         /// <param name="filePath"></param>
         private void RawDataImport(string filePath)
         {
+            
             ImportingRawDataBLL iRdb = new ImportingRawDataBLL();
             RawDataFrm rawDataFrm = new RawDataFrm(TabPage_Close);
             rawDataFrm.TopLevel = false;
@@ -506,6 +530,7 @@ namespace EsofaUI
 
         }
 
+       
         /// <summary>
         /// 
         /// </summary>

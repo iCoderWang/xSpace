@@ -12,7 +12,6 @@ namespace EsofaUI
     {
         //定义变量_del用于存储Main_Frm窗体传过来的方法。
         private DelRawDataImport _del;
-
         //创建带有参数的构造函数
         public ImportingRawDataFrm(DelRawDataImport del)
         {
