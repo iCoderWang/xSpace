@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using Office;
+using Microsoft.Office.Interop.Word;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -13,6 +14,7 @@ using EsofaModel;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.LinearAlgebra.Factorization;
+
 
 namespace EsofaUI
 {
@@ -327,5 +329,9 @@ namespace EsofaUI
 
         }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

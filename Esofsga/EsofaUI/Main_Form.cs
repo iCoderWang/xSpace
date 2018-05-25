@@ -513,8 +513,10 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void sideBar_BtnAHP_Click(object sender, EventArgs e)
         {
-            TargetAreaParameters tAreaPara = new TargetAreaParameters();
-            tAreaPara.Show();
+            //TargetAreaParameters tAreaPara = new TargetAreaParameters();
+            //tAreaPara.Show();
+            GradingFrm gradFrm = new GradingFrm();
+            gradFrm.Show();
         }
     }
 }
