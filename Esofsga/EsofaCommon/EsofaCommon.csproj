@@ -84,10 +84,10 @@
     <Compile Include="CoincidenceChecker.cs" />
     <Compile Include="DataAssignment.cs" />
     <Compile Include="FuzzyMembershipFunction.cs" />
+    <Compile Include="MD5Encryption.cs" />
     <Compile Include="ParametersWeightLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubjectiveGrading.cs" />
-    <Compile Include="TabPageCreate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EsofaModel\EsofaModel.csproj">
