@@ -227,23 +227,98 @@ namespace EsofaUI
         /// <param name="rawDataFrm"></param>
         /// <param name="ird"></param>
         /// <param name="filePath"></param>
-        public void LoadList(RawDataFrm rawDataFrm,ImportingRawDataBLL ird,string filePath)
+        public void LoadList(RawDataFrm rawDataFrm,ImportingRawDataBLL ird,string filePath,object objList)
         {
             TestFrm testFrm = new TestFrm();
             //RawDataBLL rawDataBLL = new RawDataBLL();
            List<SortedBlocksParas> listSbp = new List<SortedBlocksParas>();
+
+            //List<object> rawDataList = new List<obj>();
             List<RawData> rawDataList = new List<RawData>();
-            rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
-            rawDataList = ird.ReadfromExcel(filePath);
+            List<BasinEntity> basinEntityList = new List<BasinEntity>();
+            List<BlockEntity> blockEntityList = new List<BlockEntity>();
+            List<TargetEntity> targetEntityList = new List<TargetEntity>();
+            //List<RawData> rawDataList =  objList.ConvertAll<RawData>(x => (RawData)x);
+            //if( rawDataList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
+            //if((objList as List<RawData>).GetType() == rawDataList.GetType())
+            if (objList as List<RawData> != null)
+            {
+                rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
+                rawDataList = ird.ReadfromExcel(filePath);
+                testFrm.dataGridView1.DataSource = rawDataList;
+                if(rawDataList != null)
+                {
+                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+                    BlockGrade(rawDataList, listSbp);
+                    rawDataFrm.rawDataGridView.DataSource = rawDataList;
+                }
+                else
+                {
+                    return;
+                }
+
+            }
+            //else if (basinEntityList.GetType() == objList.ConvertAll<BasinEntity>(x => (BasinEntity)x).GetType())
+            else if(objList as List<BasinEntity> != null)
+            {
+                //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
+                testFrm.dataGridView1.AutoGenerateColumns = true;
+                basinEntityList = ird.ReadBsnfromExcel(filePath);
+                if(basinEntityList != null)
+                {
+                    testFrm.dataGridView1.DataSource = basinEntityList;
+                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+                }
+                else
+                {
+                    return;
+                }
+            }
+            //else if (blockEntityList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
+            else if (objList as List<BlockEntity> != null)
+            {
+                //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
+                testFrm.dataGridView1.AutoGenerateColumns = true;
+                blockEntityList = ird.ReadBlkfromExcel(filePath);
+                if (blockEntityList != null)
+                {
+                    testFrm.dataGridView1.DataSource = blockEntityList;
+                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+                }
+                else
+                {
+                    return;
+                }
+            }
+            //else if (targetEntityList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
+            else if (objList as List<TargetEntity> != null)
+            {
+                //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
+                testFrm.dataGridView1.AutoGenerateColumns = true;
+                targetEntityList = ird.ReadTgtfromExcel(filePath);
+                if(targetEntityList != null)
+                {
+                    testFrm.dataGridView1.DataSource = targetEntityList;
+                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+                }
+                else
+                {
+                    return;
+                }
+                
+            }
+            //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
+            //rawDataList = ird.ReadfromExcel(filePath);
+            //objList = rawDataList;
 
 
 
-            
+
             // For testing..............................
 
 
-            testFrm.dataGridView1.DataSource = rawDataList;
-            testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+            //testFrm.dataGridView1.DataSource = rawDataList;
+            //testFrm.dataGridView1.Columns[0].HeaderText = "区块";
 
             //For testing............................
 
@@ -251,13 +326,13 @@ namespace EsofaUI
 
 
 
-            BlockGrade(rawDataList, listSbp);
+            //BlockGrade(rawDataList, listSbp);
             //if (rawDataFrm.rawDataGridView.Columns[0].HeaderText != rawDataList[0].para_Blk)
             //{
             //    rawDataFrm.rawDataGridView.HeaderCell.DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(255, 255, 0, 0);
             //    // rawDataFrm.rawDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0, 0);
             //}
-            rawDataFrm.rawDataGridView.DataSource = ird.ReadfromExcel(filePath);
+            //rawDataFrm.rawDataGridView.DataSource = ird.ReadfromExcel(filePath);
             testFrm.Show();
         }
 
@@ -479,33 +554,16 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void sideBar_BtnImport_Click(object sender, EventArgs e)
         {
-            //
+            //带参数的构造函数，以方法名 RawDataImport为实参，从而实现了委托的传值
+            //RawData rawData = new RawData();
             ImportingRawDataFrm importingRawDataFrm = new ImportingRawDataFrm(RawDataImport);
-            //importingRawDataFrm.TopLevel = false;
-            //XtraTabPage xtraTabPage = new XtraTabPage();
-            //xtraTabPage.Text = "数据导入";
-            ////xtraTabPage.Controls.Add(importingRawDataFrm);
-            ////xtraTabPage.Select();
-            ////workAreaTabPageController.TabPages.Add(xtraTabPage);
-            //workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(xtraTabPage.Text);
-            //workAreaTabPageController.SelectedTabPage.Controls.Add(importingRawDataFrm);
-            //workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
             importingRawDataFrm.Show();
-            //RawDataImport(@"C:\Users\wangg\Desktop\南方海相页岩18个有利区块评价参数表 - Copy.xlsx");
-
         }
-        /*
-        private void Test(string filepath)
-        {
-            MessageBox.Show("This is test");
-        }
-        */
-
         /// <summary>
-        /// 
+        /// RawDataImport方法,将数据从Excel表格读取到RawDataFrm中的DataGridView中
         /// </summary>
         /// <param name="filePath"></param>
-        private void RawDataImport(string filePath)
+        private void RawDataImport(string filePath, object objList)
         {
             
             ImportingRawDataBLL iRdb = new ImportingRawDataBLL();
@@ -525,7 +583,7 @@ namespace EsofaUI
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
             
             //TabPageCreate("数据导入预览", rawDataFrm);
-            LoadList(rawDataFrm, iRdb, filePath);
+            LoadList(rawDataFrm, iRdb, filePath,objList);
             rawDataFrm.Show();
 
         }

@@ -89,12 +89,10 @@
             // rdoBtnBasin
             // 
             this.rdoBtnBasin.AutoSize = true;
-            this.rdoBtnBasin.Checked = true;
             this.rdoBtnBasin.Location = new System.Drawing.Point(67, 70);
             this.rdoBtnBasin.Name = "rdoBtnBasin";
             this.rdoBtnBasin.Size = new System.Drawing.Size(61, 17);
             this.rdoBtnBasin.TabIndex = 5;
-            this.rdoBtnBasin.TabStop = true;
             this.rdoBtnBasin.Text = "远景区";
             this.rdoBtnBasin.UseVisualStyleBackColor = true;
             // 
