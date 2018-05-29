@@ -100,7 +100,7 @@
             this.btnImport = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnPDF = new System.Windows.Forms.Button();
             this.gBoxEcoPara = new System.Windows.Forms.GroupBox();
             this.gBoxEngiPara = new System.Windows.Forms.GroupBox();
             this.gBoxGeoPara = new System.Windows.Forms.GroupBox();
@@ -643,15 +643,15 @@
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // btnEdit
+            // btnPDF
             // 
-            this.btnEdit.Location = new System.Drawing.Point(652, 316);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(74, 29);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "生成报告";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnPDF.Location = new System.Drawing.Point(652, 316);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(74, 29);
+            this.btnPDF.TabIndex = 1;
+            this.btnPDF.Text = "生成报告";
+            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
             // gBoxEcoPara
             // 
@@ -700,7 +700,7 @@
             this.gBoxParaMatrix.Controls.Add(this.btnImport);
             this.gBoxParaMatrix.Controls.Add(this.btnExport);
             this.gBoxParaMatrix.Controls.Add(this.btnSave);
-            this.gBoxParaMatrix.Controls.Add(this.btnEdit);
+            this.gBoxParaMatrix.Controls.Add(this.btnPDF);
             this.gBoxParaMatrix.Controls.Add(this.gBoxEcoPara);
             this.gBoxParaMatrix.Controls.Add(this.gBoxEngiPara);
             this.gBoxParaMatrix.Controls.Add(this.gBoxGeoPara);
@@ -756,7 +756,7 @@
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnPDF;
         private System.Windows.Forms.GroupBox gBoxEcoPara;
         private System.Windows.Forms.GroupBox gBoxEngiPara;
         private System.Windows.Forms.GroupBox gBoxGeoPara;

@@ -12,6 +12,11 @@ namespace EsofaDAL
 {
     public partial class ImportingRawDataDAL
     {
+        /// <summary>
+        /// 获取 RawData格式数据，并生成列表
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
         public List<RawData> GetList(string filePath)
         {
             //RawDataDAL rdd = new RawDataDAL();
@@ -20,6 +25,49 @@ namespace EsofaDAL
             DataAssignment dA = new DataAssignment();
             return dA.Assign(list,dt);
         }
+
+        /// <summary>
+        /// 获取 BasinEntity格式数据，并生成列表
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public List<BasinEntity> GetBasinList(string filePath)
+        {
+            //RawDataDAL rdd = new RawDataDAL();
+            DataTable dt = ReadFromExcel(filePath);
+            List<BasinEntity> list = new List<BasinEntity>();
+            DataAssignment dA = new DataAssignment();
+            return dA.Assign(list, dt);
+        }
+
+        /// <summary>
+        /// 获取 BlockEntity格式数据，并生成列表
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public List<BlockEntity> GetBlockList(string filePath)
+        {
+            //RawDataDAL rdd = new RawDataDAL();
+            DataTable dt = ReadFromExcel(filePath);
+            List<BlockEntity> list = new List<BlockEntity>();
+            DataAssignment dA = new DataAssignment();
+            return dA.Assign(list, dt);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public List<TargetEntity> GetTargeList(string filePath)
+        {
+            //RawDataDAL rdd = new RawDataDAL();
+            DataTable dt = ReadFromExcel(filePath);
+            List<TargetEntity> list = new List<TargetEntity>();
+            DataAssignment dA = new DataAssignment();
+            return dA.Assign(list, dt);
+        }
+
 
         /// <summary>
         /// 从Excel读取数据

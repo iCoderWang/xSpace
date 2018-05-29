@@ -34,10 +34,6 @@ namespace EsofaUI
 
         private void btnPreview_Click(object sender, EventArgs e)
         {
-           // ImportingRawDataBLL iRdb = new ImportingRawDataBLL();
-            //Main_Form mFrm = new Main_Form();
-           // RawDataFrm rawDataFrm = new RawDataFrm();
-            //XtraTabPage tabPage = new XtraTabPage();
             //设置文件路径变量
             string filePath = txtSourceDataPath.Text;
             if (filePath != "")
@@ -47,20 +43,6 @@ namespace EsofaUI
                
                 //运行委托所传递进来的函数
                 _del(filePath);
-                //RawDataImport(filePath);
-                // rawDataFrm.Show();
-               // rawDataFrm.TopLevel = false;
-                
-               // tabPage.Text = "数据导入预览";
-                //tabPage.Controls.Add(rawDataFrm);
-                //xtraTabControl1.TabPages.Add(tabPage);
-                // mFrm.workAreaTabPageController.TabPages.Add(tabPage);
-                 //mFrm.TabPageCreate("数据导入预览", rawDataFrm);
-                 //mFrm.LoadList(rawDataFrm,iRdb,filePath);
-                //rawDataFrm.Dock =DockStyle.Fill;
-               // rawDataFrm.rawDataGridView.DataSource = iRdb.ReadfromExcel(filePath );
-                //rawDataFrm.Show();
-                //importingRawDataBLL.ReadfromExcel(filePath);
             }
             else
             {

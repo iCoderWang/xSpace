@@ -34,10 +34,10 @@
             this.btnPreview = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoBtnBasin = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.rdoBtnBlock = new System.Windows.Forms.RadioButton();
+            this.rdoBtnTarget = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnBrowser
@@ -86,17 +86,17 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // radioButton1
+            // rdoBtnBasin
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(67, 70);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(61, 17);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "远景区";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoBtnBasin.AutoSize = true;
+            this.rdoBtnBasin.Checked = true;
+            this.rdoBtnBasin.Location = new System.Drawing.Point(67, 70);
+            this.rdoBtnBasin.Name = "rdoBtnBasin";
+            this.rdoBtnBasin.Size = new System.Drawing.Size(61, 17);
+            this.rdoBtnBasin.TabIndex = 5;
+            this.rdoBtnBasin.TabStop = true;
+            this.rdoBtnBasin.Text = "远景区";
+            this.rdoBtnBasin.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -107,35 +107,35 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "区域：";
             // 
-            // radioButton2
+            // rdoBtnBlock
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(146, 70);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(61, 17);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.Text = "有利区";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoBtnBlock.AutoSize = true;
+            this.rdoBtnBlock.Location = new System.Drawing.Point(146, 70);
+            this.rdoBtnBlock.Name = "rdoBtnBlock";
+            this.rdoBtnBlock.Size = new System.Drawing.Size(61, 17);
+            this.rdoBtnBlock.TabIndex = 7;
+            this.rdoBtnBlock.Text = "有利区";
+            this.rdoBtnBlock.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdoBtnTarget
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(231, 70);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(61, 17);
-            this.radioButton3.TabIndex = 8;
-            this.radioButton3.Text = "目标区";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoBtnTarget.AutoSize = true;
+            this.rdoBtnTarget.Location = new System.Drawing.Point(231, 70);
+            this.rdoBtnTarget.Name = "rdoBtnTarget";
+            this.rdoBtnTarget.Size = new System.Drawing.Size(61, 17);
+            this.rdoBtnTarget.TabIndex = 8;
+            this.rdoBtnTarget.Text = "核心区";
+            this.rdoBtnTarget.UseVisualStyleBackColor = true;
             // 
             // ImportingRawDataFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 140);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.rdoBtnTarget);
+            this.Controls.Add(this.rdoBtnBlock);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdoBtnBasin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.txtSourceDataPath);
@@ -158,9 +158,9 @@
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoBtnBasin;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton rdoBtnBlock;
+        private System.Windows.Forms.RadioButton rdoBtnTarget;
     }
 }

@@ -23,7 +23,7 @@ namespace EsofaModel
          * 市场条件 tgt_Mkt_ ,
          */
 
-        //目标区 （核心区）属性参数 Target Attribution Params
+        //目标区 （核心区）属性参数 Target Attribute Params
         //定义字段 区块 block  
         //public string para_Blk { get; set; }
         public string tgt_Att_Name { get; set; }
@@ -82,7 +82,7 @@ namespace EsofaModel
         //public string Para_Scd { get; set; }
         public string tgt_Geo_Para_Scd { get; set; }
 
-        //定义字段 顶底板厚度 (m) roof-floor Thickness
+        //定义字段 顶板厚度 (m) roof-floor Thickness
         //public string Para_Trf { get; set; }
         //定义字段 顶板岩性 Roof Lithology
         public string tgt_Geo_Para_Rfl { get; set; }

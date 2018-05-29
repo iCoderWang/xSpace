@@ -10,7 +10,7 @@ namespace EsofaModel
     public partial class BasinEntity
     {
         //盆地（远景区）实体所有参数用 bsn_ 开始
-        //盆地（远景区） 关联参数 Basin Attribution Params
+        //盆地（远景区） 关联参数 Basin Attribute Params
         public string bsn_Att_Name { get; set; }
         public string bsn_Att_Code { get; set; }
 
@@ -20,7 +20,7 @@ namespace EsofaModel
           * 工程条件 bsn_Eng_ , 
           */
 
-        //盆地（远景区）属性参数 Basin Attribution Params
+        //盆地（远景区）属性参数 Basin Attribute Params
         //定义字段 区块 block  
         //public string para_Blk { get; set; }
         //public string bsn_Att_Name { get; set; }

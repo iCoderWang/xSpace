@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using Office;
-using Microsoft.Office.Interop.Word;
+using iTextSharp.text;
 using System.Linq;
-using System.Numerics;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +13,7 @@ using EsofaModel;
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.LinearAlgebra.Factorization;
+using iTextSharp.text.pdf;
 
 
 namespace EsofaUI
@@ -329,9 +329,48 @@ namespace EsofaUI
 
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnPDF_Click(object sender, EventArgs e)
         {
-            
+            PdfGeneratorFrm pdfG = new PdfGeneratorFrm();
+            pdfG.Generate("核心区");
+            //SaveFileDialog saveFileDialog = new SaveFileDialog();
+            //saveFileDialog.Filter = "PDF 文件 (*.PDF)|*.PDF";
+            //if(saveFileDialog.ShowDialog () == DialogResult.OK)
+            //{
+            //    //开始创建PDF文档，首先声明一个Document对象
+            //    Document doc = new Document(PageSize.A4, 45, 45, 45, 45);
+            //    try
+            //    {
+            //        string filePath = saveFileDialog.FileName;
+            //        PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
+            //        doc.Open();
+            //        BaseFont baseFont = BaseFont.CreateFont(@"C:\Windows\Fonts\simsun.ttc,0",
+            //            BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            //        //设置文档字体样式
+            //        //标题字体样式
+            //        Font fontTitle = new Font(baseFont, 26);
+            //        //主要内容字体样式 
+            //        Font fontContent = new Font(baseFont, 16);
+            //        //创建新的段落
+            //        Paragraph titleParText = new Paragraph("页岩核心区评价报告", fontTitle);
+            //        //设置居中
+            //        titleParText.Alignment = Rectangle.ALIGN_CENTER;
+            //        //添加内容至PDF文档中
+            //        doc.Add(titleParText);
+            //        doc.Add(new Paragraph("\r\n 这是PDF文件显示的主要内容。。。。。\r\n ...。。回车换行Test", fontContent));
+            //        doc.Close();
+            //        MessageBox.Show("报告创建完成!","信息",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            //    }
+            //   catch(Exception)
+            //    {
+            //        if(doc != null)
+            //        {
+            //            doc.Close();
+            //            MessageBox.Show("请查看文件是否被打开？","错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            //            return;
+            //        }                  
+            //    }
+            //}
         }
     }
 }

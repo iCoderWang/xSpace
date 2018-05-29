@@ -28,72 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("目标1");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("目标2");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("目标3");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("目标4");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("目标5");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("区块1", new System.Windows.Forms.TreeNode[] {
-            treeNode28,
-            treeNode29,
-            treeNode30,
-            treeNode31,
-            treeNode32});
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("目标1");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("目标2");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("目标3");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("区块2", new System.Windows.Forms.TreeNode[] {
-            treeNode34,
-            treeNode35,
-            treeNode36});
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("目标1");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("目标2");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("区块3", new System.Windows.Forms.TreeNode[] {
-            treeNode38,
-            treeNode39});
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("盆地1", new System.Windows.Forms.TreeNode[] {
-            treeNode33,
-            treeNode37,
-            treeNode40});
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("区块1");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("区块2");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("区块3");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("区块4");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("盆地2", new System.Windows.Forms.TreeNode[] {
-            treeNode42,
-            treeNode43,
-            treeNode44,
-            treeNode45});
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("区块1");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("区块2");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("区块3");
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("盆地3", new System.Windows.Forms.TreeNode[] {
-            treeNode47,
-            treeNode48,
-            treeNode49});
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("区块1");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("区块2");
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("盆地4", new System.Windows.Forms.TreeNode[] {
-            treeNode51,
-            treeNode52});
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("盆地", new System.Windows.Forms.TreeNode[] {
-            treeNode41,
-            treeNode46,
-            treeNode50,
-            treeNode53});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("目标1");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("目标2");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("目标3");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("目标4");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("目标5");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("区块1", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("目标1");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("目标2");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("目标3");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("区块2", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8,
+            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("目标1");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("目标2");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("区块3", new System.Windows.Forms.TreeNode[] {
+            treeNode11,
+            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("盆地1", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode10,
+            treeNode13});
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("区块1");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("区块2");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("区块3");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("区块4");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("盆地2", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18});
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("区块1");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("区块2");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("区块3");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("盆地3", new System.Windows.Forms.TreeNode[] {
+            treeNode20,
+            treeNode21,
+            treeNode22});
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("区块1");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("区块2");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("盆地4", new System.Windows.Forms.TreeNode[] {
+            treeNode24,
+            treeNode25});
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("盆地", new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode19,
+            treeNode23,
+            treeNode26});
             this.splitCtnerGraFrm = new System.Windows.Forms.SplitContainer();
             this.treeViewGrad = new System.Windows.Forms.TreeView();
             this.splitContDataZone = new System.Windows.Forms.SplitContainer();
+            this.tabControlGrading = new System.Windows.Forms.TabControl();
+            this.tabPageBasin = new System.Windows.Forms.TabPage();
+            this.dgvBasin = new System.Windows.Forms.DataGridView();
+            this.tabPageBlock = new System.Windows.Forms.TabPage();
+            this.dgvBlock = new System.Windows.Forms.DataGridView();
+            this.tabPageTarget = new System.Windows.Forms.TabPage();
+            this.dgvTarget = new System.Windows.Forms.DataGridView();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControlGrading = new System.Windows.Forms.TabControl();
-            this.tabPageBasin = new System.Windows.Forms.TabPage();
-            this.tabPageBlock = new System.Windows.Forms.TabPage();
-            this.tabPageTarget = new System.Windows.Forms.TabPage();
-            this.dgvBasin = new System.Windows.Forms.DataGridView();
-            this.dgvBlock = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitCtnerGraFrm)).BeginInit();
             this.splitCtnerGraFrm.Panel1.SuspendLayout();
             this.splitCtnerGraFrm.Panel2.SuspendLayout();
@@ -102,14 +102,14 @@
             this.splitContDataZone.Panel1.SuspendLayout();
             this.splitContDataZone.Panel2.SuspendLayout();
             this.splitContDataZone.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabControlGrading.SuspendLayout();
             this.tabPageBasin.SuspendLayout();
-            this.tabPageBlock.SuspendLayout();
-            this.tabPageTarget.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBasin)).BeginInit();
+            this.tabPageBlock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBlock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPageTarget.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTarget)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitCtnerGraFrm
@@ -139,62 +139,62 @@
             this.treeViewGrad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewGrad.Location = new System.Drawing.Point(0, 0);
             this.treeViewGrad.Name = "treeViewGrad";
-            treeNode28.Name = "para_Tgt";
-            treeNode28.Text = "目标1";
-            treeNode29.Name = "para_Tgt";
-            treeNode29.Text = "目标2";
-            treeNode30.Name = "para_Tgt";
-            treeNode30.Text = "目标3";
-            treeNode31.Name = "para_Tgt";
-            treeNode31.Text = "目标4";
-            treeNode32.Name = "para_Tgt";
-            treeNode32.Text = "目标5";
-            treeNode33.Name = "para_Blk";
-            treeNode33.Text = "区块1";
-            treeNode34.Name = "para_Tgt";
-            treeNode34.Text = "目标1";
-            treeNode35.Name = "para_Tgt";
-            treeNode35.Text = "目标2";
-            treeNode36.Name = "para_Tgt";
-            treeNode36.Text = "目标3";
-            treeNode37.Name = "para_Blk";
-            treeNode37.Text = "区块2";
-            treeNode38.Name = "para_Tgt";
-            treeNode38.Text = "目标1";
-            treeNode39.Name = "para_Tgt";
-            treeNode39.Text = "目标2";
-            treeNode40.Name = "para_Blk";
-            treeNode40.Text = "区块3";
-            treeNode41.Name = "para_Bsn";
-            treeNode41.Text = "盆地1";
-            treeNode42.Name = "para_Blk";
-            treeNode42.Text = "区块1";
-            treeNode43.Name = "para_Blk";
-            treeNode43.Text = "区块2";
-            treeNode44.Name = "para_Blk";
-            treeNode44.Text = "区块3";
-            treeNode45.Name = "para_Blk";
-            treeNode45.Text = "区块4";
-            treeNode46.Name = "para_Bsn";
-            treeNode46.Text = "盆地2";
-            treeNode47.Name = "para_Blk";
-            treeNode47.Text = "区块1";
-            treeNode48.Name = "para_Blk";
-            treeNode48.Text = "区块2";
-            treeNode49.Name = "para_Blk";
-            treeNode49.Text = "区块3";
-            treeNode50.Name = "para_Bsn";
-            treeNode50.Text = "盆地3";
-            treeNode51.Name = "para_Blk";
-            treeNode51.Text = "区块1";
-            treeNode52.Name = "para_Blk";
-            treeNode52.Text = "区块2";
-            treeNode53.Name = "para_Bsn";
-            treeNode53.Text = "盆地4";
-            treeNode54.Name = "para_Bsn";
-            treeNode54.Text = "盆地";
+            treeNode1.Name = "para_Tgt";
+            treeNode1.Text = "目标1";
+            treeNode2.Name = "para_Tgt";
+            treeNode2.Text = "目标2";
+            treeNode3.Name = "para_Tgt";
+            treeNode3.Text = "目标3";
+            treeNode4.Name = "para_Tgt";
+            treeNode4.Text = "目标4";
+            treeNode5.Name = "para_Tgt";
+            treeNode5.Text = "目标5";
+            treeNode6.Name = "para_Blk";
+            treeNode6.Text = "区块1";
+            treeNode7.Name = "para_Tgt";
+            treeNode7.Text = "目标1";
+            treeNode8.Name = "para_Tgt";
+            treeNode8.Text = "目标2";
+            treeNode9.Name = "para_Tgt";
+            treeNode9.Text = "目标3";
+            treeNode10.Name = "para_Blk";
+            treeNode10.Text = "区块2";
+            treeNode11.Name = "para_Tgt";
+            treeNode11.Text = "目标1";
+            treeNode12.Name = "para_Tgt";
+            treeNode12.Text = "目标2";
+            treeNode13.Name = "para_Blk";
+            treeNode13.Text = "区块3";
+            treeNode14.Name = "para_Bsn";
+            treeNode14.Text = "盆地1";
+            treeNode15.Name = "para_Blk";
+            treeNode15.Text = "区块1";
+            treeNode16.Name = "para_Blk";
+            treeNode16.Text = "区块2";
+            treeNode17.Name = "para_Blk";
+            treeNode17.Text = "区块3";
+            treeNode18.Name = "para_Blk";
+            treeNode18.Text = "区块4";
+            treeNode19.Name = "para_Bsn";
+            treeNode19.Text = "盆地2";
+            treeNode20.Name = "para_Blk";
+            treeNode20.Text = "区块1";
+            treeNode21.Name = "para_Blk";
+            treeNode21.Text = "区块2";
+            treeNode22.Name = "para_Blk";
+            treeNode22.Text = "区块3";
+            treeNode23.Name = "para_Bsn";
+            treeNode23.Text = "盆地3";
+            treeNode24.Name = "para_Blk";
+            treeNode24.Text = "区块1";
+            treeNode25.Name = "para_Blk";
+            treeNode25.Text = "区块2";
+            treeNode26.Name = "para_Bsn";
+            treeNode26.Text = "盆地4";
+            treeNode27.Name = "para_Bsn";
+            treeNode27.Text = "盆地";
             this.treeViewGrad.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode54});
+            treeNode27});
             this.treeViewGrad.Size = new System.Drawing.Size(217, 634);
             this.treeViewGrad.TabIndex = 0;
             // 
@@ -219,6 +219,79 @@
             this.splitContDataZone.Size = new System.Drawing.Size(1161, 632);
             this.splitContDataZone.SplitterDistance = 581;
             this.splitContDataZone.TabIndex = 3;
+            // 
+            // tabControlGrading
+            // 
+            this.tabControlGrading.Controls.Add(this.tabPageBasin);
+            this.tabControlGrading.Controls.Add(this.tabPageBlock);
+            this.tabControlGrading.Controls.Add(this.tabPageTarget);
+            this.tabControlGrading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlGrading.Location = new System.Drawing.Point(0, 0);
+            this.tabControlGrading.Multiline = true;
+            this.tabControlGrading.Name = "tabControlGrading";
+            this.tabControlGrading.SelectedIndex = 0;
+            this.tabControlGrading.Size = new System.Drawing.Size(1159, 579);
+            this.tabControlGrading.TabIndex = 0;
+            // 
+            // tabPageBasin
+            // 
+            this.tabPageBasin.Controls.Add(this.dgvBasin);
+            this.tabPageBasin.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBasin.Name = "tabPageBasin";
+            this.tabPageBasin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBasin.Size = new System.Drawing.Size(1151, 553);
+            this.tabPageBasin.TabIndex = 0;
+            this.tabPageBasin.Text = "远景区";
+            this.tabPageBasin.UseVisualStyleBackColor = true;
+            // 
+            // dgvBasin
+            // 
+            this.dgvBasin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBasin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBasin.Location = new System.Drawing.Point(3, 3);
+            this.dgvBasin.Name = "dgvBasin";
+            this.dgvBasin.Size = new System.Drawing.Size(1145, 547);
+            this.dgvBasin.TabIndex = 0;
+            // 
+            // tabPageBlock
+            // 
+            this.tabPageBlock.Controls.Add(this.dgvBlock);
+            this.tabPageBlock.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBlock.Name = "tabPageBlock";
+            this.tabPageBlock.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBlock.Size = new System.Drawing.Size(1151, 553);
+            this.tabPageBlock.TabIndex = 1;
+            this.tabPageBlock.Text = "有利区";
+            this.tabPageBlock.UseVisualStyleBackColor = true;
+            // 
+            // dgvBlock
+            // 
+            this.dgvBlock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBlock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBlock.Location = new System.Drawing.Point(3, 3);
+            this.dgvBlock.Name = "dgvBlock";
+            this.dgvBlock.Size = new System.Drawing.Size(1145, 547);
+            this.dgvBlock.TabIndex = 0;
+            // 
+            // tabPageTarget
+            // 
+            this.tabPageTarget.Controls.Add(this.dgvTarget);
+            this.tabPageTarget.Location = new System.Drawing.Point(4, 22);
+            this.tabPageTarget.Name = "tabPageTarget";
+            this.tabPageTarget.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTarget.Size = new System.Drawing.Size(1151, 553);
+            this.tabPageTarget.TabIndex = 2;
+            this.tabPageTarget.Text = "核心区";
+            this.tabPageTarget.UseVisualStyleBackColor = true;
+            // 
+            // dgvTarget
+            // 
+            this.dgvTarget.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTarget.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvTarget.Location = new System.Drawing.Point(3, 3);
+            this.dgvTarget.Name = "dgvTarget";
+            this.dgvTarget.Size = new System.Drawing.Size(1145, 547);
+            this.dgvTarget.TabIndex = 0;
             // 
             // btnCancel
             // 
@@ -253,78 +326,6 @@
             this.panel1.Size = new System.Drawing.Size(1388, 636);
             this.panel1.TabIndex = 0;
             // 
-            // tabControlGrading
-            // 
-            this.tabControlGrading.Controls.Add(this.tabPageBasin);
-            this.tabControlGrading.Controls.Add(this.tabPageBlock);
-            this.tabControlGrading.Controls.Add(this.tabPageTarget);
-            this.tabControlGrading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlGrading.Location = new System.Drawing.Point(0, 0);
-            this.tabControlGrading.Multiline = true;
-            this.tabControlGrading.Name = "tabControlGrading";
-            this.tabControlGrading.SelectedIndex = 0;
-            this.tabControlGrading.Size = new System.Drawing.Size(1159, 579);
-            this.tabControlGrading.TabIndex = 0;
-            // 
-            // tabPageBasin
-            // 
-            this.tabPageBasin.Controls.Add(this.dgvBasin);
-            this.tabPageBasin.Location = new System.Drawing.Point(4, 22);
-            this.tabPageBasin.Name = "tabPageBasin";
-            this.tabPageBasin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBasin.Size = new System.Drawing.Size(1151, 553);
-            this.tabPageBasin.TabIndex = 0;
-            this.tabPageBasin.Text = "远景区";
-            this.tabPageBasin.UseVisualStyleBackColor = true;
-            // 
-            // tabPageBlock
-            // 
-            this.tabPageBlock.Controls.Add(this.dgvBlock);
-            this.tabPageBlock.Location = new System.Drawing.Point(4, 22);
-            this.tabPageBlock.Name = "tabPageBlock";
-            this.tabPageBlock.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBlock.Size = new System.Drawing.Size(1151, 553);
-            this.tabPageBlock.TabIndex = 1;
-            this.tabPageBlock.Text = "有利区";
-            this.tabPageBlock.UseVisualStyleBackColor = true;
-            // 
-            // tabPageTarget
-            // 
-            this.tabPageTarget.Controls.Add(this.dataGridView1);
-            this.tabPageTarget.Location = new System.Drawing.Point(4, 22);
-            this.tabPageTarget.Name = "tabPageTarget";
-            this.tabPageTarget.Size = new System.Drawing.Size(1151, 553);
-            this.tabPageTarget.TabIndex = 2;
-            this.tabPageTarget.Text = "目标区";
-            this.tabPageTarget.UseVisualStyleBackColor = true;
-            // 
-            // dgvBasin
-            // 
-            this.dgvBasin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBasin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBasin.Location = new System.Drawing.Point(3, 3);
-            this.dgvBasin.Name = "dgvBasin";
-            this.dgvBasin.Size = new System.Drawing.Size(1145, 547);
-            this.dgvBasin.TabIndex = 0;
-            // 
-            // dgvBlock
-            // 
-            this.dgvBlock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBlock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBlock.Location = new System.Drawing.Point(3, 3);
-            this.dgvBlock.Name = "dgvBlock";
-            this.dgvBlock.Size = new System.Drawing.Size(1145, 547);
-            this.dgvBlock.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1151, 553);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // GradingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,7 +337,6 @@
             this.Padding = new System.Windows.Forms.Padding(3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "区域分级";
-            //this.Load += new System.EventHandler(this.GradingFrm_Load);
             this.splitCtnerGraFrm.Panel1.ResumeLayout(false);
             this.splitCtnerGraFrm.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitCtnerGraFrm)).EndInit();
@@ -345,14 +345,14 @@
             this.splitContDataZone.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContDataZone)).EndInit();
             this.splitContDataZone.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.tabControlGrading.ResumeLayout(false);
             this.tabPageBasin.ResumeLayout(false);
-            this.tabPageBlock.ResumeLayout(false);
-            this.tabPageTarget.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBasin)).EndInit();
+            this.tabPageBlock.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBlock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPageTarget.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTarget)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -371,6 +371,6 @@
         private System.Windows.Forms.TabPage tabPageTarget;
         private System.Windows.Forms.DataGridView dgvBasin;
         private System.Windows.Forms.DataGridView dgvBlock;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTarget;
     }
 }

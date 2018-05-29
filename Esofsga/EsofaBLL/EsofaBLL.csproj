@@ -81,9 +81,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasinEntityBLL.cs" />
+    <Compile Include="BlockEntityBLL.cs" />
     <Compile Include="ImportingRawDataBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RawDataBLL.cs" />
+    <Compile Include="TargetEntityBLL.cs" />
     <Compile Include="UserInfoBLL.cs" />
   </ItemGroup>
   <ItemGroup>
