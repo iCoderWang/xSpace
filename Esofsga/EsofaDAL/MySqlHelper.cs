@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Collections;
 
@@ -13,10 +8,14 @@ namespace EsofaDAL
     /// <summary>
     /// MySqlHelper的摘要说明
     /// </summary>
-   public abstract class MySqlHelper
+    public abstract class MySqlHelper
     {
+        /*
+         配置你的MYSQL数据库链接字符串如下： 数据库连接字符串
+         public static string Conn = "Database='数据库名';Data Source='数据库服务器地址';User Id='数据库用户名';Password='密码';charset='utf8';pooling=true";
+        */
         //数据库连接字符串
-        public static string Conn = "Database='';Data Source='localhost';User Id='root';Password='root';charset='utf8';pooling='true'";
+        public static string Conn = "Database='';Data Source='localhost';User Id='root';Password='4585';charset='utf8';pooling='true'";
 
         //用于缓存参数的 HASH 表
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
@@ -32,9 +31,10 @@ namespace EsofaDAL
         public static int ExecuteNonQuery(string connectionString, CommandType cmdType, string cmdText, 
             params MySqlParameter[] commandParameters)
         {
-            MySqlCommand cmd = new MySqlCommand();
+            
             using(MySqlConnection conn = new MySqlConnection(connectionString))
             {
+                MySqlCommand cmd = new MySqlCommand();
                 PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
                 int val = cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
@@ -53,11 +53,14 @@ namespace EsofaDAL
         public static int ExecuteNonQuery(MySqlConnection connection, CommandType cmdType, string cmdText,
             params MySqlParameter[] commandParameters)
         {
-            MySqlCommand cmd = new MySqlCommand();
-            PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
-            int val = cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
-            return val;
+            using (MySqlCommand cmd = new MySqlCommand())
+            {
+                PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
+                int val = cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                return val;
+            }
+                
         }
 
         /// <summary>
@@ -76,11 +79,14 @@ namespace EsofaDAL
         public static int ExecuteNonQuery(MySqlTransaction trans, CommandType cmdType, string cmdText,
            params MySqlParameter[] commandParameters)
         {
-            MySqlCommand cmd = new MySqlCommand();
-            PrepareCommand(cmd, trans.Connection, trans, cmdType, cmdText, commandParameters);
-            int val = cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
-            return val;
+            using (MySqlCommand cmd = new MySqlCommand())
+            {
+                PrepareCommand(cmd, trans.Connection, trans, cmdType, cmdText, commandParameters);
+                int val = cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                return val;
+            }
+               
         }
 
         /// <summary>
@@ -99,29 +105,32 @@ namespace EsofaDAL
         public static MySqlDataReader ExecuteReader(string connectionString, CommandType cmdType, string cmdText, 
             params MySqlParameter[] commandParameters)
         {
-            //创建一个 MySQLCommand 对象
-            MySqlCommand cmd = new MySqlCommand();
+            
             //创建一个 MySQLConnection 对象
-            MySqlConnection conn = new MySqlConnection(connectionString);
-            //在这里我们用一个 try/catch 结构执行 sql 文本命令/存储过程，因为如果这个方法产生一个异常，我们要关闭连接，
-            //因为没有读取器存在。
-            //因此，commandBehavior.CloseConnection 就不会执行
-            try
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                //调用  PrepareCommand 方法，对 MySQLCommand 对象设置参数
-                PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
-                //调用 MySQLCommand 的 ExecuteReader 方法
-                MySqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                //清除参数
-                cmd.Parameters.Clear();
-                return reader;
-            }
-            catch
-            {
-                //关闭连接，抛出异常
-                conn.Close();
-                throw;
-            }
+                //创建一个 MySQLCommand 对象
+                MySqlCommand cmd = new MySqlCommand();
+                //在这里我们用一个 try/catch 结构执行 sql 文本命令/存储过程，因为如果这个方法产生一个异常，我们要关闭连接，
+                //因为没有读取器存在。
+                //因此，commandBehavior.CloseConnection 就不会执行
+                try
+                {
+                    //调用  PrepareCommand 方法，对 MySQLCommand 对象设置参数
+                    PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
+                    //调用 MySQLCommand 的 ExecuteReader 方法
+                    MySqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                    //清除参数
+                    cmd.Parameters.Clear();
+                    return reader;
+                }
+                catch
+                {
+                    //关闭连接，抛出异常
+                    conn.Close();
+                    throw;
+                }
+            }            
         }
 
         /// <summary>
@@ -135,32 +144,35 @@ namespace EsofaDAL
         public static DataSet GetDataSet(string connectionString, CommandType cmdType, string cmdText,
             params MySqlParameter[] commandParameters)
         {
-            //创建一个 MySQLCommand 对象
-            MySqlCommand cmd = new MySqlCommand();
+            
             //创建一个 MySQLConnection 对象
-            MySqlConnection conn = new MySqlConnection(connectionString);
-            //在这里我们用一个 try/catch 结构执行 sql 文本命令/存储过程，因为如果这个方法产生一个异常，我们要关闭连接，
-            //因为没有读取器存在。
-            //因此，commandBehavior.CloseConnection 就不会执行
-            try
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                //调用  PrepareCommand 方法，对 MySQLCommand 对象设置参数
-                PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
-                //创建 MySqlDataAdapter 对象，将 cmd 赋值给 SelectCommand 属性
-                MySqlDataAdapter adapter = new MySqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                //创建 Dataset 对象
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                //清除参数
-                cmd.Parameters.Clear();
-                conn.Close();
-                return ds;
-            }
-            catch(Exception e)
-            {
-                throw e;
-            }
+                //创建一个 MySQLCommand 对象
+                MySqlCommand cmd = new MySqlCommand();
+                //在这里我们用一个 try/catch 结构执行 sql 文本命令/存储过程，因为如果这个方法产生一个异常，我们要关闭连接，
+                //因为没有读取器存在。
+                //因此，commandBehavior.CloseConnection 就不会执行
+                try
+                {
+                    //调用  PrepareCommand 方法，对 MySQLCommand 对象设置参数
+                    PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
+                    //创建 MySqlDataAdapter 对象，将 cmd 赋值给 SelectCommand 属性
+                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    adapter.SelectCommand = cmd;
+                    //创建 Dataset 对象
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    //清除参数
+                    cmd.Parameters.Clear();
+                    conn.Close();
+                    return ds;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }                
         }
 
         /// <summary>
@@ -181,9 +193,10 @@ namespace EsofaDAL
         public static object ExecuteScalar (string connectionString, CommandType cmdType, string cmdText, 
             params MySqlParameter[] commandParameters)
         {
-            MySqlCommand cmd = new MySqlCommand();
+            
             using(MySqlConnection connection = new MySqlConnection(connectionString))
             {
+                MySqlCommand cmd = new MySqlCommand();
                 PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
                 object val = cmd.ExecuteScalar();
                 cmd.Parameters.Clear();
@@ -209,11 +222,14 @@ namespace EsofaDAL
         public static object ExecuteScalar(MySqlConnection connection, CommandType cmdType, string cmdText, 
             params MySqlParameter[] commandParameters)
         {
-            MySqlCommand cmd = new MySqlCommand();
-            PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
-            object val = cmd.ExecuteScalar();
-            cmd.Parameters.Clear();
-            return val;
+            using (MySqlCommand cmd = new MySqlCommand())
+            {
+                PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
+                object val = cmd.ExecuteScalar();
+                cmd.Parameters.Clear();
+                return val;
+            }
+               
         }
 
         /// <summary>
