@@ -12,10 +12,10 @@ namespace EsofaModel
         //区块实体所有参数用 blk_ 开始
         //盆地名称（远景区） 关联参数 Basin Attribute Params
         public string bsn_Att_Name { get; set; }
-        public string bsn_Att_Code { get; set; }
+        //public string bsn_Att_Code { get; set; }
         //区块 名称（有利区）关联参数 Block Attribute Params
         public string blk_Att_Name { get; set; }
-        public string blk_Att_Code { get; set; }
+        //public string blk_Att_Code { get; set; }
 
         /* 区块实体所有参数用 blk_ 开始
           * 属性条件 blk_Att_ ,

@@ -9,15 +9,11 @@ namespace EsofaUI
 {
     //定义委托，将Main_Frm下的RawDataImport方法传递给ImportingRawDataFrm窗体。
     public delegate void DelRawDataImport(string filePath, object objList);
-    //public delegate void DelBasinEntityImport(string filePath,  BasinEntity basinEntity);
-    //public delegate void DelBlockEntityImport(string filePath, BlockEntity blockEntity);
-    //public delegate void DelTargetEntityImport(string filePath, TargetEntity targetEntity);
 
     public partial class ImportingRawDataFrm : Form
     {
         //定义变量_del用于存储Main_Frm窗体传过来的方法。
         private DelRawDataImport _del;
-        private RawData _entity;
         //创建带有参数的构造函数
         public ImportingRawDataFrm(DelRawDataImport del)
         {
@@ -28,31 +24,7 @@ namespace EsofaUI
             InitializeComponent();
         }
 
-        //public ImportingRawDataFrm(DelBasinEntityImport del, BasinEntity basinEntity)
-        //{
-        //    //将委托变量赋值，当ImportingRawDataFrm在 Main_Frm下被初始化时，函数将被传递到
-        //    //ImportingRawDataFrm下，即 del的值将是被传参的函数名字
-        //    this._del = del;
-        //    InitializeComponent();
-        //}
-
-        //public ImportingRawDataFrm(DelBlockEntityImport del, BlockEntity blockEntity)
-        //{
-        //    //将委托变量赋值，当ImportingRawDataFrm在 Main_Frm下被初始化时，函数将被传递到
-        //    //ImportingRawDataFrm下，即 del的值将是被传参的函数名字
-        //    this._del = del;
-        //    InitializeComponent();
-        //}
-
-        //public ImportingRawDataFrm(DelTargetEntityImport del, TargetEntity targetEntity)
-        //{
-        //    //将委托变量赋值，当ImportingRawDataFrm在 Main_Frm下被初始化时，函数将被传递到
-        //    //ImportingRawDataFrm下，即 del的值将是被传参的函数名字
-        //    this._del = del;
-        //    InitializeComponent();
-        //}
-
-
+       
         private void btnBrowser_Click(object sender, EventArgs e)
         {
             //打开文件的类型，限定在Excel表格式
@@ -61,7 +33,6 @@ namespace EsofaUI
             {
                 txtSourceDataPath.Text = openFileDialog1.FileName;
             }
-
         }
 
         private void btnPreview_Click(object sender, EventArgs e)
@@ -96,7 +67,6 @@ namespace EsofaUI
                 else
                 {
                     //运行委托所传递进来的函数
-
                     //List<object> objList = new List<object>();
                     List<RawData> rawDataList = new List<RawData>();
                     object objList = rawDataList;

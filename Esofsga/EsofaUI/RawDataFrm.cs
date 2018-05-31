@@ -19,7 +19,10 @@ namespace EsofaUI
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// 用委托作参数构建构造函数
+        /// </summary>
+        /// <param name="delCloseTabPage"></param>
         public RawDataFrm(DelCloseTabPage delCloseTabPage)
         {
             this._delCloseTabPage = delCloseTabPage;
@@ -30,7 +33,7 @@ namespace EsofaUI
             //DataTable dt = (DataTable) this.rawDataGridView.DataSource;
             //DataTable dt = ((DataView)this.rawDataGridView.DataSource).ToTable();
             //Type type = this.rawDataGridView.DataSource.GetType();
-            List<RawData> list = (List<RawData>)this.rawDataGridView.DataSource;
+            //List<RawData> list = (List<RawData>)this.rawDataGridView.DataSource;
         }
 
         private void btnCancle_Click(object sender, EventArgs e)

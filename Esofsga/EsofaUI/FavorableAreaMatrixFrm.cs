@@ -75,5 +75,10 @@ namespace EsofaUI
             //将DataTable数据类型变量赋值给dataGridView的源数据
             this.dGridViewEcoPara.DataSource = dt;
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

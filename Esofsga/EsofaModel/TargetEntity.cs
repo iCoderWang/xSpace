@@ -11,10 +11,10 @@ namespace EsofaModel
     {
         //盆地（远景区） 关联参数 Basin Attribution Params
         public string bsn_Att_Name { get; set; }
-        public string bsn_Att_Code { get; set; }
+        //public string bsn_Att_Code { get; set; }
         //区块 （有利区）关联参数 Block Attribution Params
         public string blk_Att_Name { get; set; }
-        public string blk_Att_Code { get; set; }
+        //public string blk_Att_Code { get; set; }
 
        /* 目标区实体所有参数用 tgt_ 开始
          * 属性条件 tgt_Att_ ,
@@ -28,7 +28,7 @@ namespace EsofaModel
         //public string para_Blk { get; set; }
         public string tgt_Att_Name { get; set; }
         
-        public string tgt_Att_Code { get; set; }
+       // public string tgt_Att_Code { get; set; }
         //定义字段 主力层系 primary Strata
         public string tgt_Att_Ps { get; set; }
 

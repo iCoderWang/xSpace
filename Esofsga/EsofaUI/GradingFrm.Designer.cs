@@ -28,59 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("目标1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("目标2");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("目标3");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("目标4");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("目标5");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("区块1", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("目标1");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("目标2");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("目标3");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("区块2", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("目标1");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("目标2");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("区块3", new System.Windows.Forms.TreeNode[] {
-            treeNode11,
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("盆地1", new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode10,
-            treeNode13});
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("区块1");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("区块2");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("区块3");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("区块4");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("盆地2", new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode16,
-            treeNode17,
-            treeNode18});
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("区块1");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("区块2");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("区块3");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("盆地3", new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21,
-            treeNode22});
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("区块1");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("区块2");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("盆地4", new System.Windows.Forms.TreeNode[] {
-            treeNode24,
-            treeNode25});
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("盆地", new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode19,
-            treeNode23,
-            treeNode26});
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("目标1");
+            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("目标2");
+            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("目标3");
+            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("目标4");
+            System.Windows.Forms.TreeNode treeNode113 = new System.Windows.Forms.TreeNode("目标5");
+            System.Windows.Forms.TreeNode treeNode114 = new System.Windows.Forms.TreeNode("区块1", new System.Windows.Forms.TreeNode[] {
+            treeNode109,
+            treeNode110,
+            treeNode111,
+            treeNode112,
+            treeNode113});
+            System.Windows.Forms.TreeNode treeNode115 = new System.Windows.Forms.TreeNode("目标1");
+            System.Windows.Forms.TreeNode treeNode116 = new System.Windows.Forms.TreeNode("目标2");
+            System.Windows.Forms.TreeNode treeNode117 = new System.Windows.Forms.TreeNode("目标3");
+            System.Windows.Forms.TreeNode treeNode118 = new System.Windows.Forms.TreeNode("区块2", new System.Windows.Forms.TreeNode[] {
+            treeNode115,
+            treeNode116,
+            treeNode117});
+            System.Windows.Forms.TreeNode treeNode119 = new System.Windows.Forms.TreeNode("目标1");
+            System.Windows.Forms.TreeNode treeNode120 = new System.Windows.Forms.TreeNode("目标2");
+            System.Windows.Forms.TreeNode treeNode121 = new System.Windows.Forms.TreeNode("区块3", new System.Windows.Forms.TreeNode[] {
+            treeNode119,
+            treeNode120});
+            System.Windows.Forms.TreeNode treeNode122 = new System.Windows.Forms.TreeNode("盆地1", new System.Windows.Forms.TreeNode[] {
+            treeNode114,
+            treeNode118,
+            treeNode121});
+            System.Windows.Forms.TreeNode treeNode123 = new System.Windows.Forms.TreeNode("区块1");
+            System.Windows.Forms.TreeNode treeNode124 = new System.Windows.Forms.TreeNode("区块2");
+            System.Windows.Forms.TreeNode treeNode125 = new System.Windows.Forms.TreeNode("区块3");
+            System.Windows.Forms.TreeNode treeNode126 = new System.Windows.Forms.TreeNode("区块4");
+            System.Windows.Forms.TreeNode treeNode127 = new System.Windows.Forms.TreeNode("盆地2", new System.Windows.Forms.TreeNode[] {
+            treeNode123,
+            treeNode124,
+            treeNode125,
+            treeNode126});
+            System.Windows.Forms.TreeNode treeNode128 = new System.Windows.Forms.TreeNode("区块1");
+            System.Windows.Forms.TreeNode treeNode129 = new System.Windows.Forms.TreeNode("区块2");
+            System.Windows.Forms.TreeNode treeNode130 = new System.Windows.Forms.TreeNode("区块3");
+            System.Windows.Forms.TreeNode treeNode131 = new System.Windows.Forms.TreeNode("盆地3", new System.Windows.Forms.TreeNode[] {
+            treeNode128,
+            treeNode129,
+            treeNode130});
+            System.Windows.Forms.TreeNode treeNode132 = new System.Windows.Forms.TreeNode("区块1");
+            System.Windows.Forms.TreeNode treeNode133 = new System.Windows.Forms.TreeNode("区块2");
+            System.Windows.Forms.TreeNode treeNode134 = new System.Windows.Forms.TreeNode("盆地4", new System.Windows.Forms.TreeNode[] {
+            treeNode132,
+            treeNode133});
+            System.Windows.Forms.TreeNode treeNode135 = new System.Windows.Forms.TreeNode("盆地", new System.Windows.Forms.TreeNode[] {
+            treeNode122,
+            treeNode127,
+            treeNode131,
+            treeNode134});
             this.splitCtnerGraFrm = new System.Windows.Forms.SplitContainer();
             this.treeViewGrad = new System.Windows.Forms.TreeView();
             this.splitContDataZone = new System.Windows.Forms.SplitContainer();
@@ -139,62 +139,62 @@
             this.treeViewGrad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewGrad.Location = new System.Drawing.Point(0, 0);
             this.treeViewGrad.Name = "treeViewGrad";
-            treeNode1.Name = "para_Tgt";
-            treeNode1.Text = "目标1";
-            treeNode2.Name = "para_Tgt";
-            treeNode2.Text = "目标2";
-            treeNode3.Name = "para_Tgt";
-            treeNode3.Text = "目标3";
-            treeNode4.Name = "para_Tgt";
-            treeNode4.Text = "目标4";
-            treeNode5.Name = "para_Tgt";
-            treeNode5.Text = "目标5";
-            treeNode6.Name = "para_Blk";
-            treeNode6.Text = "区块1";
-            treeNode7.Name = "para_Tgt";
-            treeNode7.Text = "目标1";
-            treeNode8.Name = "para_Tgt";
-            treeNode8.Text = "目标2";
-            treeNode9.Name = "para_Tgt";
-            treeNode9.Text = "目标3";
-            treeNode10.Name = "para_Blk";
-            treeNode10.Text = "区块2";
-            treeNode11.Name = "para_Tgt";
-            treeNode11.Text = "目标1";
-            treeNode12.Name = "para_Tgt";
-            treeNode12.Text = "目标2";
-            treeNode13.Name = "para_Blk";
-            treeNode13.Text = "区块3";
-            treeNode14.Name = "para_Bsn";
-            treeNode14.Text = "盆地1";
-            treeNode15.Name = "para_Blk";
-            treeNode15.Text = "区块1";
-            treeNode16.Name = "para_Blk";
-            treeNode16.Text = "区块2";
-            treeNode17.Name = "para_Blk";
-            treeNode17.Text = "区块3";
-            treeNode18.Name = "para_Blk";
-            treeNode18.Text = "区块4";
-            treeNode19.Name = "para_Bsn";
-            treeNode19.Text = "盆地2";
-            treeNode20.Name = "para_Blk";
-            treeNode20.Text = "区块1";
-            treeNode21.Name = "para_Blk";
-            treeNode21.Text = "区块2";
-            treeNode22.Name = "para_Blk";
-            treeNode22.Text = "区块3";
-            treeNode23.Name = "para_Bsn";
-            treeNode23.Text = "盆地3";
-            treeNode24.Name = "para_Blk";
-            treeNode24.Text = "区块1";
-            treeNode25.Name = "para_Blk";
-            treeNode25.Text = "区块2";
-            treeNode26.Name = "para_Bsn";
-            treeNode26.Text = "盆地4";
-            treeNode27.Name = "para_Bsn";
-            treeNode27.Text = "盆地";
+            treeNode109.Name = "para_Tgt";
+            treeNode109.Text = "目标1";
+            treeNode110.Name = "para_Tgt";
+            treeNode110.Text = "目标2";
+            treeNode111.Name = "para_Tgt";
+            treeNode111.Text = "目标3";
+            treeNode112.Name = "para_Tgt";
+            treeNode112.Text = "目标4";
+            treeNode113.Name = "para_Tgt";
+            treeNode113.Text = "目标5";
+            treeNode114.Name = "para_Blk";
+            treeNode114.Text = "区块1";
+            treeNode115.Name = "para_Tgt";
+            treeNode115.Text = "目标1";
+            treeNode116.Name = "para_Tgt";
+            treeNode116.Text = "目标2";
+            treeNode117.Name = "para_Tgt";
+            treeNode117.Text = "目标3";
+            treeNode118.Name = "para_Blk";
+            treeNode118.Text = "区块2";
+            treeNode119.Name = "para_Tgt";
+            treeNode119.Text = "目标1";
+            treeNode120.Name = "para_Tgt";
+            treeNode120.Text = "目标2";
+            treeNode121.Name = "para_Blk";
+            treeNode121.Text = "区块3";
+            treeNode122.Name = "para_Bsn";
+            treeNode122.Text = "盆地1";
+            treeNode123.Name = "para_Blk";
+            treeNode123.Text = "区块1";
+            treeNode124.Name = "para_Blk";
+            treeNode124.Text = "区块2";
+            treeNode125.Name = "para_Blk";
+            treeNode125.Text = "区块3";
+            treeNode126.Name = "para_Blk";
+            treeNode126.Text = "区块4";
+            treeNode127.Name = "para_Bsn";
+            treeNode127.Text = "盆地2";
+            treeNode128.Name = "para_Blk";
+            treeNode128.Text = "区块1";
+            treeNode129.Name = "para_Blk";
+            treeNode129.Text = "区块2";
+            treeNode130.Name = "para_Blk";
+            treeNode130.Text = "区块3";
+            treeNode131.Name = "para_Bsn";
+            treeNode131.Text = "盆地3";
+            treeNode132.Name = "para_Blk";
+            treeNode132.Text = "区块1";
+            treeNode133.Name = "para_Blk";
+            treeNode133.Text = "区块2";
+            treeNode134.Name = "para_Bsn";
+            treeNode134.Text = "盆地4";
+            treeNode135.Name = "para_Bsn";
+            treeNode135.Text = "盆地";
             this.treeViewGrad.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode27});
+            treeNode135});
             this.treeViewGrad.Size = new System.Drawing.Size(217, 634);
             this.treeViewGrad.TabIndex = 0;
             // 
@@ -301,8 +301,9 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 30);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "取消";
+            this.btnCancel.Text = "关闭";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnNext
             // 
@@ -331,7 +332,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1394, 642);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1178, 555);
             this.Name = "GradingFrm";
             this.Padding = new System.Windows.Forms.Padding(3);
@@ -365,12 +370,12 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabControlGrading;
         private System.Windows.Forms.TabPage tabPageBasin;
         private System.Windows.Forms.TabPage tabPageBlock;
         private System.Windows.Forms.TabPage tabPageTarget;
-        private System.Windows.Forms.DataGridView dgvBasin;
-        private System.Windows.Forms.DataGridView dgvBlock;
-        private System.Windows.Forms.DataGridView dgvTarget;
+        public System.Windows.Forms.DataGridView dgvBasin;
+        private System.Windows.Forms.TabControl tabControlGrading;
+        public System.Windows.Forms.DataGridView dgvBlock;
+        public System.Windows.Forms.DataGridView dgvTarget;
     }
 }

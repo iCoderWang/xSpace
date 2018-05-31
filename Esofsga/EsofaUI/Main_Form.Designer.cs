@@ -79,15 +79,15 @@
             this.panel_WorkSpace = new System.Windows.Forms.Panel();
             this.splitCtner_WorkSpace = new System.Windows.Forms.SplitContainer();
             this.sideBar1 = new DevComponents.DotNetBar.SideBar();
-            this.sideBarPnl_DataAnly = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.sideBar_BtnAHP = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnTOPSIS = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnFCEM = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_DataMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnImport = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnQuery = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnModify = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnBrowse = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBarPnl_DataAnly = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBar_BtnAHP = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnTOPSIS = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnFCEM = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_UserMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnUsersList = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnUserAdd = new DevComponents.DotNetBar.ButtonItem();
@@ -556,39 +556,6 @@
             this.sideBar1.TabIndex = 1;
             this.sideBar1.Text = "sideBar1";
             // 
-            // sideBarPnl_DataAnly
-            // 
-            this.sideBarPnl_DataAnly.FontBold = true;
-            this.sideBarPnl_DataAnly.Name = "sideBarPnl_DataAnly";
-            this.sideBarPnl_DataAnly.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sideBar_BtnAHP,
-            this.sideBar_BtnTOPSIS,
-            this.sideBar_BtnFCEM});
-            this.sideBarPnl_DataAnly.Text = "数据分析";
-            // 
-            // sideBar_BtnAHP
-            // 
-            this.sideBar_BtnAHP.FontUnderline = true;
-            this.sideBar_BtnAHP.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnAHP.Name = "sideBar_BtnAHP";
-            this.sideBar_BtnAHP.Text = "层次分析法\r\n（AHP）";
-            this.sideBar_BtnAHP.Click += new System.EventHandler(this.sideBar_BtnAHP_Click);
-            // 
-            // sideBar_BtnTOPSIS
-            // 
-            this.sideBar_BtnTOPSIS.FontUnderline = true;
-            this.sideBar_BtnTOPSIS.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnTOPSIS.Name = "sideBar_BtnTOPSIS";
-            this.sideBar_BtnTOPSIS.Text = "逼近理想解排序法\r\n（TOPSIS）";
-            // 
-            // sideBar_BtnFCEM
-            // 
-            this.sideBar_BtnFCEM.FontUnderline = true;
-            this.sideBar_BtnFCEM.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnFCEM.Name = "sideBar_BtnFCEM";
-            this.sideBar_BtnFCEM.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
-            this.sideBar_BtnFCEM.Text = "模糊综合评判法\r\n（FCEM）";
-            // 
             // sideBarPnl_DataMnger
             // 
             this.sideBarPnl_DataMnger.FontBold = true;
@@ -629,6 +596,39 @@
             this.sideBar_BtnBrowse.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.sideBar_BtnBrowse.Name = "sideBar_BtnBrowse";
             this.sideBar_BtnBrowse.Text = "数据查询";
+            // 
+            // sideBarPnl_DataAnly
+            // 
+            this.sideBarPnl_DataAnly.FontBold = true;
+            this.sideBarPnl_DataAnly.Name = "sideBarPnl_DataAnly";
+            this.sideBarPnl_DataAnly.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sideBar_BtnAHP,
+            this.sideBar_BtnTOPSIS,
+            this.sideBar_BtnFCEM});
+            this.sideBarPnl_DataAnly.Text = "数据分析";
+            // 
+            // sideBar_BtnAHP
+            // 
+            this.sideBar_BtnAHP.FontUnderline = true;
+            this.sideBar_BtnAHP.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnAHP.Name = "sideBar_BtnAHP";
+            this.sideBar_BtnAHP.Text = "层次分析法\r\n（AHP）";
+            this.sideBar_BtnAHP.Click += new System.EventHandler(this.sideBar_BtnAHP_Click);
+            // 
+            // sideBar_BtnTOPSIS
+            // 
+            this.sideBar_BtnTOPSIS.FontUnderline = true;
+            this.sideBar_BtnTOPSIS.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnTOPSIS.Name = "sideBar_BtnTOPSIS";
+            this.sideBar_BtnTOPSIS.Text = "逼近理想解排序法\r\n（TOPSIS）";
+            // 
+            // sideBar_BtnFCEM
+            // 
+            this.sideBar_BtnFCEM.FontUnderline = true;
+            this.sideBar_BtnFCEM.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnFCEM.Name = "sideBar_BtnFCEM";
+            this.sideBar_BtnFCEM.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
+            this.sideBar_BtnFCEM.Text = "模糊综合评判法\r\n（FCEM）";
             // 
             // sideBarPnl_UserMnger
             // 
@@ -763,10 +763,9 @@
             this.MainMenuStrip = this.menuStrip_Main;
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "页岩气有利区优选评价系统";
+            this.Text = "页岩气区块评价系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Form_FormClosed);
-            //this.Load += new System.EventHandler(this.Main_Form_Load);
             this.menu_Panel.ResumeLayout(false);
             this.menu_Panel.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

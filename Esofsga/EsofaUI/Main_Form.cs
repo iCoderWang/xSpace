@@ -18,15 +18,20 @@ namespace EsofaUI
         }
 
         public static List<SortedBlocksParas> listBlockPara = new List<SortedBlocksParas>();
-      
+
+        //临时使用变量
+        public static List<BasinEntity> temBsnList = new List<BasinEntity>();
+        public static List<BlockEntity> temBlkList = new List<BlockEntity>();
+        public static List<TargetEntity> temTgtList = new List<TargetEntity>();
+
         /** 
          * 重写窗体关闭按钮的方法（事件）
          *将加载窗体（真正的主窗体）的关闭功能，即释放所有被占用资源的功能
          * 赋给Main_Form上的关闭按钮，当该按钮被点击时，关闭当前窗体，以及
          * 被隐藏的主加载窗体，从而用于释放所有被占用资源
         */
-        
-       
+
+
         private void Main_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Environment.Exit(0);
@@ -136,7 +141,7 @@ namespace EsofaUI
         }
 
         /// <summary>
-        /// 
+        /// 重载TabPageCreate方法，实现对RawDataFrm窗体创建Page的功能
         /// </summary>
         /// <param name="pageText"></param>
         /// <param name="rawdataFrm"></param>
@@ -164,6 +169,41 @@ namespace EsofaUI
         }
 
         /// <summary>
+        /// 重载TabPageCreate方法，实现对GradingFrm窗体创建Page的功能
+        /// </summary>
+        /// <param name="pageText"></param>
+        /// <param name="rawdataFrm"></param>
+        public void TabPageCreate(string pageText, GradingFrm gradingFrm)
+        {
+            DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();
+            workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(pageText);
+            workAreaTabPageController.SelectedTabPage.Controls.Add(gradingFrm);
+            workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
+
+            //设置窗体的宽度和新建Page的宽度相等
+            gradingFrm.Width = workAreaTabPageController.Width;
+
+            //设置窗体的高度和新建Page的高度相等
+            gradingFrm.Height = workAreaTabPageController.Height;
+
+            //临时演示数据使用
+            gradingFrm. dgvBasin.AutoGenerateColumns = true;
+            gradingFrm.dgvBasin.DataSource = temBsnList;
+            dgvCE.ColumHeaderEdit(gradingFrm.dgvBasin, gradingFrm.dgvBasin.Name);
+            gradingFrm.dgvBlock.AutoGenerateColumns = true;
+            gradingFrm.dgvBlock.DataSource = temBlkList;
+            dgvCE.ColumHeaderEdit(gradingFrm.dgvBlock, gradingFrm.dgvBlock.Name);
+            gradingFrm.dgvTarget.AutoGenerateColumns = true;
+            gradingFrm.dgvTarget.DataSource = temTgtList;
+            dgvCE.ColumHeaderEdit(gradingFrm.dgvTarget, gradingFrm.dgvTarget.Name);
+
+
+            //设置rawDataGridView的dock属性，使其填充窗体
+            gradingFrm.Dock = DockStyle.Fill;
+
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="sender"></param>
@@ -181,10 +221,7 @@ namespace EsofaUI
         {
             //创建业务逻辑层对象
             UserInfoBLL userInfoBLL = new UserInfoBLL();
-
-            //创建数据表窗体的对象
-            //UserInfoDataViewFrm userInfoDataViewFrm = new UserInfoDataViewFrm();
-
+    
             //禁用列表的自动生成
             userInfoDataViewFrm.userDataGridView.AutoGenerateColumns = false;
 
@@ -192,11 +229,7 @@ namespace EsofaUI
             userInfoDataViewFrm.userDataGridView.DataSource = userInfoBLL.GetList();
         }
 
-        //重载LoadList方法
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="rawDataFrm"></param>
+       
         private void LoadList(RawDataFrm rawDataFrm)
         {
             RawDataBLL rawDataBLL = new RawDataBLL();
@@ -206,7 +239,7 @@ namespace EsofaUI
         //重载LoadList方法
 
         /// <summary>
-        /// 
+        /// 查询数据窗口，数据从数据库获得
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -222,52 +255,51 @@ namespace EsofaUI
         }
 
         /// <summary>
-        /// 
+        /// 加载RawDataFrm窗体
         /// </summary>
         /// <param name="rawDataFrm"></param>
         /// <param name="ird"></param>
         /// <param name="filePath"></param>
-        public void LoadList(RawDataFrm rawDataFrm,ImportingRawDataBLL ird,string filePath,object objList)
+        public void LoadList(RawDataFrm rawDataFrm,ImportingRawDataBLL ird,string filePath,object objList,out string name)
         {
-            TestFrm testFrm = new TestFrm();
-            //RawDataBLL rawDataBLL = new RawDataBLL();
-           List<SortedBlocksParas> listSbp = new List<SortedBlocksParas>();
-
-            //List<object> rawDataList = new List<obj>();
+            List<SortedBlocksParas> listSbp = new List<SortedBlocksParas>();
             List<RawData> rawDataList = new List<RawData>();
             List<BasinEntity> basinEntityList = new List<BasinEntity>();
             List<BlockEntity> blockEntityList = new List<BlockEntity>();
             List<TargetEntity> targetEntityList = new List<TargetEntity>();
-            //List<RawData> rawDataList =  objList.ConvertAll<RawData>(x => (RawData)x);
-            //if( rawDataList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
-            //if((objList as List<RawData>).GetType() == rawDataList.GetType())
+            DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();
+            name = "";
             if (objList as List<RawData> != null)
             {
-                rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
+                rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
                 rawDataList = ird.ReadfromExcel(filePath);
-                testFrm.dataGridView1.DataSource = rawDataList;
                 if(rawDataList != null)
                 {
-                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
                     BlockGrade(rawDataList, listSbp);
                     rawDataFrm.rawDataGridView.DataSource = rawDataList;
+                    
                 }
                 else
                 {
                     return;
                 }
-
             }
             //else if (basinEntityList.GetType() == objList.ConvertAll<BasinEntity>(x => (BasinEntity)x).GetType())
             else if(objList as List<BasinEntity> != null)
             {
-                //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
-                testFrm.dataGridView1.AutoGenerateColumns = true;
+                rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
                 basinEntityList = ird.ReadBsnfromExcel(filePath);
                 if(basinEntityList != null)
                 {
-                    testFrm.dataGridView1.DataSource = basinEntityList;
-                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+                    rawDataFrm.rawDataGridView.Name = "dgvBasin";
+                    rawDataFrm.rawDataGridView.DataSource = basinEntityList;
+                    //rawDataFrm.rawDataGridView.Columns[0].HeaderText = "盆地名称";
+                    //DataGridView dgvBasin = rawDataFrm.rawDataGridView;
+                    dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
+                    name = "盆地_";
+
+                    //临时使用变量
+                    temBsnList = basinEntityList;
                 }
                 else
                 {
@@ -277,13 +309,22 @@ namespace EsofaUI
             //else if (blockEntityList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
             else if (objList as List<BlockEntity> != null)
             {
-                //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
-                testFrm.dataGridView1.AutoGenerateColumns = true;
+                rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
+                //testFrm.dataGridView1.AutoGenerateColumns = true;
                 blockEntityList = ird.ReadBlkfromExcel(filePath);
                 if (blockEntityList != null)
                 {
-                    testFrm.dataGridView1.DataSource = blockEntityList;
-                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+                    //rawDataFrm.rawDataGridView.DataSource = blockEntityList;
+                    //rawDataFrm.rawDataGridView.Columns[0].HeaderText = "区块名称";
+                    //DataGridView dgvBlock = rawDataFrm.rawDataGridView;
+                    rawDataFrm.rawDataGridView.Name = "dgvBlock";
+                    rawDataFrm.rawDataGridView.DataSource = blockEntityList;
+                    dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
+
+                    name = "区块_";
+
+                    //临时使用变量
+                    temBlkList = blockEntityList;
                 }
                 else
                 {
@@ -293,13 +334,22 @@ namespace EsofaUI
             //else if (targetEntityList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
             else if (objList as List<TargetEntity> != null)
             {
-                //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
-                testFrm.dataGridView1.AutoGenerateColumns = true;
+                rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
                 targetEntityList = ird.ReadTgtfromExcel(filePath);
                 if(targetEntityList != null)
                 {
-                    testFrm.dataGridView1.DataSource = targetEntityList;
-                    testFrm.dataGridView1.Columns[0].HeaderText = "区块";
+                    // rawDataFrm.rawDataGridView.DataSource = targetEntityList;
+                    //rawDataFrm.rawDataGridView.Columns[0].HeaderText = "目标区名称";
+                    rawDataFrm.rawDataGridView.Name = "dgvTarget";
+                    //DataGridView dgvTarget = rawDataFrm.rawDataGridView;
+                    rawDataFrm.rawDataGridView.DataSource = targetEntityList;
+                    dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
+                    //rawDataFrm.rawDataGridView = dgvTarget;
+                    //rawDataFrm.rawDataGridView.DataSource = targetEntityList;
+                    name = "目标区_";
+
+                    //临时使用变量
+                    temTgtList = targetEntityList;
                 }
                 else
                 {
@@ -307,33 +357,7 @@ namespace EsofaUI
                 }
                 
             }
-            //rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
-            //rawDataList = ird.ReadfromExcel(filePath);
-            //objList = rawDataList;
-
-
-
-
-            // For testing..............................
-
-
-            //testFrm.dataGridView1.DataSource = rawDataList;
-            //testFrm.dataGridView1.Columns[0].HeaderText = "区块";
-
-            //For testing............................
-
-
-
-
-
-            //BlockGrade(rawDataList, listSbp);
-            //if (rawDataFrm.rawDataGridView.Columns[0].HeaderText != rawDataList[0].para_Blk)
-            //{
-            //    rawDataFrm.rawDataGridView.HeaderCell.DataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(255, 255, 0, 0);
-            //    // rawDataFrm.rawDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 255, 0, 0);
-            //}
-            //rawDataFrm.rawDataGridView.DataSource = ird.ReadfromExcel(filePath);
-            testFrm.Show();
+            //testFrm.Show();
         }
 
         public void BlockGrade( List<RawData> rawDataList,  List<SortedBlocksParas> tempListSbp)
@@ -361,7 +385,7 @@ namespace EsofaUI
             double values;
 
             //定义临时字符串
-            string strTemp;
+            //string strTemp;
            // rawDataList.IndexOf()
            for (int i = 1; i<rawDataList.Count; i++)
             {
@@ -556,7 +580,7 @@ namespace EsofaUI
         {
             //带参数的构造函数，以方法名 RawDataImport为实参，从而实现了委托的传值
             //RawData rawData = new RawData();
-            ImportingRawDataFrm importingRawDataFrm = new ImportingRawDataFrm(RawDataImport);
+            ImportingRawDataFrm importingRawDataFrm = new ImportingRawDataFrm(RawDataImport); // 实现委托，将ImportingRawDataFrm窗体和Main_Frm窗体实现传值
             importingRawDataFrm.Show();
         }
         /// <summary>
@@ -565,12 +589,15 @@ namespace EsofaUI
         /// <param name="filePath"></param>
         private void RawDataImport(string filePath, object objList)
         {
-            
+            string areaName = "";
             ImportingRawDataBLL iRdb = new ImportingRawDataBLL();
-            RawDataFrm rawDataFrm = new RawDataFrm(TabPage_Close);
+
+            //RawDataFrm 构造方法，以TabPage_Close方法为实参，从而实现了委托中的关闭页面的操作
+            RawDataFrm rawDataFrm = new RawDataFrm(TabPage_Close);//实现关闭页面的委托
+
             rawDataFrm.TopLevel = false;
             XtraTabPage tabPage = new XtraTabPage();
-            tabPage.Text = "数据导入预览";
+            //tabPage.Text = "数据导入预览";
             rawDataFrm.Width = workAreaTabPageController.Width-5;
             //rawDataFrm.rawDataGridView.Height = rawDataFrm.Height - 100;
             rawDataFrm.Height = workAreaTabPageController.Height;
@@ -578,28 +605,31 @@ namespace EsofaUI
             rawDataFrm.btnImport.Location = new System.Drawing.Point(rawDataFrm.Width -260,rawDataFrm.Height -70);
             rawDataFrm.btnCancle.Location = new System.Drawing.Point(rawDataFrm.Width - 160, rawDataFrm.Height - 70);
             //rawDataFrm.rawDataGridView.Height = rawDataFrm.Height;
+            LoadList(rawDataFrm, iRdb, filePath, objList, out areaName);
+            tabPage.Text = areaName + "数据导入预览";
             workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(tabPage.Text);
             workAreaTabPageController.SelectedTabPage.Controls.Add(rawDataFrm);
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
             
             //TabPageCreate("数据导入预览", rawDataFrm);
-            LoadList(rawDataFrm, iRdb, filePath,objList);
+            //LoadList(rawDataFrm, iRdb, filePath,objList);
             rawDataFrm.Show();
 
         }
 
        
         /// <summary>
-        /// 
+        /// 加载AHP分析窗体，主要内容是对数据的选择性加载
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void sideBar_BtnAHP_Click(object sender, EventArgs e)
         {
-            //TargetAreaParameters tAreaPara = new TargetAreaParameters();
-            //tAreaPara.Show();
-            GradingFrm gradFrm = new GradingFrm();
-            gradFrm.Show();
+            //使用含有委托形参的构造函数，创建GradingFrm窗体，从而实现关闭主界面上TabPage的方法传递。
+            GradingFrm gradingFrm = new GradingFrm(TabPage_Close); //实现委托传递关闭当前TabPage的方法
+            gradingFrm.TopLevel = false;
+            TabPageCreate("层次分析法",gradingFrm);
+            gradingFrm.Show();
         }
     }
 }

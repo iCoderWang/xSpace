@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using iTextSharp.text;
 using System.Linq;
-using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using EsofaCommon;
 using EsofaModel;
 using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Double;
-using MathNet.Numerics.LinearAlgebra.Factorization;
-using iTextSharp.text.pdf;
 
 
 namespace EsofaUI
@@ -34,6 +26,11 @@ namespace EsofaUI
         double[,] R22;
         double[,] R23;
 
+        /// <summary>
+        /// 加载核心区参数矩阵
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CoreAreaMatrixFrm_Load(object sender, EventArgs e)
         {
             //调用通用方法模块中的数据加载方法，将数组里的数据加载到datagridview的cell中
@@ -107,7 +104,7 @@ namespace EsofaUI
         // EigenValues eignFrm = new EigenValues();
         //StringBuilder strB = new StringBuilder();
         /// <summary>
-        /// 
+        /// 计算特征值和特征向量
         /// </summary>
         /// <param name="arr"></param>
         private Vector<double> ArrayLoad(double [,] arr,out StringBuilder strB)
@@ -140,18 +137,11 @@ namespace EsofaUI
             strB.Append("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\r\n");
             strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.000000") + "\r\n" + "CR Value is: " + CR.ToString("#0.000") + "\r\n");
             strB.Append("  ******************************************" + "\r\n");
-            //eignFrm.textBox1.Text += "===============================================" + "\r\n";
-            //eignFrm.textBox1.Text += "Maximum Eigenvalue: " + maxEigenValue + "\r\n";
-            // eignFrm.textBox1.Text += "===============================================" + "\r\n";
-            //eignFrm.textBox1.Text += "Maximum Eigenvalue's Eigenvector:\r\n" + eigenVector.ToString("#0.00") + "\r\n";
-            //eignFrm.textBox1.Text += "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\r\n";
-            //eignFrm.textBox1.Text += "Maximum Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.00") + "\r\n"+"CR Value is: "+CR.ToString("#0.000")+"\r\n";
-            //eignFrm.textBox1.Text += "******************************************" + "\r\n";
             return normalizedVector;
         }
 
         /// <summary>
-        /// 
+        /// 对矩阵进行一致性检验，主要是计算一致性比例CR = CI(一致性指标)/RI(平均随机一致性指标)
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -331,46 +321,15 @@ namespace EsofaUI
 
         private void btnPDF_Click(object sender, EventArgs e)
         {
-            PdfGeneratorFrm pdfG = new PdfGeneratorFrm();
-            pdfG.Generate("核心区");
-            //SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //saveFileDialog.Filter = "PDF 文件 (*.PDF)|*.PDF";
-            //if(saveFileDialog.ShowDialog () == DialogResult.OK)
-            //{
-            //    //开始创建PDF文档，首先声明一个Document对象
-            //    Document doc = new Document(PageSize.A4, 45, 45, 45, 45);
-            //    try
-            //    {
-            //        string filePath = saveFileDialog.FileName;
-            //        PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
-            //        doc.Open();
-            //        BaseFont baseFont = BaseFont.CreateFont(@"C:\Windows\Fonts\simsun.ttc,0",
-            //            BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-            //        //设置文档字体样式
-            //        //标题字体样式
-            //        Font fontTitle = new Font(baseFont, 26);
-            //        //主要内容字体样式 
-            //        Font fontContent = new Font(baseFont, 16);
-            //        //创建新的段落
-            //        Paragraph titleParText = new Paragraph("页岩核心区评价报告", fontTitle);
-            //        //设置居中
-            //        titleParText.Alignment = Rectangle.ALIGN_CENTER;
-            //        //添加内容至PDF文档中
-            //        doc.Add(titleParText);
-            //        doc.Add(new Paragraph("\r\n 这是PDF文件显示的主要内容。。。。。\r\n ...。。回车换行Test", fontContent));
-            //        doc.Close();
-            //        MessageBox.Show("报告创建完成!","信息",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            //    }
-            //   catch(Exception)
-            //    {
-            //        if(doc != null)
-            //        {
-            //            doc.Close();
-            //            MessageBox.Show("请查看文件是否被打开？","错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            //            return;
-            //        }                  
-            //    }
-            //}
+            //PdfGeneratorFrm pdfG = new PdfGeneratorFrm();
+            //pdfG.Generate("核心区");
+            PDFCreator pdfCreator = new PDFCreator();
+            pdfCreator.Create("核心区");
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -615,9 +615,11 @@
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "退出";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnImport
             // 
+            this.btnImport.Enabled = false;
             this.btnImport.Location = new System.Drawing.Point(652, 421);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(74, 29);
@@ -627,6 +629,7 @@
             // 
             // btnExport
             // 
+            this.btnExport.Enabled = false;
             this.btnExport.Location = new System.Drawing.Point(652, 386);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(74, 29);
@@ -636,6 +639,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Enabled = false;
             this.btnSave.Location = new System.Drawing.Point(652, 351);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(74, 29);

@@ -336,9 +336,11 @@
             this.btnQuit.TabIndex = 1;
             this.btnQuit.Text = "退出";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnImport
             // 
+            this.btnImport.Enabled = false;
             this.btnImport.Location = new System.Drawing.Point(652, 401);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(74, 29);
@@ -348,6 +350,7 @@
             // 
             // btnExport
             // 
+            this.btnExport.Enabled = false;
             this.btnExport.Location = new System.Drawing.Point(652, 366);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(74, 29);
@@ -361,7 +364,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(74, 29);
             this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "保存";
+            this.btnSave.Text = "生成报告";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnEdit
@@ -370,7 +373,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(74, 29);
             this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "编辑";
+            this.btnEdit.Text = "矩阵检验";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // gBoxEcoPara

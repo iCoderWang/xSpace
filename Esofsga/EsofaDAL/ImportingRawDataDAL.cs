@@ -119,8 +119,9 @@ namespace EsofaDAL
                 ISheet sheet = wk.GetSheetAt(sheetIndex);
 
                 //构建DataTable
-                IRow row = sheet.GetRow(0);
-                dt = BuildDataTable(row);
+                IRow titleRow = sheet.GetRow(0); //第一行为标题行
+                //int columnCount = titleRow.LastCellNum;
+                dt = BuildDataTable(titleRow);
                 if (dt != null)
                 {
                     if (sheet.LastRowNum >= 1)
@@ -158,6 +159,7 @@ namespace EsofaDAL
         {
             DataTable dt = null;
             //if (Row.Cells.Count == 20)
+            
             if(Row.Cells.Count > 10)
             {
                 dt = new DataTable();

@@ -12,7 +12,7 @@ namespace EsofaModel
         //盆地（远景区）实体所有参数用 bsn_ 开始
         //盆地（远景区） 关联参数 Basin Attribute Params
         public string bsn_Att_Name { get; set; }
-        public string bsn_Att_Code { get; set; }
+        //public string bsn_Att_Code { get; set; }
 
         /* 盆地（远景区）实体所有参数用 bsn_ 开始
           * 属性条件 bsn_Att_ ,
