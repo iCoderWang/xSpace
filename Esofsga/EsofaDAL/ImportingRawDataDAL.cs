@@ -36,36 +36,36 @@ namespace EsofaDAL
         /// </summary>
         /// <param name="filePath"></param>
         /// <returns></returns>
-        public List<BasinEntity> GetBasinList(string filePath)
-        {
-            //RawDataDAL rdd = new RawDataDAL();
-            DataTable dt = ReadFromExcel(filePath,0);
-            List<BasinEntity> list = new List<BasinEntity>();
-            DataAssignment dA = new DataAssignment();
-            if (dt != null)
-            {
-                return dA.Assign(list, dt);
-            }
-            return null;
-        }
+        //public List<BasinEntity> GetBasinList(string filePath)
+        //{
+        //    //RawDataDAL rdd = new RawDataDAL();
+        //    DataTable dt = ReadFromExcel(filePath,0);
+        //    List<BasinEntity> list = new List<BasinEntity>();
+        //    DataAssignment dA = new DataAssignment();
+        //    if (dt != null)
+        //    {
+        //        return dA.Assign(list, dt);
+        //    }
+        //    return null;
+        //}
 
         /// <summary>
         /// 获取 BlockEntity格式数据，并生成列表
         /// </summary>
         /// <param name="filePath"></param>
         /// <returns></returns>
-        public List<BlockEntity> GetBlockList(string filePath)
-        {
-            //RawDataDAL rdd = new RawDataDAL();
-            DataTable dt = ReadFromExcel(filePath,1);
-            List<BlockEntity> list = new List<BlockEntity>();
-            DataAssignment dA = new DataAssignment();
-            if (dt != null)
-            {
-                return dA.Assign(list, dt);
-            }
-            return null;
-        }
+        //public List<BlockEntity> GetBlockList(string filePath)
+        //{
+        //    //RawDataDAL rdd = new RawDataDAL();
+        //    DataTable dt = ReadFromExcel(filePath,1);
+        //    List<BlockEntity> list = new List<BlockEntity>();
+        //    DataAssignment dA = new DataAssignment();
+        //    if (dt != null)
+        //    {
+        //        return dA.Assign(list, dt);
+        //    }
+        //    return null;
+        //}
 
         /// <summary>
         /// 
@@ -75,7 +75,7 @@ namespace EsofaDAL
         public List<TargetEntity> GetTargetList(string filePath)
         {
             //RawDataDAL rdd = new RawDataDAL();
-            DataTable dt = ReadFromExcel(filePath,2);
+            DataTable dt = ReadFromExcel(filePath,0);
             List<TargetEntity> list = new List<TargetEntity>();
             DataAssignment dA = new DataAssignment();
             if (dt != null)

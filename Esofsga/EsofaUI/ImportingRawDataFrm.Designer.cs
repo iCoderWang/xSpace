@@ -34,9 +34,6 @@
             this.btnPreview = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.rdoBtnBasin = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rdoBtnBlock = new System.Windows.Forms.RadioButton();
             this.rdoBtnTarget = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
@@ -86,44 +83,18 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // rdoBtnBasin
-            // 
-            this.rdoBtnBasin.AutoSize = true;
-            this.rdoBtnBasin.Location = new System.Drawing.Point(67, 70);
-            this.rdoBtnBasin.Name = "rdoBtnBasin";
-            this.rdoBtnBasin.Size = new System.Drawing.Size(61, 17);
-            this.rdoBtnBasin.TabIndex = 5;
-            this.rdoBtnBasin.Text = "远景区";
-            this.rdoBtnBasin.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "区域：";
-            // 
-            // rdoBtnBlock
-            // 
-            this.rdoBtnBlock.AutoSize = true;
-            this.rdoBtnBlock.Location = new System.Drawing.Point(146, 70);
-            this.rdoBtnBlock.Name = "rdoBtnBlock";
-            this.rdoBtnBlock.Size = new System.Drawing.Size(61, 17);
-            this.rdoBtnBlock.TabIndex = 7;
-            this.rdoBtnBlock.Text = "有利区";
-            this.rdoBtnBlock.UseVisualStyleBackColor = true;
-            // 
             // rdoBtnTarget
             // 
             this.rdoBtnTarget.AutoSize = true;
+            this.rdoBtnTarget.Checked = true;
             this.rdoBtnTarget.Location = new System.Drawing.Point(231, 70);
             this.rdoBtnTarget.Name = "rdoBtnTarget";
             this.rdoBtnTarget.Size = new System.Drawing.Size(61, 17);
             this.rdoBtnTarget.TabIndex = 8;
+            this.rdoBtnTarget.TabStop = true;
             this.rdoBtnTarget.Text = "核心区";
             this.rdoBtnTarget.UseVisualStyleBackColor = true;
+            this.rdoBtnTarget.Visible = false;
             // 
             // ImportingRawDataFrm
             // 
@@ -131,9 +102,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 140);
             this.Controls.Add(this.rdoBtnTarget);
-            this.Controls.Add(this.rdoBtnBlock);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.rdoBtnBasin);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnPreview);
             this.Controls.Add(this.txtSourceDataPath);
@@ -156,9 +124,6 @@
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.RadioButton rdoBtnBasin;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rdoBtnBlock;
         private System.Windows.Forms.RadioButton rdoBtnTarget;
     }
 }
