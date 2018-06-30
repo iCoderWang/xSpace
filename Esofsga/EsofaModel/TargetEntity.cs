@@ -9,8 +9,7 @@ namespace EsofaModel
     //目标数据实体（Target: Core Area）
     public partial class TargetEntity
     {
-        //盆地（远景区） 关联参数 Basin Attribution Params
-        public string bsn_Att_Name { get; set; }
+       
         //public string bsn_Att_Code { get; set; }
         //区块 （有利区）关联参数 Block Attribution Params
         //public string blk_Att_Name { get; set; }
@@ -27,8 +26,11 @@ namespace EsofaModel
         //定义字段 区块 block  
         //public string para_Blk { get; set; }
         public string tgt_Att_Name { get; set; }
-        
-       // public string tgt_Att_Code { get; set; }
+
+        //盆地（远景区） 关联参数 Basin Attribution Params
+        public string bsn_Att_Name { get; set; }
+
+        // public string tgt_Att_Code { get; set; }
         //定义字段 主力层系 primary Strata
         public string tgt_Att_Ps { get; set; }
 

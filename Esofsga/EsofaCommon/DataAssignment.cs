@@ -223,10 +223,10 @@ namespace EsofaCommon
                     // blk_Att_Code = row[0].ToString(),
 
                     //获取字段 目标区名字 Target name
-                    tgt_Att_Name = row[1].ToString(),
+                    tgt_Att_Name = row[0].ToString(),
 
                     //获取字段 盆地名字 basin name
-                    bsn_Att_Name = row[0].ToString(),
+                    bsn_Att_Name = row[1].ToString(),
 
                     //获取字段 目标区代码 target code
                     // tgt_Att_Code = row[0].ToString(),

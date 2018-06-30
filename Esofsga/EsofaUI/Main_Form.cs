@@ -20,8 +20,8 @@ namespace EsofaUI
         public static List<SortedBlocksParas> listBlockPara = new List<SortedBlocksParas>();
 
         //临时使用变量
-        public static List<BasinEntity> temBsnList = new List<BasinEntity>();
-        public static List<BlockEntity> temBlkList = new List<BlockEntity>();
+        //public static List<BasinEntity> temBsnList = new List<BasinEntity>();
+        //public static List<BlockEntity> temBlkList = new List<BlockEntity>();
         public static List<TargetEntity> temTgtList = new List<TargetEntity>();
 
         /** 
@@ -187,12 +187,12 @@ namespace EsofaUI
             gradingFrm.Height = workAreaTabPageController.Height;
 
             //临时演示数据使用
-            gradingFrm. dgvBasin.AutoGenerateColumns = true;
-            gradingFrm.dgvBasin.DataSource = temBsnList;
-            dgvCE.ColumHeaderEdit(gradingFrm.dgvBasin, gradingFrm.dgvBasin.Name);
-            gradingFrm.dgvBlock.AutoGenerateColumns = true;
-            gradingFrm.dgvBlock.DataSource = temBlkList;
-            dgvCE.ColumHeaderEdit(gradingFrm.dgvBlock, gradingFrm.dgvBlock.Name);
+            //gradingFrm. dgvBasin.AutoGenerateColumns = true;
+            //gradingFrm.dgvBasin.DataSource = temBsnList;
+            //dgvCE.ColumHeaderEdit(gradingFrm.dgvBasin, gradingFrm.dgvBasin.Name);
+            //gradingFrm.dgvBlock.AutoGenerateColumns = true;
+            //gradingFrm.dgvBlock.DataSource = temBlkList;
+            //dgvCE.ColumHeaderEdit(gradingFrm.dgvBlock, gradingFrm.dgvBlock.Name);
             gradingFrm.dgvTarget.AutoGenerateColumns = true;
             gradingFrm.dgvTarget.DataSource = temTgtList;
             dgvCE.ColumHeaderEdit(gradingFrm.dgvTarget, gradingFrm.dgvTarget.Name);
