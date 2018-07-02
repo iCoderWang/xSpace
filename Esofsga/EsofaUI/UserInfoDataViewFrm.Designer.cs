@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.userDataGridView = new System.Windows.Forms.DataGridView();
-            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
@@ -46,6 +44,10 @@
             this.lblConfirmPwd = new System.Windows.Forms.Label();
             this.lblUserPwd = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -68,6 +70,7 @@
             this.userDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserId,
             this.UserName,
+            this.UserPwd,
             this.UserType});
             this.userDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userDataGridView.Location = new System.Drawing.Point(3, 16);
@@ -75,30 +78,7 @@
             this.userDataGridView.ReadOnly = true;
             this.userDataGridView.Size = new System.Drawing.Size(439, 250);
             this.userDataGridView.TabIndex = 0;
-            // 
-            // UserId
-            // 
-            this.UserId.DataPropertyName = "UserId";
-            this.UserId.Frozen = true;
-            this.UserId.HeaderText = "编号";
-            this.UserId.Name = "UserId";
-            this.UserId.ReadOnly = true;
-            // 
-            // UserName
-            // 
-            this.UserName.DataPropertyName = "UserName";
-            this.UserName.Frozen = true;
-            this.UserName.HeaderText = "用户名";
-            this.UserName.Name = "UserName";
-            this.UserName.ReadOnly = true;
-            // 
-            // UserType
-            // 
-            this.UserType.DataPropertyName = "UserType";
-            this.UserType.Frozen = true;
-            this.UserType.HeaderText = "用户类型";
-            this.UserType.Name = "UserType";
-            this.UserType.ReadOnly = true;
+            this.userDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.userDataGridView_CellFormatting);
             // 
             // groupBox2
             // 
@@ -227,6 +207,40 @@
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "用户名：";
             // 
+            // UserId
+            // 
+            this.UserId.DataPropertyName = "UserId";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.UserId.DefaultCellStyle = dataGridViewCellStyle1;
+            this.UserId.Frozen = true;
+            this.UserId.HeaderText = "编号";
+            this.UserId.Name = "UserId";
+            this.UserId.ReadOnly = true;
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.Frozen = true;
+            this.UserName.HeaderText = "用户名";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            // 
+            // UserPwd
+            // 
+            this.UserPwd.DataPropertyName = "UserPwd";
+            this.UserPwd.Frozen = true;
+            this.UserPwd.HeaderText = "用户密码";
+            this.UserPwd.Name = "UserPwd";
+            this.UserPwd.ReadOnly = true;
+            // 
+            // UserType
+            // 
+            this.UserType.DataPropertyName = "UserType";
+            this.UserType.Frozen = true;
+            this.UserType.HeaderText = "用户类型";
+            this.UserType.Name = "UserType";
+            this.UserType.ReadOnly = true;
+            // 
             // UserInfoDataViewFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,6 +254,7 @@
             this.MinimizeBox = false;
             this.Name = "UserInfoDataViewFrm";
             this.Text = "用户管理";
+            this.Load += new System.EventHandler(this.UserInfoDataViewFrm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -267,6 +282,7 @@
         public System.Windows.Forms.DataGridView userDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserPwd;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserType;
     }
 }

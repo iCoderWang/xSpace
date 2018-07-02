@@ -10,9 +10,20 @@ namespace EsofaUI
             InitializeComponent();
         }
 
-        private void userDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void UserInfoDataViewFrm_Load(object sender, System.EventArgs e)
         {
+            
+        }
 
+        private void userDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                if (e.Value != null && e.Value.ToString().Length > 0)
+                {
+                    e.Value = new string('*', e.Value.ToString().Length);
+                }
+            }
         }
     }
 }

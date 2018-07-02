@@ -18,6 +18,6 @@ namespace EsofaModel
         public string UserPwd { get; set; }
 
         //定义字段 用户类型
-        public int UserType { get; set; }
+        public string UserType { get; set; }
     }
 }

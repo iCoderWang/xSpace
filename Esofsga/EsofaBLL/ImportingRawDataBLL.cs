@@ -14,23 +14,6 @@ namespace EsofaBLL
 
         }
 
-        //public List<BasinEntity> ReadBsnfromExcel(string filePath)
-        //{
-        //    ImportingRawDataDAL importingRawDataDAL = new ImportingRawDataDAL();
-        //    return importingRawDataDAL.GetBasinList(filePath);
-        //    //return importingRawDataDAL.ReadFromExcel(filePath);
-
-        //}
-
-        //public List<BlockEntity> ReadBlkfromExcel(string filePath)
-        //{
-        //    ImportingRawDataDAL importingRawDataDAL = new ImportingRawDataDAL();
-        //    return importingRawDataDAL.GetBlockList(filePath);
-        //    //return importingRawDataDAL.ReadFromExcel(filePath);
-
-        //}
-
-
         public List<TargetEntity> ReadTgtfromExcel(string filePath)
         {
             ImportingRawDataDAL importingRawDataDAL = new ImportingRawDataDAL();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Configuration;
 using MySql.Data.MySqlClient;
 using System.Collections;
 
@@ -15,8 +16,10 @@ namespace EsofaDAL
          public static string Conn = "Database='数据库名';Data Source='数据库服务器地址';User Id='数据库用户名';Password='密码';charset='utf8';pooling=true";
         */
         //数据库连接字符串
-        public static string Conn = "Database='';Data Source='localhost';User Id='root';Password='4585';charset='utf8';pooling='true'";
-
+        //public static string Conn = "Database='';Data Source='localhost';User Id='root';Password='4585';charset='utf8';pooling='true'";
+        
+        //定义静态数据库连接字符串,从配置文件中读取数据库连接字符串
+        private static string connStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
         //用于缓存参数的 HASH 表
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
 
@@ -102,12 +105,12 @@ namespace EsofaDAL
         /// <param name="cmdText">存储过程名称或者 sql 命令语句</param>
         /// <param name="commandParameters">执行命令所用参数的集合</param>
         /// <returns>包含结果的读取器</returns>
-        public static MySqlDataReader ExecuteReader(string connectionString, CommandType cmdType, string cmdText, 
+        public static MySqlDataReader ExecuteReader(string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
             
             //创建一个 MySQLConnection 对象
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 //创建一个 MySQLCommand 对象
                 MySqlCommand cmd = new MySqlCommand();
@@ -141,12 +144,12 @@ namespace EsofaDAL
         /// <param name="cmdText">存储过程名称或者 sql 命令语句</param>
         /// <param name="commandParameters">执行命令所用参数的集合</param>
         /// <returns></returns>
-        public static DataSet GetDataSet(string connectionString, CommandType cmdType, string cmdText,
+        public static DataTable GetDataTable( string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
             
             //创建一个 MySQLConnection 对象
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 //创建一个 MySQLCommand 对象
                 MySqlCommand cmd = new MySqlCommand();
@@ -161,12 +164,15 @@ namespace EsofaDAL
                     MySqlDataAdapter adapter = new MySqlDataAdapter();
                     adapter.SelectCommand = cmd;
                     //创建 Dataset 对象
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
+                    //DataSet ds = new DataSet();
+                    //创建 Datatable对象
+                    DataTable dt = new DataTable();
+                    //adapter.Fill(ds);
+                    adapter.Fill(dt);
                     //清除参数
                     cmd.Parameters.Clear();
                     conn.Close();
-                    return ds;
+                    return dt; // ds;
                 }
                 catch (Exception e)
                 {

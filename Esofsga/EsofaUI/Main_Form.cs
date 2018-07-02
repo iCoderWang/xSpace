@@ -19,10 +19,7 @@ namespace EsofaUI
 
         public static List<SortedBlocksParas> listBlockPara = new List<SortedBlocksParas>();
 
-        //临时使用变量
-        //public static List<BasinEntity> temBsnList = new List<BasinEntity>();
-        //public static List<BlockEntity> temBlkList = new List<BlockEntity>();
-        public static List<TargetEntity> temTgtList = new List<TargetEntity>();
+       public static List<TargetEntity> temTgtList = new List<TargetEntity>();
 
         /** 
          * 重写窗体关闭按钮的方法（事件）
@@ -186,13 +183,6 @@ namespace EsofaUI
             //设置窗体的高度和新建Page的高度相等
             gradingFrm.Height = workAreaTabPageController.Height;
 
-            //临时演示数据使用
-            //gradingFrm. dgvBasin.AutoGenerateColumns = true;
-            //gradingFrm.dgvBasin.DataSource = temBsnList;
-            //dgvCE.ColumHeaderEdit(gradingFrm.dgvBasin, gradingFrm.dgvBasin.Name);
-            //gradingFrm.dgvBlock.AutoGenerateColumns = true;
-            //gradingFrm.dgvBlock.DataSource = temBlkList;
-            //dgvCE.ColumHeaderEdit(gradingFrm.dgvBlock, gradingFrm.dgvBlock.Name);
             gradingFrm.dgvTarget.AutoGenerateColumns = true;
             gradingFrm.dgvTarget.DataSource = temTgtList;
             dgvCE.ColumHeaderEdit(gradingFrm.dgvTarget, gradingFrm.dgvTarget.Name);
@@ -284,55 +274,7 @@ namespace EsofaUI
                     return;
                 }
             }
-            //else if (basinEntityList.GetType() == objList.ConvertAll<BasinEntity>(x => (BasinEntity)x).GetType())
-            //else if(objList as List<BasinEntity> != null)
-            //{
-            //    rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
-            //    basinEntityList = ird.ReadBsnfromExcel(filePath);
-            //    if(basinEntityList != null)
-            //    {
-            //        rawDataFrm.rawDataGridView.Name = "dgvBasin";
-            //        rawDataFrm.rawDataGridView.DataSource = basinEntityList;
-            //        //rawDataFrm.rawDataGridView.Columns[0].HeaderText = "盆地名称";
-            //        //DataGridView dgvBasin = rawDataFrm.rawDataGridView;
-            //        dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
-            //        name = "盆地_";
-
-            //        //临时使用变量
-            //        temBsnList = basinEntityList;
-            //    }
-            //    else
-            //    {
-            //        return;
-            //    }
-            //}
-            //else if (blockEntityList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
-            //else if (objList as List<BlockEntity> != null)
-            //{
-            //    rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
-            //    //testFrm.dataGridView1.AutoGenerateColumns = true;
-            //    blockEntityList = ird.ReadBlkfromExcel(filePath);
-            //    if (blockEntityList != null)
-            //    {
-            //        //rawDataFrm.rawDataGridView.DataSource = blockEntityList;
-            //        //rawDataFrm.rawDataGridView.Columns[0].HeaderText = "区块名称";
-            //        //DataGridView dgvBlock = rawDataFrm.rawDataGridView;
-            //        rawDataFrm.rawDataGridView.Name = "dgvBlock";
-            //        rawDataFrm.rawDataGridView.DataSource = blockEntityList;
-            //        dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
-
-            //        name = "区块_";
-
-            //        //临时使用变量
-            //        temBlkList = blockEntityList;
-            //    }
-            //    else
-            //    {
-            //        return;
-            //    }
-            //}
-            //else if (targetEntityList.GetType() == objList.ConvertAll<RawData>(x => (RawData)x).GetType())
-            else if (objList as List<TargetEntity> != null)
+         else if (objList as List<TargetEntity> != null)
             {
                 rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
                 targetEntityList = ird.ReadTgtfromExcel(filePath);

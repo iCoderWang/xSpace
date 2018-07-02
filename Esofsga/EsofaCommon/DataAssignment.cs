@@ -6,6 +6,20 @@ namespace EsofaCommon
 {
     public partial class DataAssignment
     {
+        public List<UserInfo> Assign (List<UserInfo> list, DataTable dt)
+        {
+            foreach(DataRow dr in dt.Rows)
+            {
+                list.Add(new UserInfo()
+                {
+                    UserId = (int)dr[0],
+                    UserName = dr[1].ToString(),
+                    UserPwd = dr[2].ToString(),
+                    UserType = dr[3].ToString()
+                });
+            }
+            return list;
+        }
         //RawData数据体 实现数据表格化分配的方法 Asssign
         public List<RawData> Assign (List<RawData> list, DataTable dt)
         {

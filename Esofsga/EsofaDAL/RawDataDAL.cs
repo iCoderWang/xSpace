@@ -9,18 +9,10 @@ namespace EsofaDAL
     {
         public List <RawData> GetList()
         {
-            string sql = "select * from RawData";
-            DataTable dt = SqliteHelper.GetDataTable(sql);
+            string sql = "select * from target";
+            DataTable dt = MySqlHelper.GetDataTable(sql,CommandType.Text);
             DataAssignment dA = new DataAssignment();
-        //构造要查询的 sql语句
-        // string sql = "select * from RawData";
-
-        //使用SQLIT额Helper进行查询
-        // DataTable dt = SqliteHelper.GetDataTable(sql);
-
-        //将dt中的数据转存到list当中
             List<RawData> list = new List<RawData>();
-            //DataTable dt = new DataTable();
             return dA.Assign(list,dt);
             
         }

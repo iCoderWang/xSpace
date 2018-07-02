@@ -43,20 +43,6 @@ namespace EsofaUI
             {
                 //对当前窗体进行卸载并释放资源
                 Dispose();
-                //if (rdoBtnBasin.Checked == true)
-                //{
-                //    List<BasinEntity> basinEntityList = new List<BasinEntity>();
-                //    object objList = basinEntityList;
-                //    _del(filePath, objList);
-                //    //_del(filePath, basinEntityList.ConvertAll<object>(x => (object)x));
-                //}
-                //else if (rdoBtnBlock.Checked == true)
-                //{
-                //    List<BlockEntity> blockEntityList = new List<BlockEntity>();
-                //    object objList = blockEntityList;
-                //    _del(filePath, objList);
-                //    //_del(filePath, blockEntityList.ConvertAll<object>(x => (object)x));
-                //}
                  if(rdoBtnTarget.Checked == true)
                 {
                     List<TargetEntity> targetEntityList = new List<TargetEntity>();
