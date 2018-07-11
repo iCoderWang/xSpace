@@ -31,11 +31,11 @@ namespace EsofaDAL
         /// <param name="cmdText">存储过程名称或者 sql 命令语句</param>
         /// <param name="commandParameters">执行命令所用参数的集合</param>
         /// <returns>执行命令所影响的行数</returns>
-        public static int ExecuteNonQuery(string connectionString, CommandType cmdType, string cmdText, 
+        public static int ExecuteNonQuery(string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
             
-            using(MySqlConnection conn = new MySqlConnection(connectionString))
+            using(MySqlConnection conn = new MySqlConnection(connStr))
             {
                 MySqlCommand cmd = new MySqlCommand();
                 PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
@@ -45,6 +45,7 @@ namespace EsofaDAL
             }
         }
 
+        /**
         /// <summary>
         /// 用现有的数据库连接执行一个 sql 命令（不返回数据集）
         /// </summary>
@@ -65,7 +66,7 @@ namespace EsofaDAL
             }
                 
         }
-
+    **/
         /// <summary>
         /// 使用现有的 SQL事务 执行一个 sql 命令（不返回数据集）
         /// </summary>

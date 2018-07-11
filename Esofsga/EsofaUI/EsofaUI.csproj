@@ -232,6 +232,12 @@
     <Compile Include="RawDataFrm.Designer.cs">
       <DependentUpon>RawDataFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserAddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAddFrm.Designer.cs">
+      <DependentUpon>UserAddFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInfoDataViewFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </Compile>
     <EmbeddedResource Include="RawDataFrm.resx">
       <DependentUpon>RawDataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAddFrm.resx">
+      <DependentUpon>UserAddFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInfoDataViewFrm.resx">
       <DependentUpon>UserInfoDataViewFrm.cs</DependentUpon>

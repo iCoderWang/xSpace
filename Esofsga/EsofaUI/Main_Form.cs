@@ -110,14 +110,25 @@ namespace EsofaUI
         {
             //点击“用户浏览”产生新的用户TabPage，并在该Page上显示后台数据库中
             //所有在册用户的信息
-            //XtraTabPage  newPage = workAreaTabPageController.TabPages.Add("注册用户信息表");
-            // workAreaTabPageController.SelectedTabPage = newPage;
             UserInfoDataViewFrm frmUserInfo = new UserInfoDataViewFrm();
+
+            //Toplevel属性，用于设置窗体在TabPage上的显示层级
             frmUserInfo.TopLevel = false;
             TabPageCreate("注册用户信息表", frmUserInfo);
             LoadList(frmUserInfo);
             frmUserInfo.Show();
         }
+
+        private void sideBar_BtnUserAdd_Click(object sender, EventArgs e)
+        {
+            UserAddFrm frmUserAdd = new UserAddFrm();
+            frmUserAdd.TopLevel = false;
+            TabPageCreate("注册用户信息表",frmUserAdd);
+            frmUserAdd.Show();
+
+
+        }
+
 
         /// <summary>
         /// 
@@ -136,6 +147,16 @@ namespace EsofaUI
            
             //LoadList(frmUserInfo);
         }
+
+        private void TabPageCreate(string pageText, Form frm)
+        {
+            workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(pageText);
+            workAreaTabPageController.SelectedTabPage.Controls.Add(frm);
+            workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
+        }
+
+
+
 
         /// <summary>
         /// 重载TabPageCreate方法，实现对RawDataFrm窗体创建Page的功能
@@ -219,14 +240,14 @@ namespace EsofaUI
             userInfoDataViewFrm.userDataGridView.DataSource = userInfoBLL.GetList();
         }
 
-       
+        //重载LoadList方法
         private void LoadList(RawDataFrm rawDataFrm)
         {
             RawDataBLL rawDataBLL = new RawDataBLL();
             rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
             rawDataFrm.rawDataGridView.DataSource = rawDataBLL.GetList();
         }
-        //重载LoadList方法
+
 
         /// <summary>
         /// 查询数据窗口，数据从数据库获得
@@ -573,5 +594,7 @@ namespace EsofaUI
             TabPageCreate("层次分析法",gradingFrm);
             gradingFrm.Show();
         }
+
+       
     }
 }

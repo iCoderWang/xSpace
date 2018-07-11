@@ -543,7 +543,7 @@
             this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
             this.sideBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataMnger;
+            this.sideBar1.ExpandedPanel = this.sideBarPnl_UserMnger;
             this.sideBar1.Location = new System.Drawing.Point(2, 41);
             this.sideBar1.Name = "sideBar1";
             this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -658,6 +658,7 @@
             this.sideBar_BtnUserAdd.Name = "sideBar_BtnUserAdd";
             this.sideBar_BtnUserAdd.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
             this.sideBar_BtnUserAdd.Text = "添加用户";
+            this.sideBar_BtnUserAdd.Click += new System.EventHandler(this.sideBar_BtnUserAdd_Click);
             // 
             // sideBar_BtnPermissionMn
             // 

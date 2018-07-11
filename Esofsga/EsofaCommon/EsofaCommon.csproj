@@ -80,6 +80,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Windows.Forms" />
@@ -94,6 +95,7 @@
     <Compile Include="CoincidenceChecker.cs" />
     <Compile Include="DataAssignment.cs" />
     <Compile Include="DataGridViewColumnEditor.cs" />
+    <Compile Include="EncryptConnection.cs" />
     <Compile Include="FuzzyMembershipFunction.cs" />
     <Compile Include="MD5Encryption.cs" />
     <Compile Include="ParametersWeightLoader.cs" />
