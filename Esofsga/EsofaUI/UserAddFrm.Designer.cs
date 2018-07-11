@@ -83,6 +83,7 @@
             // radioBtnComUser
             // 
             this.radioBtnComUser.AutoSize = true;
+            this.radioBtnComUser.Checked = true;
             this.radioBtnComUser.Location = new System.Drawing.Point(168, 131);
             this.radioBtnComUser.Name = "radioBtnComUser";
             this.radioBtnComUser.Size = new System.Drawing.Size(73, 17);
@@ -106,6 +107,7 @@
             // 
             this.txtConfirmPwd.Location = new System.Drawing.Point(74, 98);
             this.txtConfirmPwd.Name = "txtConfirmPwd";
+            this.txtConfirmPwd.PasswordChar = '*';
             this.txtConfirmPwd.Size = new System.Drawing.Size(167, 20);
             this.txtConfirmPwd.TabIndex = 6;
             // 
@@ -113,6 +115,7 @@
             // 
             this.txtUserPwd.Location = new System.Drawing.Point(74, 65);
             this.txtUserPwd.Name = "txtUserPwd";
+            this.txtUserPwd.PasswordChar = '*';
             this.txtUserPwd.Size = new System.Drawing.Size(167, 20);
             this.txtUserPwd.TabIndex = 5;
             // 
