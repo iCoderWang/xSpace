@@ -595,6 +595,12 @@ namespace EsofaUI
             gradingFrm.Show();
         }
 
-       
+        private void sideBar_BtnUserDel_Click(object sender, EventArgs e)
+        {
+            SideBar_BtnUsersList_Click(sideBar_BtnUsersList,e);
+            
+
+
+        }
     }
 }

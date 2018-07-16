@@ -79,6 +79,12 @@
             this.panel_WorkSpace = new System.Windows.Forms.Panel();
             this.splitCtner_WorkSpace = new System.Windows.Forms.SplitContainer();
             this.sideBar1 = new DevComponents.DotNetBar.SideBar();
+            this.sideBarPnl_UserMnger = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBar_BtnUsersList = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnUserAdd = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnPermissionMn = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnUserDel = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnUserLogout = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_DataMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnImport = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnQuery = new DevComponents.DotNetBar.ButtonItem();
@@ -88,12 +94,6 @@
             this.sideBar_BtnAHP = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnTOPSIS = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnFCEM = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBarPnl_UserMnger = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.sideBar_BtnUsersList = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnUserAdd = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnPermissionMn = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnUserDel = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnUserLogout = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_Help = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnDoc = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnAbout = new DevComponents.DotNetBar.ButtonItem();
@@ -556,6 +556,61 @@
             this.sideBar1.TabIndex = 1;
             this.sideBar1.Text = "sideBar1";
             // 
+            // sideBarPnl_UserMnger
+            // 
+            this.sideBarPnl_UserMnger.FontBold = true;
+            this.sideBarPnl_UserMnger.Name = "sideBarPnl_UserMnger";
+            this.sideBarPnl_UserMnger.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sideBar_BtnUsersList,
+            this.sideBar_BtnUserAdd,
+            this.sideBar_BtnPermissionMn,
+            this.sideBar_BtnUserDel,
+            this.sideBar_BtnUserLogout});
+            this.sideBarPnl_UserMnger.Text = "用户管理";
+            // 
+            // sideBar_BtnUsersList
+            // 
+            this.sideBar_BtnUsersList.FontUnderline = true;
+            this.sideBar_BtnUsersList.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnUsersList.Name = "sideBar_BtnUsersList";
+            this.sideBar_BtnUsersList.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnUsersList.Text = "用户浏览";
+            this.sideBar_BtnUsersList.Click += new System.EventHandler(this.SideBar_BtnUsersList_Click);
+            // 
+            // sideBar_BtnUserAdd
+            // 
+            this.sideBar_BtnUserAdd.FontUnderline = true;
+            this.sideBar_BtnUserAdd.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnUserAdd.Name = "sideBar_BtnUserAdd";
+            this.sideBar_BtnUserAdd.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnUserAdd.Text = "添加用户";
+            this.sideBar_BtnUserAdd.Click += new System.EventHandler(this.sideBar_BtnUserAdd_Click);
+            // 
+            // sideBar_BtnPermissionMn
+            // 
+            this.sideBar_BtnPermissionMn.FontUnderline = true;
+            this.sideBar_BtnPermissionMn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnPermissionMn.Name = "sideBar_BtnPermissionMn";
+            this.sideBar_BtnPermissionMn.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnPermissionMn.Text = "权限管理";
+            // 
+            // sideBar_BtnUserDel
+            // 
+            this.sideBar_BtnUserDel.FontUnderline = true;
+            this.sideBar_BtnUserDel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnUserDel.Name = "sideBar_BtnUserDel";
+            this.sideBar_BtnUserDel.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnUserDel.Text = "删除用户";
+            this.sideBar_BtnUserDel.Click += new System.EventHandler(this.sideBar_BtnUserDel_Click);
+            // 
+            // sideBar_BtnUserLogout
+            // 
+            this.sideBar_BtnUserLogout.FontUnderline = true;
+            this.sideBar_BtnUserLogout.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnUserLogout.Name = "sideBar_BtnUserLogout";
+            this.sideBar_BtnUserLogout.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnUserLogout.Text = "注销用户";
+            // 
             // sideBarPnl_DataMnger
             // 
             this.sideBarPnl_DataMnger.FontBold = true;
@@ -629,60 +684,6 @@
             this.sideBar_BtnFCEM.Name = "sideBar_BtnFCEM";
             this.sideBar_BtnFCEM.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
             this.sideBar_BtnFCEM.Text = "模糊综合评判法\r\n（FCEM）";
-            // 
-            // sideBarPnl_UserMnger
-            // 
-            this.sideBarPnl_UserMnger.FontBold = true;
-            this.sideBarPnl_UserMnger.Name = "sideBarPnl_UserMnger";
-            this.sideBarPnl_UserMnger.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sideBar_BtnUsersList,
-            this.sideBar_BtnUserAdd,
-            this.sideBar_BtnPermissionMn,
-            this.sideBar_BtnUserDel,
-            this.sideBar_BtnUserLogout});
-            this.sideBarPnl_UserMnger.Text = "用户管理";
-            // 
-            // sideBar_BtnUsersList
-            // 
-            this.sideBar_BtnUsersList.FontUnderline = true;
-            this.sideBar_BtnUsersList.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUsersList.Name = "sideBar_BtnUsersList";
-            this.sideBar_BtnUsersList.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUsersList.Text = "用户浏览";
-            this.sideBar_BtnUsersList.Click += new System.EventHandler(this.SideBar_BtnUsersList_Click);
-            // 
-            // sideBar_BtnUserAdd
-            // 
-            this.sideBar_BtnUserAdd.FontUnderline = true;
-            this.sideBar_BtnUserAdd.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUserAdd.Name = "sideBar_BtnUserAdd";
-            this.sideBar_BtnUserAdd.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUserAdd.Text = "添加用户";
-            this.sideBar_BtnUserAdd.Click += new System.EventHandler(this.sideBar_BtnUserAdd_Click);
-            // 
-            // sideBar_BtnPermissionMn
-            // 
-            this.sideBar_BtnPermissionMn.FontUnderline = true;
-            this.sideBar_BtnPermissionMn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnPermissionMn.Name = "sideBar_BtnPermissionMn";
-            this.sideBar_BtnPermissionMn.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnPermissionMn.Text = "权限管理";
-            // 
-            // sideBar_BtnUserDel
-            // 
-            this.sideBar_BtnUserDel.FontUnderline = true;
-            this.sideBar_BtnUserDel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUserDel.Name = "sideBar_BtnUserDel";
-            this.sideBar_BtnUserDel.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUserDel.Text = "删除用户";
-            // 
-            // sideBar_BtnUserLogout
-            // 
-            this.sideBar_BtnUserLogout.FontUnderline = true;
-            this.sideBar_BtnUserLogout.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUserLogout.Name = "sideBar_BtnUserLogout";
-            this.sideBar_BtnUserLogout.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUserLogout.Text = "注销用户";
             // 
             // sideBarPnl_Help
             // 

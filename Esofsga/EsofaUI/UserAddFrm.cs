@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using EsofaBLL;
 
@@ -23,17 +16,17 @@ namespace EsofaUI
             UserAddBLL uab = new UserAddBLL();
             if(txtUserName.Text =="")
             {
-                MessageBox.Show("用户名不能为空。", "警告", MessageBoxButtons.OK);
+                MessageBox.Show("用户名不能为空。       ", "警告", MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
             else if(txtUserPwd.Text == "")
             {
-                MessageBox.Show("用户密码不能为空。", "警告", MessageBoxButtons.OK);
+                MessageBox.Show("用户密码不能为空 。     ", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if(txtConfirmPwd.Text == "")
             {
-                MessageBox.Show("请确认用户密码。", "警告", MessageBoxButtons.OK);
+                MessageBox.Show("请确认用户密码。      ", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -48,7 +41,7 @@ namespace EsofaUI
                             txtUserName.Text = "";
                             txtUserPwd.Text = "";
                             txtConfirmPwd.Text = "";
-                            MessageBox.Show(rowCount + "行数据成功写入数据库。");
+                            MessageBox.Show(rowCount + "行数据成功写入数据库。","信息",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         }
                         else if (radioBtnComUser.Checked == true)
                         {
@@ -56,12 +49,12 @@ namespace EsofaUI
                             txtUserName.Text = "";
                             txtUserPwd.Text = "";
                             txtConfirmPwd.Text = "";
-                            MessageBox.Show(rowCount + "行数据成功写入数据库。");
+                            MessageBox.Show(rowCount + " 行数据成功写入数据库。", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     if(txtUserPwd.Text.Trim() != txtConfirmPwd.Text.Trim())
                     {
-                        MessageBox.Show("用户密码不一致。", "警告", MessageBoxButtons.OK);
+                        MessageBox.Show("用户密码不一致。     ", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     

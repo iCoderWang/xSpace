@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.userDataGridView = new System.Windows.Forms.DataGridView();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserPwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnQuite = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -70,8 +70,8 @@
             // UserId
             // 
             this.UserId.DataPropertyName = "UserId";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.UserId.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.UserId.DefaultCellStyle = dataGridViewCellStyle1;
             this.UserId.Frozen = true;
             this.UserId.HeaderText = "编号";
             this.UserId.Name = "UserId";
@@ -101,28 +101,27 @@
             this.UserType.Name = "UserType";
             this.UserType.ReadOnly = true;
             // 
-            // btnCancel
+            // btnQuite
             // 
-            this.btnCancel.Location = new System.Drawing.Point(370, 286);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 12;
-            this.btnCancel.Text = "确定";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnQuite.Location = new System.Drawing.Point(373, 330);
+            this.btnQuite.Name = "btnQuite";
+            this.btnQuite.Size = new System.Drawing.Size(75, 23);
+            this.btnQuite.TabIndex = 12;
+            this.btnQuite.Text = "确定";
+            this.btnQuite.UseVisualStyleBackColor = true;
             // 
             // UserInfoDataViewFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 321);
+            this.ClientSize = new System.Drawing.Size(458, 365);
             this.ControlBox = false;
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnQuite);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UserInfoDataViewFrm";
-            this.Text = "用户浏览";
             this.Load += new System.EventHandler(this.UserInfoDataViewFrm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).EndInit();
@@ -133,7 +132,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnQuite;
         public System.Windows.Forms.DataGridView userDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
