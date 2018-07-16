@@ -82,11 +82,12 @@
             this.sideBarPnl_UserMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnUsersList = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnUserAdd = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnPermissionMn = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnUserDel = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnUserLogout = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnAccessChange = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnPwdChange = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_DataMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnImport = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnAddData = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnQuery = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnModify = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnBrowse = new DevComponents.DotNetBar.ButtonItem();
@@ -563,9 +564,9 @@
             this.sideBarPnl_UserMnger.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideBar_BtnUsersList,
             this.sideBar_BtnUserAdd,
-            this.sideBar_BtnPermissionMn,
             this.sideBar_BtnUserDel,
-            this.sideBar_BtnUserLogout});
+            this.sideBar_BtnAccessChange,
+            this.sideBar_BtnPwdChange});
             this.sideBarPnl_UserMnger.Text = "用户管理";
             // 
             // sideBar_BtnUsersList
@@ -586,14 +587,6 @@
             this.sideBar_BtnUserAdd.Text = "添加用户";
             this.sideBar_BtnUserAdd.Click += new System.EventHandler(this.sideBar_BtnUserAdd_Click);
             // 
-            // sideBar_BtnPermissionMn
-            // 
-            this.sideBar_BtnPermissionMn.FontUnderline = true;
-            this.sideBar_BtnPermissionMn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnPermissionMn.Name = "sideBar_BtnPermissionMn";
-            this.sideBar_BtnPermissionMn.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnPermissionMn.Text = "权限管理";
-            // 
             // sideBar_BtnUserDel
             // 
             this.sideBar_BtnUserDel.FontUnderline = true;
@@ -603,13 +596,22 @@
             this.sideBar_BtnUserDel.Text = "删除用户";
             this.sideBar_BtnUserDel.Click += new System.EventHandler(this.sideBar_BtnUserDel_Click);
             // 
-            // sideBar_BtnUserLogout
+            // sideBar_BtnAccessChange
             // 
-            this.sideBar_BtnUserLogout.FontUnderline = true;
-            this.sideBar_BtnUserLogout.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUserLogout.Name = "sideBar_BtnUserLogout";
-            this.sideBar_BtnUserLogout.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUserLogout.Text = "注销用户";
+            this.sideBar_BtnAccessChange.FontUnderline = true;
+            this.sideBar_BtnAccessChange.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnAccessChange.Name = "sideBar_BtnAccessChange";
+            this.sideBar_BtnAccessChange.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnAccessChange.Text = "权限管理";
+            this.sideBar_BtnAccessChange.Click += new System.EventHandler(this.sideBar_BtnAccessChange_Click);
+            // 
+            // sideBar_BtnPwdChange
+            // 
+            this.sideBar_BtnPwdChange.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.sideBar_BtnPwdChange.FontUnderline = true;
+            this.sideBar_BtnPwdChange.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnPwdChange.Name = "sideBar_BtnPwdChange";
+            this.sideBar_BtnPwdChange.Text = "修改密码";
             // 
             // sideBarPnl_DataMnger
             // 
@@ -617,6 +619,7 @@
             this.sideBarPnl_DataMnger.Name = "sideBarPnl_DataMnger";
             this.sideBarPnl_DataMnger.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideBar_BtnImport,
+            this.sideBar_BtnAddData,
             this.sideBar_BtnQuery,
             this.sideBar_BtnModify,
             this.sideBar_BtnBrowse});
@@ -627,8 +630,16 @@
             this.sideBar_BtnImport.FontUnderline = true;
             this.sideBar_BtnImport.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.sideBar_BtnImport.Name = "sideBar_BtnImport";
-            this.sideBar_BtnImport.Text = "数据导入";
+            this.sideBar_BtnImport.Text = "批量导入";
             this.sideBar_BtnImport.Click += new System.EventHandler(this.sideBar_BtnImport_Click);
+            // 
+            // sideBar_BtnAddData
+            // 
+            this.sideBar_BtnAddData.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.sideBar_BtnAddData.FontUnderline = true;
+            this.sideBar_BtnAddData.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnAddData.Name = "sideBar_BtnAddData";
+            this.sideBar_BtnAddData.Text = "添加数据";
             // 
             // sideBar_BtnQuery
             // 
@@ -844,8 +855,7 @@
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnFCEM;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnUserAdd;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnUserDel;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnPermissionMn;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnUserLogout;
+        private DevComponents.DotNetBar.ButtonItem sideBar_BtnAccessChange;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnDoc;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnAbout;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnImport;
@@ -863,5 +873,7 @@
         public DevExpress.XtraTab.XtraTabControl workAreaTabPageController;
         private System.Windows.Forms.ToolStripMenuItem 注销用户LToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuSub_UserQuery;
+        private DevComponents.DotNetBar.ButtonItem sideBar_BtnPwdChange;
+        private DevComponents.DotNetBar.ButtonItem sideBar_BtnAddData;
     }
 }

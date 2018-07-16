@@ -126,6 +126,18 @@
   <metadata name="toolStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="menuStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 17</value>
+  </metadata>
+  <metadata name="menuStrip_Main.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>273, 17</value>
+  </metadata>
+  <metadata name="toolStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStrip_BtnOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -218,8 +230,8 @@
         B77NOxV9m7Y9JEuzV/MWed/6HQ9gmn0ats8lWrNP/W45z/qt98jS7FG/TcanfscdmGasuH7HK9/GHYd9
         Gnc0AdkqUK0QAJLAqgkHtm/a8de3Ycdsv84NvGADvJp2aQIlnqMrBGGt+h1/fJvm/8Ym59u49aRP/SYu
         sCFAL2gABeGGgJwKlkACIK/6Ne1IQlNXB5XGNMS3cXsDVAoFAKPaCa6mftstqDAEYLikaUc9VAoO7Ov3
-        s/jWd/+DqJn/GyqMACBDwLFSv+MdCPs0b8+GSoGBf/1+AZgFvk0b30KFiQfQcIC4sHH7Qagw8cC3dY+4
-        b/32a2ADGnaEQ4VJAyBDgLbXEJ1acQMGBgDbbgjBMLiG0wAAAABJRU5ErkJggg==
+        s/jWt/2DqJn/GyqMACBDwLFSv+MdCPs0b8+GSoGBf/1+AZgFvk0b30KFiQfQcIC4sHH7Qagw8cC3dY+4
+        b/32a2ADGnaEQ4VJAyBDgLbXEJ1acQMGBgDU4wi8x9TnzQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="toolStripBtn_Redo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -318,6 +330,12 @@
   <metadata name="statusStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="statusStrip1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="panel_WorkSpace.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -349,6 +367,9 @@
     <value>True</value>
   </metadata>
   <metadata name="tabPage_Welcome.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

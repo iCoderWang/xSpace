@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.userDataGridView = new System.Windows.Forms.DataGridView();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,6 +36,8 @@
             this.UserPwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuite = new System.Windows.Forms.Button();
+            this.btnUserDel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -70,8 +72,8 @@
             // UserId
             // 
             this.UserId.DataPropertyName = "UserId";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.UserId.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.UserId.DefaultCellStyle = dataGridViewCellStyle4;
             this.UserId.Frozen = true;
             this.UserId.HeaderText = "编号";
             this.UserId.Name = "UserId";
@@ -103,12 +105,35 @@
             // 
             // btnQuite
             // 
-            this.btnQuite.Location = new System.Drawing.Point(373, 330);
+            this.btnQuite.Location = new System.Drawing.Point(370, 330);
             this.btnQuite.Name = "btnQuite";
-            this.btnQuite.Size = new System.Drawing.Size(75, 23);
+            this.btnQuite.Size = new System.Drawing.Size(75, 25);
             this.btnQuite.TabIndex = 12;
-            this.btnQuite.Text = "确定";
+            this.btnQuite.Text = "退出";
             this.btnQuite.UseVisualStyleBackColor = true;
+            this.btnQuite.Click += new System.EventHandler(this.btnQuite_Click);
+            // 
+            // btnUserDel
+            // 
+            this.btnUserDel.Location = new System.Drawing.Point(289, 330);
+            this.btnUserDel.Name = "btnUserDel";
+            this.btnUserDel.Size = new System.Drawing.Size(75, 25);
+            this.btnUserDel.TabIndex = 13;
+            this.btnUserDel.Text = "删除";
+            this.btnUserDel.UseVisualStyleBackColor = true;
+            this.btnUserDel.Visible = false;
+            this.btnUserDel.Click += new System.EventHandler(this.btnUserDel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(289, 330);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 25);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "权限变更";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // UserInfoDataViewFrm
             // 
@@ -116,6 +141,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 365);
             this.ControlBox = false;
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnUserDel);
             this.Controls.Add(this.btnQuite);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -138,5 +165,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserPwd;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserType;
+        public System.Windows.Forms.Button btnUserDel;
+        public System.Windows.Forms.Button btnUpdate;
     }
 }

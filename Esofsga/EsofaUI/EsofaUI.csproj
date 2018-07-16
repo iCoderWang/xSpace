@@ -158,6 +158,12 @@
     <Compile Include="About_Box.Designer.cs">
       <DependentUpon>About_Box.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccessChangeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccessChangeFrm.Designer.cs">
+      <DependentUpon>AccessChangeFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CoreAreaMatrixFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </Compile>
     <EmbeddedResource Include="About_Box.resx">
       <DependentUpon>About_Box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccessChangeFrm.resx">
+      <DependentUpon>AccessChangeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CoreAreaMatrixFrm.resx">
       <DependentUpon>CoreAreaMatrixFrm.cs</DependentUpon>

@@ -13,12 +13,14 @@ namespace EsofaUI
     //private delegate void DelCloseTabPage();
     public partial class GradingFrm : Form
     {
+        //定义委托
         private DelCloseTabPage _delCloseTabPage;
         public GradingFrm()
         {
             InitializeComponent();
         }
 
+        //重载构造函数，用委托做传递参数
         public GradingFrm(DelCloseTabPage delCloseTabPage)
         {
             this._delCloseTabPage = delCloseTabPage;

@@ -100,7 +100,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserAddDAL.cs" />
+    <Compile Include="UserManageDAL.cs" />
     <Compile Include="BasinEntityDAL.cs" />
     <Compile Include="BlockEntityDAL.cs" />
     <Compile Include="ImportingRawDataDAL.cs" />

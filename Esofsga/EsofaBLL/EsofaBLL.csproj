@@ -87,7 +87,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RawDataBLL.cs" />
     <Compile Include="TargetEntityBLL.cs" />
-    <Compile Include="UserAddBLL.cs" />
+    <Compile Include="UserManageBLL.cs" />
     <Compile Include="UserInfoBLL.cs" />
   </ItemGroup>
   <ItemGroup>

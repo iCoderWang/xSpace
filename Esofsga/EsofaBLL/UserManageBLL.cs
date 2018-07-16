@@ -7,15 +7,26 @@ using EsofaDAL;
 
 namespace EsofaBLL
 {
-    public partial class UserAddBLL
+    public partial class UserManageBLL
     {
         public int Add(string strUserName, string strUserPwd, string strUserRole)
         {
             //创建数据层对象
-            UserAddDAL uad = new UserAddDAL();
+            UserManageDAL uad = new UserManageDAL();
 
             //调用查询方法
             return uad.Add(strUserName,strUserPwd,strUserRole);
+        }
+        public void Delete(int userID)
+        {
+            UserManageDAL umd = new UserManageDAL();
+            umd.Delete(userID);
+        }
+
+        public void Update(string sql, int userID)
+        {
+            UserManageDAL umd = new UserManageDAL();
+            umd.Update(sql, userID);
         }
     }
 }

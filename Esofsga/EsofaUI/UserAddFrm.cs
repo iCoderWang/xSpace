@@ -6,14 +6,21 @@ namespace EsofaUI
 {
     public partial class UserAddFrm : Form
     {
+        //定义委托
+        private DelCloseTabPage _delCloseTabPage;
         public UserAddFrm()
         {
+            InitializeComponent();
+        }
+        public UserAddFrm(DelCloseTabPage delCloseTabPage)
+        {
+            this._delCloseTabPage = delCloseTabPage;
             InitializeComponent();
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            UserAddBLL uab = new UserAddBLL();
+            UserManageBLL uab = new UserManageBLL();
             if(txtUserName.Text =="")
             {
                 MessageBox.Show("用户名不能为空。       ", "警告", MessageBoxButtons.OK,MessageBoxIcon.Warning);
@@ -60,6 +67,11 @@ namespace EsofaUI
                     
                 }
             }
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            _delCloseTabPage();
         }
     }
 }

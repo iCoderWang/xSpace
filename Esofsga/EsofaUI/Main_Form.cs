@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
 using EsofaBLL;
@@ -59,6 +60,9 @@ namespace EsofaUI
         //实例化About_Box对象，用于操作
         About_Box aboutBox = new About_Box();
 
+        //实例化 UserInfoDataViewFrm 对象，用于操作
+        UserInfoDataViewFrm tempFrm = new UserInfoDataViewFrm();
+
         /// <summary>
         /// 
         /// </summary>
@@ -86,11 +90,11 @@ namespace EsofaUI
         /// 
         /// </summary>
         //关闭选中的页面
-        private void TabPage_Close()
+        public void TabPage_Close()
         {
             workAreaTabPageController.SelectedTabPage.Dispose();
         }
-        private void WorkAreaTabPageController_CloseButtonClick(object sender, EventArgs e)
+        public void WorkAreaTabPageController_CloseButtonClick(object sender, EventArgs e)
         {
             workAreaTabPageController.SelectedTabPage.Dispose();
             int tabPageCounts = workAreaTabPageController.TabPages.Count;
@@ -110,8 +114,8 @@ namespace EsofaUI
         {
             //点击“用户浏览”产生新的用户TabPage，并在该Page上显示后台数据库中
             //所有在册用户的信息
-            UserInfoDataViewFrm frmUserInfo = new UserInfoDataViewFrm();
-
+            UserInfoDataViewFrm frmUserInfo = new UserInfoDataViewFrm(TabPage_Close);
+            tempFrm = frmUserInfo;
             //Toplevel属性，用于设置窗体在TabPage上的显示层级
             frmUserInfo.TopLevel = false;
             TabPageCreate("注册用户信息表", frmUserInfo);
@@ -121,12 +125,11 @@ namespace EsofaUI
 
         private void sideBar_BtnUserAdd_Click(object sender, EventArgs e)
         {
-            UserAddFrm frmUserAdd = new UserAddFrm();
+            //使用委托，通过构造函数，将主窗体的TabPage_Close方法传递给子窗体 UserAddFrm
+            UserAddFrm frmUserAdd = new UserAddFrm(TabPage_Close);
             frmUserAdd.TopLevel = false;
             TabPageCreate("注册用户信息表",frmUserAdd);
             frmUserAdd.Show();
-
-
         }
 
 
@@ -543,6 +546,7 @@ namespace EsofaUI
         {
             //带参数的构造函数，以方法名 RawDataImport为实参，从而实现了委托的传值
             //RawData rawData = new RawData();
+            //使用委托，通过构造函数，将主窗体的 RawDataImport 方法 传递给子窗体 ImportingRawDataFrm
             ImportingRawDataFrm importingRawDataFrm = new ImportingRawDataFrm(RawDataImport); // 实现委托，将ImportingRawDataFrm窗体和Main_Frm窗体实现传值
             importingRawDataFrm.Show();
         }
@@ -556,6 +560,7 @@ namespace EsofaUI
             ImportingRawDataBLL iRdb = new ImportingRawDataBLL();
 
             //RawDataFrm 构造方法，以TabPage_Close方法为实参，从而实现了委托中的关闭页面的操作
+            //使用委托，通过构造函数，将主窗体的TabPage_Close方法传递给子窗体 RawDataFrm
             RawDataFrm rawDataFrm = new RawDataFrm(TabPage_Close);//实现关闭页面的委托
 
             rawDataFrm.TopLevel = false;
@@ -595,12 +600,26 @@ namespace EsofaUI
             gradingFrm.Show();
         }
 
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void sideBar_BtnUserDel_Click(object sender, EventArgs e)
         {
             SideBar_BtnUsersList_Click(sideBar_BtnUsersList,e);
-            
+            tempFrm.btnUserDel.Visible = true;
+            tempFrm = null;
+        }
 
-
+        private void sideBar_BtnAccessChange_Click(object sender, EventArgs e)
+        {
+            //调用用户信息预览的功能模块
+            SideBar_BtnUsersList_Click(sideBar_BtnUsersList, e);
+            //关闭当前窗体上的DataGridView多行选择功能
+            tempFrm.userDataGridView.MultiSelect = false;
+            tempFrm.btnUpdate.Visible = true;
+            tempFrm = null;
         }
     }
 }
