@@ -47,7 +47,45 @@ namespace EsofaCommon
             {
             }
         }
-    }
+        /// <summary>
+        ///　对appSettings节点添加健值
+        ///　如果健已经存在则更改值
+        ///　添加后重新保存并刷新该节点
+        /// </summary>
+        /// <param name="dict">添加的健值集合</param>
+        /// <param name="isProtected">是否加密appSettings节点数据,如果为TrueappSettings节点下所有数据都会被加密</param>
+        public static void AddConfig(System.Collections.Generic.Dictionary<string, string> dict, bool isProtected)
+        {
+            if (dict == null || dict.Count <= 0) return;
+            System.Configuration.Configuration configuration = System.Configuration.ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            //循环添加或更改健值
+            foreach (System.Collections.Generic.KeyValuePair<string, string> key_value in dict)
+            {
+                if (string.IsNullOrEmpty(key_value.Key)) continue;
+                if (configuration.AppSettings.Settings[key_value.Key] != null)
+                    configuration.AppSettings.Settings[key_value.Key].Value = key_value.Value;
+                else
+                    configuration.AppSettings.Settings.Add(key_value.Key, key_value.Value);
+            }
 
+            //保存配置文件
+            try
+            {
+                //加密配置信息
+                if (isProtected && !configuration.AppSettings.SectionInformation.IsProtected)
+                {
+                    configuration.AppSettings.SectionInformation.ForceSave = true;
+                    configuration.AppSettings.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
+                }
+                configuration.Save();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            ConfigurationManager.RefreshSection("appSettings");
+        }
+    }
 }
+
 

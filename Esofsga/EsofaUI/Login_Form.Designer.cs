@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.btn_Login = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBox_UserName = new System.Windows.Forms.TextBox();
+            this.txtBox_UserPwd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_Login
@@ -48,38 +48,38 @@
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // textBox1
+            // txtBox_UserName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(406, 156);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 35);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBox_UserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBox_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_UserName.Location = new System.Drawing.Point(407, 149);
+            this.txtBox_UserName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtBox_UserName.Name = "txtBox_UserName";
+            this.txtBox_UserName.Size = new System.Drawing.Size(176, 35);
+            this.txtBox_UserName.TabIndex = 0;
+            this.txtBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox2
+            // txtBox_UserPwd
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(406, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(176, 35);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtBox_UserPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_UserPwd.Location = new System.Drawing.Point(407, 210);
+            this.txtBox_UserPwd.Name = "txtBox_UserPwd";
+            this.txtBox_UserPwd.PasswordChar = '*';
+            this.txtBox_UserPwd.Size = new System.Drawing.Size(176, 35);
+            this.txtBox_UserPwd.TabIndex = 1;
+            this.txtBox_UserPwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBox_UserPwd.UseSystemPasswordChar = true;
             // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BackgroundImage = global::EsofaUI.Properties.Resources.logo;
+            this.BackgroundImage = global::EsofaUI.Properties.Resources.Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(700, 465);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox_UserPwd);
+            this.Controls.Add(this.txtBox_UserName);
             this.Controls.Add(this.btn_Login);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -96,8 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Login;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBox_UserName;
+        private System.Windows.Forms.TextBox txtBox_UserPwd;
     }
 }
 

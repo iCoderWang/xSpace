@@ -100,6 +100,8 @@
             this.workAreaTabPageController = new DevExpress.XtraTab.XtraTabControl();
             this.tabPage_Welcome = new DevExpress.XtraTab.XtraTabPage();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_UserName = new System.Windows.Forms.Label();
+            this.lbl_UserRole = new System.Windows.Forms.Label();
             this.menu_Panel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip_Main.SuspendLayout();
@@ -116,6 +118,8 @@
             // 
             // menu_Panel
             // 
+            this.menu_Panel.Controls.Add(this.lbl_UserRole);
+            this.menu_Panel.Controls.Add(this.lbl_UserName);
             this.menu_Panel.Controls.Add(this.toolStrip1);
             this.menu_Panel.Controls.Add(this.menuStrip_Main);
             this.menu_Panel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -429,28 +433,28 @@
             // menuSub_UserQuery
             // 
             this.menuSub_UserQuery.Name = "menuSub_UserQuery";
-            this.menuSub_UserQuery.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_UserQuery.Size = new System.Drawing.Size(143, 22);
             this.menuSub_UserQuery.Text = "用户浏览(Q)";
             this.menuSub_UserQuery.Click += new System.EventHandler(this.MenuSub_UserQuery_Click);
             // 
             // menuSub_UserAdd
             // 
             this.menuSub_UserAdd.Name = "menuSub_UserAdd";
-            this.menuSub_UserAdd.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_UserAdd.Size = new System.Drawing.Size(143, 22);
             this.menuSub_UserAdd.Text = "添加用户(N)";
             this.menuSub_UserAdd.Click += new System.EventHandler(this.menuSub_UserAdd_Click);
             // 
             // menuSub_UserDel
             // 
             this.menuSub_UserDel.Name = "menuSub_UserDel";
-            this.menuSub_UserDel.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_UserDel.Size = new System.Drawing.Size(143, 22);
             this.menuSub_UserDel.Text = "删除用户(D)";
             this.menuSub_UserDel.Click += new System.EventHandler(this.menuSub_UserDel_Click);
             // 
             // menuSub_UserPm
             // 
             this.menuSub_UserPm.Name = "menuSub_UserPm";
-            this.menuSub_UserPm.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_UserPm.Size = new System.Drawing.Size(143, 22);
             this.menuSub_UserPm.Text = "权限管理(P)";
             this.menuSub_UserPm.Click += new System.EventHandler(this.menuSub_UserPm_Click);
             // 
@@ -749,6 +753,30 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "欢迎登录评价系统";
             // 
+            // lbl_UserName
+            // 
+            this.lbl_UserName.AutoSize = true;
+            this.lbl_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_UserName.Location = new System.Drawing.Point(1308, 35);
+            this.lbl_UserName.Name = "lbl_UserName";
+            this.lbl_UserName.Size = new System.Drawing.Size(41, 15);
+            this.lbl_UserName.TabIndex = 2;
+            this.lbl_UserName.Text = "label3";
+            this.lbl_UserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_UserRole
+            // 
+            this.lbl_UserRole.AutoSize = true;
+            this.lbl_UserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UserRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_UserRole.Location = new System.Drawing.Point(1383, 35);
+            this.lbl_UserRole.Name = "lbl_UserRole";
+            this.lbl_UserRole.Size = new System.Drawing.Size(41, 15);
+            this.lbl_UserRole.TabIndex = 3;
+            this.lbl_UserRole.Text = "label4";
+            this.lbl_UserRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -812,7 +840,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuSub_AHP;
         private System.Windows.Forms.ToolStripMenuItem menuSub_TOPSIS;
         private System.Windows.Forms.ToolStripMenuItem menuSub_FCEM;
-        private System.Windows.Forms.ToolStripMenuItem menuMain_UserMn;
         private System.Windows.Forms.ToolStripMenuItem menuSub_UserAdd;
         private System.Windows.Forms.ToolStripMenuItem menuSub_UserDel;
         private System.Windows.Forms.ToolStripMenuItem menuSub_UserPm;
@@ -838,9 +865,6 @@
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnAHP;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnTOPSIS;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnFCEM;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnUserAdd;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnUserDel;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnAccessChange;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnDoc;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnAbout;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnImport;
@@ -853,10 +877,16 @@
         private System.Windows.Forms.ToolStripMenuItem menuSub_Redo;
         private DevExpress.XtraTab.XtraTabPage tabPage_Welcome;
         private System.Windows.Forms.ToolStripMenuItem menuSub_Wel;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnUsersList;
         private System.Windows.Forms.Label label2;
         public DevExpress.XtraTab.XtraTabControl workAreaTabPageController;
         private System.Windows.Forms.ToolStripMenuItem menuSub_UserQuery;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnAddData;
+        public System.Windows.Forms.Label lbl_UserRole;
+        public System.Windows.Forms.Label lbl_UserName;
+        public DevComponents.DotNetBar.ButtonItem sideBar_BtnUserAdd;
+        public DevComponents.DotNetBar.ButtonItem sideBar_BtnUserDel;
+        public DevComponents.DotNetBar.ButtonItem sideBar_BtnAccessChange;
+        public DevComponents.DotNetBar.ButtonItem sideBar_BtnUsersList;
+        public System.Windows.Forms.ToolStripMenuItem menuMain_UserMn;
     }
 }
