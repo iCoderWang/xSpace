@@ -91,6 +91,7 @@
             this.txtBox_NewPwd.Name = "txtBox_NewPwd";
             this.txtBox_NewPwd.Size = new System.Drawing.Size(172, 20);
             this.txtBox_NewPwd.TabIndex = 5;
+            this.txtBox_NewPwd.UseSystemPasswordChar = true;
             // 
             // lbl_OldPwd
             // 
@@ -108,6 +109,7 @@
             this.txtBox_ConfirmedNewPwd.Name = "txtBox_ConfirmedNewPwd";
             this.txtBox_ConfirmedNewPwd.Size = new System.Drawing.Size(172, 20);
             this.txtBox_ConfirmedNewPwd.TabIndex = 7;
+            this.txtBox_ConfirmedNewPwd.UseSystemPasswordChar = true;
             // 
             // lbl_NewPwd
             // 

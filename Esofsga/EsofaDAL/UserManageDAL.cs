@@ -44,7 +44,7 @@ namespace EsofaDAL
         {
             //构造要执行的更新语句
             //string sql = "update user_info set user_role=" + userRole + "where user_id =" + userID;
-            string sql = sqlTemp + "where user_id =" + userID;
+            string sql = sqlTemp + " where user_id =" + userID;
             //使用MySQLHelper进行更新
             int rowCount = MySqlHelper.ExecuteNonQuery(sql, CommandType.Text);
         }

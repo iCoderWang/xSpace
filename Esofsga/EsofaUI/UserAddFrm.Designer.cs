@@ -39,7 +39,7 @@
             this.lblUserPwd = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.btnAddUser = new System.Windows.Forms.Button();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
+            this.btn_AddUser = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,22 +153,22 @@
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
-            // btnDeleteUser
+            // btn_AddUser
             // 
-            this.btnDeleteUser.Location = new System.Drawing.Point(130, 261);
-            this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteUser.TabIndex = 10;
-            this.btnDeleteUser.Text = "添加用户";
-            this.btnDeleteUser.UseVisualStyleBackColor = true;
-            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
+            this.btn_AddUser.Location = new System.Drawing.Point(130, 261);
+            this.btn_AddUser.Name = "btn_AddUser";
+            this.btn_AddUser.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddUser.TabIndex = 10;
+            this.btn_AddUser.Text = "添加用户";
+            this.btn_AddUser.UseVisualStyleBackColor = true;
+            this.btn_AddUser.Click += new System.EventHandler(this.btn_AddUser_Click);
             // 
             // UserAddFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 293);
-            this.Controls.Add(this.btnDeleteUser);
+            this.Controls.Add(this.btn_AddUser);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.groupBox2);
             this.MaximizeBox = false;
@@ -184,7 +184,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnDeleteUser;
+        private System.Windows.Forms.Button btn_AddUser;
         private System.Windows.Forms.RadioButton radioBtnComUser;
         private System.Windows.Forms.RadioButton radioBtnManager;
         private System.Windows.Forms.TextBox txtConfirmPwd;

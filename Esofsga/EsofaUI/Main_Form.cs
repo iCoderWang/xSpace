@@ -226,6 +226,20 @@ namespace EsofaUI
         {
             SideBar_BtnUsersList_Click( sender, e);
         }
+        private void menuSub_UserAdd_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnUserAdd_Click(sender,e);
+        }
+
+        private void menuSub_UserDel_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnUserDel_Click(sender,e);
+        }
+
+        private void menuSub_UserPm_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnAccessChange_Click(sender,e);
+        }
 
         /// <summary>
         /// 
@@ -621,5 +635,7 @@ namespace EsofaUI
             tempFrm.btnUpdate.Visible = true;
             tempFrm = null;
         }
+
+        
     }
 }

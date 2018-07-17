@@ -26,7 +26,9 @@ namespace EsofaUI
             }
             if(chkBox_UpdatePwd.Checked == false)
             {
-                txtBox_NewPwd.Enabled = false; 
+                txtBox_NewPwd.Text = "";
+                txtBox_NewPwd.Enabled = false;
+                txtBox_ConfirmedNewPwd.Text = "";
                 txtBox_ConfirmedNewPwd.Enabled = false;
             }
         }
@@ -55,36 +57,66 @@ namespace EsofaUI
         private void btn_Ok_Click(object sender, EventArgs e)
         {
             string userID = this.txtBox_UserID.Text;
-            //string userName = this.txtBox_UserName.Text;
             string userNewPwd;
-            string userConfirmedNewPwd;
-            string userNewRole;
-            string sql_UpdatePwd;
-            string sql_UpdateRole;
-            string sql_UpdateBoth;
-           
-            if (txtBox_NewPwd.Text != "" && txtBox_ConfirmedNewPwd.Text != ""
+            //string userConfirmedNewPwd;
+            string userNewRole = "";
+            string sql_Update="";
+            UserManageBLL umb = new UserManageBLL();
+           if(chkBox_UpdatePwd.Checked ==true)
+            {
+                
+                if(chkBox_UpdateRole.Checked != true)
+                {
+                    if (txtBox_NewPwd.Text != "" && txtBox_ConfirmedNewPwd.Text != ""
             && (txtBox_NewPwd.Text == txtBox_ConfirmedNewPwd.Text))
-            {
-                userNewPwd = txtBox_NewPwd.Text;
-                sql_UpdatePwd = " update user_info set user_password = " + userNewPwd; 
-            }
-            else if (txtBox_NewPwd.Text == "" || txtBox_ConfirmedNewPwd.Text == "")
-            {
-                MessageBox.Show("密码项不能为空，请检查。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                    {
+                        userNewPwd = txtBox_NewPwd.Text;
+                        sql_Update = " update user_info set user_password = " + "\"" + userNewPwd + "\"";
+                    }
+                    else if (txtBox_NewPwd.Text == "" || txtBox_ConfirmedNewPwd.Text == "")
+                    {
+                        MessageBox.Show("密码项不能为空，请检查。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+                else if(chkBox_UpdateRole.Checked == true)
+                {
+                    if (rdoBtn_Admin.Checked == true)
+                    {
+                        userNewRole = rdoBtn_Admin.Text;
+                    }
+                    if (rdoBtn_CommenUser.Checked == true)
+                    {
+                        userNewRole = rdoBtn_CommenUser.Text;
+                    }
+                    if (txtBox_NewPwd.Text != "" && txtBox_ConfirmedNewPwd.Text != ""
+           && (txtBox_NewPwd.Text == txtBox_ConfirmedNewPwd.Text))
+                    {
+                        userNewPwd = txtBox_NewPwd.Text;
+                        sql_Update = " update user_info set user_password = " + "\"" + userNewPwd + "\"" + ", user_role = " + "\"" + userNewRole + "\"";
+                    }
+                    else if (txtBox_NewPwd.Text == "" || txtBox_ConfirmedNewPwd.Text == "")
+                    {
+                        MessageBox.Show("密码项不能为空，请检查。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
             }
             
-            if(rdoBtn_Admin.Checked == true)
+            if(chkBox_UpdateRole.Checked == true && chkBox_UpdatePwd.Checked == false)
             {
-                userNewRole = rdoBtn_Admin.Text;
-                sql_UpdateRole = " update user_info set user_role = " + userNewRole;
+                if (rdoBtn_Admin.Checked == true)
+                {
+                    userNewRole = rdoBtn_Admin.Text;                    
+                }
+                if (rdoBtn_CommenUser.Checked == true)
+                {
+                    userNewRole = rdoBtn_CommenUser.Text;
+                }
+                sql_Update = " update user_info set user_role = " +"\"" + userNewRole + "\"";
             }
-            if(rdoBtn_CommenUser.Checked == true)
-            {
-                userNewRole = rdoBtn_CommenUser.Text;
-                sql_UpdateRole = " update user_info set user_role = " + userNewRole;
-            }
+            umb.Update(sql_Update, Convert.ToInt32(userID));
+            MessageBox.Show("更新完成，请检查", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
