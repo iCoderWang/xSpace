@@ -14,5 +14,11 @@ namespace EsofaBLL
             //调用查询方法，返回数据
             return rDataDal.GetList();
         }
+
+        public int Insert(string sql)
+        {
+            RawDataDAL rdd = new RawDataDAL();
+            return rdd.Insert(sql);
+        }
     }
 }

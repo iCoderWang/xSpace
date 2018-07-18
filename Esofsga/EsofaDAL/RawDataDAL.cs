@@ -16,5 +16,11 @@ namespace EsofaDAL
             return dA.Assign(list,dt);
             
         }
+
+        public int Insert(string sql)
+        {
+            int rowCount = MySqlHelper.ExecuteNonQuery(sql, CommandType.Text);
+            return rowCount;
+        }
     }
 }
