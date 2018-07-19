@@ -12,7 +12,7 @@ namespace EsofaCommon
             {
                 list.Add(new UserInfo()
                 {
-                    UserId = (int)dr[0],
+                    UserId = (int) dr[0],
                     UserName = dr[1].ToString(),
                     UserPwd = dr[2].ToString(),
                     UserType = dr[3].ToString()

@@ -12,7 +12,7 @@ namespace EsofaCommon
         //int[,] TABLE = new int[,] { { 1, 2, 3 }, { 4, 5, 6 } };
         //DataTable dt = new DataTable();
         //    for (int i = 0; i<TABLE.GetLength(1); i++)
-        //        dt.Columns.Add(i.ToString(), typeof(int));
+        //        dt.Columns.Add(i.ToString(), typeofConvert.ToInt32);
         //    for (int i = 0; i<TABLE.GetLength(0); i++)
         //    {
         //        DataRow dr = dt.NewRow();
