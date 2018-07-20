@@ -45,28 +45,28 @@ namespace EsofaDAL
             }
         }
 
-        /**
+        
         /// <summary>
         /// 用现有的数据库连接执行一个 sql 命令（不返回数据集）
         /// </summary>
-        /// <param name="connection">一个现有的数据库连接</param>
+        /// <param name="conn">一个现有的数据库连接</param>
         /// <param name="cmdType">命令类型（存储过程，文本，等等）</param>
         /// <param name="cmdText">存储过程名称或者sql命令语句</param>
         /// <param name="commandParameters">执行命令所用参数的集合</param>
         /// <returns>执行命令所影响的行数</returns>
-        public static int ExecuteNonQuery(MySqlConnection connection, CommandType cmdType, string cmdText,
+        public static void ExecuteCommand(string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
-            using (MySqlCommand cmd = new MySqlCommand())
+            using (MySqlConnection conn = new MySqlConnection(connStr))
             {
-                PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
+                MySqlCommand cmd = new MySqlCommand();
+                PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
                 int val = cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
-                return val;
             }
                 
         }
-    **/
+
         /// <summary>
         /// 使用现有的 SQL事务 执行一个 sql 命令（不返回数据集）
         /// </summary>

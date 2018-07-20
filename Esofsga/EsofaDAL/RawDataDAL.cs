@@ -7,13 +7,13 @@ namespace EsofaDAL
 {
     public partial class RawDataDAL
     {
-        public List <RawData> GetList()
+        public List <TargetEntity> GetList()
         {
             string sql = "select * from target";
             DataTable dt = MySqlHelper.GetDataTable(sql,CommandType.Text);
             DataAssignment dA = new DataAssignment();
-            List<RawData> list = new List<RawData>();
-            return dA.Assign(list,dt);
+            List<TargetEntity> list = new List<TargetEntity>();
+            return dA.AssignFromDb(list,dt);
             
         }
 
@@ -21,6 +21,11 @@ namespace EsofaDAL
         {
             int rowCount = MySqlHelper.ExecuteNonQuery(sql, CommandType.Text);
             return rowCount;
+        }
+
+        public void ExecuteCmd(string sql)
+        {
+            MySqlHelper.ExecuteCommand(sql, CommandType.Text);
         }
     }
 }

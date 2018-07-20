@@ -6,7 +6,7 @@ namespace EsofaBLL
 {
     public partial class RawDataBLL
     {
-        public List<RawData> GetList()
+        public List<TargetEntity> GetList()
         {
             //创建数据层对象
             RawDataDAL rDataDal = new RawDataDAL();
@@ -19,6 +19,12 @@ namespace EsofaBLL
         {
             RawDataDAL rdd = new RawDataDAL();
             return rdd.Insert(sql);
+        }
+
+        public void ExecuteCmd(string sql)
+        {
+            RawDataDAL rdd = new RawDataDAL();
+            rdd.ExecuteCmd(sql);
         }
     }
 }

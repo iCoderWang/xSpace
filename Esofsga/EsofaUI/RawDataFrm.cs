@@ -54,7 +54,8 @@ namespace EsofaUI
                     int tgtBmcN, tgtBmcX;
                     string tgtDs, tgtLed, tgtGp, tgtDmd, tgtTu, tgtPn, tgtSg;
                     int[] colIndex = { 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 28, 29, 30, 31 };
-
+                    int rowIndex = 0,diffVal;
+                    int rowsAmount = rawDataGridView.SelectedRows.Count;
 
                     StringBuilder sql = new StringBuilder("insert ignore into target " +
                                     "(tgt_Att_Name, bsn_Att_Name, tgt_Att_Ps, tgt_Att_Para_Sc, tgt_Att_Para_Gr_Min, " +
@@ -64,14 +65,15 @@ namespace EsofaUI
                                     "tgt_Geo_Para_Scd, tgt_Geo_Para_Rfc, tgt_Eng_Para_Dr_Min, tgt_Eng_Para_Dr_Max, tgt_Eng_Para_Pc_Min, " +
                                     "tgt_Eng_Para_Pc_Max, tgt_Eng_Para_Per, tgt_Eng_Para_Fdd, tgt_Eng_Para_Psdc_Min, tgt_Eng_Para_Psdc_Max, " +
                                     "tgt_Eng_Para_Bmc_Min, tgt_Eng_Para_Bmc_Max, tgt_Eng_Para_Ds, tgt_Eng_Para_Led, tgt_Mkt_Para_Gp," +
-                                    "tgt_Mkt_Para_Dmd, tgt_Mkt_Para_Tu, tgt_Mkt_Para_Pn, tgt_Mkt_Para_Sg) values (\"");
-                    //int rowCounts;
+                                    "tgt_Mkt_Para_Dmd, tgt_Mkt_Para_Tu, tgt_Mkt_Para_Pn, tgt_Mkt_Para_Sg) values ");
                     DialogResult RSS = MessageBox.Show(this, "确定要写入选中行数据吗？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     switch (RSS)
                     {
                         case DialogResult.Yes:
-                            for (int i = this.rawDataGridView.SelectedRows.Count; i > 0; i--)
+                            for (int i = rowsAmount; i > 0; i--)
                             {
+                                rowIndex ++;
+                                sql.Append("(\"");
                                 for (int j = 0; j < colIndex.Length; j++)
                                 {
                                     if (rawDataGridView.SelectedRows[i - 1].Cells[colIndex[j]].Value.ToString() == "")
@@ -109,7 +111,7 @@ namespace EsofaUI
                                         }
                                         else
                                         {
-                                            MessageBox.Show("'保存条件' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBox.Show("第 " + rowIndex + " 行 '保存条件' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                             return;
                                         }
                                     }
@@ -140,7 +142,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大地质资源量应该大于或等于最小地质资源量！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 "+ rowIndex +" 行最大地质资源量应该大于或等于最小地质资源量！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[7].Value) >=
@@ -165,7 +167,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大富有机质页岩厚度应该大于或等于最小富有机质页岩厚度！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大富有机质页岩厚度应该大于或等于最小富有机质页岩厚度！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[9].Value) >=
@@ -190,7 +192,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大Toc值应该大于或等于最小Toc值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大Toc值应该大于或等于最小Toc值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if ((rawDataGridView.SelectedRows[i - 1].Cells[10].Value).ToString() != "")
@@ -223,7 +225,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大Ro值应该大于或等于最小Ro值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大Ro值应该大于或等于最小Ro值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if ((rawDataGridView.SelectedRows[i - 1].Cells[13].Value).ToString() != "")
@@ -256,7 +258,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大含气量值应该大于或等于最小含气量值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大含气量值应该大于或等于最小含气量值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[17].Value) >=
@@ -281,7 +283,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大资源丰度值应该大于或等于最小资源丰度值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大资源丰度值应该大于或等于最小资源丰度值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[19].Value) >=
@@ -306,7 +308,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大孔隙度值应该大于或等于最小孔隙度值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大孔隙度值应该大于或等于最小孔隙度值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if ((rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString() != "")
@@ -320,7 +322,7 @@ namespace EsofaUI
                                         }
                                         else
                                         {
-                                            MessageBox.Show("'构造复杂程度' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBox.Show("第 " + rowIndex + " 行 '构造复杂程度' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                             return;
                                         }
                                     }
@@ -339,7 +341,7 @@ namespace EsofaUI
                                         }
                                         else
                                         {
-                                            MessageBox.Show("'顶底板条件' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBox.Show("第 " + rowIndex + " 行 '顶底板条件' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                             return;
                                         }
                                     }
@@ -369,7 +371,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大埋深范围值应该大于或等于最小埋深范围值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大埋深范围值应该大于或等于最小埋深范围值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[25].Value) >=
@@ -394,7 +396,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大压力系数值应该大于或等于最小压力系数值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大压力系数值应该大于或等于最小压力系数值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if ((rawDataGridView.SelectedRows[i - 1].Cells[26].Value).ToString() != "")
@@ -416,7 +418,7 @@ namespace EsofaUI
                                         }
                                         else
                                         {
-                                            MessageBox.Show("'裂缝发育程度' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            MessageBox.Show("第 " + rowIndex + " 行 '裂缝发育程度' 该字段值是枚举类型，只能是“好，较好，中，差”值中的一个。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                             return;
                                         }
                                     }
@@ -446,7 +448,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大主应力差异系数值应该大于或等于最小主应力差异系数值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大主应力差异系数值应该大于或等于最小主应力差异系数值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if (Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[31].Value) >=
@@ -471,7 +473,7 @@ namespace EsofaUI
                                     }
                                     else
                                     {
-                                        MessageBox.Show("最大脆性矿物含量值应该大于或等于最小脆性矿物含量值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("第 " + rowIndex + " 行最大脆性矿物含量值应该大于或等于最小脆性矿物含量值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
                                     if ((rawDataGridView.SelectedRows[i - 1].Cells[32].Value).ToString() != "")
@@ -600,11 +602,25 @@ namespace EsofaUI
                                     MessageBox.Show("目标区块名称不能为空，数据导入中止！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                counter += rdb.Insert(sql.ToString());
+                                //counter += rdb.Insert(sql.ToString());
+                                if ((i - 1) != 0)
+                                {
+                                    sql.Append(",");
+                                }
                             }
+                            rdb.ExecuteCmd("alter table target auto_increment=1");
+                            counter += rdb.Insert(sql.ToString());
                             if (counter != 0)
                             {
-                                MessageBox.Show("成功插入选中" + counter + "行数据！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if(counter == rowsAmount)
+                                {
+                                    MessageBox.Show("成功插入所选中 " + counter + " 行数据！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    diffVal = rowsAmount - counter;
+                                    MessageBox.Show("成功插入所选 "+ rowsAmount + " 数据中的 " + counter + " 行数据！\n\r导入数据中有 "+diffVal+" 条与数据库中目标区名称重复！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }   
                             }
                             break;
                         case DialogResult.No:

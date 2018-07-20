@@ -261,8 +261,14 @@ namespace EsofaUI
         private void LoadList(RawDataFrm rawDataFrm)
         {
             RawDataBLL rawDataBLL = new RawDataBLL();
-            rawDataFrm.rawDataGridView.AutoGenerateColumns = false;
+            rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
+            DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();
+            rawDataFrm.rawDataGridView.Name = "dgvTarget";
+            
             rawDataFrm.rawDataGridView.DataSource = rawDataBLL.GetList();
+            dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
+            //name = "目标区_";
+            
         }
 
 
@@ -273,12 +279,22 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void sideBar_BtnQuery_Click(object sender, EventArgs e)
         {
-            RawDataFrm rawDataFrm = new RawDataFrm();
+            RawDataFrm rawDataFrm = new RawDataFrm(TabPage_Close);
             // rawDataFrm.Show();
             rawDataFrm.TopLevel = false;
-            TabPageCreate("数据浏览",rawDataFrm);
+            XtraTabPage tabPage = new XtraTabPage();
+            rawDataFrm.Width = workAreaTabPageController.Width - 5;
+            rawDataFrm.Height = workAreaTabPageController.Height;
+            rawDataFrm.rawDataGridView.Height = rawDataFrm.Height - 80;
+            //rawDataFrm.btnImport.Location = new System.Drawing.Point(rawDataFrm.Width - 260, rawDataFrm.Height - 70);
+            //rawDataFrm.btnImport.Enabled = false;
+            rawDataFrm.btnImport.Visible = false;
+            rawDataFrm.btnCancle.Location = new System.Drawing.Point(rawDataFrm.Width - 160, rawDataFrm.Height - 70);
             LoadList(rawDataFrm);
-            //rawdataFrm.Dock =DockStyle.Fill;
+            tabPage.Text = "目标区_数据浏览";
+            workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(tabPage.Text);
+            workAreaTabPageController.SelectedTabPage.Controls.Add(rawDataFrm);
+            workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
             rawDataFrm.Show();
         }
 
@@ -292,52 +308,26 @@ namespace EsofaUI
         {
             List<SortedBlocksParas> listSbp = new List<SortedBlocksParas>();
             List<RawData> rawDataList = new List<RawData>();
-            //List<BasinEntity> basinEntityList = new List<BasinEntity>();
-            //List<BlockEntity> blockEntityList = new List<BlockEntity>();
             List<TargetEntity> targetEntityList = new List<TargetEntity>();
             DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();
             name = "";
-            if (objList as List<RawData> != null)
-            {
-                rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
-                rawDataList = ird.ReadfromExcel(filePath);
-                if(rawDataList != null)
+             if (objList as List<TargetEntity> != null)
                 {
-                    BlockGrade(rawDataList, listSbp);
-                    rawDataFrm.rawDataGridView.DataSource = rawDataList;
-                    
-                }
-                else
-                {
-                    return;
-                }
-            }
-         else if (objList as List<TargetEntity> != null)
-            {
-                rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
-                targetEntityList = ird.ReadTgtfromExcel(filePath);
-                if(targetEntityList != null)
-                {
-                    // rawDataFrm.rawDataGridView.DataSource = targetEntityList;
-                    //rawDataFrm.rawDataGridView.Columns[0].HeaderText = "目标区名称";
-                    rawDataFrm.rawDataGridView.Name = "dgvTarget";
-                    //DataGridView dgvTarget = rawDataFrm.rawDataGridView;
-                    rawDataFrm.rawDataGridView.DataSource = targetEntityList;
-                    dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
-                    //rawDataFrm.rawDataGridView = dgvTarget;
-                    //rawDataFrm.rawDataGridView.DataSource = targetEntityList;
-                    name = "目标区_";
-
-                    //临时使用变量
-                    temTgtList = targetEntityList;
-                }
-                else
-                {
-                    return;
-                }
+                    rawDataFrm.rawDataGridView.AutoGenerateColumns = true;
+                    targetEntityList = ird.ReadTgtfromExcel(filePath);
+                    if(targetEntityList != null)
+                    {
+                        rawDataFrm.rawDataGridView.Name = "dgvTarget";
+                        rawDataFrm.rawDataGridView.DataSource = targetEntityList;
+                        dgvCE.ColumHeaderEdit(rawDataFrm.rawDataGridView, rawDataFrm.rawDataGridView.Name);
+                        name = "目标区_";
+                    }
+                    else
+                    {
+                        return;
+                    }
                 
-            }
-            //testFrm.Show();
+                }
         }
 
         public void BlockGrade( List<RawData> rawDataList,  List<SortedBlocksParas> tempListSbp)
@@ -579,22 +569,16 @@ namespace EsofaUI
 
             rawDataFrm.TopLevel = false;
             XtraTabPage tabPage = new XtraTabPage();
-            //tabPage.Text = "数据导入预览";
             rawDataFrm.Width = workAreaTabPageController.Width-5;
-            //rawDataFrm.rawDataGridView.Height = rawDataFrm.Height - 100;
             rawDataFrm.Height = workAreaTabPageController.Height;
             rawDataFrm.rawDataGridView.Height = rawDataFrm.Height - 80;
             rawDataFrm.btnImport.Location = new System.Drawing.Point(rawDataFrm.Width -260,rawDataFrm.Height -70);
             rawDataFrm.btnCancle.Location = new System.Drawing.Point(rawDataFrm.Width - 160, rawDataFrm.Height - 70);
-            //rawDataFrm.rawDataGridView.Height = rawDataFrm.Height;
             LoadList(rawDataFrm, iRdb, filePath, objList, out areaName);
             tabPage.Text = areaName + "数据导入预览";
             workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(tabPage.Text);
             workAreaTabPageController.SelectedTabPage.Controls.Add(rawDataFrm);
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
-            
-            //TabPageCreate("数据导入预览", rawDataFrm);
-            //LoadList(rawDataFrm, iRdb, filePath,objList);
             rawDataFrm.Show();
 
         }
@@ -636,6 +620,24 @@ namespace EsofaUI
             tempFrm = null;
         }
 
-        
+        private void menuSub_DataIm_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnImport_Click(sideBar_BtnImport, e);
+        }
+
+        private void menuSub_DataQu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripBtn_DataImport_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnImport_Click(sideBar_BtnImport, e);
+        }
+
+        private void menuSub_DataBr_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnQuery_Click(sideBar_BtnQuery, e);
+        }
     }
 }
