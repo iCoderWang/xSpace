@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.userDataGridView = new System.Windows.Forms.DataGridView();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +55,7 @@
             // 
             this.userDataGridView.AllowUserToAddRows = false;
             this.userDataGridView.AllowUserToDeleteRows = false;
+            this.userDataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.userDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.userDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserId,
@@ -72,8 +73,8 @@
             // UserId
             // 
             this.UserId.DataPropertyName = "UserId";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.UserId.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.UserId.DefaultCellStyle = dataGridViewCellStyle1;
             this.UserId.Frozen = true;
             this.UserId.HeaderText = "编号";
             this.UserId.Name = "UserId";

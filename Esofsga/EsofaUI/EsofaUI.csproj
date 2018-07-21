@@ -176,6 +176,12 @@
     <Compile Include="CoreAreaMatrixFrm.Designer.cs">
       <DependentUpon>CoreAreaMatrixFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbDataQueryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbDataQueryFrm.Designer.cs">
+      <DependentUpon>DbDataQueryFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EigenValues.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,17 +206,22 @@
     <Compile Include="PdfGeneratorFrm.Designer.cs">
       <DependentUpon>PdfGeneratorFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ProspectAreaMatrixFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProspectAreaMatrixFrm.Designer.cs">
       <DependentUpon>ProspectAreaMatrixFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RawDataEditorFrm.cs">
+    <Compile Include="RawDataRecorderFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RawDataEditorFrm.Designer.cs">
-      <DependentUpon>RawDataEditorFrm.cs</DependentUpon>
+    <Compile Include="RawDataRecorderFrm.Designer.cs">
+      <DependentUpon>RawDataRecorderFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="SortedBlocksFrm.cs">
       <SubType>Form</SubType>
@@ -271,6 +282,9 @@
     <EmbeddedResource Include="CoreAreaMatrixFrm.resx">
       <DependentUpon>CoreAreaMatrixFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DbDataQueryFrm.resx">
+      <DependentUpon>DbDataQueryFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EigenValues.resx">
       <DependentUpon>EigenValues.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProspectAreaMatrixFrm.resx">
       <DependentUpon>ProspectAreaMatrixFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawDataRecorderFrm.resx">
+      <DependentUpon>RawDataRecorderFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SortedBlocksFrm.resx">
       <DependentUpon>SortedBlocksFrm.cs</DependentUpon>
@@ -305,14 +322,9 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RawDataFrm.resx">
       <DependentUpon>RawDataFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,9 +363,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\30708358_600.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\未标题-11.png" />
   </ItemGroup>
   <ItemGroup>
@@ -370,8 +379,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\minus2.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\mod1.png" />
+    <None Include="Resources\mod.png" />
+    <None Include="Resources\ref.png" />
+    <None Include="Resources\mlDel.png" />
+    <None Include="Resources\del.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Edit_32x32.png" />
+    <None Include="Resources\qBy.png" />
+    <None Include="Resources\qAll.png" />
+    <None Include="Resources\Find_32x32.png" />
     <None Include="Resources\Login.jpg" />
-    <None Include="Resources\logo.png" />
     <None Include="Resources\DevAV\Actions\Close_16x16.png" />
     <None Include="Resources\DevAV\Actions\OpenDoc_16x16.png" />
     <None Include="Resources\redo_32x32.png" />

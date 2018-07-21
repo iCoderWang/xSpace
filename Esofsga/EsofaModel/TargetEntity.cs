@@ -14,7 +14,8 @@ namespace EsofaModel
         //区块 （有利区）关联参数 Block Attribution Params
         //public string blk_Att_Name { get; set; }
         //public string blk_Att_Code { get; set; }
-
+        //目标区块的序号
+        public int tgt_Att_Sn { get; set; }
        /* 目标区实体所有参数用 tgt_ 开始
          * 属性条件 tgt_Att_ ,
          * 地质条件 tgt_Geo_ ,

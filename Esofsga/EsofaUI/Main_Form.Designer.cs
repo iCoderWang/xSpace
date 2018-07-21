@@ -61,8 +61,8 @@
             this.menuSub_DataIm = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_DataInput = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_DataQu = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSub_DataMo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_DataBr = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSub_DataMo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain_DataAn = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_AHP = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_TOPSIS = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,8 +85,8 @@
             this.sideBar_BtnImport = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnAddData = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnQuery = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnModify = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnBrowse = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnModify = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_DataAnly = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnAHP = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnTOPSIS = new DevComponents.DotNetBar.ButtonItem();
@@ -103,6 +103,7 @@
             this.workAreaTabPageController = new DevExpress.XtraTab.XtraTabControl();
             this.tabPage_Welcome = new DevExpress.XtraTab.XtraTabPage();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_Status = new System.Windows.Forms.Label();
             this.menu_Panel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip_Main.SuspendLayout();
@@ -126,15 +127,16 @@
             this.menu_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.menu_Panel.Location = new System.Drawing.Point(0, 0);
             this.menu_Panel.Name = "menu_Panel";
-            this.menu_Panel.Size = new System.Drawing.Size(1444, 54);
+            this.menu_Panel.Size = new System.Drawing.Size(734, 54);
             this.menu_Panel.TabIndex = 0;
             // 
             // lbl_UserRole
             // 
+            this.lbl_UserRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_UserRole.AutoSize = true;
             this.lbl_UserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbl_UserRole.Location = new System.Drawing.Point(1383, 35);
+            this.lbl_UserRole.Location = new System.Drawing.Point(670, 35);
             this.lbl_UserRole.Name = "lbl_UserRole";
             this.lbl_UserRole.Size = new System.Drawing.Size(41, 15);
             this.lbl_UserRole.TabIndex = 3;
@@ -143,10 +145,11 @@
             // 
             // lbl_UserName
             // 
+            this.lbl_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_UserName.AutoSize = true;
             this.lbl_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbl_UserName.Location = new System.Drawing.Point(1308, 35);
+            this.lbl_UserName.Location = new System.Drawing.Point(595, 35);
             this.lbl_UserName.Name = "lbl_UserName";
             this.lbl_UserName.Size = new System.Drawing.Size(41, 15);
             this.lbl_UserName.TabIndex = 2;
@@ -169,7 +172,7 @@
             this.toolStripBtn_Redo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1444, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(734, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -219,6 +222,7 @@
             this.toolStripBtn_DataModify.Name = "toolStripBtn_DataModify";
             this.toolStripBtn_DataModify.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_DataModify.ToolTipText = "编辑数据";
+            this.toolStripBtn_DataModify.Click += new System.EventHandler(this.toolStripBtn_DataModify_Click);
             // 
             // toolStripBtn_DataDel
             // 
@@ -285,7 +289,7 @@
             this.menuMain_Help});
             this.menuStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_Main.Name = "menuStrip_Main";
-            this.menuStrip_Main.Size = new System.Drawing.Size(1444, 24);
+            this.menuStrip_Main.Size = new System.Drawing.Size(734, 24);
             this.menuStrip_Main.TabIndex = 0;
             this.menuStrip_Main.Text = "menuStrip1";
             // 
@@ -302,7 +306,6 @@
             // 
             // menuSub_Open
             // 
-            this.menuSub_Open.Image = global::EsofaUI.Properties.Resources.OpenDoc_16x16;
             this.menuSub_Open.Name = "menuSub_Open";
             this.menuSub_Open.Size = new System.Drawing.Size(117, 22);
             this.menuSub_Open.Text = "打开(O)";
@@ -320,7 +323,6 @@
             // 
             // menuSub_Close
             // 
-            this.menuSub_Close.Image = global::EsofaUI.Properties.Resources.Close_16x16;
             this.menuSub_Close.Name = "menuSub_Close";
             this.menuSub_Close.Size = new System.Drawing.Size(117, 22);
             this.menuSub_Close.Text = "关闭(X)";
@@ -385,8 +387,8 @@
             this.menuMain_DataMn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuSub_DataIm,
             this.menuSub_DataInput,
-            this.menuSub_DataBr,
             this.menuSub_DataQu,
+            this.menuSub_DataBr,
             this.menuSub_DataMo});
             this.menuMain_DataMn.Name = "menuMain_DataMn";
             this.menuMain_DataMn.Size = new System.Drawing.Size(90, 20);
@@ -396,36 +398,37 @@
             // 
             this.menuSub_DataIm.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataIm.Image")));
             this.menuSub_DataIm.Name = "menuSub_DataIm";
-            this.menuSub_DataIm.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataIm.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataIm.Text = "批量导入(I)";
             this.menuSub_DataIm.Click += new System.EventHandler(this.menuSub_DataIm_Click);
             // 
             // menuSub_DataInput
             // 
             this.menuSub_DataInput.Name = "menuSub_DataInput";
-            this.menuSub_DataInput.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataInput.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataInput.Text = "数据录入(R)";
             // 
             // menuSub_DataQu
             // 
             this.menuSub_DataQu.Name = "menuSub_DataQu";
-            this.menuSub_DataQu.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataQu.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataQu.Text = "数据查询(Q)";
             this.menuSub_DataQu.Click += new System.EventHandler(this.menuSub_DataQu_Click);
+            // 
+            // menuSub_DataBr
+            // 
+            this.menuSub_DataBr.Name = "menuSub_DataBr";
+            this.menuSub_DataBr.Size = new System.Drawing.Size(145, 22);
+            this.menuSub_DataBr.Text = "数据浏览(B)";
+            this.menuSub_DataBr.Click += new System.EventHandler(this.menuSub_DataBr_Click);
             // 
             // menuSub_DataMo
             // 
             this.menuSub_DataMo.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataMo.Image")));
             this.menuSub_DataMo.Name = "menuSub_DataMo";
-            this.menuSub_DataMo.Size = new System.Drawing.Size(180, 22);
-            this.menuSub_DataMo.Text = "数据修改(M)";
-            // 
-            // menuSub_DataBr
-            // 
-            this.menuSub_DataBr.Name = "menuSub_DataBr";
-            this.menuSub_DataBr.Size = new System.Drawing.Size(180, 22);
-            this.menuSub_DataBr.Text = "数据浏览(B)";
-            this.menuSub_DataBr.Click += new System.EventHandler(this.menuSub_DataBr_Click);
+            this.menuSub_DataMo.Size = new System.Drawing.Size(145, 22);
+            this.menuSub_DataMo.Text = "数据编辑(M)";
+            this.menuSub_DataMo.Click += new System.EventHandler(this.menuSub_DataMo_Click);
             // 
             // menuMain_DataAn
             // 
@@ -525,19 +528,21 @@
             // 
             // panel_StatusBar
             // 
+            this.panel_StatusBar.Controls.Add(this.lbl_Status);
             this.panel_StatusBar.Controls.Add(this.statusStrip1);
             this.panel_StatusBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_StatusBar.Location = new System.Drawing.Point(0, 844);
+            this.panel_StatusBar.Location = new System.Drawing.Point(0, 386);
             this.panel_StatusBar.Name = "panel_StatusBar";
-            this.panel_StatusBar.Size = new System.Drawing.Size(1444, 37);
+            this.panel_StatusBar.Size = new System.Drawing.Size(734, 25);
             this.panel_StatusBar.TabIndex = 1;
             // 
             // statusStrip1
             // 
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1444, 37);
+            this.statusStrip1.Size = new System.Drawing.Size(734, 25);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -548,7 +553,7 @@
             this.panel_WorkSpace.Location = new System.Drawing.Point(0, 54);
             this.panel_WorkSpace.Name = "panel_WorkSpace";
             this.panel_WorkSpace.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.panel_WorkSpace.Size = new System.Drawing.Size(1444, 790);
+            this.panel_WorkSpace.Size = new System.Drawing.Size(734, 332);
             this.panel_WorkSpace.TabIndex = 2;
             // 
             // splitCtner_WorkSpace
@@ -569,8 +574,8 @@
             // 
             this.splitCtner_WorkSpace.Panel2.Controls.Add(this.workAreaTabPageController);
             this.splitCtner_WorkSpace.Panel2MinSize = 600;
-            this.splitCtner_WorkSpace.Size = new System.Drawing.Size(1444, 788);
-            this.splitCtner_WorkSpace.SplitterDistance = 160;
+            this.splitCtner_WorkSpace.Size = new System.Drawing.Size(734, 330);
+            this.splitCtner_WorkSpace.SplitterDistance = 120;
             this.splitCtner_WorkSpace.TabIndex = 0;
             // 
             // sideBar1
@@ -586,7 +591,7 @@
             this.sideBarPnl_DataAnly,
             this.sideBarPnl_UserMnger,
             this.sideBarPnl_Help});
-            this.sideBar1.Size = new System.Drawing.Size(156, 743);
+            this.sideBar1.Size = new System.Drawing.Size(116, 285);
             this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.sideBar1.TabIndex = 1;
             this.sideBar1.Text = "sideBar1";
@@ -599,8 +604,8 @@
             this.sideBar_BtnImport,
             this.sideBar_BtnAddData,
             this.sideBar_BtnQuery,
-            this.sideBar_BtnModify,
-            this.sideBar_BtnBrowse});
+            this.sideBar_BtnBrowse,
+            this.sideBar_BtnModify});
             this.sideBarPnl_DataMnger.Text = "数据管理";
             // 
             // sideBar_BtnImport
@@ -624,22 +629,24 @@
             this.sideBar_BtnQuery.FontUnderline = true;
             this.sideBar_BtnQuery.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.sideBar_BtnQuery.Name = "sideBar_BtnQuery";
-            this.sideBar_BtnQuery.Text = "数据浏览";
+            this.sideBar_BtnQuery.Text = "数据查询";
             this.sideBar_BtnQuery.Click += new System.EventHandler(this.sideBar_BtnQuery_Click);
-            // 
-            // sideBar_BtnModify
-            // 
-            this.sideBar_BtnModify.FontUnderline = true;
-            this.sideBar_BtnModify.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnModify.Name = "sideBar_BtnModify";
-            this.sideBar_BtnModify.Text = "数据修改";
             // 
             // sideBar_BtnBrowse
             // 
             this.sideBar_BtnBrowse.FontUnderline = true;
             this.sideBar_BtnBrowse.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.sideBar_BtnBrowse.Name = "sideBar_BtnBrowse";
-            this.sideBar_BtnBrowse.Text = "数据查询";
+            this.sideBar_BtnBrowse.Text = "数据浏览";
+            this.sideBar_BtnBrowse.Click += new System.EventHandler(this.sideBar_BtnBrowse_Click);
+            // 
+            // sideBar_BtnModify
+            // 
+            this.sideBar_BtnModify.FontUnderline = true;
+            this.sideBar_BtnModify.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnModify.Name = "sideBar_BtnModify";
+            this.sideBar_BtnModify.Text = "数据编辑";
+            this.sideBar_BtnModify.Click += new System.EventHandler(this.sideBar_BtnModify_Click);
             // 
             // sideBarPnl_DataAnly
             // 
@@ -755,7 +762,7 @@
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.label1.Size = new System.Drawing.Size(156, 41);
+            this.label1.Size = new System.Drawing.Size(116, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "项目管理";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -767,7 +774,7 @@
             this.workAreaTabPageController.Location = new System.Drawing.Point(0, 0);
             this.workAreaTabPageController.Name = "workAreaTabPageController";
             this.workAreaTabPageController.SelectedTabPage = this.tabPage_Welcome;
-            this.workAreaTabPageController.Size = new System.Drawing.Size(1278, 786);
+            this.workAreaTabPageController.Size = new System.Drawing.Size(608, 328);
             this.workAreaTabPageController.TabIndex = 0;
             this.workAreaTabPageController.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabPage_Welcome});
@@ -777,7 +784,7 @@
             // 
             this.tabPage_Welcome.Controls.Add(this.label2);
             this.tabPage_Welcome.Name = "tabPage_Welcome";
-            this.tabPage_Welcome.Size = new System.Drawing.Size(1272, 758);
+            this.tabPage_Welcome.Size = new System.Drawing.Size(602, 300);
             this.tabPage_Welcome.Text = "欢迎登录";
             // 
             // label2
@@ -789,11 +796,20 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "欢迎登录评价系统";
             // 
+            // lbl_Status
+            // 
+            this.lbl_Status.AutoSize = true;
+            this.lbl_Status.Location = new System.Drawing.Point(532, 6);
+            this.lbl_Status.Name = "lbl_Status";
+            this.lbl_Status.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Status.TabIndex = 1;
+            this.lbl_Status.Text = "label3";
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 881);
+            this.ClientSize = new System.Drawing.Size(734, 411);
             this.Controls.Add(this.panel_WorkSpace);
             this.Controls.Add(this.panel_StatusBar);
             this.Controls.Add(this.menu_Panel);
@@ -881,7 +897,6 @@
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnAbout;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnImport;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnQuery;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnModify;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnBrowse;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Undo;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Redo;
@@ -901,5 +916,7 @@
         public DevComponents.DotNetBar.ButtonItem sideBar_BtnUsersList;
         public System.Windows.Forms.ToolStripMenuItem menuMain_UserMn;
         private System.Windows.Forms.ToolStripMenuItem menuSub_DataInput;
+        private DevComponents.DotNetBar.ButtonItem sideBar_BtnModify;
+        public System.Windows.Forms.Label lbl_Status;
     }
 }

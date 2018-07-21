@@ -1,6 +1,8 @@
-﻿using EsofaModel;
+﻿using System;
+using EsofaModel;
 using System.Collections.Generic;
 using System.Data;
+using System.Windows.Forms;
 
 namespace EsofaCommon
 {
@@ -221,140 +223,155 @@ namespace EsofaCommon
         //核心区 TargetEntity数据体 实现数据表格化 from Excel 分配方法 Assign 重载
         public List<TargetEntity> Assign(List<TargetEntity> list, DataTable dt)
         {
-            foreach (DataRow row in dt.Rows)
+            int Sn = 0;
+            try
             {
-                list.Add(new TargetEntity()
+                foreach (DataRow row in dt.Rows)
                 {
-                    //获取字段 目标区名字 Target name
-                    tgt_Att_Name = row[0].ToString(),
+                    Sn++;
+                    list.Add(new TargetEntity()
+                    {
+                        tgt_Att_Sn = Sn, //Convert.ToInt32(row[0]),
+                        //获取字段 目标区名字 Target name
+                        tgt_Att_Name = row[1].ToString(),
 
-                    //获取字段 盆地名字 basin name
-                    bsn_Att_Name = row[1].ToString(),
+                        //获取字段 盆地名字 basin name
+                        bsn_Att_Name = row[2].ToString(),
 
-                    //获取字段 主力层系 primary Strata
-                    tgt_Att_Ps = row[2].ToString(),
+                        //获取字段 主力层系 primary Strata
+                        tgt_Att_Ps = row[3].ToString(),
 
-                    //定义字段 保存条件 Storage Condition
-                    tgt_Att_Para_Sc = row[3].ToString(),
+                        //定义字段 保存条件 Storage Condition
+                        tgt_Att_Para_Sc = row[4].ToString(),
 
-                    //定义字段 最小——地质资源量 (万亿方) geological resource
-                    tgt_Att_Para_Gr_Min = row[4].ToString(),
+                        //定义字段 最小——地质资源量 (万亿方) geological resource
+                        tgt_Att_Para_Gr_Min = row[5].ToString(),
 
-                    //定义字段 最大——地质资源量 (万亿方) geological resource
-                    tgt_Att_Para_Gr_Max = row[5].ToString(),
+                        //定义字段 最大——地质资源量 (万亿方) geological resource
+                        tgt_Att_Para_Gr_Max = row[6].ToString(),
 
-                    //定义字段 最小——富有机质页岩厚度范围(m) Thinckness Range Riching Organic Matters Shale
-                    tgt_Geo_Para_TrRoms_Min = row[6].ToString(),
+                        //定义字段 最小——富有机质页岩厚度范围(m) Thinckness Range Riching Organic Matters Shale
+                        tgt_Geo_Para_TrRoms_Min = row[7].ToString(),
 
-                    //定义字段 最大——富有机质页岩厚度范围(m) Thinckness Range Riching Organic Matters Shale
-                    tgt_Geo_Para_TrRoms_Max = row[7].ToString(),
+                        //定义字段 最大——富有机质页岩厚度范围(m) Thinckness Range Riching Organic Matters Shale
+                        tgt_Geo_Para_TrRoms_Max = row[8].ToString(),
 
-                    //定义字段 最小——Toc 总有机碳
-                    tgt_Geo_Para_Toc_Min = row[8].ToString(),
+                        //定义字段 最小——Toc 总有机碳
+                        tgt_Geo_Para_Toc_Min = row[9].ToString(),
 
-                    //定义字段 最大——Toc 总有机碳
-                    tgt_Geo_Para_Toc_Max = row[9].ToString(),
+                        //定义字段 最大——Toc 总有机碳
+                        tgt_Geo_Para_Toc_Max = row[10].ToString(),
 
-                    //定义字段 Kt 有机质类型 Kerogen Type
-                    tgt_Geo_Para_Kt = row[10].ToString(),
+                        //定义字段 Kt 有机质类型 Kerogen Type
+                        tgt_Geo_Para_Kt = row[11].ToString(),
 
-                    //定义字段 最小——Ro 有机质成熟度
-                    tgt_Geo_Para_Ro_Min = row[11].ToString(),
+                        //定义字段 最小——Ro 有机质成熟度
+                        tgt_Geo_Para_Ro_Min = row[12].ToString(),
 
-                    //定义字段 最大——Ro 有机质成熟度
-                    tgt_Geo_Para_Ro_Max = row[12].ToString(),
+                        //定义字段 最大——Ro 有机质成熟度
+                        tgt_Geo_Para_Ro_Max = row[13].ToString(),
 
-                    //定义字段 有效圈定面积(km2) Effective Area
-                    tgt_Geo_Para_Ea = row[13].ToString(),
+                        //定义字段 有效圈定面积(km2) Effective Area
+                        tgt_Geo_Para_Ea = row[14].ToString(),
 
-                    //定义字段 最小——含气量 (m3/t) Gas Content
-                    tgt_Geo_Para_Gc_Min = row[14].ToString(),
+                        //定义字段 最小——含气量 (m3/t) Gas Content
+                        tgt_Geo_Para_Gc_Min = row[15].ToString(),
 
-                    //定义字段 最大——含气量 (m3/t) Gas Content
-                    tgt_Geo_Para_Gc_Max = row[15].ToString(),
+                        //定义字段 最大——含气量 (m3/t) Gas Content
+                        tgt_Geo_Para_Gc_Max = row[16].ToString(),
 
-                    //定义字段 最小——资源丰度 (10^8 m^3/km^2 亿立方/平方公里) Resource richness
-                    tgt_Geo_Para_Rr_Min = row[16].ToString(),
+                        //定义字段 最小——资源丰度 (10^8 m^3/km^2 亿立方/平方公里) Resource richness
+                        tgt_Geo_Para_Rr_Min = row[17].ToString(),
 
-                    //定义字段 最大——资源丰度 (10^8 m^3/km^2 亿立方/平方公里) Resource richness
-                    tgt_Geo_Para_Rr_Max = row[17].ToString(),
+                        //定义字段 最大——资源丰度 (10^8 m^3/km^2 亿立方/平方公里) Resource richness
+                        tgt_Geo_Para_Rr_Max = row[18].ToString(),
 
-                    //定义字段 最小——孔隙度 (%) Porosity
-                    tgt_Geo_Para_Por_Min = row[18].ToString(),
+                        //定义字段 最小——孔隙度 (%) Porosity
+                        tgt_Geo_Para_Por_Min = row[19].ToString(),
 
-                    //定义字段 最大——孔隙度 (%) Porosity
-                    tgt_Geo_Para_Por_Max = row[19].ToString(),
+                        //定义字段 最大——孔隙度 (%) Porosity
+                        tgt_Geo_Para_Por_Max = row[20].ToString(),
 
-                    //定义字段 构造复杂程度 Structure Complexity degree
-                    tgt_Geo_Para_Scd = row[20].ToString(),
+                        //定义字段 构造复杂程度 Structure Complexity degree
+                        tgt_Geo_Para_Scd = row[21].ToString(),
 
-                    //定义字段 顶底板条件 Roof—Floor Conditions
-                    tgt_Geo_Para_Rfc = row[21].ToString(),
+                        //定义字段 顶底板条件 Roof—Floor Conditions
+                        tgt_Geo_Para_Rfc = row[22].ToString(),
 
-                    //定义字段 最小——埋深范围(m)  Depth Range 
-                    tgt_Eng_Para_Dr_Min = row[22].ToString(),
+                        //定义字段 最小——埋深范围(m)  Depth Range 
+                        tgt_Eng_Para_Dr_Min = row[23].ToString(),
 
-                    //定义字段 最大——埋深范围(m)  Depth Range 
-                    tgt_Eng_Para_Dr_Max = row[23].ToString(),
+                        //定义字段 最大——埋深范围(m)  Depth Range 
+                        tgt_Eng_Para_Dr_Max = row[24].ToString(),
 
-                    //定义字段 最小——压力系数 Pressure Coefficient (Factor)
-                    tgt_Eng_Para_Pc_Min = row[24].ToString(),
+                        //定义字段 最小——压力系数 Pressure Coefficient (Factor)
+                        tgt_Eng_Para_Pc_Min = row[25].ToString(),
 
-                    //定义字段 最大——压力系数 Pressure Coefficient (Factor)
-                    tgt_Eng_Para_Pc_Max = row[25].ToString(),
+                        //定义字段 最大——压力系数 Pressure Coefficient (Factor)
+                        tgt_Eng_Para_Pc_Max = row[26].ToString(),
 
-                    //定义字段 渗透率 Permeability
-                    tgt_Eng_Para_Per = row[26].ToString(),
+                        //定义字段 渗透率 Permeability
+                        tgt_Eng_Para_Per = row[27].ToString(),
 
-                    //定义字段 裂缝发育程度 Fracture Development Degree
-                    tgt_Eng_Para_Fdd = row[27].ToString(),
+                        //定义字段 裂缝发育程度 Fracture Development Degree
+                        tgt_Eng_Para_Fdd = row[28].ToString(),
 
-                    //定义字段 最小——主应力差异系数 Principle Stress Diversity Coefficient (Factor)
-                    tgt_Eng_Para_Psdc_Min = row[28].ToString(),
+                        //定义字段 最小——主应力差异系数 Principle Stress Diversity Coefficient (Factor)
+                        tgt_Eng_Para_Psdc_Min = row[29].ToString(),
 
-                    //定义字段 最大——主应力差异系数 Principle Stress Diversity Coefficient (Factor)
-                    tgt_Eng_Para_Psdc_Max = row[29].ToString(),
+                        //定义字段 最大——主应力差异系数 Principle Stress Diversity Coefficient (Factor)
+                        tgt_Eng_Para_Psdc_Max = row[30].ToString(),
 
-                    //定义字段 最小——脆性矿物含量 Brittle Mineral Content
-                    tgt_Eng_Para_Bmc_Min = row[30].ToString(),
+                        //定义字段 最小——脆性矿物含量 Brittle Mineral Content
+                        tgt_Eng_Para_Bmc_Min = row[31].ToString(),
 
-                    //定义字段 最大——脆性矿物含量 Brittle Mineral Content
-                    tgt_Eng_Para_Bmc_Max = row[31].ToString(),
+                        //定义字段 最大——脆性矿物含量 Brittle Mineral Content
+                        tgt_Eng_Para_Bmc_Max = row[32].ToString(),
 
-                    //定义字段 水系 Drainage System
-                    tgt_Eng_Para_Ds = row[32].ToString(),
+                        //定义字段 水系 Drainage System
+                        tgt_Eng_Para_Ds = row[33].ToString(),
 
-                    //定义字段 区域勘探程度 Local Exploring Degree
-                    tgt_Eng_Para_Led = row[33].ToString(),
+                        //定义字段 区域勘探程度 Local Exploring Degree
+                        tgt_Eng_Para_Led = row[34].ToString(),
 
-                    //定义字段 市场气价 Gas Price
-                    tgt_Mkt_Para_Gp = row[34].ToString(),
+                        //定义字段 市场气价 Gas Price
+                        tgt_Mkt_Para_Gp = row[35].ToString(),
 
-                    //定义字段 市场需求 Demand
-                    tgt_Mkt_Para_Dmd = row[35].ToString(),
+                        //定义字段 市场需求 Demand
+                        tgt_Mkt_Para_Dmd = row[36].ToString(),
 
-                    //定义字段 交通设施 Transport Utility
-                    tgt_Mkt_Para_Tu = row[36].ToString(),
+                        //定义字段 交通设施 Transport Utility
+                        tgt_Mkt_Para_Tu = row[37].ToString(),
 
-                    //定义字段 管网条件 Pipe Net
-                    tgt_Mkt_Para_Pn = row[37].ToString(),
+                        //定义字段 管网条件 Pipe Net
+                        tgt_Mkt_Para_Pn = row[38].ToString(),
 
-                    //定义字段 地表地貌 Suface and Geography
-                    tgt_Mkt_Para_Sg = row[38].ToString()
-                });
+                        //定义字段 地表地貌 Suface and Geography
+                        tgt_Mkt_Para_Sg = row[39].ToString()
+                    });
 
+                }
+                //将集合返回
+                return list;
             }
-            //将集合返回
-            return list;
+            catch (System.IndexOutOfRangeException)
+            {
+                MessageBox.Show("源文凭数据格式不正确，请检查。","警告",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return null;
+            }
+            
         }
 
         //核心区 TargetEntity数据体 实现数据表格化 from MySql 分配方法 Assign 重载
         public List<TargetEntity> AssignFromDb(List<TargetEntity> list, DataTable dt)
         {
+            int Sn = 0;
             foreach (DataRow row in dt.Rows)
             {
+                Sn++;
                 list.Add(new TargetEntity()
                 {
+                    tgt_Att_Sn = Sn,
                     //获取字段 目标区名字 Target name
                     tgt_Att_Name = row[1].ToString(),
 

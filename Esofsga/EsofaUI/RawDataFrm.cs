@@ -29,13 +29,14 @@ namespace EsofaUI
             this._delCloseTabPage = delCloseTabPage;
             InitializeComponent();
         }
-        enum TgtSc { 好, 较好, 中, 差 };
-        enum TgtScd { 好, 较好, 中, 差 };
-        enum TgtRfc { 好, 较好, 中, 差 };
-        enum TgtFdd { 好, 较好, 中, 差 };
-        
+        /// <summary>
+        /// 用于导入Excel表格中的源数据到数据库表 target 中
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImport_Click(object sender, EventArgs e)
         {
+            
             int counter = 0;
             try
             {
@@ -53,7 +54,7 @@ namespace EsofaUI
                     float tgtPsdcN, tgtPsdcX;
                     int tgtBmcN, tgtBmcX;
                     string tgtDs, tgtLed, tgtGp, tgtDmd, tgtTu, tgtPn, tgtSg;
-                    int[] colIndex = { 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 28, 29, 30, 31 };
+                    int[] colIndex = { 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 23, 24, 25, 26, 27, 29, 30, 31,32 };
                     int rowIndex = 0,diffVal;
                     int rowsAmount = rawDataGridView.SelectedRows.Count;
 
@@ -81,33 +82,33 @@ namespace EsofaUI
                                         rawDataGridView.SelectedRows[i - 1].Cells[colIndex[j]].Value = 0;
                                     }
                                 }
-                                if ((rawDataGridView.SelectedRows[i - 1].Cells[0].Value).ToString() != "")
+                                if ((rawDataGridView.SelectedRows[i - 1].Cells[1].Value).ToString() != "")
                                 {
-                                    tgtName = (rawDataGridView.SelectedRows[i - 1].Cells[0].Value).ToString() + "\",";
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[1].Value).ToString() != "")
+                                    tgtName = (rawDataGridView.SelectedRows[i - 1].Cells[1].Value).ToString() + "\",";
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[2].Value).ToString() != "")
                                     {
-                                        bsnName = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[1].Value).ToString() + "\",";
+                                        bsnName = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[2].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         bsnName = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[2].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString() != "")
                                     {
-                                        tgtPs = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[2].Value).ToString() + "\",";
+                                        tgtPs = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtPs = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[4].Value).ToString() != "")
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString().Equals("中")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString().Equals("好")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString().Equals("差")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString().Equals("较好"))
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[4].Value).ToString().Equals("中")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[4].Value).ToString().Equals("好")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[4].Value).ToString().Equals("差")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[4].Value).ToString().Equals("较好"))
                                         {
-                                            tgtSc = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[3].Value).ToString() + "\",";
+                                            tgtSc = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[4].Value).ToString() + "\",";
                                         }
                                         else
                                         {
@@ -120,20 +121,20 @@ namespace EsofaUI
                                         tgtSc = "NULL,";
                                     }
 
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[5].Value) >=
-                                        Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[4].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[6].Value) >=
+                                        Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[5].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[4].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[5].Value).ToString() != "")
                                         {
-                                            tgtGrN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[4].Value);
+                                            tgtGrN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[5].Value);
                                         }
                                         else
                                         {
                                             tgtGrN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[5].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[6].Value).ToString() != "")
                                         {
-                                            tgtGrX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[5].Value);
+                                            tgtGrX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[6].Value);
                                         }
                                         else
                                         {
@@ -145,20 +146,20 @@ namespace EsofaUI
                                         MessageBox.Show("第 "+ rowIndex +" 行最大地质资源量应该大于或等于最小地质资源量！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[7].Value) >=
-                                       Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[6].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[8].Value) >=
+                                       Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[7].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[6].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[7].Value).ToString() != "")
                                         {
-                                            tgtTrRomsN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[6].Value);
+                                            tgtTrRomsN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[7].Value);
                                         }
                                         else
                                         {
                                             tgtTrRomsN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[7].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[8].Value).ToString() != "")
                                         {
-                                            tgtTrRomsX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[7].Value);
+                                            tgtTrRomsX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[8].Value);
                                         }
                                         else
                                         {
@@ -170,20 +171,20 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大富有机质页岩厚度应该大于或等于最小富有机质页岩厚度！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[9].Value) >=
-                                       Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[8].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[10].Value) >=
+                                       Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[9].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[8].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[9].Value).ToString() != "")
                                         {
-                                            tgtTocN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[8].Value);
+                                            tgtTocN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[9].Value);
                                         }
                                         else
                                         {
                                             tgtTocN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[9].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[10].Value).ToString() != "")
                                         {
-                                            tgtTocX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[9].Value);
+                                            tgtTocX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[10].Value);
                                         }
                                         else
                                         {
@@ -195,28 +196,28 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大Toc值应该大于或等于最小Toc值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[10].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[11].Value).ToString() != "")
                                     {
-                                        tgtKt = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[10].Value).ToString() + "\",";
+                                        tgtKt = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[11].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtKt = "NULL,";
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[12].Value) >=
-                                      Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[11].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[13].Value) >=
+                                      Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[12].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[11].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[12].Value).ToString() != "")
                                         {
-                                            tgtRoN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[11].Value);
+                                            tgtRoN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[12].Value);
                                         }
                                         else
                                         {
                                             tgtRoN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[12].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[13].Value).ToString() != "")
                                         {
-                                            tgtRoX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[12].Value);
+                                            tgtRoX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[13].Value);
                                         }
                                         else
                                         {
@@ -228,28 +229,28 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大Ro值应该大于或等于最小Ro值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[13].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[14].Value).ToString() != "")
                                     {
-                                        tgtEa = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[13].Value);
+                                        tgtEa = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[14].Value);
                                     }
                                     else
                                     {
                                         tgtEa = 0;
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[15].Value) >=
-                                     Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[14].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[16].Value) >=
+                                     Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[15].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[14].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[15].Value).ToString() != "")
                                         {
-                                            tgtGcN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[14].Value);
+                                            tgtGcN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[15].Value);
                                         }
                                         else
                                         {
                                             tgtGcN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[15].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[16].Value).ToString() != "")
                                         {
-                                            tgtGcX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[15].Value);
+                                            tgtGcX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[16].Value);
                                         }
                                         else
                                         {
@@ -261,20 +262,20 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大含气量值应该大于或等于最小含气量值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[17].Value) >=
-                                     Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[16].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[18].Value) >=
+                                     Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[17].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[16].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[17].Value).ToString() != "")
                                         {
-                                            tgtRrN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[16].Value);
+                                            tgtRrN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[17].Value);
                                         }
                                         else
                                         {
                                             tgtRrN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[17].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[18].Value).ToString() != "")
                                         {
-                                            tgtRrX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[17].Value);
+                                            tgtRrX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[18].Value);
                                         }
                                         else
                                         {
@@ -286,20 +287,20 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大资源丰度值应该大于或等于最小资源丰度值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[19].Value) >=
-                                    Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[18].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[20].Value) >=
+                                    Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[19].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[18].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[19].Value).ToString() != "")
                                         {
-                                            tgtPorN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[18].Value);
+                                            tgtPorN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[19].Value);
                                         }
                                         else
                                         {
                                             tgtPorN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[19].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString() != "")
                                         {
-                                            tgtPorX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[19].Value);
+                                            tgtPorX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[20].Value);
                                         }
                                         else
                                         {
@@ -311,14 +312,14 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大孔隙度值应该大于或等于最小孔隙度值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString() != "")
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString().Equals("中")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString().Equals("好")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString().Equals("差")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString().Equals("较好"))
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("中")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("好")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("差")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("较好"))
                                         {
-                                            tgtScd = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[20].Value).ToString() + "\",";
+                                            tgtScd = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString() + "\",";
                                         }
                                         else
                                         {
@@ -330,14 +331,14 @@ namespace EsofaUI
                                     {
                                         tgtScd = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[22].Value).ToString() != "")
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("中")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("好")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("差")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString().Equals("较好"))
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[22].Value).ToString().Equals("中")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[22].Value).ToString().Equals("好")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[22].Value).ToString().Equals("差")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[22].Value).ToString().Equals("较好"))
                                         {
-                                            tgtRfc = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[21].Value).ToString() + "\",";
+                                            tgtRfc = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[22].Value).ToString() + "\",";
                                         }
                                         else
                                         {
@@ -349,20 +350,20 @@ namespace EsofaUI
                                     {
                                         tgtRfc = "NULL,";
                                     }
-                                    if (Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[23].Value) >=
-                                   Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[22].Value))
+                                    if (Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[24].Value) >=
+                                   Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[23].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[22].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[23].Value).ToString() != "")
                                         {
-                                            tgtDrN = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[22].Value);
+                                            tgtDrN = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[23].Value);
                                         }
                                         else
                                         {
                                             tgtDrN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[23].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[24].Value).ToString() != "")
                                         {
-                                            tgtDrX = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[23].Value);
+                                            tgtDrX = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[24].Value);
                                         }
                                         else
                                         {
@@ -374,20 +375,20 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大埋深范围值应该大于或等于最小埋深范围值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[25].Value) >=
-                                    Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[24].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[26].Value) >=
+                                    Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[25].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[24].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[25].Value).ToString() != "")
                                         {
-                                            tgtPcN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[24].Value);
+                                            tgtPcN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[25].Value);
                                         }
                                         else
                                         {
                                             tgtPcN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[25].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[26].Value).ToString() != "")
                                         {
-                                            tgtPcX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[25].Value);
+                                            tgtPcX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[26].Value);
                                         }
                                         else
                                         {
@@ -399,22 +400,22 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大压力系数值应该大于或等于最小压力系数值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[26].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[27].Value).ToString() != "")
                                     {
-                                        tgtPer = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[26].Value);
+                                        tgtPer = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[27].Value);
                                     }
                                     else
                                     {
                                         tgtPer = 0;
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[27].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[28].Value).ToString() != "")
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[27].Value).ToString().Equals("中")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[27].Value).ToString().Equals("好")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[27].Value).ToString().Equals("差")
-                                            || (rawDataGridView.SelectedRows[i - 1].Cells[27].Value).ToString().Equals("较好"))
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[28].Value).ToString().Equals("中")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[28].Value).ToString().Equals("好")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[28].Value).ToString().Equals("差")
+                                            || (rawDataGridView.SelectedRows[i - 1].Cells[28].Value).ToString().Equals("较好"))
                                         {
-                                            tgtFdd = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[27].Value).ToString() + "\",";
+                                            tgtFdd = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[28].Value).ToString() + "\",";
                                         }
                                         else
                                         {
@@ -426,20 +427,20 @@ namespace EsofaUI
                                     {
                                         tgtFdd = "NULL,";
                                     }
-                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[29].Value) >=
-                                   Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[28].Value))
+                                    if (Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[30].Value) >=
+                                   Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[29].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[28].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[29].Value).ToString() != "")
                                         {
-                                            tgtPsdcN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[28].Value);
+                                            tgtPsdcN = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[29].Value);
                                         }
                                         else
                                         {
                                             tgtPsdcN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[29].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[30].Value).ToString() != "")
                                         {
-                                            tgtPsdcX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[29].Value);
+                                            tgtPsdcX = Convert.ToSingle(rawDataGridView.SelectedRows[i - 1].Cells[30].Value);
                                         }
                                         else
                                         {
@@ -451,20 +452,20 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大主应力差异系数值应该大于或等于最小主应力差异系数值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if (Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[31].Value) >=
-                                  Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[30].Value))
+                                    if (Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[32].Value) >=
+                                  Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[31].Value))
                                     {
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[30].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[31].Value).ToString() != "")
                                         {
-                                            tgtBmcN = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[30].Value);
+                                            tgtBmcN = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[31].Value);
                                         }
                                         else
                                         {
                                             tgtBmcN = 0;
                                         }
-                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[31].Value).ToString() != "")
+                                        if ((rawDataGridView.SelectedRows[i - 1].Cells[32].Value).ToString() != "")
                                         {
-                                            tgtBmcX = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[31].Value);
+                                            tgtBmcX = Convert.ToInt32(rawDataGridView.SelectedRows[i - 1].Cells[32].Value);
                                         }
                                         else
                                         {
@@ -476,57 +477,57 @@ namespace EsofaUI
                                         MessageBox.Show("第 " + rowIndex + " 行最大脆性矿物含量值应该大于或等于最小脆性矿物含量值！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         return;
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[32].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[33].Value).ToString() != "")
                                     {
-                                        tgtDs = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[32].Value).ToString() + "\",";
+                                        tgtDs = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[33].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtDs = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[33].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[34].Value).ToString() != "")
                                     {
-                                        tgtLed = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[33].Value).ToString() + "\",";
+                                        tgtLed = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[34].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtLed = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[34].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[35].Value).ToString() != "")
                                     {
-                                        tgtGp = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[34].Value).ToString() + "\",";
+                                        tgtGp = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[35].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtGp = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[35].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[36].Value).ToString() != "")
                                     {
-                                        tgtDmd = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[35].Value).ToString() + "\",";
+                                        tgtDmd = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[36].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtDmd = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[36].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[37].Value).ToString() != "")
                                     {
-                                        tgtTu = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[36].Value).ToString() + "\",";
+                                        tgtTu = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[37].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtTu = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[37].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[38].Value).ToString() != "")
                                     {
-                                        tgtPn = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[37].Value).ToString() + "\",";
+                                        tgtPn = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[38].Value).ToString() + "\",";
                                     }
                                     else
                                     {
                                         tgtPn = "NULL,";
                                     }
-                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[38].Value).ToString() != "")
+                                    if ((rawDataGridView.SelectedRows[i - 1].Cells[39].Value).ToString() != "")
                                     {
-                                        tgtSg = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[38].Value).ToString() + "\")";
+                                        tgtSg = "\"" + (rawDataGridView.SelectedRows[i - 1].Cells[39].Value).ToString() + "\")";
                                     }
                                     else
                                     {
@@ -614,13 +615,17 @@ namespace EsofaUI
                             {
                                 if(counter == rowsAmount)
                                 {
-                                    MessageBox.Show("成功插入所选中 " + counter + " 行数据！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("成功写入所选中 " + counter + " 行数据！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                                 else
                                 {
                                     diffVal = rowsAmount - counter;
-                                    MessageBox.Show("成功插入所选 "+ rowsAmount + " 数据中的 " + counter + " 行数据！\n\r导入数据中有 "+diffVal+" 条与数据库中目标区名称重复！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("成功写入所选 "+ rowsAmount + " 数据中的 " + counter + " 行数据！\n\r导入数据中有 "+diffVal+" 条与数据库中目标区名称重复！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }   
+                            }
+                            else
+                            {
+                                MessageBox.Show("成功写入所选 "+rowsAmount+"行数据中的 0 行数据！\n\r导入数据中有 " + rowsAmount + " 条与数据库中目标区名称重复！", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             break;
                         case DialogResult.No:
@@ -644,6 +649,11 @@ namespace EsofaUI
         private void btnCancle_Click(object sender, EventArgs e)
         {
             _delCloseTabPage();
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test......");
         }
     }
 }
