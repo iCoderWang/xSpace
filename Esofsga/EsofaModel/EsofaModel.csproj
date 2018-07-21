@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AverageValuesTargetEntity.cs" />
     <Compile Include="BasinEntity.cs" />
     <Compile Include="BlockEntity.cs" />
     <Compile Include="BlockParametersGrade.cs" />

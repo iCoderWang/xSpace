@@ -9,13 +9,9 @@ namespace EsofaModel
     //目标数据实体（Target: Core Area）
     public partial class TargetEntity
     {
-       
-        //public string bsn_Att_Code { get; set; }
-        //区块 （有利区）关联参数 Block Attribution Params
-        //public string blk_Att_Name { get; set; }
-        //public string blk_Att_Code { get; set; }
         //目标区块的序号
         public int tgt_Att_Sn { get; set; }
+
        /* 目标区实体所有参数用 tgt_ 开始
          * 属性条件 tgt_Att_ ,
          * 地质条件 tgt_Geo_ ,
@@ -25,13 +21,11 @@ namespace EsofaModel
 
         //目标区 （核心区）属性参数 Target Attribute Params
         //定义字段 区块 block  
-        //public string para_Blk { get; set; }
         public string tgt_Att_Name { get; set; }
 
         //盆地（远景区） 关联参数 Basin Attribution Params
         public string bsn_Att_Name { get; set; }
 
-        // public string tgt_Att_Code { get; set; }
         //定义字段 主力层系 primary Strata
         public string tgt_Att_Ps { get; set; }
 
@@ -48,9 +42,6 @@ namespace EsofaModel
         /* 目标区 （核心区）地质参数
          * Target Geology Params:  tgt_Geo_Para_
          */
-        //定义字段 富有机质页岩平均厚度(m) Average Shale Thickness Riching Organic Matters 
-        //public string Para_StromAt { get; set; }
-        //public string tgt_Geo_Para_Astrom { get; set; }
 
         //定义字段 最小——富有机质页岩厚度范围(m) Thinckness Range Riching Organic Matters Shale
         public string tgt_Geo_Para_TrRoms_Min { get; set; }
@@ -74,7 +65,6 @@ namespace EsofaModel
         public string tgt_Geo_Para_Ro_Max { get; set; }
 
         //定义字段 有效圈定面积(km2) Effective Area
-        // public string Para_Ea { get; set; }
         public string tgt_Geo_Para_Ea { get; set; }
 
         //定义字段 最小——含气量 (m3/t) Gas Content
@@ -96,32 +86,15 @@ namespace EsofaModel
         public string tgt_Geo_Para_Por_Max { get; set; }
 
         //定义字段 构造复杂程度 Structure Complexity degree
-        //public string Para_Scd { get; set; }
         public string tgt_Geo_Para_Scd { get; set; }
 
         //定义字段 顶底板条件 (m) roof-floor Thickness
         public string tgt_Geo_Para_Rfc { get; set; }
 
-        //public string Para_Trf { get; set; }
-        //定义字段 顶板岩性 Roof Lithology
-        //public string tgt_Geo_Para_Rfl { get; set; }
-
-        //定义字段 顶板厚度 Roof Thickness
-        //public string tgt_Geo_Para_Rft { get; set; }
-
-        //定义字段 底板岩性 Floor Lithology
-        //public string tgt_Geo_Para_Frl { get; set; }
-
-        //定义字段 底板厚度 Floor Thickness
-        //public string tgt_Geo_Para_Frt { get; set; }
-
 
         /* 目标区 （核心区）工程参数
          * Target Engineering Params: tgt_Eng_Para_
          */
-        //定义字段 埋深范围均值(m) Average Depth 
-        // public string Para_Dr { get; set; }
-        //public string tgt_Eng_Para_Ad { get; set; }
 
         //定义字段 最小——埋深范围(m)  Depth Range 
         public string tgt_Eng_Para_Dr_Min { get; set; }
@@ -180,9 +153,5 @@ namespace EsofaModel
 
         //定义字段 地表地貌 Suface and Geography
         public string tgt_Mkt_Para_Sg { get; set; }
-
-
-        //定义字段 富有机质页岩厚度(m) shale Thickness Riching Organic Matters
-        //public string Para_Strom { get; set; }
     }
 }

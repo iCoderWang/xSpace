@@ -21,18 +21,21 @@ namespace EsofaUI
         
         private void tlStrip_DbQueryAll_Click(object sender, EventArgs e)
         {
+            string sql = "select * from target";
             RawDataBLL rawDataBLL = new RawDataBLL();
             this.dgv_DbQuery.AutoGenerateColumns = true;
             DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();
-            this.dgv_DbQuery.Name = "dgvTarget";
+            this.dgv_DbQuery.Name = "dgvView";
             this.dgv_DbQuery.ReadOnly = true;
-            this.dgv_DbQuery.DataSource = rawDataBLL.GetList();
+            this.dgv_DbQuery.DataSource = rawDataBLL.GetAvg_List(sql);
             dgvCE.ColumHeaderEdit(this.dgv_DbQuery, this.dgv_DbQuery.Name);
         }
 
         private void tlStrip_DbQueryBy_Click(object sender, EventArgs e)
         {
             this.dgv_DbQuery.DataSource = null;
+            ConditionalQueryFrm cqf = new ConditionalQueryFrm();
+            cqf.Show();
         }
 
         private void tlStripBtn_Edit_Click(object sender, EventArgs e)

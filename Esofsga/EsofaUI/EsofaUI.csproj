@@ -170,6 +170,12 @@
     <Compile Include="AccessChangeFrm.Designer.cs">
       <DependentUpon>AccessChangeFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConditionalQueryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConditionalQueryFrm.Designer.cs">
+      <DependentUpon>ConditionalQueryFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CoreAreaMatrixFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccessChangeFrm.resx">
       <DependentUpon>AccessChangeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConditionalQueryFrm.resx">
+      <DependentUpon>ConditionalQueryFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CoreAreaMatrixFrm.resx">
       <DependentUpon>CoreAreaMatrixFrm.cs</DependentUpon>
