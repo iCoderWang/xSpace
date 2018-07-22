@@ -60,7 +60,7 @@ namespace EsofaCommon
                 {
                     dgv.Columns[i].HeaderText = headerTxt[i - 1];
                 }
-                }
+            }
              
         }
     }

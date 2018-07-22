@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tlStrip_DbQueryFrm = new System.Windows.Forms.ToolStrip();
-            this.dgv_DbQuery = new System.Windows.Forms.DataGridView();
             this.tlStrip_DbQueryAll = new System.Windows.Forms.ToolStripButton();
             this.tlStrip_DbQueryBy = new System.Windows.Forms.ToolStripButton();
             this.tlStripBtn_Edit = new System.Windows.Forms.ToolStripButton();
@@ -40,6 +39,7 @@
             this.tlStripBtn_Refresh = new System.Windows.Forms.ToolStripButton();
             this.tlStripBtn_BlankRowAdd = new System.Windows.Forms.ToolStripButton();
             this.tlStripBtn_BlankRowDel = new System.Windows.Forms.ToolStripButton();
+            this.dgv_DbQuery = new System.Windows.Forms.DataGridView();
             this.tlStrip_DbQueryFrm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DbQuery)).BeginInit();
             this.SuspendLayout();
@@ -66,18 +66,6 @@
             this.tlStrip_DbQueryFrm.TabIndex = 0;
             this.tlStrip_DbQueryFrm.Text = "数据查询";
             // 
-            // dgv_DbQuery
-            // 
-            this.dgv_DbQuery.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgv_DbQuery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DbQuery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgv_DbQuery.Location = new System.Drawing.Point(0, 34);
-            this.dgv_DbQuery.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.dgv_DbQuery.Name = "dgv_DbQuery";
-            this.dgv_DbQuery.ReadOnly = true;
-            this.dgv_DbQuery.Size = new System.Drawing.Size(750, 416);
-            this.dgv_DbQuery.TabIndex = 1;
-            // 
             // tlStrip_DbQueryAll
             // 
             this.tlStrip_DbQueryAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -86,6 +74,7 @@
             this.tlStrip_DbQueryAll.Margin = new System.Windows.Forms.Padding(2, 3, 1, 3);
             this.tlStrip_DbQueryAll.Name = "tlStrip_DbQueryAll";
             this.tlStrip_DbQueryAll.Size = new System.Drawing.Size(28, 28);
+            this.tlStrip_DbQueryAll.Tag = "";
             this.tlStrip_DbQueryAll.Text = "全部查询";
             this.tlStrip_DbQueryAll.Click += new System.EventHandler(this.tlStrip_DbQueryAll_Click);
             // 
@@ -97,6 +86,7 @@
             this.tlStrip_DbQueryBy.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.tlStrip_DbQueryBy.Name = "tlStrip_DbQueryBy";
             this.tlStrip_DbQueryBy.Size = new System.Drawing.Size(28, 28);
+            this.tlStrip_DbQueryBy.Tag = "";
             this.tlStrip_DbQueryBy.Text = "条件查询";
             this.tlStrip_DbQueryBy.Click += new System.EventHandler(this.tlStrip_DbQueryBy_Click);
             // 
@@ -200,6 +190,18 @@
             this.tlStripBtn_BlankRowDel.Size = new System.Drawing.Size(28, 28);
             this.tlStripBtn_BlankRowDel.Text = "删除空行";
             this.tlStripBtn_BlankRowDel.Visible = false;
+            // 
+            // dgv_DbQuery
+            // 
+            this.dgv_DbQuery.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgv_DbQuery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DbQuery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgv_DbQuery.Location = new System.Drawing.Point(0, 34);
+            this.dgv_DbQuery.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.dgv_DbQuery.Name = "dgv_DbQuery";
+            this.dgv_DbQuery.ReadOnly = true;
+            this.dgv_DbQuery.Size = new System.Drawing.Size(750, 416);
+            this.dgv_DbQuery.TabIndex = 1;
             // 
             // DbDataQueryFrm
             // 

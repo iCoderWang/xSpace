@@ -20,7 +20,6 @@ namespace EsofaUI
             //将委托变量赋值，当ImportingRawDataFrm在 Main_Frm下被初始化时，函数将被传递到
             //ImportingRawDataFrm下，即 del的值将是被传参的函数名字
             this._del = del;
-            //this._entity = rawData;
             InitializeComponent();
         }
 
