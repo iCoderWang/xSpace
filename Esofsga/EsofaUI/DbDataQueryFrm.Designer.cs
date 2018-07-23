@@ -130,6 +130,7 @@
             this.tlStripBtn_DbUpdate.Size = new System.Drawing.Size(28, 29);
             this.tlStripBtn_DbUpdate.Text = "更新数据库";
             this.tlStripBtn_DbUpdate.Visible = false;
+            this.tlStripBtn_DbUpdate.Click += new System.EventHandler(this.tlStripBtn_DbUpdate_Click);
             // 
             // tlStripBtn_MultiDel
             // 
@@ -142,6 +143,7 @@
             this.tlStripBtn_MultiDel.Size = new System.Drawing.Size(28, 28);
             this.tlStripBtn_MultiDel.Text = "批量删除";
             this.tlStripBtn_MultiDel.Visible = false;
+            this.tlStripBtn_MultiDel.Click += new System.EventHandler(this.tlStripBtn_MultiDel_Click);
             // 
             // tlStripBtn_SingleDel
             // 
@@ -154,6 +156,7 @@
             this.tlStripBtn_SingleDel.Size = new System.Drawing.Size(28, 28);
             this.tlStripBtn_SingleDel.Text = "单条删除";
             this.tlStripBtn_SingleDel.Visible = false;
+            this.tlStripBtn_SingleDel.Click += new System.EventHandler(this.tlStripBtn_SingleDel_Click);
             // 
             // tlStripBtn_Refresh
             // 
@@ -166,6 +169,7 @@
             this.tlStripBtn_Refresh.Size = new System.Drawing.Size(28, 28);
             this.tlStripBtn_Refresh.Text = "数据刷新";
             this.tlStripBtn_Refresh.Visible = false;
+            this.tlStripBtn_Refresh.Click += new System.EventHandler(this.tlStripBtn_Refresh_Click);
             // 
             // tlStripBtn_BlankRowAdd
             // 
@@ -178,6 +182,7 @@
             this.tlStripBtn_BlankRowAdd.Size = new System.Drawing.Size(28, 28);
             this.tlStripBtn_BlankRowAdd.Text = "添加空行";
             this.tlStripBtn_BlankRowAdd.Visible = false;
+            this.tlStripBtn_BlankRowAdd.Click += new System.EventHandler(this.tlStripBtn_BlankRowAdd_Click);
             // 
             // tlStripBtn_BlankRowDel
             // 
@@ -190,9 +195,11 @@
             this.tlStripBtn_BlankRowDel.Size = new System.Drawing.Size(28, 28);
             this.tlStripBtn_BlankRowDel.Text = "删除空行";
             this.tlStripBtn_BlankRowDel.Visible = false;
+            this.tlStripBtn_BlankRowDel.Click += new System.EventHandler(this.tlStripBtn_BlankRowDel_Click);
             // 
             // dgv_DbQuery
             // 
+            this.dgv_DbQuery.AllowUserToAddRows = false;
             this.dgv_DbQuery.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgv_DbQuery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DbQuery.Dock = System.Windows.Forms.DockStyle.Top;

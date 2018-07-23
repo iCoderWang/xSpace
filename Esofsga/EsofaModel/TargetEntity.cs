@@ -12,13 +12,13 @@ namespace EsofaModel
         //目标区块的序号
         public int tgt_Att_Sn { get; set; }
 
-       /* 目标区实体所有参数用 tgt_ 开始
-         * 属性条件 tgt_Att_ ,
-         * 地质条件 tgt_Geo_ ,
-         * 工程条件 tgt_Eng_ , 
-         * 市场条件 tgt_Mkt_ ,
-         */
-
+        /* 目标区实体所有参数用 tgt_ 开始
+          * 属性条件 tgt_Att_ ,
+          * 地质条件 tgt_Geo_ ,
+          * 工程条件 tgt_Eng_ , 
+          * 市场条件 tgt_Mkt_ ,
+          */
+        
         //目标区 （核心区）属性参数 Target Attribute Params
         //定义字段 区块 block  
         public string tgt_Att_Name { get; set; }
@@ -153,5 +153,8 @@ namespace EsofaModel
 
         //定义字段 地表地貌 Suface and Geography
         public string tgt_Mkt_Para_Sg { get; set; }
+
+        //目标区块的Id
+        public int tgt_Att_Id { get; set; }
     }
 }

@@ -150,6 +150,7 @@
             this.txtBox_QuerySql.Name = "txtBox_QuerySql";
             this.txtBox_QuerySql.Size = new System.Drawing.Size(387, 78);
             this.txtBox_QuerySql.TabIndex = 10;
+            this.txtBox_QuerySql.TextChanged += new System.EventHandler(this.txtBox_QuerySql_TextChanged);
             // 
             // btn_QueryCmd
             // 

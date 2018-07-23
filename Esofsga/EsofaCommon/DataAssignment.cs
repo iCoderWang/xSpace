@@ -232,6 +232,7 @@ namespace EsofaCommon
                     list.Add(new TargetEntity()
                     {
                         tgt_Att_Sn = Sn, //Convert.ToInt32(row[0]),
+
                         //获取字段 目标区名字 Target name
                         tgt_Att_Name = row[1].ToString(),
 
@@ -372,6 +373,10 @@ namespace EsofaCommon
                 list.Add(new TargetEntity()
                 {
                     tgt_Att_Sn = Sn,
+
+                    //获取字段 目标区Id
+                    tgt_Att_Id = Convert.ToInt32(row[0]),
+
                     //获取字段 目标区名字 Target name
                     tgt_Att_Name = row[1].ToString(),
 
@@ -499,13 +504,17 @@ namespace EsofaCommon
         //数据表格 from MySql 分配方法 Assign 重载
         public List<AverageValuesTargetEntity> AssignFromDb(List<AverageValuesTargetEntity> list, DataTable dt)
         {
-            int Sn = 0;
+            int Sn = 10;
             foreach (DataRow row in dt.Rows)
             {
                 Sn++;
                 list.Add(new AverageValuesTargetEntity()
                 {
                     tgt_Att_Sn = Sn,
+
+                    //获取字段 目标区Id
+                    tgt_Att_Id = Convert.ToInt32(row[0]),
+
                     //获取字段 目标区名字 Target name
                     tgt_Att_Name = row[1].ToString(),
 

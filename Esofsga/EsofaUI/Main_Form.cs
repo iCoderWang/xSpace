@@ -669,6 +669,7 @@ namespace EsofaUI
         private void sideBar_BtnModify_Click(object sender, EventArgs e)
         {
             DbDataQueryFrm dbDataQueryFrm = new DbDataQueryFrm(TabPage_Close);
+            //lbl_Status.Text = "选中行数："+ (dbDataQueryFrm.rowCounter).ToString();
             dbDataQueryFrm.tlStripBtn_Edit.Enabled = true;
             dbDataQueryFrm.tlStripBtn_Edit.Visible = true;
             //dbDataQueryFrm.tlStripBtn_DbUpdate.Enabled = true;

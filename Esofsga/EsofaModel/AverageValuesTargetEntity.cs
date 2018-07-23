@@ -122,6 +122,9 @@ namespace EsofaModel
         //定义字段 地表地貌 Suface and Geography
         public string tgt_Mkt_Para_Sg { get; set; }
 
+        //目标区块的Id
+        public int tgt_Att_Id { get; set; }
+
     }
 }
 

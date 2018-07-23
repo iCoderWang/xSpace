@@ -49,15 +49,6 @@ namespace EsofaUI
                     _del(filePath, objList);
                     // _del(filePath, targetEntityList.ConvertAll<object>(x => (object)x));
                 }
-                else
-                {
-                    //运行委托所传递进来的函数
-                    //List<object> objList = new List<object>();
-                    List<RawData> rawDataList = new List<RawData>();
-                    object objList = rawDataList;
-                    _del(filePath, objList);
-                    //_del(filePath,rawDataList.ConvertAll<object>( x => (object)x));
-                }
             }
             else
             {
