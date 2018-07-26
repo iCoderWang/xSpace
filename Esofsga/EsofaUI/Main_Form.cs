@@ -203,6 +203,9 @@ namespace EsofaUI
         public void TabPageCreate(string pageText, GradingFrm gradingFrm)
         {
             DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();
+            List<AverageValuesTargetEntity> listAV_Te = new List<AverageValuesTargetEntity>();
+            List<AverageValuesBlockEntity> listAV_Blk = new List<AverageValuesBlockEntity>();
+            List<AverageValuesBasinEntity> listAV_Bsn = new List<AverageValuesBasinEntity>();
             workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(pageText);
             workAreaTabPageController.SelectedTabPage.Controls.Add(gradingFrm);
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
@@ -213,9 +216,13 @@ namespace EsofaUI
             //设置窗体的高度和新建Page的高度相等
             gradingFrm.Height = workAreaTabPageController.Height;
 
-            gradingFrm.dgvTarget.AutoGenerateColumns = true;
-            gradingFrm.dgvTarget.DataSource = temTgtList;
-            dgvCE.ColumHeaderEdit(gradingFrm.dgvTarget, gradingFrm.dgvTarget.Name);
+            //gradingFrm.dgvView_Target.AutoGenerateColumns = true;
+            gradingFrm.dgvView_Target.DataSource = listAV_Te;
+            gradingFrm.dgvView_Block.DataSource = listAV_Blk;
+            gradingFrm.dgvView_Basin.DataSource = listAV_Bsn;       
+            dgvCE.ColumHeaderEdit(gradingFrm.dgvView_Target, "dgvView");
+            dgvCE.ColumHeaderEdit(gradingFrm.dgvView_Block, "dgvView_Block");
+            dgvCE.ColumHeaderEdit(gradingFrm.dgvView_Basin, "dgvView_Basin");
 
 
             //设置rawDataGridView的dock属性，使其填充窗体
@@ -338,6 +345,17 @@ namespace EsofaUI
         {
             DbDataQueryFrm dbDataQueryFrm = new DbDataQueryFrm(TabPage_Close);
             dbDataQueryFrm.TopLevel = false;
+            dbDataQueryFrm.tlStripBtn_MultiDel.Visible = false;
+            dbDataQueryFrm.tlStripBtn_SingleDel.Visible = false;
+            dbDataQueryFrm.tlStripBtn_BlankRowAdd.Visible = false;
+            dbDataQueryFrm.tlStripBtn_BlankRowDel.Visible = false;
+            dbDataQueryFrm.tlStripBtn_DbUpdate.Visible = false;
+            dbDataQueryFrm.tlStripBtn_DataModify.Visible = false;
+            dbDataQueryFrm.tlStrip_ChkBox.Visible = false;
+            dbDataQueryFrm.toolStripSeparator1.Visible = false;
+            dbDataQueryFrm.toolStripSeparator3.Visible = false;
+            dbDataQueryFrm.toolStripSeparator4.Visible = false;
+            dbDataQueryFrm.toolStripSeparator5.Visible = false;
             XtraTabPage tabPage = new XtraTabPage();
             dbDataQueryFrm.Width = workAreaTabPageController.Width - 5;
             dbDataQueryFrm.Height = workAreaTabPageController.Height;
@@ -670,20 +688,13 @@ namespace EsofaUI
         {
             DbDataQueryFrm dbDataQueryFrm = new DbDataQueryFrm(TabPage_Close);
             //lbl_Status.Text = "选中行数："+ (dbDataQueryFrm.rowCounter).ToString();
-            dbDataQueryFrm.tlStripBtn_Edit.Enabled = true;
-            dbDataQueryFrm.tlStripBtn_Edit.Visible = true;
-            //dbDataQueryFrm.tlStripBtn_DbUpdate.Enabled = true;
-            dbDataQueryFrm.tlStripBtn_DbUpdate.Visible = true;
-            //
-            dbDataQueryFrm.tlStripBtn_MultiDel.Visible = true;
-            //dbDataQueryFrm.
-            dbDataQueryFrm.tlStripBtn_SingleDel.Visible = true;
-            //dbDataQueryFrm.;
-            dbDataQueryFrm.tlStripBtn_Refresh.Visible = true;
-            //dbDataQueryFrm.tlStripBtn_BlankRowAdd.Enabled = true;
-            dbDataQueryFrm.tlStripBtn_BlankRowAdd.Visible = true;
-            //dbDataQueryFrm.tlStripBtn_BlankRowDel.Enabled = true;
-            dbDataQueryFrm.tlStripBtn_BlankRowDel.Visible = true;
+            dbDataQueryFrm.tlStrip_ChkBox.Enabled = true;
+            dbDataQueryFrm.tlStrip_ChkBox.Visible = true;
+            dbDataQueryFrm.tlStripBtn_BlankRowAdd.Visible = false;
+            dbDataQueryFrm.tlStripBtn_BlankRowDel.Visible = false;
+            dbDataQueryFrm.tlStripBtn_DataModify.Visible = false;
+            dbDataQueryFrm.toolStripSeparator3.Visible = false;
+            //dbDataQueryFrm.tlStrip_DbQueryAll.Margin = new Padding(100, 3, 1, 3);
             dbDataQueryFrm.TopLevel = false;
             XtraTabPage tabPage = new XtraTabPage();
             dbDataQueryFrm.Width = workAreaTabPageController.Width - 5;
@@ -724,6 +735,38 @@ namespace EsofaUI
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
             rawDataFrm.Show();
 
+        }
+
+        private void sideBar_BtnAddData_Click(object sender, EventArgs e)
+        {
+            DbDataQueryFrm dbDataQueryFrm = new DbDataQueryFrm(TabPage_Close);
+            //lbl_Status.Text = "选中行数："+ (dbDataQueryFrm.rowCounter).ToString();
+            dbDataQueryFrm.tlStrip_ChkBox.Enabled = false;
+            dbDataQueryFrm.tlStrip_ChkBox.Visible = false;
+            dbDataQueryFrm.tlStrip_DbQueryAll.Enabled = false;
+            dbDataQueryFrm.tlStrip_DbQueryAll.Visible = false;
+            dbDataQueryFrm.toolStripSeparator5.Visible = false;
+            dbDataQueryFrm.toolStripSeparator2.Visible = false;
+            dbDataQueryFrm.tlStrip_DbQueryBy.Enabled = false;
+            dbDataQueryFrm.tlStrip_DbQueryBy.Visible = false;
+            dbDataQueryFrm.tlStripBtn_DbUpdate.Visible = false;
+            dbDataQueryFrm.tlStripBtn_MultiDel.Enabled = true;
+            dbDataQueryFrm.tlStripBtn_SingleDel.Enabled = true;
+            dbDataQueryFrm.tlStripBtn_BlankRowAdd.Enabled = true;
+            dbDataQueryFrm.tlStripBtn_BlankRowDel.Visible = false;
+            
+            //dbDataQueryFrm.tlStrip_DbQueryAll.Margin = new Padding(3, 3, 1, 3);
+            dbDataQueryFrm.TopLevel = false;
+            XtraTabPage tabPage = new XtraTabPage();
+            dbDataQueryFrm.Width = workAreaTabPageController.Width - 5;
+            dbDataQueryFrm.Height = workAreaTabPageController.Height;
+            //dbDataQueryFrm.dgv_DbQuery.Height = dbDataQueryFrm.Height;
+            dbDataQueryFrm.dgv_DbQuery.Height = dbDataQueryFrm.Height - 62;
+            tabPage.Text = "目标区_数据录入";
+            workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(tabPage.Text);
+            workAreaTabPageController.SelectedTabPage.Controls.Add(dbDataQueryFrm);
+            workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
+            dbDataQueryFrm.Show();
         }
     }
 }

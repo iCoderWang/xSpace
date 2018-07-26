@@ -159,18 +159,10 @@ namespace EsofaUI
                 //list.ConvertAll(s=> s as AverageValuesTargetEntity);
                 foreach (AverageValuesTargetEntity avte in listAvgTgtEnty)
                 {
-                    //if (dgvName.Equals("dgvView"))
-                    //{
-                    //    obj.ConvertAll(s => s as AverageValuesTargetEntity);
-                    //}
-                    //if (dgvName.Equals("dgvTarget"))
-                    //{
-                    //    obj.ConvertAll(s => s as TargetEntity);
-                    //}
                     //利用反射机制，将string类型的值转变为变量，变获取 对象变量(avte)中对应的该名称属性的值。
                     Type tp = avte.GetType(); //获取对象(obj) avte 的变量类型为： AverageValuesTargeEntity
-                                             //对字符串（属性 Property）即 parasAvgTE[indexItem]进行判断，发现属性(Property)的属性(Attribute),
-                                             //并提供对属性(Property)的访问，比如获取该属性的值 （.GetValue( 对象 (obj))）
+                    //对字符串（属性 Property）即 parasAvgTE[indexItem]进行判断，发现属性(Property)的属性(Attribute),
+                    //并提供对属性(Property)的访问，比如获取该属性的值 （.GetValue( 对象 (obj))）
                     System.Reflection.PropertyInfo pi = tp.GetProperty(parasAvgTgtEnty[indexItem].Trim());
                     // pi.GetVaue(avte); 语句是获得对象avte的属性 parasAvgTE[indexItem] 所对应的值 
                     //下面的判断语句是为了剔除重复值 

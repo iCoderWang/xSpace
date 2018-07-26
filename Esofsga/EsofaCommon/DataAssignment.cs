@@ -504,7 +504,7 @@ namespace EsofaCommon
         //数据表格 from MySql 分配方法 Assign 重载
         public List<AverageValuesTargetEntity> AssignFromDb(List<AverageValuesTargetEntity> list, DataTable dt)
         {
-            int Sn = 10;
+            int Sn = 0;
             foreach (DataRow row in dt.Rows)
             {
                 Sn++;

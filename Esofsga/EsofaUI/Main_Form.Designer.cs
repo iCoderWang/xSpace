@@ -398,35 +398,35 @@
             // 
             this.menuSub_DataIm.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataIm.Image")));
             this.menuSub_DataIm.Name = "menuSub_DataIm";
-            this.menuSub_DataIm.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataIm.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataIm.Text = "批量导入(I)";
             this.menuSub_DataIm.Click += new System.EventHandler(this.menuSub_DataIm_Click);
             // 
             // menuSub_DataInput
             // 
             this.menuSub_DataInput.Name = "menuSub_DataInput";
-            this.menuSub_DataInput.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataInput.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataInput.Text = "数据录入(R)";
             // 
             // menuSub_DataMo
             // 
             this.menuSub_DataMo.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataMo.Image")));
             this.menuSub_DataMo.Name = "menuSub_DataMo";
-            this.menuSub_DataMo.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataMo.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataMo.Text = "数据编辑(M)";
             this.menuSub_DataMo.Click += new System.EventHandler(this.menuSub_DataMo_Click);
             // 
             // menuSub_DataQu
             // 
             this.menuSub_DataQu.Name = "menuSub_DataQu";
-            this.menuSub_DataQu.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataQu.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataQu.Text = "数据查询(Q)";
             this.menuSub_DataQu.Click += new System.EventHandler(this.menuSub_DataQu_Click);
             // 
             // menuSub_DataBr
             // 
             this.menuSub_DataBr.Name = "menuSub_DataBr";
-            this.menuSub_DataBr.Size = new System.Drawing.Size(180, 22);
+            this.menuSub_DataBr.Size = new System.Drawing.Size(145, 22);
             this.menuSub_DataBr.Text = "数据浏览(B)";
             this.menuSub_DataBr.Click += new System.EventHandler(this.menuSub_DataBr_Click);
             // 
@@ -577,14 +577,15 @@
             this.splitCtner_WorkSpace.Panel1.Controls.Add(this.sideBar1);
             this.splitCtner_WorkSpace.Panel1.Controls.Add(this.label1);
             this.splitCtner_WorkSpace.Panel1.Padding = new System.Windows.Forms.Padding(2, 0, 0, 2);
-            this.splitCtner_WorkSpace.Panel1MinSize = 120;
+            this.splitCtner_WorkSpace.Panel1MinSize = 60;
             // 
             // splitCtner_WorkSpace.Panel2
             // 
             this.splitCtner_WorkSpace.Panel2.Controls.Add(this.workAreaTabPageController);
             this.splitCtner_WorkSpace.Panel2MinSize = 600;
             this.splitCtner_WorkSpace.Size = new System.Drawing.Size(734, 330);
-            this.splitCtner_WorkSpace.SplitterDistance = 120;
+            this.splitCtner_WorkSpace.SplitterDistance = 60;
+            this.splitCtner_WorkSpace.SplitterWidth = 2;
             this.splitCtner_WorkSpace.TabIndex = 0;
             // 
             // sideBar1
@@ -592,15 +593,15 @@
             this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
             this.sideBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataMnger;
-            this.sideBar1.Location = new System.Drawing.Point(2, 41);
+            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataAnly;
+            this.sideBar1.Location = new System.Drawing.Point(2, 35);
             this.sideBar1.Name = "sideBar1";
             this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.sideBarPnl_DataMnger,
             this.sideBarPnl_DataAnly,
             this.sideBarPnl_UserMnger,
             this.sideBarPnl_Help});
-            this.sideBar1.Size = new System.Drawing.Size(116, 285);
+            this.sideBar1.Size = new System.Drawing.Size(56, 291);
             this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.sideBar1.TabIndex = 1;
             this.sideBar1.Text = "sideBar1";
@@ -632,6 +633,7 @@
             this.sideBar_BtnAddData.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.sideBar_BtnAddData.Name = "sideBar_BtnAddData";
             this.sideBar_BtnAddData.Text = "数据录入";
+            this.sideBar_BtnAddData.Click += new System.EventHandler(this.sideBar_BtnAddData_Click);
             // 
             // sideBar_BtnModify
             // 
@@ -765,16 +767,16 @@
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.label1.Size = new System.Drawing.Size(116, 41);
+            this.label1.Size = new System.Drawing.Size(56, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "项目管理";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // workAreaTabPageController
             // 
@@ -783,7 +785,7 @@
             this.workAreaTabPageController.Location = new System.Drawing.Point(0, 0);
             this.workAreaTabPageController.Name = "workAreaTabPageController";
             this.workAreaTabPageController.SelectedTabPage = this.tabPage_Welcome;
-            this.workAreaTabPageController.Size = new System.Drawing.Size(608, 328);
+            this.workAreaTabPageController.Size = new System.Drawing.Size(670, 328);
             this.workAreaTabPageController.TabIndex = 0;
             this.workAreaTabPageController.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabPage_Welcome});
@@ -793,7 +795,7 @@
             // 
             this.tabPage_Welcome.Controls.Add(this.label2);
             this.tabPage_Welcome.Name = "tabPage_Welcome";
-            this.tabPage_Welcome.Size = new System.Drawing.Size(602, 300);
+            this.tabPage_Welcome.Size = new System.Drawing.Size(664, 300);
             this.tabPage_Welcome.Text = "欢迎登录";
             // 
             // label2

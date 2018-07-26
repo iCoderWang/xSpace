@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsofaBLL", "EsofaBLL\EsofaB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsofaDAL", "EsofaDAL\EsofaDAL.csproj", "{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsofaInterface", "EsofaInterface\EsofaInterface.csproj", "{B9823FC6-4203-48CD-ABE6-13287DF48687}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,18 +83,6 @@ Global
 		{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}.Release|x64.Build.0 = Release|x64
 		{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}.Release|x86.ActiveCfg = Release|x86
 		{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}.Release|x86.Build.0 = Release|x86
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Debug|x64.ActiveCfg = Debug|x64
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Debug|x64.Build.0 = Debug|x64
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Debug|x86.ActiveCfg = Debug|x86
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Debug|x86.Build.0 = Debug|x86
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Release|x64.ActiveCfg = Release|x64
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Release|x64.Build.0 = Release|x64
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Release|x86.ActiveCfg = Release|x86
-		{B9823FC6-4203-48CD-ABE6-13287DF48687}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
