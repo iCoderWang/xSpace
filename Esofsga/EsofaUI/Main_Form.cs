@@ -733,6 +733,7 @@ namespace EsofaUI
             workAreaTabPageController.SelectedTabPage = workAreaTabPageController.TabPages.Add(tabPage.Text);
             workAreaTabPageController.SelectedTabPage.Controls.Add(rawDataFrm);
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
+            //workAreaTabPageController.TabPages.Remove (x=>x)
             rawDataFrm.Show();
 
         }

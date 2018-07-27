@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("盆地/区域");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitCtnerGraFrm = new System.Windows.Forms.SplitContainer();
             this.treeViewGrad = new System.Windows.Forms.TreeView();
             this.splitContDataZone = new System.Windows.Forms.SplitContainer();
@@ -95,7 +101,6 @@
             this.treeViewGrad.Size = new System.Drawing.Size(78, 442);
             this.treeViewGrad.TabIndex = 0;
             this.treeViewGrad.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeViewGrad_AfterCheck);
-            this.treeViewGrad.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewGrad_AfterSelect);
             // 
             // splitContDataZone
             // 
@@ -147,11 +152,26 @@
             // 
             // dgvView_Target
             // 
+            this.dgvView_Target.AllowUserToAddRows = false;
+            this.dgvView_Target.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvView_Target.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvView_Target.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvView_Target.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvView_Target.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView_Target.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvView_Target.Location = new System.Drawing.Point(1, 1);
             this.dgvView_Target.Margin = new System.Windows.Forms.Padding(1);
             this.dgvView_Target.Name = "dgvView_Target";
+            this.dgvView_Target.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvView_Target.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvView_Target.Size = new System.Drawing.Size(596, 359);
             this.dgvView_Target.TabIndex = 0;
             // 
@@ -162,19 +182,34 @@
             this.tabPageBlock.Margin = new System.Windows.Forms.Padding(1);
             this.tabPageBlock.Name = "tabPageBlock";
             this.tabPageBlock.Padding = new System.Windows.Forms.Padding(1);
-            this.tabPageBlock.Size = new System.Drawing.Size(596, 359);
+            this.tabPageBlock.Size = new System.Drawing.Size(598, 361);
             this.tabPageBlock.TabIndex = 1;
             this.tabPageBlock.Text = "有利区";
             this.tabPageBlock.UseVisualStyleBackColor = true;
             // 
             // dgvView_Block
             // 
+            this.dgvView_Block.AllowUserToAddRows = false;
+            this.dgvView_Block.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvView_Block.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvView_Block.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvView_Block.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvView_Block.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView_Block.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvView_Block.Location = new System.Drawing.Point(1, 1);
             this.dgvView_Block.Margin = new System.Windows.Forms.Padding(1);
             this.dgvView_Block.Name = "dgvView_Block";
-            this.dgvView_Block.Size = new System.Drawing.Size(594, 357);
+            this.dgvView_Block.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvView_Block.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvView_Block.Size = new System.Drawing.Size(596, 359);
             this.dgvView_Block.TabIndex = 0;
             // 
             // tabPageBasin
@@ -184,19 +219,34 @@
             this.tabPageBasin.Margin = new System.Windows.Forms.Padding(1);
             this.tabPageBasin.Name = "tabPageBasin";
             this.tabPageBasin.Padding = new System.Windows.Forms.Padding(1);
-            this.tabPageBasin.Size = new System.Drawing.Size(596, 359);
+            this.tabPageBasin.Size = new System.Drawing.Size(598, 361);
             this.tabPageBasin.TabIndex = 0;
             this.tabPageBasin.Text = "远景区";
             this.tabPageBasin.UseVisualStyleBackColor = true;
             // 
             // dgvView_Basin
             // 
+            this.dgvView_Basin.AllowUserToAddRows = false;
+            this.dgvView_Basin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvView_Basin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvView_Basin.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvView_Basin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvView_Basin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView_Basin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvView_Basin.Location = new System.Drawing.Point(1, 1);
             this.dgvView_Basin.Margin = new System.Windows.Forms.Padding(1);
             this.dgvView_Basin.Name = "dgvView_Basin";
-            this.dgvView_Basin.Size = new System.Drawing.Size(594, 357);
+            this.dgvView_Basin.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvView_Basin.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvView_Basin.Size = new System.Drawing.Size(596, 359);
             this.dgvView_Basin.TabIndex = 0;
             // 
             // btnCancel

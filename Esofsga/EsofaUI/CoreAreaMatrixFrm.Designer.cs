@@ -31,24 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -60,27 +49,34 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dGridViewEngiPara = new System.Windows.Forms.DataGridView();
-            this.para_Dr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Pf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Permeability = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Fdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Psdf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Bmc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Drainage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_ExploerLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dGridViewEcoPara = new System.Windows.Forms.DataGridView();
-            this.para_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Demand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Infras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_PipeNet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_GeoGraphy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dGridViewGeoPara = new System.Windows.Forms.DataGridView();
+            this.dGridViewCor = new System.Windows.Forms.DataGridView();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.btnPDF = new System.Windows.Forms.Button();
+            this.gBoxEcoPara = new System.Windows.Forms.GroupBox();
+            this.gBoxEngiPara = new System.Windows.Forms.GroupBox();
+            this.gBoxGeoPara = new System.Windows.Forms.GroupBox();
+            this.gBoxCoralArea = new System.Windows.Forms.GroupBox();
+            this.gBoxParaMatrix = new System.Windows.Forms.GroupBox();
+            this.btnCoincidenceCheck = new System.Windows.Forms.Button();
             this.para_Strom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Toc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_OMType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,21 +88,39 @@
             this.para_Scd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Roof = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Floor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dGridViewCor = new System.Windows.Forms.DataGridView();
             this.para_Geo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Engi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Eco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnQuit = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnPDF = new System.Windows.Forms.Button();
-            this.gBoxEcoPara = new System.Windows.Forms.GroupBox();
-            this.gBoxEngiPara = new System.Windows.Forms.GroupBox();
-            this.gBoxGeoPara = new System.Windows.Forms.GroupBox();
-            this.gBoxCoralArea = new System.Windows.Forms.GroupBox();
-            this.gBoxParaMatrix = new System.Windows.Forms.GroupBox();
-            this.btnCoincidenceCheck = new System.Windows.Forms.Button();
+            this.para_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Demand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Infras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_PipeNet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_GeoGraphy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Dr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Pf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Permeability = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Fdd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Psdf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Bmc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Drainage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_ExploerLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gBoxParameters = new System.Windows.Forms.GroupBox();
+            this.btn_Mrt_ToLeft = new System.Windows.Forms.Button();
+            this.btn_Mrt_ToRight = new System.Windows.Forms.Button();
+            this.btn_Geo_ToLeft = new System.Windows.Forms.Button();
+            this.btn_Geo_ToRight = new System.Windows.Forms.Button();
+            this.listBox_Diff_EcoPara = new System.Windows.Forms.ListBox();
+            this.listBox_Diff_GeoPara = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Eng_ToLeft = new System.Windows.Forms.Button();
+            this.listBox_Diff_EngiPara = new System.Windows.Forms.ListBox();
+            this.btn_Eng_ToRight = new System.Windows.Forms.Button();
+            this.listBox_EngPara = new System.Windows.Forms.ListBox();
+            this.engParasLbl = new System.Windows.Forms.Label();
+            this.listBox_EcoPara = new System.Windows.Forms.ListBox();
+            this.listBox_GeoPara = new System.Windows.Forms.ListBox();
+            this.ecoParasLbl = new System.Windows.Forms.Label();
+            this.geoParasLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dGridViewEngiPara)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridViewEcoPara)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridViewGeoPara)).BeginInit();
@@ -116,6 +130,8 @@
             this.gBoxGeoPara.SuspendLayout();
             this.gBoxCoralArea.SuspendLayout();
             this.gBoxParaMatrix.SuspendLayout();
+            this.gBoxParameters.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dGridViewEngiPara
@@ -164,101 +180,6 @@
             this.dGridViewEngiPara.Size = new System.Drawing.Size(345, 212);
             this.dGridViewEngiPara.TabIndex = 0;
             // 
-            // para_Dr
-            // 
-            this.para_Dr.DataPropertyName = "0";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.para_Dr.DefaultCellStyle = dataGridViewCellStyle3;
-            this.para_Dr.HeaderText = "埋深";
-            this.para_Dr.Name = "para_Dr";
-            this.para_Dr.ReadOnly = true;
-            this.para_Dr.ToolTipText = "埋深范围 (m)";
-            // 
-            // para_Pf
-            // 
-            this.para_Pf.DataPropertyName = "1";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.para_Pf.DefaultCellStyle = dataGridViewCellStyle4;
-            this.para_Pf.HeaderText = "压力";
-            this.para_Pf.Name = "para_Pf";
-            this.para_Pf.ReadOnly = true;
-            this.para_Pf.ToolTipText = "压力系数";
-            // 
-            // para_Permeability
-            // 
-            this.para_Permeability.DataPropertyName = "2";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.para_Permeability.DefaultCellStyle = dataGridViewCellStyle5;
-            this.para_Permeability.HeaderText = "渗透率";
-            this.para_Permeability.Name = "para_Permeability";
-            this.para_Permeability.ReadOnly = true;
-            this.para_Permeability.ToolTipText = "渗透率";
-            // 
-            // para_Fdd
-            // 
-            this.para_Fdd.DataPropertyName = "3";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = "0";
-            this.para_Fdd.DefaultCellStyle = dataGridViewCellStyle6;
-            this.para_Fdd.HeaderText = "裂缝发育";
-            this.para_Fdd.Name = "para_Fdd";
-            this.para_Fdd.ReadOnly = true;
-            this.para_Fdd.ToolTipText = "裂缝发育程度";
-            // 
-            // para_Psdf
-            // 
-            this.para_Psdf.DataPropertyName = "4";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.para_Psdf.DefaultCellStyle = dataGridViewCellStyle7;
-            this.para_Psdf.HeaderText = "主应力差";
-            this.para_Psdf.Name = "para_Psdf";
-            this.para_Psdf.ReadOnly = true;
-            this.para_Psdf.ToolTipText = "主应力差异系数";
-            // 
-            // para_Bmc
-            // 
-            this.para_Bmc.DataPropertyName = "5";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Format = "N2";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.para_Bmc.DefaultCellStyle = dataGridViewCellStyle8;
-            this.para_Bmc.HeaderText = "脆矿";
-            this.para_Bmc.Name = "para_Bmc";
-            this.para_Bmc.ReadOnly = true;
-            this.para_Bmc.ToolTipText = "脆性矿物含量";
-            // 
-            // para_Drainage
-            // 
-            this.para_Drainage.DataPropertyName = "6";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = "0";
-            this.para_Drainage.DefaultCellStyle = dataGridViewCellStyle9;
-            this.para_Drainage.HeaderText = "水系";
-            this.para_Drainage.Name = "para_Drainage";
-            this.para_Drainage.ReadOnly = true;
-            // 
-            // para_ExploerLevel
-            // 
-            this.para_ExploerLevel.DataPropertyName = "7";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Format = "N2";
-            dataGridViewCellStyle10.NullValue = "0";
-            this.para_ExploerLevel.DefaultCellStyle = dataGridViewCellStyle10;
-            this.para_ExploerLevel.HeaderText = "勘探程度";
-            this.para_ExploerLevel.Name = "para_ExploerLevel";
-            this.para_ExploerLevel.ReadOnly = true;
-            this.para_ExploerLevel.ToolTipText = "区域勘探程度";
-            // 
             // dGridViewEcoPara
             // 
             this.dGridViewEcoPara.AllowUserToAddRows = false;
@@ -297,72 +218,8 @@
             this.dGridViewEcoPara.Name = "dGridViewEcoPara";
             this.dGridViewEcoPara.ReadOnly = true;
             this.dGridViewEcoPara.RowHeadersVisible = false;
-            this.dGridViewEcoPara.Size = new System.Drawing.Size(270, 212);
+            this.dGridViewEcoPara.Size = new System.Drawing.Size(204, 212);
             this.dGridViewEcoPara.TabIndex = 0;
-            // 
-            // para_Price
-            // 
-            this.para_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.para_Price.DataPropertyName = "0";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.Format = "N2";
-            dataGridViewCellStyle14.NullValue = "0";
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.para_Price.DefaultCellStyle = dataGridViewCellStyle14;
-            this.para_Price.HeaderText = "气价";
-            this.para_Price.Name = "para_Price";
-            this.para_Price.ReadOnly = true;
-            this.para_Price.ToolTipText = "市场气价 (元/m3)";
-            // 
-            // para_Demand
-            // 
-            this.para_Demand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.para_Demand.DataPropertyName = "1";
-            dataGridViewCellStyle15.Format = "N2";
-            dataGridViewCellStyle15.NullValue = "0";
-            this.para_Demand.DefaultCellStyle = dataGridViewCellStyle15;
-            this.para_Demand.HeaderText = "需求";
-            this.para_Demand.Name = "para_Demand";
-            this.para_Demand.ReadOnly = true;
-            this.para_Demand.ToolTipText = "市场需求";
-            // 
-            // para_Infras
-            // 
-            this.para_Infras.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.para_Infras.DataPropertyName = "2";
-            dataGridViewCellStyle16.Format = "N2";
-            dataGridViewCellStyle16.NullValue = "0";
-            this.para_Infras.DefaultCellStyle = dataGridViewCellStyle16;
-            this.para_Infras.HeaderText = "交通";
-            this.para_Infras.Name = "para_Infras";
-            this.para_Infras.ReadOnly = true;
-            this.para_Infras.ToolTipText = "交通设施";
-            // 
-            // para_PipeNet
-            // 
-            this.para_PipeNet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.para_PipeNet.DataPropertyName = "3";
-            dataGridViewCellStyle17.Format = "N2";
-            dataGridViewCellStyle17.NullValue = "0";
-            this.para_PipeNet.DefaultCellStyle = dataGridViewCellStyle17;
-            this.para_PipeNet.HeaderText = "管网";
-            this.para_PipeNet.Name = "para_PipeNet";
-            this.para_PipeNet.ReadOnly = true;
-            this.para_PipeNet.ToolTipText = "管网条件";
-            // 
-            // para_GeoGraphy
-            // 
-            this.para_GeoGraphy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.para_GeoGraphy.DataPropertyName = "4";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.Format = "N2";
-            dataGridViewCellStyle18.NullValue = "0";
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.para_GeoGraphy.DefaultCellStyle = dataGridViewCellStyle18;
-            this.para_GeoGraphy.HeaderText = "地表地貌";
-            this.para_GeoGraphy.Name = "para_GeoGraphy";
-            this.para_GeoGraphy.ReadOnly = true;
-            this.para_GeoGraphy.ToolTipText = "地表地貌";
             // 
             // dGridViewGeoPara
             // 
@@ -403,140 +260,6 @@
             this.dGridViewGeoPara.Size = new System.Drawing.Size(442, 220);
             this.dGridViewGeoPara.TabIndex = 0;
             // 
-            // para_Strom
-            // 
-            this.para_Strom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.para_Strom.DataPropertyName = "0";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.Format = "N2";
-            dataGridViewCellStyle22.NullValue = "0";
-            this.para_Strom.DefaultCellStyle = dataGridViewCellStyle22;
-            this.para_Strom.HeaderText = "厚度";
-            this.para_Strom.Name = "para_Strom";
-            this.para_Strom.ReadOnly = true;
-            this.para_Strom.ToolTipText = "富有机质页岩厚度(m)";
-            // 
-            // para_Toc
-            // 
-            this.para_Toc.DataPropertyName = "1";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.Format = "N2";
-            dataGridViewCellStyle23.NullValue = "0";
-            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle23;
-            this.para_Toc.HeaderText = "含量";
-            this.para_Toc.Name = "para_Toc";
-            this.para_Toc.ReadOnly = true;
-            this.para_Toc.ToolTipText = "有机质含量TOC(%)";
-            // 
-            // para_OMType
-            // 
-            this.para_OMType.DataPropertyName = "2";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.Format = "N2";
-            dataGridViewCellStyle24.NullValue = "0";
-            this.para_OMType.DefaultCellStyle = dataGridViewCellStyle24;
-            this.para_OMType.HeaderText = "类型";
-            this.para_OMType.Name = "para_OMType";
-            this.para_OMType.ReadOnly = true;
-            this.para_OMType.ToolTipText = "有机质类型";
-            // 
-            // para_Ro
-            // 
-            this.para_Ro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.para_Ro.DataPropertyName = "3";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.Format = "N2";
-            dataGridViewCellStyle25.NullValue = "0";
-            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle25;
-            this.para_Ro.HeaderText = "成熟度";
-            this.para_Ro.Name = "para_Ro";
-            this.para_Ro.ReadOnly = true;
-            this.para_Ro.ToolTipText = "有机质成熟度Ro(%)";
-            // 
-            // para_Ea
-            // 
-            this.para_Ea.DataPropertyName = "4";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.Format = "N2";
-            dataGridViewCellStyle26.NullValue = "0";
-            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle26;
-            this.para_Ea.HeaderText = "面积";
-            this.para_Ea.Name = "para_Ea";
-            this.para_Ea.ReadOnly = true;
-            this.para_Ea.ToolTipText = "有效面积  (km2)";
-            // 
-            // para_Gc
-            // 
-            this.para_Gc.DataPropertyName = "5";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.Format = "N2";
-            dataGridViewCellStyle27.NullValue = "0";
-            this.para_Gc.DefaultCellStyle = dataGridViewCellStyle27;
-            this.para_Gc.HeaderText = "含气量";
-            this.para_Gc.Name = "para_Gc";
-            this.para_Gc.ReadOnly = true;
-            this.para_Gc.ToolTipText = "含气量 (m3/t)";
-            // 
-            // para_Rr
-            // 
-            this.para_Rr.DataPropertyName = "6";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.Format = "N2";
-            dataGridViewCellStyle28.NullValue = "0";
-            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle28;
-            this.para_Rr.HeaderText = "丰度";
-            this.para_Rr.Name = "para_Rr";
-            this.para_Rr.ReadOnly = true;
-            this.para_Rr.ToolTipText = "资源丰度 (108m3/km2)";
-            // 
-            // para_Por
-            // 
-            this.para_Por.DataPropertyName = "7";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.Format = "N2";
-            dataGridViewCellStyle29.NullValue = "0";
-            this.para_Por.DefaultCellStyle = dataGridViewCellStyle29;
-            this.para_Por.HeaderText = "孔隙度";
-            this.para_Por.Name = "para_Por";
-            this.para_Por.ReadOnly = true;
-            this.para_Por.ToolTipText = "孔隙度 (%)";
-            // 
-            // para_Scd
-            // 
-            this.para_Scd.DataPropertyName = "8";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.Format = "N2";
-            dataGridViewCellStyle30.NullValue = "0";
-            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle30;
-            this.para_Scd.HeaderText = "构造";
-            this.para_Scd.Name = "para_Scd";
-            this.para_Scd.ReadOnly = true;
-            this.para_Scd.ToolTipText = "构造复杂程度";
-            // 
-            // para_Roof
-            // 
-            this.para_Roof.DataPropertyName = "9";
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.Format = "N2";
-            dataGridViewCellStyle31.NullValue = "0";
-            this.para_Roof.DefaultCellStyle = dataGridViewCellStyle31;
-            this.para_Roof.HeaderText = "顶板";
-            this.para_Roof.Name = "para_Roof";
-            this.para_Roof.ReadOnly = true;
-            this.para_Roof.ToolTipText = "顶板岩性及厚度 (m)";
-            // 
-            // para_Floor
-            // 
-            this.para_Floor.DataPropertyName = "10";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.Format = "N2";
-            dataGridViewCellStyle32.NullValue = "0";
-            this.para_Floor.DefaultCellStyle = dataGridViewCellStyle32;
-            this.para_Floor.HeaderText = "底板";
-            this.para_Floor.Name = "para_Floor";
-            this.para_Floor.ReadOnly = true;
-            this.para_Floor.ToolTipText = "底板岩性及厚度 (m)";
-            // 
             // dGridViewCor
             // 
             this.dGridViewCor.AllowUserToAddRows = false;
@@ -565,8 +288,239 @@
             this.dGridViewCor.Name = "dGridViewCor";
             this.dGridViewCor.ReadOnly = true;
             this.dGridViewCor.RowHeadersVisible = false;
-            this.dGridViewCor.Size = new System.Drawing.Size(270, 220);
+            this.dGridViewCor.Size = new System.Drawing.Size(204, 220);
             this.dGridViewCor.TabIndex = 0;
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(586, 456);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(74, 29);
+            this.btnQuit.TabIndex = 1;
+            this.btnQuit.Text = "退出";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnPDF
+            // 
+            this.btnPDF.Location = new System.Drawing.Point(586, 316);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(74, 29);
+            this.btnPDF.TabIndex = 1;
+            this.btnPDF.Text = "生成报告";
+            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
+            // gBoxEcoPara
+            // 
+            this.gBoxEcoPara.Controls.Add(this.dGridViewEcoPara);
+            this.gBoxEcoPara.Location = new System.Drawing.Point(6, 263);
+            this.gBoxEcoPara.Name = "gBoxEcoPara";
+            this.gBoxEcoPara.Size = new System.Drawing.Size(210, 231);
+            this.gBoxEcoPara.TabIndex = 0;
+            this.gBoxEcoPara.TabStop = false;
+            this.gBoxEcoPara.Text = "经济条件矩阵 R23";
+            // 
+            // gBoxEngiPara
+            // 
+            this.gBoxEngiPara.Controls.Add(this.dGridViewEngiPara);
+            this.gBoxEngiPara.Location = new System.Drawing.Point(222, 263);
+            this.gBoxEngiPara.Name = "gBoxEngiPara";
+            this.gBoxEngiPara.Size = new System.Drawing.Size(351, 231);
+            this.gBoxEngiPara.TabIndex = 0;
+            this.gBoxEngiPara.TabStop = false;
+            this.gBoxEngiPara.Text = "工程条件矩阵 R22";
+            // 
+            // gBoxGeoPara
+            // 
+            this.gBoxGeoPara.Controls.Add(this.dGridViewGeoPara);
+            this.gBoxGeoPara.Location = new System.Drawing.Point(222, 18);
+            this.gBoxGeoPara.Name = "gBoxGeoPara";
+            this.gBoxGeoPara.Size = new System.Drawing.Size(448, 239);
+            this.gBoxGeoPara.TabIndex = 0;
+            this.gBoxGeoPara.TabStop = false;
+            this.gBoxGeoPara.Text = "地质条件矩阵 R21";
+            // 
+            // gBoxCoralArea
+            // 
+            this.gBoxCoralArea.Controls.Add(this.dGridViewCor);
+            this.gBoxCoralArea.Location = new System.Drawing.Point(6, 18);
+            this.gBoxCoralArea.Name = "gBoxCoralArea";
+            this.gBoxCoralArea.Size = new System.Drawing.Size(210, 239);
+            this.gBoxCoralArea.TabIndex = 0;
+            this.gBoxCoralArea.TabStop = false;
+            this.gBoxCoralArea.Text = "核心区参数矩阵 R1";
+            // 
+            // gBoxParaMatrix
+            // 
+            this.gBoxParaMatrix.Controls.Add(this.btnCoincidenceCheck);
+            this.gBoxParaMatrix.Controls.Add(this.btnQuit);
+            this.gBoxParaMatrix.Controls.Add(this.btnPDF);
+            this.gBoxParaMatrix.Controls.Add(this.gBoxEcoPara);
+            this.gBoxParaMatrix.Controls.Add(this.gBoxEngiPara);
+            this.gBoxParaMatrix.Controls.Add(this.gBoxGeoPara);
+            this.gBoxParaMatrix.Controls.Add(this.gBoxCoralArea);
+            this.gBoxParaMatrix.Location = new System.Drawing.Point(349, 12);
+            this.gBoxParaMatrix.Name = "gBoxParaMatrix";
+            this.gBoxParaMatrix.Size = new System.Drawing.Size(677, 500);
+            this.gBoxParaMatrix.TabIndex = 2;
+            this.gBoxParaMatrix.TabStop = false;
+            this.gBoxParaMatrix.Text = "判断矩阵";
+            // 
+            // btnCoincidenceCheck
+            // 
+            this.btnCoincidenceCheck.Location = new System.Drawing.Point(586, 280);
+            this.btnCoincidenceCheck.Name = "btnCoincidenceCheck";
+            this.btnCoincidenceCheck.Size = new System.Drawing.Size(73, 27);
+            this.btnCoincidenceCheck.TabIndex = 2;
+            this.btnCoincidenceCheck.Text = "矩阵检验";
+            this.btnCoincidenceCheck.UseVisualStyleBackColor = true;
+            this.btnCoincidenceCheck.Click += new System.EventHandler(this.btnCoincidenceCheck_Click);
+            // 
+            // para_Strom
+            // 
+            this.para_Strom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.para_Strom.DataPropertyName = "0";
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.Format = "N2";
+            dataGridViewCellStyle22.NullValue = "0";
+            this.para_Strom.DefaultCellStyle = dataGridViewCellStyle22;
+            this.para_Strom.HeaderText = "厚度";
+            this.para_Strom.Name = "para_Strom";
+            this.para_Strom.ReadOnly = true;
+            this.para_Strom.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Strom.ToolTipText = "富有机质页岩厚度(m)";
+            // 
+            // para_Toc
+            // 
+            this.para_Toc.DataPropertyName = "1";
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.Format = "N2";
+            dataGridViewCellStyle23.NullValue = "0";
+            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle23;
+            this.para_Toc.HeaderText = "含量";
+            this.para_Toc.Name = "para_Toc";
+            this.para_Toc.ReadOnly = true;
+            this.para_Toc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Toc.ToolTipText = "有机质含量TOC(%)";
+            // 
+            // para_OMType
+            // 
+            this.para_OMType.DataPropertyName = "2";
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.Format = "N2";
+            dataGridViewCellStyle24.NullValue = "0";
+            this.para_OMType.DefaultCellStyle = dataGridViewCellStyle24;
+            this.para_OMType.HeaderText = "类型";
+            this.para_OMType.Name = "para_OMType";
+            this.para_OMType.ReadOnly = true;
+            this.para_OMType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_OMType.ToolTipText = "有机质类型";
+            // 
+            // para_Ro
+            // 
+            this.para_Ro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.para_Ro.DataPropertyName = "3";
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.Format = "N2";
+            dataGridViewCellStyle25.NullValue = "0";
+            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle25;
+            this.para_Ro.HeaderText = "成熟度";
+            this.para_Ro.Name = "para_Ro";
+            this.para_Ro.ReadOnly = true;
+            this.para_Ro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Ro.ToolTipText = "有机质成熟度Ro(%)";
+            // 
+            // para_Ea
+            // 
+            this.para_Ea.DataPropertyName = "4";
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.Format = "N2";
+            dataGridViewCellStyle26.NullValue = "0";
+            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle26;
+            this.para_Ea.HeaderText = "面积";
+            this.para_Ea.Name = "para_Ea";
+            this.para_Ea.ReadOnly = true;
+            this.para_Ea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Ea.ToolTipText = "有效面积  (km2)";
+            // 
+            // para_Gc
+            // 
+            this.para_Gc.DataPropertyName = "5";
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.Format = "N2";
+            dataGridViewCellStyle27.NullValue = "0";
+            this.para_Gc.DefaultCellStyle = dataGridViewCellStyle27;
+            this.para_Gc.HeaderText = "含气量";
+            this.para_Gc.Name = "para_Gc";
+            this.para_Gc.ReadOnly = true;
+            this.para_Gc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Gc.ToolTipText = "含气量 (m3/t)";
+            // 
+            // para_Rr
+            // 
+            this.para_Rr.DataPropertyName = "6";
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.Format = "N2";
+            dataGridViewCellStyle28.NullValue = "0";
+            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle28;
+            this.para_Rr.HeaderText = "丰度";
+            this.para_Rr.Name = "para_Rr";
+            this.para_Rr.ReadOnly = true;
+            this.para_Rr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Rr.ToolTipText = "资源丰度 (108m3/km2)";
+            // 
+            // para_Por
+            // 
+            this.para_Por.DataPropertyName = "7";
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.Format = "N2";
+            dataGridViewCellStyle29.NullValue = "0";
+            this.para_Por.DefaultCellStyle = dataGridViewCellStyle29;
+            this.para_Por.HeaderText = "孔隙度";
+            this.para_Por.Name = "para_Por";
+            this.para_Por.ReadOnly = true;
+            this.para_Por.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Por.ToolTipText = "孔隙度 (%)";
+            // 
+            // para_Scd
+            // 
+            this.para_Scd.DataPropertyName = "8";
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.Format = "N2";
+            dataGridViewCellStyle30.NullValue = "0";
+            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle30;
+            this.para_Scd.HeaderText = "构造";
+            this.para_Scd.Name = "para_Scd";
+            this.para_Scd.ReadOnly = true;
+            this.para_Scd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Scd.ToolTipText = "构造复杂程度";
+            // 
+            // para_Roof
+            // 
+            this.para_Roof.DataPropertyName = "9";
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.Format = "N2";
+            dataGridViewCellStyle31.NullValue = "0";
+            this.para_Roof.DefaultCellStyle = dataGridViewCellStyle31;
+            this.para_Roof.HeaderText = "顶板";
+            this.para_Roof.Name = "para_Roof";
+            this.para_Roof.ReadOnly = true;
+            this.para_Roof.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Roof.ToolTipText = "顶板岩性及厚度 (m)";
+            // 
+            // para_Floor
+            // 
+            this.para_Floor.DataPropertyName = "10";
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.Format = "N2";
+            dataGridViewCellStyle32.NullValue = "0";
+            this.para_Floor.DefaultCellStyle = dataGridViewCellStyle32;
+            this.para_Floor.HeaderText = "底板";
+            this.para_Floor.Name = "para_Floor";
+            this.para_Floor.ReadOnly = true;
+            this.para_Floor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Floor.ToolTipText = "底板岩性及厚度 (m)";
             // 
             // para_Geo
             // 
@@ -579,6 +533,7 @@
             this.para_Geo.HeaderText = "地质";
             this.para_Geo.Name = "para_Geo";
             this.para_Geo.ReadOnly = true;
+            this.para_Geo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.para_Geo.ToolTipText = "地质条件";
             // 
             // para_Engi
@@ -592,6 +547,7 @@
             this.para_Engi.HeaderText = "工程";
             this.para_Engi.Name = "para_Engi";
             this.para_Engi.ReadOnly = true;
+            this.para_Engi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.para_Engi.ToolTipText = "工程条件";
             // 
             // para_Eco
@@ -605,133 +561,423 @@
             this.para_Eco.HeaderText = "经济";
             this.para_Eco.Name = "para_Eco";
             this.para_Eco.ReadOnly = true;
+            this.para_Eco.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.para_Eco.ToolTipText = "经济条件";
             // 
-            // btnQuit
+            // para_Price
             // 
-            this.btnQuit.Location = new System.Drawing.Point(652, 456);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(74, 29);
-            this.btnQuit.TabIndex = 1;
-            this.btnQuit.Text = "退出";
-            this.btnQuit.UseVisualStyleBackColor = true;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.para_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.para_Price.DataPropertyName = "0";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.Format = "N2";
+            dataGridViewCellStyle14.NullValue = "0";
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.para_Price.DefaultCellStyle = dataGridViewCellStyle14;
+            this.para_Price.HeaderText = "气价";
+            this.para_Price.Name = "para_Price";
+            this.para_Price.ReadOnly = true;
+            this.para_Price.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Price.ToolTipText = "市场气价 (元/m3)";
             // 
-            // btnImport
+            // para_Demand
             // 
-            this.btnImport.Enabled = false;
-            this.btnImport.Location = new System.Drawing.Point(652, 421);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(74, 29);
-            this.btnImport.TabIndex = 1;
-            this.btnImport.Text = "导入";
-            this.btnImport.UseVisualStyleBackColor = true;
+            this.para_Demand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.para_Demand.DataPropertyName = "1";
+            dataGridViewCellStyle15.Format = "N2";
+            dataGridViewCellStyle15.NullValue = "0";
+            this.para_Demand.DefaultCellStyle = dataGridViewCellStyle15;
+            this.para_Demand.HeaderText = "需求";
+            this.para_Demand.Name = "para_Demand";
+            this.para_Demand.ReadOnly = true;
+            this.para_Demand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Demand.ToolTipText = "市场需求";
             // 
-            // btnExport
+            // para_Infras
             // 
-            this.btnExport.Enabled = false;
-            this.btnExport.Location = new System.Drawing.Point(652, 386);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(74, 29);
-            this.btnExport.TabIndex = 1;
-            this.btnExport.Text = "导出";
-            this.btnExport.UseVisualStyleBackColor = true;
+            this.para_Infras.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.para_Infras.DataPropertyName = "2";
+            dataGridViewCellStyle16.Format = "N2";
+            dataGridViewCellStyle16.NullValue = "0";
+            this.para_Infras.DefaultCellStyle = dataGridViewCellStyle16;
+            this.para_Infras.HeaderText = "交通";
+            this.para_Infras.Name = "para_Infras";
+            this.para_Infras.ReadOnly = true;
+            this.para_Infras.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Infras.ToolTipText = "交通设施";
             // 
-            // btnSave
+            // para_PipeNet
             // 
-            this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(652, 351);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(74, 29);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "保存";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.para_PipeNet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.para_PipeNet.DataPropertyName = "3";
+            dataGridViewCellStyle17.Format = "N2";
+            dataGridViewCellStyle17.NullValue = "0";
+            this.para_PipeNet.DefaultCellStyle = dataGridViewCellStyle17;
+            this.para_PipeNet.HeaderText = "管网";
+            this.para_PipeNet.Name = "para_PipeNet";
+            this.para_PipeNet.ReadOnly = true;
+            this.para_PipeNet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_PipeNet.ToolTipText = "管网条件";
             // 
-            // btnPDF
+            // para_GeoGraphy
             // 
-            this.btnPDF.Location = new System.Drawing.Point(652, 316);
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(74, 29);
-            this.btnPDF.TabIndex = 1;
-            this.btnPDF.Text = "生成报告";
-            this.btnPDF.UseVisualStyleBackColor = true;
-            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            this.para_GeoGraphy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.para_GeoGraphy.DataPropertyName = "4";
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.Format = "N2";
+            dataGridViewCellStyle18.NullValue = "0";
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.para_GeoGraphy.DefaultCellStyle = dataGridViewCellStyle18;
+            this.para_GeoGraphy.HeaderText = "地表地貌";
+            this.para_GeoGraphy.Name = "para_GeoGraphy";
+            this.para_GeoGraphy.ReadOnly = true;
+            this.para_GeoGraphy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_GeoGraphy.ToolTipText = "地表地貌";
             // 
-            // gBoxEcoPara
+            // para_Dr
             // 
-            this.gBoxEcoPara.Controls.Add(this.dGridViewEcoPara);
-            this.gBoxEcoPara.Location = new System.Drawing.Point(6, 263);
-            this.gBoxEcoPara.Name = "gBoxEcoPara";
-            this.gBoxEcoPara.Size = new System.Drawing.Size(276, 231);
-            this.gBoxEcoPara.TabIndex = 0;
-            this.gBoxEcoPara.TabStop = false;
-            this.gBoxEcoPara.Text = "经济条件矩阵 R23";
+            this.para_Dr.DataPropertyName = "0";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = "0";
+            this.para_Dr.DefaultCellStyle = dataGridViewCellStyle3;
+            this.para_Dr.HeaderText = "埋深";
+            this.para_Dr.Name = "para_Dr";
+            this.para_Dr.ReadOnly = true;
+            this.para_Dr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Dr.ToolTipText = "埋深范围 (m)";
             // 
-            // gBoxEngiPara
+            // para_Pf
             // 
-            this.gBoxEngiPara.Controls.Add(this.dGridViewEngiPara);
-            this.gBoxEngiPara.Location = new System.Drawing.Point(288, 263);
-            this.gBoxEngiPara.Name = "gBoxEngiPara";
-            this.gBoxEngiPara.Size = new System.Drawing.Size(351, 231);
-            this.gBoxEngiPara.TabIndex = 0;
-            this.gBoxEngiPara.TabStop = false;
-            this.gBoxEngiPara.Text = "工程条件矩阵 R22";
+            this.para_Pf.DataPropertyName = "1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.para_Pf.DefaultCellStyle = dataGridViewCellStyle4;
+            this.para_Pf.HeaderText = "压力";
+            this.para_Pf.Name = "para_Pf";
+            this.para_Pf.ReadOnly = true;
+            this.para_Pf.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Pf.ToolTipText = "压力系数";
             // 
-            // gBoxGeoPara
+            // para_Permeability
             // 
-            this.gBoxGeoPara.Controls.Add(this.dGridViewGeoPara);
-            this.gBoxGeoPara.Location = new System.Drawing.Point(288, 18);
-            this.gBoxGeoPara.Name = "gBoxGeoPara";
-            this.gBoxGeoPara.Size = new System.Drawing.Size(448, 239);
-            this.gBoxGeoPara.TabIndex = 0;
-            this.gBoxGeoPara.TabStop = false;
-            this.gBoxGeoPara.Text = "地质条件矩阵 R21";
+            this.para_Permeability.DataPropertyName = "2";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.para_Permeability.DefaultCellStyle = dataGridViewCellStyle5;
+            this.para_Permeability.HeaderText = "渗透率";
+            this.para_Permeability.Name = "para_Permeability";
+            this.para_Permeability.ReadOnly = true;
+            this.para_Permeability.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Permeability.ToolTipText = "渗透率";
             // 
-            // gBoxCoralArea
+            // para_Fdd
             // 
-            this.gBoxCoralArea.Controls.Add(this.dGridViewCor);
-            this.gBoxCoralArea.Location = new System.Drawing.Point(6, 18);
-            this.gBoxCoralArea.Name = "gBoxCoralArea";
-            this.gBoxCoralArea.Size = new System.Drawing.Size(276, 239);
-            this.gBoxCoralArea.TabIndex = 0;
-            this.gBoxCoralArea.TabStop = false;
-            this.gBoxCoralArea.Text = "核心区参数矩阵 R1";
+            this.para_Fdd.DataPropertyName = "3";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = "0";
+            this.para_Fdd.DefaultCellStyle = dataGridViewCellStyle6;
+            this.para_Fdd.HeaderText = "裂缝发育";
+            this.para_Fdd.Name = "para_Fdd";
+            this.para_Fdd.ReadOnly = true;
+            this.para_Fdd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Fdd.ToolTipText = "裂缝发育程度";
             // 
-            // gBoxParaMatrix
+            // para_Psdf
             // 
-            this.gBoxParaMatrix.Controls.Add(this.btnCoincidenceCheck);
-            this.gBoxParaMatrix.Controls.Add(this.btnQuit);
-            this.gBoxParaMatrix.Controls.Add(this.btnImport);
-            this.gBoxParaMatrix.Controls.Add(this.btnExport);
-            this.gBoxParaMatrix.Controls.Add(this.btnSave);
-            this.gBoxParaMatrix.Controls.Add(this.btnPDF);
-            this.gBoxParaMatrix.Controls.Add(this.gBoxEcoPara);
-            this.gBoxParaMatrix.Controls.Add(this.gBoxEngiPara);
-            this.gBoxParaMatrix.Controls.Add(this.gBoxGeoPara);
-            this.gBoxParaMatrix.Controls.Add(this.gBoxCoralArea);
-            this.gBoxParaMatrix.Location = new System.Drawing.Point(8, 9);
-            this.gBoxParaMatrix.Name = "gBoxParaMatrix";
-            this.gBoxParaMatrix.Size = new System.Drawing.Size(742, 500);
-            this.gBoxParaMatrix.TabIndex = 2;
-            this.gBoxParaMatrix.TabStop = false;
-            this.gBoxParaMatrix.Text = "判断矩阵";
+            this.para_Psdf.DataPropertyName = "4";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.para_Psdf.DefaultCellStyle = dataGridViewCellStyle7;
+            this.para_Psdf.HeaderText = "主应力差";
+            this.para_Psdf.Name = "para_Psdf";
+            this.para_Psdf.ReadOnly = true;
+            this.para_Psdf.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Psdf.ToolTipText = "主应力差异系数";
             // 
-            // btnCoincidenceCheck
+            // para_Bmc
             // 
-            this.btnCoincidenceCheck.Location = new System.Drawing.Point(652, 280);
-            this.btnCoincidenceCheck.Name = "btnCoincidenceCheck";
-            this.btnCoincidenceCheck.Size = new System.Drawing.Size(73, 27);
-            this.btnCoincidenceCheck.TabIndex = 2;
-            this.btnCoincidenceCheck.Text = "矩阵检验";
-            this.btnCoincidenceCheck.UseVisualStyleBackColor = true;
-            this.btnCoincidenceCheck.Click += new System.EventHandler(this.btnCoincidenceCheck_Click);
+            this.para_Bmc.DataPropertyName = "5";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.para_Bmc.DefaultCellStyle = dataGridViewCellStyle8;
+            this.para_Bmc.HeaderText = "脆矿";
+            this.para_Bmc.Name = "para_Bmc";
+            this.para_Bmc.ReadOnly = true;
+            this.para_Bmc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Bmc.ToolTipText = "脆性矿物含量";
+            // 
+            // para_Drainage
+            // 
+            this.para_Drainage.DataPropertyName = "6";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "N2";
+            dataGridViewCellStyle9.NullValue = "0";
+            this.para_Drainage.DefaultCellStyle = dataGridViewCellStyle9;
+            this.para_Drainage.HeaderText = "水系";
+            this.para_Drainage.Name = "para_Drainage";
+            this.para_Drainage.ReadOnly = true;
+            this.para_Drainage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // para_ExploerLevel
+            // 
+            this.para_ExploerLevel.DataPropertyName = "7";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = "0";
+            this.para_ExploerLevel.DefaultCellStyle = dataGridViewCellStyle10;
+            this.para_ExploerLevel.HeaderText = "勘探程度";
+            this.para_ExploerLevel.Name = "para_ExploerLevel";
+            this.para_ExploerLevel.ReadOnly = true;
+            this.para_ExploerLevel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_ExploerLevel.ToolTipText = "区域勘探程度";
+            // 
+            // gBoxParameters
+            // 
+            this.gBoxParameters.Controls.Add(this.btn_Mrt_ToLeft);
+            this.gBoxParameters.Controls.Add(this.btn_Mrt_ToRight);
+            this.gBoxParameters.Controls.Add(this.btn_Geo_ToLeft);
+            this.gBoxParameters.Controls.Add(this.btn_Geo_ToRight);
+            this.gBoxParameters.Controls.Add(this.listBox_Diff_EcoPara);
+            this.gBoxParameters.Controls.Add(this.listBox_Diff_GeoPara);
+            this.gBoxParameters.Controls.Add(this.groupBox1);
+            this.gBoxParameters.Controls.Add(this.listBox_EcoPara);
+            this.gBoxParameters.Controls.Add(this.listBox_GeoPara);
+            this.gBoxParameters.Controls.Add(this.ecoParasLbl);
+            this.gBoxParameters.Controls.Add(this.geoParasLbl);
+            this.gBoxParameters.Location = new System.Drawing.Point(2, 12);
+            this.gBoxParameters.Name = "gBoxParameters";
+            this.gBoxParameters.Size = new System.Drawing.Size(341, 439);
+            this.gBoxParameters.TabIndex = 3;
+            this.gBoxParameters.TabStop = false;
+            this.gBoxParameters.Text = "评价参数";
+            // 
+            // btn_Mrt_ToLeft
+            // 
+            this.btn_Mrt_ToLeft.AutoSize = true;
+            this.btn_Mrt_ToLeft.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Mrt_ToLeft.FlatAppearance.BorderSize = 0;
+            this.btn_Mrt_ToLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Mrt_ToLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mrt_ToLeft.Location = new System.Drawing.Point(170, 395);
+            this.btn_Mrt_ToLeft.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Mrt_ToLeft.Name = "btn_Mrt_ToLeft";
+            this.btn_Mrt_ToLeft.Size = new System.Drawing.Size(30, 22);
+            this.btn_Mrt_ToLeft.TabIndex = 13;
+            this.btn_Mrt_ToLeft.Text = "<<<";
+            this.btn_Mrt_ToLeft.UseVisualStyleBackColor = true;
+            // 
+            // btn_Mrt_ToRight
+            // 
+            this.btn_Mrt_ToRight.AutoSize = true;
+            this.btn_Mrt_ToRight.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Mrt_ToRight.FlatAppearance.BorderSize = 0;
+            this.btn_Mrt_ToRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Mrt_ToRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mrt_ToRight.Location = new System.Drawing.Point(170, 360);
+            this.btn_Mrt_ToRight.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Mrt_ToRight.Name = "btn_Mrt_ToRight";
+            this.btn_Mrt_ToRight.Size = new System.Drawing.Size(30, 22);
+            this.btn_Mrt_ToRight.TabIndex = 12;
+            this.btn_Mrt_ToRight.Text = ">>>";
+            this.btn_Mrt_ToRight.UseVisualStyleBackColor = true;
+            // 
+            // btn_Geo_ToLeft
+            // 
+            this.btn_Geo_ToLeft.AutoSize = true;
+            this.btn_Geo_ToLeft.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Geo_ToLeft.FlatAppearance.BorderSize = 0;
+            this.btn_Geo_ToLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Geo_ToLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Geo_ToLeft.Location = new System.Drawing.Point(170, 110);
+            this.btn_Geo_ToLeft.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Geo_ToLeft.Name = "btn_Geo_ToLeft";
+            this.btn_Geo_ToLeft.Size = new System.Drawing.Size(30, 22);
+            this.btn_Geo_ToLeft.TabIndex = 10;
+            this.btn_Geo_ToLeft.Text = "<<<";
+            this.btn_Geo_ToLeft.UseVisualStyleBackColor = true;
+            // 
+            // btn_Geo_ToRight
+            // 
+            this.btn_Geo_ToRight.AutoSize = true;
+            this.btn_Geo_ToRight.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Geo_ToRight.FlatAppearance.BorderSize = 0;
+            this.btn_Geo_ToRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Geo_ToRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Geo_ToRight.Location = new System.Drawing.Point(171, 71);
+            this.btn_Geo_ToRight.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Geo_ToRight.Name = "btn_Geo_ToRight";
+            this.btn_Geo_ToRight.Size = new System.Drawing.Size(30, 22);
+            this.btn_Geo_ToRight.TabIndex = 9;
+            this.btn_Geo_ToRight.Text = ">>>";
+            this.btn_Geo_ToRight.UseVisualStyleBackColor = true;
+            // 
+            // listBox_Diff_EcoPara
+            // 
+            this.listBox_Diff_EcoPara.FormattingEnabled = true;
+            this.listBox_Diff_EcoPara.Location = new System.Drawing.Point(204, 348);
+            this.listBox_Diff_EcoPara.Name = "listBox_Diff_EcoPara";
+            this.listBox_Diff_EcoPara.ScrollAlwaysVisible = true;
+            this.listBox_Diff_EcoPara.Size = new System.Drawing.Size(130, 82);
+            this.listBox_Diff_EcoPara.TabIndex = 8;
+            // 
+            // listBox_Diff_GeoPara
+            // 
+            this.listBox_Diff_GeoPara.FormattingEnabled = true;
+            this.listBox_Diff_GeoPara.Location = new System.Drawing.Point(204, 24);
+            this.listBox_Diff_GeoPara.Name = "listBox_Diff_GeoPara";
+            this.listBox_Diff_GeoPara.ScrollAlwaysVisible = true;
+            this.listBox_Diff_GeoPara.Size = new System.Drawing.Size(130, 160);
+            this.listBox_Diff_GeoPara.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_Eng_ToLeft);
+            this.groupBox1.Controls.Add(this.listBox_Diff_EngiPara);
+            this.groupBox1.Controls.Add(this.btn_Eng_ToRight);
+            this.groupBox1.Controls.Add(this.listBox_EngPara);
+            this.groupBox1.Controls.Add(this.engParasLbl);
+            this.groupBox1.Location = new System.Drawing.Point(0, 186);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(341, 151);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            // 
+            // btn_Eng_ToLeft
+            // 
+            this.btn_Eng_ToLeft.AutoSize = true;
+            this.btn_Eng_ToLeft.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Eng_ToLeft.FlatAppearance.BorderSize = 0;
+            this.btn_Eng_ToLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Eng_ToLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eng_ToLeft.Location = new System.Drawing.Point(170, 83);
+            this.btn_Eng_ToLeft.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Eng_ToLeft.Name = "btn_Eng_ToLeft";
+            this.btn_Eng_ToLeft.Size = new System.Drawing.Size(30, 22);
+            this.btn_Eng_ToLeft.TabIndex = 14;
+            this.btn_Eng_ToLeft.Text = "<<<";
+            this.btn_Eng_ToLeft.UseVisualStyleBackColor = true;
+            // 
+            // listBox_Diff_EngiPara
+            // 
+            this.listBox_Diff_EngiPara.FormattingEnabled = true;
+            this.listBox_Diff_EngiPara.Location = new System.Drawing.Point(204, 19);
+            this.listBox_Diff_EngiPara.Name = "listBox_Diff_EngiPara";
+            this.listBox_Diff_EngiPara.ScrollAlwaysVisible = true;
+            this.listBox_Diff_EngiPara.Size = new System.Drawing.Size(130, 121);
+            this.listBox_Diff_EngiPara.TabIndex = 5;
+            // 
+            // btn_Eng_ToRight
+            // 
+            this.btn_Eng_ToRight.AutoSize = true;
+            this.btn_Eng_ToRight.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Eng_ToRight.FlatAppearance.BorderSize = 0;
+            this.btn_Eng_ToRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Eng_ToRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Eng_ToRight.Location = new System.Drawing.Point(170, 44);
+            this.btn_Eng_ToRight.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Eng_ToRight.Name = "btn_Eng_ToRight";
+            this.btn_Eng_ToRight.Size = new System.Drawing.Size(30, 22);
+            this.btn_Eng_ToRight.TabIndex = 11;
+            this.btn_Eng_ToRight.Text = ">>>";
+            this.btn_Eng_ToRight.UseVisualStyleBackColor = true;
+            // 
+            // listBox_EngPara
+            // 
+            this.listBox_EngPara.Enabled = false;
+            this.listBox_EngPara.FormattingEnabled = true;
+            this.listBox_EngPara.Items.AddRange(new object[] {
+            "埋深(m)",
+            "压力系数",
+            "渗透率(mD)",
+            "裂缝发育程度",
+            "应力差异系数",
+            "脆性矿物含量(%)",
+            "水系",
+            "区域勘探程度"});
+            this.listBox_EngPara.Location = new System.Drawing.Point(34, 20);
+            this.listBox_EngPara.Name = "listBox_EngPara";
+            this.listBox_EngPara.ScrollAlwaysVisible = true;
+            this.listBox_EngPara.Size = new System.Drawing.Size(133, 121);
+            this.listBox_EngPara.TabIndex = 4;
+            // 
+            // engParasLbl
+            // 
+            this.engParasLbl.AutoSize = true;
+            this.engParasLbl.Location = new System.Drawing.Point(9, 50);
+            this.engParasLbl.Name = "engParasLbl";
+            this.engParasLbl.Size = new System.Drawing.Size(19, 52);
+            this.engParasLbl.TabIndex = 1;
+            this.engParasLbl.Text = "工\r\n程\r\n条\r\n件";
+            // 
+            // listBox_EcoPara
+            // 
+            this.listBox_EcoPara.Enabled = false;
+            this.listBox_EcoPara.FormattingEnabled = true;
+            this.listBox_EcoPara.Items.AddRange(new object[] {
+            "市场气价",
+            "市场需求",
+            "交通设施",
+            "管网条件",
+            "地表地貌"});
+            this.listBox_EcoPara.Location = new System.Drawing.Point(34, 348);
+            this.listBox_EcoPara.Name = "listBox_EcoPara";
+            this.listBox_EcoPara.ScrollAlwaysVisible = true;
+            this.listBox_EcoPara.Size = new System.Drawing.Size(133, 82);
+            this.listBox_EcoPara.TabIndex = 5;
+            // 
+            // listBox_GeoPara
+            // 
+            this.listBox_GeoPara.Enabled = false;
+            this.listBox_GeoPara.FormattingEnabled = true;
+            this.listBox_GeoPara.Items.AddRange(new object[] {
+            "页岩厚度(m)",
+            "有机质含量TOC(%)",
+            "干酪根类型",
+            "有机质成熟度Ro(%)",
+            "圈定面积(km^2)",
+            "含气量(m^3/t)",
+            "资源丰度",
+            "孔隙度(%)",
+            "构造复杂程度",
+            "顶板条件",
+            "底板条件"});
+            this.listBox_GeoPara.Location = new System.Drawing.Point(34, 24);
+            this.listBox_GeoPara.Name = "listBox_GeoPara";
+            this.listBox_GeoPara.ScrollAlwaysVisible = true;
+            this.listBox_GeoPara.Size = new System.Drawing.Size(130, 160);
+            this.listBox_GeoPara.TabIndex = 3;
+            // 
+            // ecoParasLbl
+            // 
+            this.ecoParasLbl.AutoSize = true;
+            this.ecoParasLbl.Location = new System.Drawing.Point(9, 363);
+            this.ecoParasLbl.Name = "ecoParasLbl";
+            this.ecoParasLbl.Size = new System.Drawing.Size(19, 52);
+            this.ecoParasLbl.TabIndex = 2;
+            this.ecoParasLbl.Text = "经\r\n济\r\n条\r\n件";
+            // 
+            // geoParasLbl
+            // 
+            this.geoParasLbl.AutoSize = true;
+            this.geoParasLbl.Location = new System.Drawing.Point(9, 83);
+            this.geoParasLbl.Name = "geoParasLbl";
+            this.geoParasLbl.Size = new System.Drawing.Size(19, 52);
+            this.geoParasLbl.TabIndex = 0;
+            this.geoParasLbl.Text = "地\r\n质\r\n条\r\n件\r\n";
+            this.geoParasLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CoreAreaMatrixFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(759, 519);
+            this.ClientSize = new System.Drawing.Size(1038, 518);
+            this.Controls.Add(this.gBoxParameters);
             this.Controls.Add(this.gBoxParaMatrix);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -747,6 +993,10 @@
             this.gBoxGeoPara.ResumeLayout(false);
             this.gBoxCoralArea.ResumeLayout(false);
             this.gBoxParaMatrix.ResumeLayout(false);
+            this.gBoxParameters.ResumeLayout(false);
+            this.gBoxParameters.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -757,18 +1007,13 @@
         private System.Windows.Forms.DataGridView dGridViewGeoPara;
         private System.Windows.Forms.DataGridView dGridViewCor;
         private System.Windows.Forms.Button btnQuit;
-        private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPDF;
         private System.Windows.Forms.GroupBox gBoxEcoPara;
         private System.Windows.Forms.GroupBox gBoxEngiPara;
         private System.Windows.Forms.GroupBox gBoxGeoPara;
         private System.Windows.Forms.GroupBox gBoxCoralArea;
         private System.Windows.Forms.GroupBox gBoxParaMatrix;
-        private System.Windows.Forms.DataGridViewTextBoxColumn para_Geo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn para_Engi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn para_Eco;
+        private System.Windows.Forms.Button btnCoincidenceCheck;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Dr;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Pf;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Permeability;
@@ -793,6 +1038,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Scd;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Roof;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Floor;
-        private System.Windows.Forms.Button btnCoincidenceCheck;
+        private System.Windows.Forms.DataGridViewTextBoxColumn para_Geo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn para_Engi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn para_Eco;
+        private System.Windows.Forms.GroupBox gBoxParameters;
+        public System.Windows.Forms.Button btn_Mrt_ToLeft;
+        public System.Windows.Forms.Button btn_Mrt_ToRight;
+        public System.Windows.Forms.Button btn_Geo_ToLeft;
+        public System.Windows.Forms.Button btn_Geo_ToRight;
+        private System.Windows.Forms.ListBox listBox_Diff_EcoPara;
+        private System.Windows.Forms.ListBox listBox_Diff_GeoPara;
+        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Button btn_Eng_ToLeft;
+        private System.Windows.Forms.ListBox listBox_Diff_EngiPara;
+        public System.Windows.Forms.Button btn_Eng_ToRight;
+        private System.Windows.Forms.ListBox listBox_EngPara;
+        private System.Windows.Forms.Label engParasLbl;
+        private System.Windows.Forms.ListBox listBox_EcoPara;
+        private System.Windows.Forms.ListBox listBox_GeoPara;
+        private System.Windows.Forms.Label ecoParasLbl;
+        private System.Windows.Forms.Label geoParasLbl;
     }
 }

@@ -79,6 +79,9 @@
       <HintPath>..\packages\MathNet.Numerics.4.4.0\lib\net461\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\MySql.Data.dll</HintPath>
@@ -100,6 +103,7 @@
     <Compile Include="CoincidenceChecker.cs" />
     <Compile Include="DataAssignment.cs" />
     <Compile Include="DataGridViewColumnEditor.cs" />
+    <Compile Include="DataGridViewOutputToExcel.cs" />
     <Compile Include="EncryptConnection.cs" />
     <Compile Include="FuzzyMembershipFunction.cs" />
     <Compile Include="DataSourceToDataTable.cs" />
@@ -107,15 +111,36 @@
     <Compile Include="ParametersWeightLoader.cs" />
     <Compile Include="PDFCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TargetListTransfomer.cs" />
     <Compile Include="SqlSyntaxValidating.cs" />
     <Compile Include="SubjectiveGrading.cs" />
-    <Compile Include="TreeViewNodesCheckState.cs" />
+    <Compile Include="TreeViewNodesCheckStateSetting.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EsofaModel\EsofaModel.csproj">
       <Project>{C13CA4AC-8AAA-41A6-948E-BECE6BCE33FA}</Project>
       <Name>EsofaModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>99</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

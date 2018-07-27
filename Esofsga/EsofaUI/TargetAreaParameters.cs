@@ -29,14 +29,14 @@ namespace EsofaUI
             this.listBox_Diff_EcoPara.Items.Clear();
 
             //清空表示当前选择区域的标签
-            this.lab_TargetEco.Text = "";
-            this.lab_TargetEngi.Text = "";
-            this.lab_TargetGeo.Text = "";
+           // this.lab_TargetEco.Text = "";
+            //this.lab_TargetEngi.Text = "";
+           // this.lab_TargetGeo.Text = "";
             
             //标准表示当前选择区域的标签
-            this.lab_TargetEco.Text = "核\r\n心\r\n区";
-            this.lab_TargetEngi.Text = "核\r\n心\r\n区";
-            this.lab_TargetGeo.Text = "核\r\n心\r\n区";
+           // this.lab_TargetEco.Text = "核\r\n心\r\n区";
+            //this.lab_TargetEngi.Text = "核\r\n心\r\n区";
+            //this.lab_TargetGeo.Text = "核\r\n心\r\n区";
             //添加核心区的地质参数
             foreach (string str in this.listBox_GeoPara.Items)
             {
@@ -70,14 +70,14 @@ namespace EsofaUI
             this.listBox_Diff_EcoPara.Visible = true;
 
             //清空表示当前选择区域的标签
-            this.lab_TargetEco.Text = "";
-            this.lab_TargetEngi.Text = "";
-            this.lab_TargetGeo.Text = "";
+           // this.lab_TargetEco.Text = "";
+            //this.lab_TargetEngi.Text = "";
+            //this.lab_TargetGeo.Text = "";
 
             //标准表示当前选择区域的标签
-            this.lab_TargetEco.Text = "有\r\n利\r\n区";
-            this.lab_TargetEngi.Text = "有\r\n利\r\n区";
-            this.lab_TargetGeo.Text = "有\r\n利\r\n区";
+            //this.lab_TargetEco.Text = "有\r\n利\r\n区";
+            //this.lab_TargetEngi.Text = "有\r\n利\r\n区";
+           // this.lab_TargetGeo.Text = "有\r\n利\r\n区";
 
             //添加有利区的地质参数
             foreach (string str in this.listBox_GeoPara.Items)
@@ -136,14 +136,14 @@ namespace EsofaUI
             this.listBox_Diff_EcoPara.Items.Clear();
 
             //清空表示当前选择区域的标签
-            this.lab_TargetEco.Text = "";
-            this.lab_TargetEngi.Text = "";
-            this.lab_TargetGeo.Text = "";
+            //this.lab_TargetEco.Text = "";
+            //this.lab_TargetEngi.Text = "";
+            //this.lab_TargetGeo.Text = "";
 
             //标准表示当前选择区域的标签
             //this.lab_TargetEco.Text = "远\r\n景\r\n区";
-            this.lab_TargetEngi.Text = "远\r\n景\r\n区";
-            this.lab_TargetGeo.Text = "远\r\n景\r\n区";
+            //this.lab_TargetEngi.Text = "远\r\n景\r\n区";
+            //this.lab_TargetGeo.Text = "远\r\n景\r\n区";
 
             //添加远景区的地质参数
             foreach (string str in this.listBox_GeoPara.Items)
@@ -211,14 +211,14 @@ namespace EsofaUI
             this.listBox_Diff_EcoPara.Visible = true;
 
             //清空表示当前选择区域的标签
-            this.lab_TargetEco.Text = "";
-            this.lab_TargetEngi.Text = "";
-            this.lab_TargetGeo.Text = "";
+            //this.lab_TargetEco.Text = "";
+            //this.lab_TargetEngi.Text = "";
+            //this.lab_TargetGeo.Text = "";
 
             //标准表示当前选择区域的标签
-            this.lab_TargetEco.Text = "核\r\n心\r\n区";
-            this.lab_TargetEngi.Text = "核\r\n心\r\n区";
-            this.lab_TargetGeo.Text = "核\r\n心\r\n区";
+           // this.lab_TargetEco.Text = "核\r\n心\r\n区";
+            //this.lab_TargetEngi.Text = "核\r\n心\r\n区";
+            //this.lab_TargetGeo.Text = "核\r\n心\r\n区";
             //添加核心区的地质参数
             foreach (string str in this.listBox_GeoPara.Items)
             {

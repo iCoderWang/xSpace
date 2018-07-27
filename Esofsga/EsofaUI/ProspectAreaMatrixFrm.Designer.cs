@@ -35,6 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,24 +45,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dGridViewEngiPara = new System.Windows.Forms.DataGridView();
-            this.para_Dr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Bmc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dGridViewEcoPara = new System.Windows.Forms.DataGridView();
             this.dGridViewGeoPara = new System.Windows.Forms.DataGridView();
-            this.para_Strom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Toc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_OMType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Ro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Ea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Rr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Scd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dGridViewPros = new System.Windows.Forms.DataGridView();
-            this.para_Geo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.para_Engi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
@@ -70,6 +59,17 @@
             this.gBoxGeoPara = new System.Windows.Forms.GroupBox();
             this.gBoxProspectArea = new System.Windows.Forms.GroupBox();
             this.gBoxParaMatrix = new System.Windows.Forms.GroupBox();
+            this.para_Geo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Engi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Strom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Toc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_OMType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Ro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Ea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Rr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Scd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Dr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.para_Bmc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dGridViewEngiPara)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridViewEcoPara)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridViewGeoPara)).BeginInit();
@@ -119,20 +119,6 @@
             this.dGridViewEngiPara.RowHeadersVisible = false;
             this.dGridViewEngiPara.Size = new System.Drawing.Size(345, 212);
             this.dGridViewEngiPara.TabIndex = 0;
-            // 
-            // para_Dr
-            // 
-            this.para_Dr.HeaderText = "埋深";
-            this.para_Dr.Name = "para_Dr";
-            this.para_Dr.ReadOnly = true;
-            this.para_Dr.ToolTipText = "埋深范围 (m)";
-            // 
-            // para_Bmc
-            // 
-            this.para_Bmc.HeaderText = "脆矿";
-            this.para_Bmc.Name = "para_Bmc";
-            this.para_Bmc.ReadOnly = true;
-            this.para_Bmc.ToolTipText = "脆性矿物含量";
             // 
             // dGridViewEcoPara
             // 
@@ -203,77 +189,6 @@
             this.dGridViewGeoPara.Size = new System.Drawing.Size(442, 220);
             this.dGridViewGeoPara.TabIndex = 0;
             // 
-            // para_Strom
-            // 
-            this.para_Strom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.para_Strom.DefaultCellStyle = dataGridViewCellStyle7;
-            this.para_Strom.HeaderText = "厚度";
-            this.para_Strom.Name = "para_Strom";
-            this.para_Strom.ReadOnly = true;
-            this.para_Strom.ToolTipText = "富有机质页岩厚度(m)";
-            // 
-            // para_Toc
-            // 
-            this.para_Toc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle8;
-            this.para_Toc.HeaderText = "含量";
-            this.para_Toc.Name = "para_Toc";
-            this.para_Toc.ReadOnly = true;
-            this.para_Toc.ToolTipText = "有机质含量 TOC(%)";
-            // 
-            // para_OMType
-            // 
-            this.para_OMType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_OMType.DefaultCellStyle = dataGridViewCellStyle9;
-            this.para_OMType.HeaderText = "类型";
-            this.para_OMType.Name = "para_OMType";
-            this.para_OMType.ReadOnly = true;
-            this.para_OMType.ToolTipText = "有机质类型";
-            // 
-            // para_Ro
-            // 
-            this.para_Ro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle10;
-            this.para_Ro.HeaderText = "成熟度";
-            this.para_Ro.Name = "para_Ro";
-            this.para_Ro.ReadOnly = true;
-            this.para_Ro.ToolTipText = "有机质成熟度Ro(%)";
-            // 
-            // para_Ea
-            // 
-            this.para_Ea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle11;
-            this.para_Ea.HeaderText = "面积";
-            this.para_Ea.Name = "para_Ea";
-            this.para_Ea.ReadOnly = true;
-            this.para_Ea.ToolTipText = "有效面积  (km2)";
-            // 
-            // para_Rr
-            // 
-            this.para_Rr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle12;
-            this.para_Rr.HeaderText = "丰度";
-            this.para_Rr.Name = "para_Rr";
-            this.para_Rr.ReadOnly = true;
-            this.para_Rr.ToolTipText = "资源丰度 (108m3/km2)";
-            // 
-            // para_Scd
-            // 
-            this.para_Scd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle13;
-            this.para_Scd.HeaderText = "构造";
-            this.para_Scd.Name = "para_Scd";
-            this.para_Scd.ReadOnly = true;
-            this.para_Scd.ToolTipText = "构造复杂程度";
-            // 
             // dGridViewPros
             // 
             this.dGridViewPros.AllowUserToAddRows = false;
@@ -313,20 +228,6 @@
             this.dGridViewPros.RowHeadersVisible = false;
             this.dGridViewPros.Size = new System.Drawing.Size(270, 220);
             this.dGridViewPros.TabIndex = 0;
-            // 
-            // para_Geo
-            // 
-            this.para_Geo.HeaderText = "地质";
-            this.para_Geo.Name = "para_Geo";
-            this.para_Geo.ReadOnly = true;
-            this.para_Geo.ToolTipText = "地质条件";
-            // 
-            // para_Engi
-            // 
-            this.para_Engi.HeaderText = "工程";
-            this.para_Engi.Name = "para_Engi";
-            this.para_Engi.ReadOnly = true;
-            this.para_Engi.ToolTipText = "工程条件";
             // 
             // btnQuit
             // 
@@ -436,6 +337,116 @@
             this.gBoxParaMatrix.TabStop = false;
             this.gBoxParaMatrix.Text = "判断矩阵";
             // 
+            // para_Geo
+            // 
+            this.para_Geo.HeaderText = "地质";
+            this.para_Geo.Name = "para_Geo";
+            this.para_Geo.ReadOnly = true;
+            this.para_Geo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Geo.ToolTipText = "地质条件";
+            // 
+            // para_Engi
+            // 
+            this.para_Engi.HeaderText = "工程";
+            this.para_Engi.Name = "para_Engi";
+            this.para_Engi.ReadOnly = true;
+            this.para_Engi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Engi.ToolTipText = "工程条件";
+            // 
+            // para_Strom
+            // 
+            this.para_Strom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.para_Strom.DefaultCellStyle = dataGridViewCellStyle7;
+            this.para_Strom.HeaderText = "厚度";
+            this.para_Strom.Name = "para_Strom";
+            this.para_Strom.ReadOnly = true;
+            this.para_Strom.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Strom.ToolTipText = "富有机质页岩厚度(m)";
+            // 
+            // para_Toc
+            // 
+            this.para_Toc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle8;
+            this.para_Toc.HeaderText = "含量";
+            this.para_Toc.Name = "para_Toc";
+            this.para_Toc.ReadOnly = true;
+            this.para_Toc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Toc.ToolTipText = "有机质含量 TOC(%)";
+            // 
+            // para_OMType
+            // 
+            this.para_OMType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_OMType.DefaultCellStyle = dataGridViewCellStyle9;
+            this.para_OMType.HeaderText = "类型";
+            this.para_OMType.Name = "para_OMType";
+            this.para_OMType.ReadOnly = true;
+            this.para_OMType.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_OMType.ToolTipText = "有机质类型";
+            // 
+            // para_Ro
+            // 
+            this.para_Ro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle10;
+            this.para_Ro.HeaderText = "成熟度";
+            this.para_Ro.Name = "para_Ro";
+            this.para_Ro.ReadOnly = true;
+            this.para_Ro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Ro.ToolTipText = "有机质成熟度Ro(%)";
+            // 
+            // para_Ea
+            // 
+            this.para_Ea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle11;
+            this.para_Ea.HeaderText = "面积";
+            this.para_Ea.Name = "para_Ea";
+            this.para_Ea.ReadOnly = true;
+            this.para_Ea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Ea.ToolTipText = "有效面积  (km2)";
+            // 
+            // para_Rr
+            // 
+            this.para_Rr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle12;
+            this.para_Rr.HeaderText = "丰度";
+            this.para_Rr.Name = "para_Rr";
+            this.para_Rr.ReadOnly = true;
+            this.para_Rr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Rr.ToolTipText = "资源丰度 (108m3/km2)";
+            // 
+            // para_Scd
+            // 
+            this.para_Scd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle13;
+            this.para_Scd.HeaderText = "构造";
+            this.para_Scd.Name = "para_Scd";
+            this.para_Scd.ReadOnly = true;
+            this.para_Scd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Scd.ToolTipText = "构造复杂程度";
+            // 
+            // para_Dr
+            // 
+            this.para_Dr.HeaderText = "埋深";
+            this.para_Dr.Name = "para_Dr";
+            this.para_Dr.ReadOnly = true;
+            this.para_Dr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Dr.ToolTipText = "埋深范围 (m)";
+            // 
+            // para_Bmc
+            // 
+            this.para_Bmc.HeaderText = "脆矿";
+            this.para_Bmc.Name = "para_Bmc";
+            this.para_Bmc.ReadOnly = true;
+            this.para_Bmc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.para_Bmc.ToolTipText = "脆性矿物含量";
+            // 
             // ProspectAreaMatrixFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,8 +485,6 @@
         private System.Windows.Forms.GroupBox gBoxParaMatrix;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Dr;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Bmc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn para_Geo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn para_Engi;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Strom;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Toc;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_OMType;
@@ -483,5 +492,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Ea;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Rr;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Scd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn para_Geo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn para_Engi;
     }
 }

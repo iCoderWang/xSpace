@@ -292,11 +292,11 @@ namespace EsofaUI
             }
     }
 
-        private void tlStripBtn_Refresh_Click(object sender, EventArgs e)
-        {
-            dgv_DbQuery.DataSource = dt;
-            dgv_DbQuery.Refresh();
-        }
+        //private void tlStripBtn_Refresh_Click(object sender, EventArgs e)
+        //{
+        //    dgv_DbQuery.DataSource = dt;
+        //    dgv_DbQuery.Refresh();
+        //}
         int sn = 0;
         private void tlStripBtn_BlankRowAdd_Click(object sender, EventArgs e)
         {

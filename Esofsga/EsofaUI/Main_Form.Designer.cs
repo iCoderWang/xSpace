@@ -593,7 +593,7 @@
             this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
             this.sideBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataAnly;
+            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataMnger;
             this.sideBar1.Location = new System.Drawing.Point(2, 35);
             this.sideBar1.Name = "sideBar1";
             this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -795,8 +795,10 @@
             // 
             this.tabPage_Welcome.Controls.Add(this.label2);
             this.tabPage_Welcome.Name = "tabPage_Welcome";
+            this.tabPage_Welcome.PageVisible = false;
+            this.tabPage_Welcome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabPage_Welcome.Size = new System.Drawing.Size(664, 300);
-            this.tabPage_Welcome.Text = "欢迎登录";
+            this.tabPage_Welcome.Text = "欢迎";
             // 
             // label2
             // 
