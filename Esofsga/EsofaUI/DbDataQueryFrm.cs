@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using System.Data;
 using System.Text;
 using EsofaModel;
-using EsofaBLL;
 using System.Collections.Generic;
 
 namespace EsofaUI
@@ -297,7 +296,7 @@ namespace EsofaUI
         //    dgv_DbQuery.DataSource = dt;
         //    dgv_DbQuery.Refresh();
         //}
-        int sn = 0;
+        //int sn;
         private void tlStripBtn_BlankRowAdd_Click(object sender, EventArgs e)
         {
             dgv_DbQuery.AllowUserToAddRows = false;
@@ -314,7 +313,7 @@ namespace EsofaUI
             DataRow dR = null;
             if (dgv_DbQuery.DataSource == null)
             {
-                sn = 0;
+                //sn = 0;
                 //System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
                 //watch.Start();
                 DataTable dt = DataSourceToDataTable.GetListToDataTable(new List<TargetEntity>());

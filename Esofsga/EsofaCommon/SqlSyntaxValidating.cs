@@ -37,7 +37,7 @@ namespace EsofaCommon
                         cmd.ExecuteNonQuery();
                         bResult = true;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         bResult = false;
                     }                    

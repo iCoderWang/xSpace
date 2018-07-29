@@ -70,7 +70,7 @@ namespace EsofaModel
         //public string Para_Scd { get; set; }
         public string tgt_Geo_Para_Scd { get; set; }
 
-        //定义字段 顶底板条件 (m) roof-floor Thickness
+        //定义字段 顶底板条件 (m) roof-floor Condition
         public string tgt_Geo_Para_Rfc { get; set; }
 
         /* 目标区 （核心区）工程参数

@@ -86,5 +86,35 @@ namespace EsofaCommon
             return u;
         }
         
+        /// <summary>
+        /// 对于等级性评价，比如，好，较好，中，差，这种参数的赋分
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public double FuzzyRankScore(string str)
+        {
+            switch (str.Trim())
+            {
+                case "好":
+                    return 100;
+                case "较好":
+                    return 75;
+                case "中":
+                    return 50;
+                case "差":
+                    return 25;
+
+            }
+            return 0;
+        }
+
+        public double ToAssignForKerogenType(string str)
+        {
+            if (str.Trim() != "")
+            {
+                return 50;
+            }
+            return 0;
+        }
     }
 }

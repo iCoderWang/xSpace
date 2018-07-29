@@ -18,10 +18,16 @@ namespace EsofaUI
     {
         //定义委托
         private DelCloseTabPage _delCloseTabPage;
+        ////private SortedBlocksFrm sbf;
         public GradingFrm()
         {
             InitializeComponent();
         }
+        //public GradingFrm(SortedBlocksFrm sBF)
+        //{
+        //    InitializeComponent();
+        //    sbf = sBF;
+        //}
 
         //重载构造函数，用委托做传递参数
         public GradingFrm(DelCloseTabPage delCloseTabPage)
@@ -51,9 +57,17 @@ namespace EsofaUI
             if (tabControlGrading.SelectedTab == tabPageTarget)
             {
                 //核心区为当前选定区域 创建核心区矩阵窗体实例
-                CoreAreaMatrixFrm camf = new CoreAreaMatrixFrm();
+                //CoreAreaMatrixFrm camf = new CoreAreaMatrixFrm();
                 //显示核心区矩阵窗体
-                camf.Show();
+                if (lstTgtSelected.Count != 0)//lstTgtSelected != null)
+                {
+                    camf.Show();
+                }
+                else
+                {
+                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
         }
 
@@ -76,11 +90,15 @@ namespace EsofaUI
         List<AverageValuesTargetEntity> listAvgTgtEnty = null;
         string sql = "select * from view_target";
         RawDataBLL rawDataBLL = new RawDataBLL();
-        
+        CoreAreaMatrixFrm camf = null;
+
+
         private void GradingFrm_Load(object sender, EventArgs e)
         {
             listAvgTgtEnty = rawDataBLL.GetAvg_List(sql);
             dt = DataSourceToDataTable.GetListToDataTable(listAvgTgtEnty);
+            //SortedBlocksFrm sbf = new SortedBlocksFrm(listAvgTgtEnty);
+            
             List<string> list_BsnName = new List<string>();
             List<string> list_TgtName = new List<string>();
             TreeNode tN = new TreeNode();
@@ -168,10 +186,21 @@ namespace EsofaUI
                 dgvView_Target.DataSource = DataSourceToDataTable.GetListToDataTable(lstTgtSelected);
                 dgvView_Basin.DataSource = DataSourceToDataTable.GetListToDataTable(tlt.ToBasin(lstTgtSelected, lstBsnSelected));
                 dgvView_Block.DataSource = DataSourceToDataTable.GetListToDataTable(tlt.ToBlock(lstTgtSelected, lstBlkSelected));
+                if (lstTgtSelected != null)
+                {
+                     camf = new CoreAreaMatrixFrm(lstTgtSelected);
+                }
+                else
+                {
+                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。","警告",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    return;
+                }
                 tgtSn = 0;
+                
                 //dgvView_Target.Refresh();
             }
         }
 
+       
     }
 }

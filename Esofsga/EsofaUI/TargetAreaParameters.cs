@@ -68,17 +68,7 @@ namespace EsofaUI
             //非远景区经济参数参与评估
             this.listBox_Diff_EcoPara.Enabled = true;
             this.listBox_Diff_EcoPara.Visible = true;
-
-            //清空表示当前选择区域的标签
-           // this.lab_TargetEco.Text = "";
-            //this.lab_TargetEngi.Text = "";
-            //this.lab_TargetGeo.Text = "";
-
-            //标准表示当前选择区域的标签
-            //this.lab_TargetEco.Text = "有\r\n利\r\n区";
-            //this.lab_TargetEngi.Text = "有\r\n利\r\n区";
-           // this.lab_TargetGeo.Text = "有\r\n利\r\n区";
-
+            
             //添加有利区的地质参数
             foreach (string str in this.listBox_GeoPara.Items)
             {
