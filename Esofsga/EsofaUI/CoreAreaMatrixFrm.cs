@@ -17,11 +17,6 @@ namespace EsofaUI
             InitializeComponent();
         }
         double[,] R1;
-        //double[,] Rtest = {
-        //                            {-1,1,0 },
-        //                            { -4,3,0},
-        //                            {1,0,2 }
-        //                        };
         double[,] R21;
         double[,] R22;
         double[,] R23;
@@ -40,27 +35,26 @@ namespace EsofaUI
             DataTable dt = new DataTable();
 
             //定义核心区区块(分层方法中的 第一层)参数的权重矩阵数据
-            double [,] coreAreaWeight_R1 = { {1,1,3 }, 
+            double [,] tgtAreaWeight_R1 = { {1,1,3 }, 
                                                                {1,1,3 }, 
                                                                {1/3.0,1/3.0,1 } };
-            R1 = coreAreaWeight_R1;
+            R1 = tgtAreaWeight_R1;
             //R1 ={ {-1,1,0 },{ -4,3,0},{ 1,0,2} };
 
             //定义核心区区块(分层方法中的 第二层)地质条件参数的权重矩阵数据
-            double[,] coreGeoWeight_R21 = { {1,3,7,3,3,3,1,6,1,8,9 },
-                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5,6 }, 
-                                                               {1/7.0,1/3.0,1,1/3.0,1/3.0,1/3.0,1/7.0,1/1.5,1/7.0,2,3 },
-                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5,6 }, 
-                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5,6},
-                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5,6 },
-                                                               {1,3,7,3,3,3,1,6,1,8,9 }, 
-                                                               {1/6.0,1/2.5,1.5,1/2.5,1/2.5,1/2.5,1/6.0,1,1/6.0,3,4 }, 
-                                                               {1,3,7,3,3,3,1,6,1,8,9 }, 
-                                                               {1/8.0,1/5.0,1/2.0,1/5.0,1/5.0,1/5.0,1/8.0,1/3.0,1/8.0,1,2 }, 
-                                                               {1/9.0,1/6.0,1/3.0,1/6.0,1/6.0,1/6.0,1/9.0,1/4.0,1/9.0,1/2.0,1 } };
-            R21 = coreGeoWeight_R21;
+            double[,] tgtGeoWeight_R21 = { {1,3,7,3,3,3,1,6,1,8 },
+                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5 }, 
+                                                               {1/7.0,1/3.0,1,1/3.0,1/3.0,1/3.0,1/7.0,1/1.5,1/7.0,2 },
+                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5 }, 
+                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5},
+                                                               {1/3.0,1,3,1,1,1,1/3.0,2.5,1/3.0,5 },
+                                                               {1,3,7,3,3,3,1,6,1,8 }, 
+                                                               {1/6.0,1/2.5,1.5,1/2.5,1/2.5,1/2.5,1/6.0,1,1/6.0,3}, 
+                                                               {1,3,7,3,3,3,1,6,1,8 }, 
+                                                               {1/8.0,1/5.0,1/2.0,1/5.0,1/5.0,1/5.0,1/8.0,1/3.0,1/8.0,1}};
+            R21 = tgtGeoWeight_R21;
             ////定义核心区区块(分层方法中的 第二层)工程条件参数的权重矩阵数据
-            double[,] coreEngiWeight_R22 = { {1,3,3,8,6,1,6,9 },
+            double[,] tgtEngiWeight_R22 = { {1,3,3,8,6,1,6,9 },
                                                                {1/3.0,1,1,5,4,1/3.0,4,6 },
                                                                {1/3.0,1,1,5,4,1/3.0,4,6 },
                                                                {1/8.0,1/5.0,1/5.0,1,1/3.0,1/8.0,1/3.0,2 },
@@ -68,78 +62,64 @@ namespace EsofaUI
                                                                {1,3,3,8,6,1,6,9  },
                                                                {1/6.0,1/6.0,1/4.0,3,1,1/6.0,1,5 },
                                                                {1/9.0,1/6.0,1/6.0,1/2.0,1/5.0,1/9.0,1/5.0,1 } };
-            R22 = coreEngiWeight_R22;
+            R22 = tgtEngiWeight_R22;
             ////定义核心区区块(分层方法中的 第二层)经济条件参数的权重矩阵数据
-            double[,] coreEcoWeight_R23 = { {1,1,3,3,1/3.0 },
+            double[,] tgtEcoWeight_R23 = { {1,1,3,3,1/3.0 },
                                                                {1,1,3,3,1/3.0 },
                                                                {1/3.0,1/3.0,1,1,1/6.0 },
                                                                {1/3.0,1/3.0,1,1,1/6.0 },
                                                                {3,3,6,6,1 } };
-            R23 = coreEcoWeight_R23;
+            R23 = tgtEcoWeight_R23;
            
             //调用通用数据加载方法，返回DataTable类型数据表格
-           dt = paraWeightLoader.ParaWeightLoad(coreAreaWeight_R1);
+           dt = paraWeightLoader.ParaWeightLoad(tgtAreaWeight_R1);
 
             //将DataTable数据类型变量赋值给dataGridView的源数据
-            this.dGridViewCor.DataSource = dt;
+            this.dgv_Tgt.DataSource = dt;
 
             //调用通用数据加载方法，返回DataTable类型数据表格
-            dt = paraWeightLoader.ParaWeightLoad(coreGeoWeight_R21);
+            dt = paraWeightLoader.ParaWeightLoad(tgtGeoWeight_R21);
 
             //将DataTable数据类型变量赋值给dataGridView的源数据
-            this.dGridViewGeoPara.DataSource = dt;
+            this.dgv_Tgt_GeoPara.DataSource = dt;
 
             //调用通用数据加载方法，返回DataTable类型数据表格
-            dt = paraWeightLoader.ParaWeightLoad(coreEngiWeight_R22);
+            dt = paraWeightLoader.ParaWeightLoad(tgtEngiWeight_R22);
 
             //将DataTable数据类型变量赋值给dataGridView的源数据
-            this.dGridViewEngiPara.DataSource = dt;
+            this.dgv_Tgt_EngPara.DataSource = dt;
 
             //调用通用数据加载方法，返回DataTable类型数据表格
-            dt = paraWeightLoader.ParaWeightLoad(coreEcoWeight_R23);
+            dt = paraWeightLoader.ParaWeightLoad(tgtEcoWeight_R23);
 
             //将DataTable数据类型变量赋值给dataGridView的源数据
-            this.dGridViewEcoPara.DataSource = dt;
+            this.dgv_Tgt_EcoPara.DataSource = dt;
         }
-        // EigenValues eignFrm = new EigenValues();
-        //StringBuilder strB = new StringBuilder();
+
+        #region
         /// <summary>
         /// 计算特征值和特征向量
         /// </summary>
         /// <param name="arr"></param>
-        private Vector<double> ArrayLoad(double [,] arr,out StringBuilder strB)
-        {
-            double maxEigenValue;
-             strB = new StringBuilder();
-            //EigenValues eignFrm = new EigenValues();
-            CoincidenceChecker cChecker = new CoincidenceChecker();
-            Vector<double> eigenVector = cChecker.Caculate(arr, out maxEigenValue);
-            Vector<double> normalizedVector = eigenVector.Normalize(1);
-            double CR=cChecker.CrGenerate(maxEigenValue, arr);
-            #region
-            //foreach (double num in eigenVector)
-            //{
-            //    if (Math.Abs(num) < 0.000001)
-            //    {
-            //        eignFrm.textBox1.Text += num.ToString("#0.0") + "\r\n";
-            //    }
-            //    else
-            //    {
-            //        eignFrm.textBox1.Text += num.ToString("#0.000") + "\r\n";
-            //    }
-            // }
-            //eignFrm.textBox1.Text += eigenVector.EigenVectors.ToString("#0.00") + "\r\n";
-            #endregion
-            strB.Append("  ===============================================" + "\r\n");
-            strB.Append("  Maximum Eigenvalue: " + maxEigenValue + "\r\n");
-            strB.Append("  ===============================================" + "\r\n");
-            strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + eigenVector.ToString("#0.000000") + "\r\n");
-            strB.Append("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\r\n");
-            strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.000000") + "\r\n" + "CR Value is: " + CR.ToString("#0.000") + "\r\n");
-            strB.Append("  ******************************************" + "\r\n");
-            return normalizedVector;
-        }
-
+        //private Vector<double> ArrayLoad(double [,] arr,out StringBuilder strB)
+        //{
+        //    double maxEigenValue;
+        //     strB = new StringBuilder();
+        //    //EigenValues eignFrm = new EigenValues();
+        //    CoincidenceChecker cChecker = new CoincidenceChecker();
+        //    Vector<double> eigenVector = cChecker.Caculate(arr, out maxEigenValue);
+        //    Vector<double> normalizedVector = eigenVector.Normalize(1);
+        //    double CR=cChecker.CrGenerate(maxEigenValue, arr);
+        //    strB.Append("  ===============================================" + "\r\n");
+        //    strB.Append("  Maximum Eigenvalue: " + maxEigenValue + "\r\n");
+        //    strB.Append("  ===============================================" + "\r\n");
+        //    strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + eigenVector.ToString("#0.000000") + "\r\n");
+        //    strB.Append("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\r\n");
+        //    strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.000000") + "\r\n" + "CR Value is: " + CR.ToString("#0.000") + "\r\n");
+        //    strB.Append("  ******************************************" + "\r\n");
+        //    return normalizedVector;
+        //}
+        #endregion
         /// <summary>
         /// 对矩阵进行一致性检验，主要是计算一致性比例CR = CI(一致性指标)/RI(平均随机一致性指标)
         /// </summary>
@@ -164,20 +144,20 @@ namespace EsofaUI
             double wgt_Pc;
             double wgt_Psdf;
             double wgt_Bmc;
-
+            CoincidenceChecker cc = new CoincidenceChecker();
             double tempTotalSocres = 0;
             int counter = Main_Form.listBlockPara.Count;
             //
             SortedBlocksFrm sBf = new SortedBlocksFrm();
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
-           Vector<double> vR1 = ArrayLoad(R1, out strB);
+           Vector<double> vR1 = cc.ArrayLoad(R1, out strB);
             eignFrm.textBox1.Text += "R1: \r\n"+strB.ToString() + "\r\n\r\n";
-            Vector<double> vR21 = ArrayLoad(R21, out strB) * vR1.ElementAt(0);
+            Vector<double> vR21 = cc.ArrayLoad(R21, out strB) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
-            Vector<double> vR22 = ArrayLoad(R22, out strB) * vR1.ElementAt(1);
+            Vector<double> vR22 = cc.ArrayLoad(R22, out strB) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
-            Vector<double> vR23 = ArrayLoad(R23, out strB) * vR1.ElementAt(2);
+            Vector<double> vR23 = cc.ArrayLoad(R23, out strB) * vR1.ElementAt(2);
             #region
             //Evd<double> eigen = cc.Caculate(Rtest);
             ////int index = eigen.EigenValues.MaximumIndex();
@@ -331,5 +311,97 @@ namespace EsofaUI
         {
             this.Close();
         }
+
+        private void btn_Geo_ToRight_Click(object sender, EventArgs e)
+        {
+            lstBx_Selected_GeoPara.Items.AddRange(lstBx_All_GeoPara.Items);
+            lstBx_All_GeoPara.Items.Clear();
+        }
+
+        private void lstBx_All_GeoPara_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstBx_All_GeoPara.SelectedIndex!=-1)
+            {
+                lstBx_Selected_GeoPara.Items.Add(lstBx_All_GeoPara.SelectedItem);
+                lstBx_All_GeoPara.Items.Remove(lstBx_All_GeoPara.SelectedItem);
+            }
+        }
+
+        private void btn_Geo_ToLeft_Click(object sender, EventArgs e)
+        {
+            lstBx_All_GeoPara.Items.AddRange(lstBx_Selected_GeoPara.Items);
+            lstBx_Selected_GeoPara.Items.Clear();
+        }
+
+        private void lstBx_Selected_GeoPara_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstBx_Selected_GeoPara.SelectedIndex != -1)
+            {
+                lstBx_All_GeoPara.Items.Add(lstBx_Selected_GeoPara.SelectedItem);
+                lstBx_Selected_GeoPara.Items.Remove(lstBx_Selected_GeoPara.SelectedItem);
+            }
+        }
+
+        private void lstBx_All_EngPara_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstBx_All_EngPara.SelectedIndex != -1)
+            {
+                lstBx_Selected_EngPara.Items.Add(lstBx_All_EngPara.SelectedItem);
+                lstBx_All_EngPara.Items.Remove(lstBx_All_EngPara.SelectedItem);
+            }
+        }
+        private void lstBx_Selected_EngPara_DoubleClick(object sender, EventArgs e)
+        {
+            if(lstBx_Selected_EngPara.SelectedIndex != -1)
+            {
+                lstBx_All_EngPara.Items.Add(lstBx_Selected_EngPara.SelectedItem);
+                lstBx_Selected_EngPara.Items.Remove(lstBx_Selected_EngPara.SelectedItem);
+            }
+        }
+
+        private void btn_Eng_ToRight_Click(object sender, EventArgs e)
+        {
+            lstBx_Selected_EngPara.Items.AddRange(lstBx_All_EngPara.Items);
+            lstBx_All_EngPara.Items.Clear();
+        }
+
+        private void btn_Eng_ToLeft_Click(object sender, EventArgs e)
+        {
+            lstBx_All_EngPara.Items.AddRange(lstBx_Selected_EngPara.Items);
+            
+            lstBx_Selected_EngPara.Items.Clear();
+        }
+
+        private void lstBx_All_EcoPara_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstBx_All_EcoPara.SelectedIndex != -1)
+            {
+                lstBx_Selected_EcoPara.Items.Add(lstBx_All_EcoPara.SelectedItem);
+                lstBx_All_EcoPara.Items.Remove(lstBx_All_EcoPara.SelectedItem);
+            }
+        }
+
+        private void lstBx_Selected_EcoPara_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstBx_Selected_EcoPara.SelectedIndex != -1)
+            {
+                lstBx_All_EcoPara.Items.Add(lstBx_Selected_EcoPara.SelectedItem);
+                lstBx_Selected_EcoPara.Items.Remove(lstBx_Selected_EcoPara.SelectedItem);
+            }
+        }
+
+        private void btn_Eco_ToRight_Click(object sender, EventArgs e)
+        {
+            lstBx_Selected_EcoPara.Items.AddRange(lstBx_All_EcoPara.Items);
+            lstBx_All_EcoPara.Items.Clear();
+        }
+
+        private void btn_Eco_ToLeft_Click(object sender, EventArgs e)
+        {
+            lstBx_All_EcoPara.Items.AddRange(lstBx_Selected_EcoPara.Items);
+            lstBx_Selected_EcoPara.Items.Clear();
+        }
+
+ 
     }
 }

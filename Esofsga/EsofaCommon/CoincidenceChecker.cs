@@ -1,27 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MathNet;
+﻿
 using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Double;
 using MathNet.Numerics.LinearAlgebra.Factorization;
+using System.Text;
 
 namespace EsofaCommon
 {
     //方阵设定一致性检验模块
     public partial class CoincidenceChecker
     {
-        //Matrix<double> processedData = Matrix<double>.Build.Random(5, 5);
-        //Evd<double> eigen = processedData.Evd();
-        //Vector<Complex> eigenvector = eigen.EigenValues;
-        //Using the constructor
-        //Matrix<double> someMatrix = new DenseMatrix(4, 4, someArray)
-
-        //Using the static function
-        //Matrix<double> someMatrix = DenseMatrix.OfColumnMajor(4, 4, someArray);
-
         //计算特征值的方法，返回特征值的最大值
         /// <summary>
         /// 计算最大特征值
@@ -30,7 +16,7 @@ namespace EsofaCommon
         /// <param name="arr"></param>
         /// <param name="maxEigenValue"></param>
         /// <returns></returns>
-        public Vector<double> Caculate(double [,] arr, out double maxEigenValue)
+        private Vector<double> Caculate(double [,] arr, out double maxEigenValue)
         {
             //double[,] arr = new double [,]{ { 1,-3,3}, {3,-5,3 }, {6,-6,4 } };
             //对out参数 最大特征值变量预先赋值
@@ -72,10 +58,6 @@ namespace EsofaCommon
             {
                 eigenVector = -eigenVector;
             }
-            //Vector<double> v = eigen.EigenValues.Real();
-            
-                //int i = eigen.EigenValues.MaximumIndex();
-            //return eigen.
             return eigenVector;
         }
 
@@ -86,7 +68,7 @@ namespace EsofaCommon
         /// <param name="maxEigenValue"></param>
         /// <param name="arr"></param>
         /// <returns></returns>
-        public double CrGenerate(double maxEigenValue,double [,] arr)
+        private double CrGenerate(double maxEigenValue,double [,] arr)
         {
             //定义CR变量
             double CR;
@@ -115,6 +97,30 @@ namespace EsofaCommon
             }
             return CR;
         }
-        
+
+        /// <summary>
+        /// 计算特征值和特征向量
+        /// </summary>
+        /// <param name="arr"></param>
+        public Vector<double> ArrayLoad(double[,] arr, out StringBuilder strB)
+        {
+            double maxEigenValue;
+            strB = new StringBuilder();
+            //CoincidenceChecker cChecker = new CoincidenceChecker();
+            //Vector<double> eigenVector = cChecker.Caculate(arr, out maxEigenValue);
+            Vector<double> eigenVector = Caculate(arr, out maxEigenValue);
+            Vector<double> normalizedVector = eigenVector.Normalize(1);
+            //double CR = cChecker.CrGenerate(maxEigenValue, arr);
+            double CR = CrGenerate(maxEigenValue, arr);
+            strB.Append("  ===============================================" + "\r\n");
+            strB.Append("  Maximum Eigenvalue: " + maxEigenValue + "\r\n");
+            strB.Append("  ===============================================" + "\r\n");
+            strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + eigenVector.ToString("#0.000000") + "\r\n");
+            strB.Append("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\r\n");
+            strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.000000") + "\r\n" + "CR Value is: " + CR.ToString("#0.000") + "\r\n");
+            strB.Append("  ******************************************" + "\r\n");
+            return normalizedVector;
+        }
+
     }
 }
