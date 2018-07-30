@@ -84,7 +84,9 @@
     <Compile Include="BlockParametersGrade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RawData.cs" />
+    <Compile Include="SortedBasinsParas.cs" />
     <Compile Include="SortedBlocksParas.cs" />
+    <Compile Include="SortedTargetsParas.cs" />
     <Compile Include="TargetEntity.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>

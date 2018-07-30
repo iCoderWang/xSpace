@@ -96,13 +96,13 @@ namespace EsofaCommon
             switch (str.Trim())
             {
                 case "好":
-                    return 100;
+                    return 85;
                 case "较好":
-                    return 75;
+                    return 80;
                 case "中":
-                    return 50;
+                    return 75;
                 case "差":
-                    return 25;
+                    return 50;
 
             }
             return 0;

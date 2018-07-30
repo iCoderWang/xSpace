@@ -18,16 +18,10 @@ namespace EsofaUI
     {
         //定义委托
         private DelCloseTabPage _delCloseTabPage;
-        ////private SortedBlocksFrm sbf;
         public GradingFrm()
         {
             InitializeComponent();
         }
-        //public GradingFrm(SortedBlocksFrm sBF)
-        //{
-        //    InitializeComponent();
-        //    sbf = sBF;
-        //}
 
         //重载构造函数，用委托做传递参数
         public GradingFrm(DelCloseTabPage delCloseTabPage)
@@ -41,26 +35,43 @@ namespace EsofaUI
             if (tabControlGrading.SelectedTab == tabPageBasin)
             {
                 //远景区为当前选定区域 创建远景区矩阵窗体实例
-                ProspectAreaMatrixFrm pamf = new ProspectAreaMatrixFrm();
                 //显示远景区矩阵窗体
-                pamf.Show();
+                if (lstTgtSelected != null)
+                {
+                    pamf = new ProspectAreaMatrixFrm(lstBsnSelected);
+                    pamf.Show();
+                }
+                else
+                {
+                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
 
             if (tabControlGrading.SelectedTab == tabPageBlock)
             {
                 //有利区为当前选定区域 创建有利区矩阵窗体实例
-                FavorableAreaMatrixFrm famf = new FavorableAreaMatrixFrm();
                 //显示有利区矩阵窗体
-                famf.Show();
+                if (lstTgtSelected.Count != 0)
+                {
+                    famf = new FavorableAreaMatrixFrm(lstBlkSelected);
+                    famf.Show();
+                }
+                else
+                {
+                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
             }
 
             if (tabControlGrading.SelectedTab == tabPageTarget)
             {
                 //核心区为当前选定区域 创建核心区矩阵窗体实例
-                //CoreAreaMatrixFrm camf = new CoreAreaMatrixFrm();
                 //显示核心区矩阵窗体
                 if (lstTgtSelected.Count != 0)//lstTgtSelected != null)
                 {
+                    camf = new CoreAreaMatrixFrm(lstTgtSelected);
                     camf.Show();
                 }
                 else
@@ -80,32 +91,26 @@ namespace EsofaUI
             "平均TOC(%)","干酪根类型","平均Ro(%)","有效圈定面积(1-4km深,km^2)","平均含气量 (m^3/t)","平均资源丰度(亿m^3/km^2)",
             "平均孔隙度(%)","构造复杂度","顶底板岩性","平均埋深范围","平均压力系数","渗透率","裂缝发育度","平均主应力差异系数",
             "平均脆性矿物含量","水系","区域勘探度","市场气价","市场需求","交通设施","管网条件","地表地貌" };
-        //视图数据对应的各属性变量
-        //string[] parasView = new string[] {"tgt_Name","bsn_Name","tgt_Ps","tgt_Sc","tgt_Gr_Avg","tgt_TrRoms_Avg",
-        //    "tgt_Toc_Avg","tgt_Kt","tgt_Ro_Avg","tgt_Ea","tgt_Gc_Avg","tgt_Rr_Avg","tgt_Por_Avg","tgt_Scd","tgt_Rfc",
-        //    "tgt_Dr_Avg","tgt_Pc_Avg","tgt_Per","tgt_Fdd","tgt_Psdc_Avg","tgt_Bmc_Avg","tgt_Ds","tgt_Led","tgt_Gp",
-        //    "tgt_Dmd","tgt_Tu","tgt_Pn","tgt_Sg" };
 
         DataTable dt = new DataTable();
         List<AverageValuesTargetEntity> listAvgTgtEnty = null;
         string sql = "select * from view_target";
         RawDataBLL rawDataBLL = new RawDataBLL();
         CoreAreaMatrixFrm camf = null;
+        FavorableAreaMatrixFrm famf = null;
+        ProspectAreaMatrixFrm pamf = null;
 
 
         private void GradingFrm_Load(object sender, EventArgs e)
         {
             listAvgTgtEnty = rawDataBLL.GetAvg_List(sql);
             dt = DataSourceToDataTable.GetListToDataTable(listAvgTgtEnty);
-            //SortedBlocksFrm sbf = new SortedBlocksFrm(listAvgTgtEnty);
-            
             List<string> list_BsnName = new List<string>();
             List<string> list_TgtName = new List<string>();
             TreeNode tN = new TreeNode();
             string otherBsn = "";
            
             //将所有数据存在dt表内，后面的操作就是从该表中来读取数据
-            //dt = DataSourceToDataTable.GetListToDataTable(listAvgTgtEnty);
             foreach(AverageValuesTargetEntity val in listAvgTgtEnty)
             {
                 //下面的判断语句是为了避免有重复值出现，其等同于下面的Linq语句：
@@ -152,8 +157,6 @@ namespace EsofaUI
         int tgtSn = 0;
         List<string> lstTgtName = new List<string>();
         TargetListTransfomer tlt = new TargetListTransfomer();
-      
-        //SetNodeCheckState sncs = new SetNodeCheckState();
         TreeViewNodesCheckStateSetting tvncs = new TreeViewNodesCheckStateSetting();
         List<AverageValuesTargetEntity> lstTgtSelected = new List<AverageValuesTargetEntity>();
         List<AverageValuesBasinEntity> lstBsnSelected = new List<AverageValuesBasinEntity>();
@@ -182,22 +185,12 @@ namespace EsofaUI
                         }
                     }
                 }
-                //MessageBox.Show("The value of Counter is : " + str);
+                lstBlkSelected = tlt.ToBlock(lstTgtSelected, lstBlkSelected);
+                lstBsnSelected = tlt.ToBasin(lstTgtSelected, lstBsnSelected);
                 dgvView_Target.DataSource = DataSourceToDataTable.GetListToDataTable(lstTgtSelected);
-                dgvView_Basin.DataSource = DataSourceToDataTable.GetListToDataTable(tlt.ToBasin(lstTgtSelected, lstBsnSelected));
-                dgvView_Block.DataSource = DataSourceToDataTable.GetListToDataTable(tlt.ToBlock(lstTgtSelected, lstBlkSelected));
-                if (lstTgtSelected != null)
-                {
-                     camf = new CoreAreaMatrixFrm(lstTgtSelected);
-                }
-                else
-                {
-                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。","警告",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                    return;
-                }
+                dgvView_Basin.DataSource = DataSourceToDataTable.GetListToDataTable(lstBsnSelected);
+                dgvView_Block.DataSource = DataSourceToDataTable.GetListToDataTable(lstBlkSelected);
                 tgtSn = 0;
-                
-                //dgvView_Target.Refresh();
             }
         }
 

@@ -105,30 +105,46 @@ namespace EsofaUI
             this.dgv_Tgt_EcoPara.DataSource = dt;
         }
 
+
+        //定义地质条件的权重变量
         #region
-        /// <summary>
-        /// 计算特征值和特征向量
-        /// </summary>
-        /// <param name="arr"></param>
-        //private Vector<double> ArrayLoad(double [,] arr,out StringBuilder strB)
-        //{
-        //    double maxEigenValue;
-        //     strB = new StringBuilder();
-        //    //EigenValues eignFrm = new EigenValues();
-        //    CoincidenceChecker cChecker = new CoincidenceChecker();
-        //    Vector<double> eigenVector = cChecker.Caculate(arr, out maxEigenValue);
-        //    Vector<double> normalizedVector = eigenVector.Normalize(1);
-        //    double CR=cChecker.CrGenerate(maxEigenValue, arr);
-        //    strB.Append("  ===============================================" + "\r\n");
-        //    strB.Append("  Maximum Eigenvalue: " + maxEigenValue + "\r\n");
-        //    strB.Append("  ===============================================" + "\r\n");
-        //    strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + eigenVector.ToString("#0.000000") + "\r\n");
-        //    strB.Append("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\r\n");
-        //    strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.000000") + "\r\n" + "CR Value is: " + CR.ToString("#0.000") + "\r\n");
-        //    strB.Append("  ******************************************" + "\r\n");
-        //    return normalizedVector;
-        //}
+        //依次：厚度、含量、干酪根类型、成熟度、面积、含气量、丰度、孔隙度、构造、顶底板岩性
+        double wgt_StromAt;
+        double wgt_Toc;
+        double wgt_Kt;
+        double wgt_Ro;
+        double wgt_Ea;
+        double wgt_Gc;
+        double wgt_Rr;
+        double wgt_Por;
+        double wgt_Scd;
+        double wgt_Rfc;
         #endregion
+
+        //定义 工程条件的权重变量
+        #region
+        //依次：埋深、压力系数、渗透率、裂缝发育程度、主应力差、脆矿、水系、区域勘探程度
+        double wgt_Dr;
+        double wgt_Pc;
+        double wgt_Per;
+        double wgt_Fdd;
+        double wgt_Psdc;
+        double wgt_Bmc;
+        double wgt_Ds;
+        double wgt_Led;
+        #endregion
+
+        //定义经济条件的权重变量
+        #region
+        //依次：市场气价、市场需求、交通设施、管网条件、地表地貌
+        double wgt_Gp;
+        double wgt_Dmd;
+        double wgt_Tu;
+        double wgt_Pn;
+        double wgt_Sg;
+        bool chkFlag = false;
+        #endregion
+
         /// <summary>
         /// 对矩阵进行一致性检验，主要是计算一致性比例CR = CI(一致性指标)/RI(平均随机一致性指标)
         /// </summary>
@@ -136,44 +152,7 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void btnCoincidenceCheck_Click(object sender, EventArgs e)
         {
-            //ArrayLoad(Rtest);
-            //定义地质条件的权重变量
-            //依次：厚度、含量、干酪根类型、成熟度、面积、含气量、丰度、孔隙度、构造、顶底板岩性
-            double wgt_StromAt;
-            double wgt_Toc;
-            double wgt_Kt;
-            double wgt_Ro;
-            double wgt_Ea;
-            double wgt_Gc;
-            double wgt_Rr;
-            double wgt_Por;
-            double wgt_Scd;
-            double wgt_Rfc;
-
-            //定义 工程条件的权重变量
-            //依次：埋深、压力系数、渗透率、裂缝发育程度、主应力差、脆矿、水系、区域勘探程度
-            double wgt_Ad;
-            double wgt_Pc;
-            double wgt_Per;
-            double wgt_Fdd;
-            double wgt_Psdf;
-            double wgt_Bmc;
-            double wgt_Ds;
-            double wgt_Led;
-
-            //定义经济条件的权重变量
-            //依次：市场气价、市场需求、交通设施、管网条件、地表地貌
-            double wgt_Gp;
-            double wgt_Dmd;
-            double wgt_Tu;
-            double wgt_Pn;
-            double wgt_Sg;
-
             CoincidenceChecker cc = new CoincidenceChecker();
-            double tempTotalSocres = 0;
-            //int counter = Main_Form.listBlockPara.Count;
-            //
-            SortedBlocksFrm sBf = new SortedBlocksFrm();
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
            Vector<double> vR1 = cc.ArrayLoad(R1, out strB);
@@ -186,381 +165,441 @@ namespace EsofaUI
             eignFrm.textBox1.Text += "R23: \r\n" + strB.ToString() + "\r\n"+ vR21 + "\r\n" + vR22 + "\r\n" + vR23;
 
             //从地质条件的参数权重向量 vR21 中对应地对权重变量进行赋值
-            wgt_StromAt = vR21[0];
-            wgt_Toc = vR21[1];
-            wgt_Kt = vR21[2];
-            wgt_Ro = vR21[3];
-            wgt_Ea = vR21[4];
-            wgt_Gc = vR21[5];
-            wgt_Rr = vR21[6];
-            wgt_Por = vR21[7];
-            wgt_Scd = vR21[8];
-            wgt_Rfc = vR21[9];
+            wgt_StromAt = Convert.ToDouble(vR21[0].ToString("0.###"));
+            wgt_Toc = Convert.ToDouble(vR21[1].ToString("0.###"));
+            wgt_Kt = Convert.ToDouble(vR21[2].ToString ("0.###"));
+            wgt_Ro = Convert.ToDouble(vR21[3].ToString("0.0000"));
+            wgt_Ea = Convert.ToDouble(vR21[4].ToString("0.0000"));
+            wgt_Gc = Convert.ToDouble(vR21[5].ToString("0.0000"));
+            wgt_Rr = Convert.ToDouble(vR21[6].ToString("0.0000"));
+            wgt_Por = Convert.ToDouble(vR21[7].ToString("0.0000"));
+            wgt_Scd = Convert.ToDouble(vR21[8].ToString("0.0000"));
+            wgt_Rfc = Convert.ToDouble(vR21[9].ToString("0.0000"));
 
             //从工程条件的参数权重向量中对应地对权重变量进行赋值
-            wgt_Ad = vR22[0];
-            wgt_Pc = vR22[1];
-            wgt_Per = vR22[2];
-            wgt_Fdd = vR22[3];
-            wgt_Psdf = vR22[4];
-            wgt_Bmc = vR22[5];
-            wgt_Ds = vR22[6];
-            wgt_Led = vR22[7];
+            wgt_Dr = Convert.ToDouble(vR22[0].ToString("0.0000"));
+            wgt_Pc = Convert.ToDouble(vR22[1].ToString("0.0000"));
+            wgt_Per = Convert.ToDouble(vR22[2].ToString("0.0000"));
+            wgt_Fdd = Convert.ToDouble(vR22[3].ToString("0.0000"));
+            wgt_Psdc = Convert.ToDouble(vR22[4].ToString("0.0000"));
+            wgt_Bmc = Convert.ToDouble(vR22[5].ToString("0.0000"));
+            wgt_Ds = Convert.ToDouble(vR22[6].ToString("0.0000"));
+            wgt_Led = Convert.ToDouble(vR22[7].ToString("0.0000"));
 
             //从经济条件的参数权重向量中对应地对权重变量进行赋值
-            wgt_Gp = vR23[0];
-            wgt_Dmd = vR23[1];
-            wgt_Tu = vR23[2];
-            wgt_Pn = vR23[3];
-            wgt_Sg = vR23[4];
-
-            List<SortedBlocksParas> lst_SBP = BlockGrade(lst_Tgt);
-            int counter = lst_SBP.Count;
-            foreach (SortedBlocksParas sBp in lst_SBP)
-            {
-                //地质条件
-                sBp.para_StromAtWeight = wgt_StromAt;
-                tempTotalSocres += sBp.para_StromAtWeight * sBp.para_StromAtScores;
-
-                sBp.para_TocWeight = wgt_Toc;
-                tempTotalSocres += sBp.para_TocWeight * sBp.para_TocScores;
-
-                sBp.para_RoWeight = wgt_Ro;
-                tempTotalSocres += sBp.para_RoWeight * sBp.para_RoScores;
-
-                sBp.para_EaWeight = wgt_Ea;
-                tempTotalSocres += sBp.para_EaWeight * sBp.para_EaScores;
-
-                sBp.para_GcWeight = wgt_Gc;
-                tempTotalSocres += sBp.para_GcWeight * sBp.para_GcScores;
-
-                sBp.para_RrWeight = wgt_Rr;
-                tempTotalSocres += sBp.para_RrWeight * sBp.para_RrScores;
-
-                sBp.para_PorWeight = wgt_Por;
-                tempTotalSocres += sBp.para_PorWeight * sBp.para_PorScores;
-
-                //工程条件
-                sBp.para_DrWeight = wgt_Ad;
-                tempTotalSocres += sBp.para_DrWeight * sBp.para_DrScores;
-
-                sBp.para_PcWeight = wgt_Pc;
-                tempTotalSocres += sBp.para_PcWeight * sBp.para_PcScores;
-
-                sBp.para_PsdcWeight = wgt_Psdf;
-                tempTotalSocres += sBp.para_PsdcWeight * sBp.para_PsdcScores;
-
-                sBp.para_BmcWeight = wgt_Bmc;
-                tempTotalSocres += sBp.para_BmcWeight * sBp.para_BmcScores;
-
-                sBp.para_TotalScores = tempTotalSocres + sBp.para_PsScores+sBp.para_FddScores+sBp.para_ScScores;
-                tempTotalSocres = 0;
-            }
-            lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
-            foreach(SortedBlocksParas sBp in lst_SBP)
-            {
-                sBp.para_Rank = counter ;
-                counter--;
-            }
-           //Main_Form.listBlockPara.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
-            //sBf.dgv_Tgt_Sorted.DataSource = Main_Form.listBlockPara;
+            wgt_Gp = Convert.ToDouble(vR23[0].ToString("0.0000"));
+            wgt_Dmd = Convert.ToDouble(vR23[1].ToString("0.0000"));
+            wgt_Tu = Convert.ToDouble(vR23[2].ToString("0.0000"));
+            wgt_Pn = Convert.ToDouble(vR23[3].ToString("0.0000"));
+            wgt_Sg = Convert.ToDouble(vR23[4].ToString("0.0000"));
             eignFrm.Show();
-            sBf.Show();
-
+            #region
+            //List<SortedBlocksParas> lst_SBP = BlockGrade(lst_Tgt);
+            //int counter = lst_SBP.Count;
+            //lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
+            //foreach(SortedBlocksParas sBp in lst_SBP)
+            //{
+            //    sBp.para_Rank = counter ;
+            //    counter--;
+            //}
+            //lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
+            //sBf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
+            //sBf.Show();
+            #endregion
+            chkFlag = true;
         }
         #region
-        public List<SortedBlocksParas> BlockGrade(List<AverageValuesTargetEntity> list_AvTgt)
+        /// <summary>
+        /// 对数据进行评分加权赋值等操作
+        /// </summary>
+        /// <param name="list_AvTgt"></param>
+        /// <returns></returns>
+        public List<SortedTargetsParas> BlockGrade(List<AverageValuesTargetEntity> list_AvTgt)
         {
             //定义模糊隶属函数的实例
             FuzzyMembershipFunction fMf = new FuzzyMembershipFunction();
             SubjectiveGrading sG = new SubjectiveGrading();
-            List<SortedBlocksParas> list_Sbp = new List<SortedBlocksParas>();
+            List<SortedTargetsParas> list_Sbp = new List<SortedTargetsParas>();
 
             //定义赋值分数变量
             double gradeScore;
 
             //定义SortedBlocksParas Entity类变量
             
-            SortedBlocksParas tmpSBP = new SortedBlocksParas();
+            SortedTargetsParas [] tmpSBP= new SortedTargetsParas[list_AvTgt.Count];
             //定义数值变量
             double values;
             for (int i = 0; i < list_AvTgt.Count; i++)
             {
-                //tmpSBP = new SortedBlocksParas();
+                tmpSBP[i] = new SortedTargetsParas();
+                tmpSBP[i].para_TotalScores = 0;
                 //区块名称 没有分值
-                tmpSBP.para_Tgt = list_AvTgt[i].tgt_Att_Name;
+                tmpSBP[i].para_Tgt = list_AvTgt[i].tgt_Att_Name;
 
                 //盆地/区域名称 没有分值
-                tmpSBP.para_Bsn = list_AvTgt[i].bsn_Att_Name;
+                tmpSBP[i].para_Bsn = list_AvTgt[i].bsn_Att_Name;
 
                 //主力层系 分值
-                tmpSBP.para_Ps = list_AvTgt[i].tgt_Att_Ps;
-                tmpSBP.para_PsScores = sG.Grade(list_AvTgt[i].tgt_Att_Ps);
+                tmpSBP[i].para_Ps = list_AvTgt[i].tgt_Att_Ps;
+                tmpSBP[i].para_PsScores = sG.Grade(list_AvTgt[i].tgt_Att_Ps);
+                tmpSBP[i].para_TotalScores += tmpSBP[i].para_PsScores;
 
                 //保存条件 分值
-                tmpSBP.para_Sc = list_AvTgt[i].tgt_Att_Para_Sc;
-                tmpSBP.para_ScScores = sG.Grade(list_AvTgt[i].tgt_Att_Para_Sc);
+                tmpSBP[i].para_Sc = list_AvTgt[i].tgt_Att_Para_Sc;
+                tmpSBP[i].para_ScScores = fMf.FuzzyRankScore(list_AvTgt[i].tgt_Att_Para_Sc);
+                tmpSBP[i].para_TotalScores += tmpSBP[i].para_ScScores;
 
-                //地质资源量
-                tmpSBP.para_Gr = list_AvTgt[i].tgt_Att_Para_Gr_Avg;
-                tmpSBP.para_GrScores = 0;
+                //地质资源量 (赋值标准没有制定)
+                tmpSBP[i].para_Gr = list_AvTgt[i].tgt_Att_Para_Gr_Avg;
+                tmpSBP[i].para_GrScores = 0;
+                tmpSBP[i].para_TotalScores += tmpSBP[i].para_GrScores;
 
                 //地质条件
 
                 #region
                 //对富含有机质页岩厚度的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg.Trim() != "" 
+                    && lstBx_Selected_GeoPara.Items.Contains("页岩厚度"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg);
                     gradeScore = fMf.FuzzyLarge(1.6, 15, values);
-                    tmpSBP.para_StromAt = list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg;
-                    tmpSBP.para_StromAtScores = gradeScore;
+                    tmpSBP[i].para_StromAt = list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg;
+                    tmpSBP[i].para_StromAtScores = gradeScore;
+                    tmpSBP[i].para_StromAtWeight = wgt_StromAt;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_StromAtScores * tmpSBP[i].para_StromAtWeight;
                 }
                 else
                 {
-                    tmpSBP.para_StromAt = list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg;
-                    tmpSBP.para_StromAtScores = 0;
+                    tmpSBP[i].para_StromAt = list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg;
+                    tmpSBP[i].para_StromAtScores = 0;
+                    tmpSBP[i].para_StromAtWeight = wgt_StromAt;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Toc 的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Geo_Para_Toc_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Toc_Avg.Trim() != ""
+                    && lstBx_Selected_GeoPara.Items.Contains("含量TOC(%)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_Toc_Avg);
                     gradeScore = fMf.FuzzyLarge(1.6, 2, values);
-                    tmpSBP.para_Toc = list_AvTgt[i].tgt_Geo_Para_Toc_Avg;
-                    tmpSBP.para_TocScores = gradeScore;
+                    tmpSBP[i].para_Toc = list_AvTgt[i].tgt_Geo_Para_Toc_Avg;
+                    tmpSBP[i].para_TocScores = gradeScore;
+                    tmpSBP[i].para_TocWeight = wgt_Toc;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_TocScores * tmpSBP[i].para_TocWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Toc = list_AvTgt[i].tgt_Geo_Para_Toc_Avg;
-                    tmpSBP.para_TocScores = 0;
+                    tmpSBP[i].para_Toc = list_AvTgt[i].tgt_Geo_Para_Toc_Avg;
+                    tmpSBP[i].para_TocScores = 0;
+                    tmpSBP[i].para_TocWeight = wgt_Toc;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对干酪根类型求值 干酪根类型没有赋值函数，没有完成该函数的条件
-                if (list_AvTgt[i].tgt_Geo_Para_Kt.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Kt.Trim() != ""
+                    && lstBx_Selected_GeoPara.Items.Contains("干酪根类型"))
                 {
                     string val = list_AvTgt[i].tgt_Geo_Para_Kt;
                     gradeScore = fMf.ToAssignForKerogenType(val);
-                    tmpSBP.para_Kt = list_AvTgt[i].tgt_Geo_Para_Kt;
-                    tmpSBP.para_KtScores = gradeScore;
+                    tmpSBP[i].para_Kt = list_AvTgt[i].tgt_Geo_Para_Kt;
+                    tmpSBP[i].para_KtScores = gradeScore;
+                    tmpSBP[i].para_KtWeight = wgt_Kt;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_KtScores * tmpSBP[i].para_KtWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Kt = list_AvTgt[i].tgt_Geo_Para_Kt;
-                    tmpSBP.para_KtScores = 0;
+                    tmpSBP[i].para_Kt = list_AvTgt[i].tgt_Geo_Para_Kt;
+                    tmpSBP[i].para_KtScores = 0;
+                    tmpSBP[i].para_KtWeight = wgt_Kt;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Ro 的平均值进行高斯型隶属函数求值
-                if (list_AvTgt[i].tgt_Geo_Para_Ro_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Ro_Avg.Trim() != ""
+                    && lstBx_Selected_GeoPara.Items.Contains("成熟度Ro(%)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_Ro_Avg);
                     gradeScore = fMf.FuzzyGussian(values);
-                    tmpSBP.para_Ro = list_AvTgt[i].tgt_Geo_Para_Ro_Avg;
-                    tmpSBP.para_RoScores = gradeScore;
+                    tmpSBP[i].para_Ro = list_AvTgt[i].tgt_Geo_Para_Ro_Avg;
+                    tmpSBP[i].para_RoScores = gradeScore;
+                    tmpSBP[i].para_RoWeight = wgt_Ro;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_RoScores * tmpSBP[i].para_RoWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Ro = list_AvTgt[i].tgt_Geo_Para_Ro_Avg;
-                    tmpSBP.para_RoScores = 0;
+                    tmpSBP[i].para_Ro = list_AvTgt[i].tgt_Geo_Para_Ro_Avg;
+                    tmpSBP[i].para_RoScores = 0;
+                    tmpSBP[i].para_RoWeight = wgt_Ro;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Ea 的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Geo_Para_Ea.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Ea.Trim() != ""
+                    && lstBx_Selected_GeoPara.Items.Contains("圈定面积(km^2)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_Ea);
                     gradeScore = fMf.FuzzyLarge(1.2, 200, values);
-                    tmpSBP.para_Ea = list_AvTgt[i].tgt_Geo_Para_Ea;
-                    tmpSBP.para_EaScores = gradeScore;
+                    tmpSBP[i].para_Ea = list_AvTgt[i].tgt_Geo_Para_Ea;
+                    tmpSBP[i].para_EaScores = gradeScore;
+                    tmpSBP[i].para_EaWeight = wgt_Ea;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_EaScores * tmpSBP[i].para_EaWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Ea = list_AvTgt[i].tgt_Geo_Para_Ea;
-                    tmpSBP.para_EaScores = 0;
+                    tmpSBP[i].para_Ea = list_AvTgt[i].tgt_Geo_Para_Ea;
+                    tmpSBP[i].para_EaScores = 0;
+                    tmpSBP[i].para_EaWeight = wgt_Ea;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Gc 的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Geo_Para_Gc_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Gc_Avg.Trim() != ""
+                    && lstBx_Selected_GeoPara.Items.Contains("含气量(m^3/t)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_Gc_Avg.Trim());
                     gradeScore = fMf.FuzzyLarge(1.6, 2, values);
-                    tmpSBP.para_Gc = list_AvTgt[i].tgt_Geo_Para_Gc_Avg.Trim();
-                    tmpSBP.para_GcScores = gradeScore;
+                    tmpSBP[i].para_Gc = list_AvTgt[i].tgt_Geo_Para_Gc_Avg.Trim();
+                    tmpSBP[i].para_GcScores = gradeScore;
+                    tmpSBP[i].para_GcWeight = wgt_Gc;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_GcScores * tmpSBP[i].para_GcWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Gc = list_AvTgt[i].tgt_Geo_Para_Gc_Avg.Trim();
-                    tmpSBP.para_GcScores = 0;
+                    tmpSBP[i].para_Gc = list_AvTgt[i].tgt_Geo_Para_Gc_Avg.Trim();
+                    tmpSBP[i].para_GcScores = 0;
+                    tmpSBP[i].para_GcWeight = wgt_Gc;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Rr 的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Geo_Para_Rr_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Rr_Avg.Trim() != "" 
+                    && lstBx_Selected_GeoPara.Items.Contains("丰度(亿方/km^2)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_Rr_Avg.Trim());
                     gradeScore = fMf.FuzzyLarge(1, 0.5, values);
-                    tmpSBP.para_Rr = list_AvTgt[i].tgt_Geo_Para_Rr_Avg.Trim();
-                    tmpSBP.para_RrScores = gradeScore;
+                    tmpSBP[i].para_Rr = list_AvTgt[i].tgt_Geo_Para_Rr_Avg.Trim();
+                    tmpSBP[i].para_RrScores = gradeScore;
+                    tmpSBP[i].para_RrWeight = wgt_Rr;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_RrScores * tmpSBP[i].para_RrWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Rr = list_AvTgt[i].tgt_Geo_Para_Rr_Avg.Trim();
-                    tmpSBP.para_RrScores = 0;
+                    tmpSBP[i].para_Rr = list_AvTgt[i].tgt_Geo_Para_Rr_Avg.Trim();
+                    tmpSBP[i].para_RrScores = 0;
+                    tmpSBP[i].para_RrWeight = wgt_Rr;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Por 的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Geo_Para_Por_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Por_Avg.Trim() != ""
+                    && lstBx_Selected_GeoPara.Items.Contains("孔隙度(%)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_Por_Avg.Trim());
                     gradeScore = fMf.FuzzyLarge(1.2, 2, values);
-                    tmpSBP.para_Por = list_AvTgt[i].tgt_Geo_Para_Por_Avg.Trim();
-                    tmpSBP.para_PorScores = gradeScore;
+                    tmpSBP[i].para_Por = list_AvTgt[i].tgt_Geo_Para_Por_Avg.Trim();
+                    tmpSBP[i].para_PorScores = gradeScore;
+                    tmpSBP[i].para_PorWeight = wgt_Por;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_PorScores * tmpSBP[i].para_PorWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Por = list_AvTgt[i].tgt_Geo_Para_Por_Avg.Trim();
-                    tmpSBP.para_PorScores = 0;
+                    tmpSBP[i].para_Por = list_AvTgt[i].tgt_Geo_Para_Por_Avg.Trim();
+                    tmpSBP[i].para_PorScores = 0;
+                    tmpSBP[i].para_PorWeight = wgt_Por;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对构造复杂度Scd 求值
-                if (list_AvTgt[i].tgt_Geo_Para_Scd.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Scd.Trim() != ""
+                    && lstBx_Selected_GeoPara.Items.Contains("构造复杂度"))
                 {
                     string val = list_AvTgt[i].tgt_Geo_Para_Scd.Trim();
                     gradeScore = fMf.FuzzyRankScore(val);
-                    tmpSBP.para_Scd = list_AvTgt[i].tgt_Geo_Para_Scd;
-                    tmpSBP.para_ScdScores = gradeScore;
+                    tmpSBP[i].para_Scd = list_AvTgt[i].tgt_Geo_Para_Scd;
+                    tmpSBP[i].para_ScdScores = gradeScore;
+                    tmpSBP[i].para_ScdWeight = wgt_Scd;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_ScdScores * tmpSBP[i].para_ScdWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Scd = list_AvTgt[i].tgt_Geo_Para_Scd;
-                    tmpSBP.para_ScdScores = 0;
+                    tmpSBP[i].para_Scd = list_AvTgt[i].tgt_Geo_Para_Scd;
+                    tmpSBP[i].para_ScdScores = 0;
+                    tmpSBP[i].para_ScdWeight = wgt_Scd;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对顶底板岩性Rfc求值
-                if (list_AvTgt[i].tgt_Geo_Para_Rfc.Trim() != "")
+                if (list_AvTgt[i].tgt_Geo_Para_Rfc.Trim() != "" 
+                    && lstBx_Selected_GeoPara.Items.Contains("顶底板岩性"))
                 {
                     string val = list_AvTgt[i].tgt_Geo_Para_Rfc.Trim();
                     gradeScore = fMf.FuzzyRankScore(val);
-                    tmpSBP.para_Rfc = list_AvTgt[i].tgt_Geo_Para_Rfc;
-                    tmpSBP.para_RfcScores = gradeScore;
+                    tmpSBP[i].para_Rfc = list_AvTgt[i].tgt_Geo_Para_Rfc;
+                    tmpSBP[i].para_RfcScores = gradeScore;
+                    tmpSBP[i].para_RfcWeight = wgt_Rfc;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_RfcScores * tmpSBP[i].para_RfcWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Rfc = list_AvTgt[i].tgt_Geo_Para_Rfc;
-                    tmpSBP.para_RfcScores = 0;
+                    tmpSBP[i].para_Rfc = list_AvTgt[i].tgt_Geo_Para_Rfc;
+                    tmpSBP[i].para_RfcScores = 0;
+                    tmpSBP[i].para_RfcWeight = wgt_Rfc;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
                 #endregion
 
                 //工程条件
                 #region
-                //埋深先计算平均值，然后利用高斯型隶属函数赋分
-                if (list_AvTgt[i].tgt_Eng_Para_Dr_Avg.Trim() != "")
+                //埋深 Dr Depth Range先计算平均值，然后利用高斯型隶属函数赋分
+                if (list_AvTgt[i].tgt_Eng_Para_Dr_Avg.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("埋深(m)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Dr_Avg.Trim());
                     gradeScore = fMf.FuzzyGussian(values);
-                    tmpSBP.para_Dr = list_AvTgt[i].tgt_Eng_Para_Dr_Avg.Trim();
-                    tmpSBP.para_DrScores = gradeScore;
+                    tmpSBP[i].para_Dr = list_AvTgt[i].tgt_Eng_Para_Dr_Avg.Trim();
+                    tmpSBP[i].para_DrScores = gradeScore;
+                    tmpSBP[i].para_DrWeight = wgt_Dr;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_DrScores * tmpSBP[i].para_DrWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Dr = list_AvTgt[i].tgt_Eng_Para_Dr_Avg.Trim();
-                    tmpSBP.para_DrScores = 0;
+                    tmpSBP[i].para_Dr = list_AvTgt[i].tgt_Eng_Para_Dr_Avg.Trim();
+                    tmpSBP[i].para_DrScores = 0;
+                    tmpSBP[i].para_DrWeight = wgt_Dr;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Pc 压力系数 的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("压力系数"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_PcScores = gradeScore;
+                    tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_PcScores = gradeScore;
+                    tmpSBP[i].para_PcWeight = wgt_Pc;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_PcScores * tmpSBP[i].para_PcWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_PcScores = 0;
+                    tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_PcScores = 0;
+                    tmpSBP[i].para_PcWeight = wgt_Pc;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //渗透率（对页岩气，没必要的一个参数)求值
-                if (list_AvTgt[i].tgt_Eng_Para_Per.Trim() != "")
+                if (list_AvTgt[i].tgt_Eng_Para_Per.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("渗透率(mD)"))
                 {
                     //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     //gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    // tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_PcScores = 0;
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_PerScores = 0;
+                    tmpSBP[i].para_PerWeight = wgt_Per;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_PerScores * tmpSBP[i].para_PerWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Per = list_AvTgt[i].tgt_Eng_Para_Per.Trim();
-                    tmpSBP.para_PerScores = 0;
+                    tmpSBP[i].para_Per = list_AvTgt[i].tgt_Eng_Para_Per.Trim();
+                    tmpSBP[i].para_PerScores = 0;
+                    tmpSBP[i].para_PerWeight = wgt_Per;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //裂缝发育度 分值
-                if (list_AvTgt[i].tgt_Eng_Para_Fdd.Trim() != "")
+                if (list_AvTgt[i].tgt_Eng_Para_Fdd.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("裂缝发育程度"))
                 {
                     string val = list_AvTgt[i].tgt_Eng_Para_Fdd.Trim();
                     gradeScore = fMf.FuzzyRankScore(val);
-                    tmpSBP.para_Fdd = list_AvTgt[i].tgt_Eng_Para_Fdd.Trim();
-                    tmpSBP.para_FddScores = gradeScore;
+                    tmpSBP[i].para_Fdd = list_AvTgt[i].tgt_Eng_Para_Fdd.Trim();
+                    tmpSBP[i].para_FddScores = gradeScore;
+                    tmpSBP[i].para_FddWeight = wgt_Fdd;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_FddScores * tmpSBP[i].para_FddWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Fdd = list_AvTgt[i].tgt_Eng_Para_Fdd.Trim();
-                    tmpSBP.para_FddScores = 0;
+                    tmpSBP[i].para_Fdd = list_AvTgt[i].tgt_Eng_Para_Fdd.Trim();
+                    tmpSBP[i].para_FddScores = 0;
+                    tmpSBP[i].para_FddWeight = wgt_Fdd;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Psdc 主应力差异 的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Eng_Para_Psdc_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Eng_Para_Psdc_Avg.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("主应力差异系数"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Psdc_Avg.Trim());
                     gradeScore = fMf.FuzzySmall(2.15, 0.5, values);
-                    tmpSBP.para_Psdc = list_AvTgt[i].tgt_Eng_Para_Psdc_Avg.Trim();
-                    tmpSBP.para_PsdcScores = gradeScore;
+                    tmpSBP[i].para_Psdc = list_AvTgt[i].tgt_Eng_Para_Psdc_Avg.Trim();
+                    tmpSBP[i].para_PsdcScores = gradeScore;
+                    tmpSBP[i].para_PsdcWeight = wgt_Psdc;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_PsdcScores * tmpSBP[i].para_PsdcWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Psdc = list_AvTgt[i].tgt_Eng_Para_Psdc_Avg.Trim();
-                    tmpSBP.para_PsdcScores = 0;
+                    tmpSBP[i].para_Psdc = list_AvTgt[i].tgt_Eng_Para_Psdc_Avg.Trim();
+                    tmpSBP[i].para_PsdcScores = 0;
+                    tmpSBP[i].para_PsdcWeight = wgt_Psdc;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //对Bmc  的平均值进行增大型隶属函数求值
-                if (list_AvTgt[i].tgt_Eng_Para_Bmc_Avg.Trim() != "")
+                if (list_AvTgt[i].tgt_Eng_Para_Bmc_Avg.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("脆性矿物含量(%)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Bmc_Avg.Trim());
                     gradeScore = fMf.FuzzyLarge(2.15, 30, values);
-                    tmpSBP.para_Bmc = list_AvTgt[i].tgt_Eng_Para_Bmc_Avg.Trim();
-                    tmpSBP.para_BmcScores = gradeScore;
+                    tmpSBP[i].para_Bmc = list_AvTgt[i].tgt_Eng_Para_Bmc_Avg.Trim();
+                    tmpSBP[i].para_BmcScores = gradeScore;
+                    tmpSBP[i].para_BmcWeight = wgt_Bmc;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_BmcScores * tmpSBP[i].para_BmcWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Bmc = list_AvTgt[i].tgt_Eng_Para_Bmc_Avg.Trim();
-                    tmpSBP.para_BmcScores = 0;
+                    tmpSBP[i].para_Bmc = list_AvTgt[i].tgt_Eng_Para_Bmc_Avg.Trim();
+                    tmpSBP[i].para_BmcScores = 0;
+                    tmpSBP[i].para_BmcWeight = wgt_Bmc;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //水系求值
-                if (list_AvTgt[i].tgt_Eng_Para_Ds.Trim() != "")
+                if (list_AvTgt[i].tgt_Eng_Para_Ds.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("水系"))
                 {
                     //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     //gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    // tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_DsScores = 0;
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_DsScores = 0;
+                    tmpSBP[i].para_DsWeight = wgt_Ds;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_DsScores * tmpSBP[i].para_DsWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Ds = list_AvTgt[i].tgt_Eng_Para_Ds.Trim();
-                    tmpSBP.para_DsScores = 0;
+                    tmpSBP[i].para_Ds = list_AvTgt[i].tgt_Eng_Para_Ds.Trim();
+                    tmpSBP[i].para_DsScores = 0;
+                    tmpSBP[i].para_DsWeight = wgt_Ds;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //区域勘探程度求值
-                if (list_AvTgt[i].tgt_Eng_Para_Led.Trim() != "")
+                if (list_AvTgt[i].tgt_Eng_Para_Led.Trim() != ""
+                    && lstBx_Selected_EngPara.Items.Contains("区域勘探程度"))
                 {
                     //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     //gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    // tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_LedScores = 0;
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_LedScores = 0;
+                    tmpSBP[i].para_LedWeight = wgt_Led;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_LedScores * tmpSBP[i].para_LedWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Led = list_AvTgt[i].tgt_Eng_Para_Led.Trim();
-                    tmpSBP.para_LedScores = 0;
+                    tmpSBP[i].para_Led = list_AvTgt[i].tgt_Eng_Para_Led.Trim();
+                    tmpSBP[i].para_LedScores = 0;
+                    tmpSBP[i].para_LedWeight = wgt_Led;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 #endregion
@@ -570,71 +609,137 @@ namespace EsofaUI
 
                 #region
                 //市场气价求值
-                if (list_AvTgt[i].tgt_Mkt_Para_Gp.Trim() != "")
+                if (list_AvTgt[i].tgt_Mkt_Para_Gp.Trim() != ""
+                    && lstBx_Selected_EcoPara.Items.Contains("市场气价"))
                 {
                     //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     //gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    // tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_GpScores = 0;
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_GpScores = 0;
+                    tmpSBP[i].para_GpWeight = wgt_Gp;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_GpScores * tmpSBP[i].para_GpWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Gp = list_AvTgt[i].tgt_Mkt_Para_Gp.Trim();
-                    tmpSBP.para_GpScores = 0;
+                    tmpSBP[i].para_Gp = list_AvTgt[i].tgt_Mkt_Para_Gp.Trim();
+                    tmpSBP[i].para_GpScores = 0;
+                    tmpSBP[i].para_GpWeight = wgt_Gp;
+                    tmpSBP[i].para_TotalScores += 0;
+                }
+
+                //市场需求求值
+                if (list_AvTgt[i].tgt_Mkt_Para_Dmd.Trim() != ""
+                    && lstBx_Selected_EcoPara.Items.Contains("市场需求"))
+                {
+                    //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
+                    //gradeScore = fMf.FuzzyLarge(6, 1, values);
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_DmdScores = 0;
+                    tmpSBP[i].para_DmdWeight = wgt_Dmd;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_DmdScores * tmpSBP[i].para_DmdWeight;
+                }
+                else
+                {
+                    tmpSBP[i].para_Dmd = list_AvTgt[i].tgt_Mkt_Para_Dmd.Trim();
+                    tmpSBP[i].para_DmdScores = 0;
+                    tmpSBP[i].para_DmdWeight = wgt_Dmd;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //交通设施求值
-                if (list_AvTgt[i].tgt_Mkt_Para_Tu.Trim() != "")
+                if (list_AvTgt[i].tgt_Mkt_Para_Tu.Trim() != ""
+                    && lstBx_Selected_EcoPara.Items.Contains("交通设施"))
                 {
                     //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     //gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    // tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_TuScores = 0;
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_TuScores = 0;
+                    tmpSBP[i].para_TuWeight = wgt_Tu;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_TuScores * tmpSBP[i].para_TuWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Tu = list_AvTgt[i].tgt_Mkt_Para_Tu.Trim();
-                    tmpSBP.para_TuScores = 0;
+                    tmpSBP[i].para_Tu = list_AvTgt[i].tgt_Mkt_Para_Tu.Trim();
+                    tmpSBP[i].para_TuScores = 0;
+                    tmpSBP[i].para_TuWeight = wgt_Tu;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //管网条件求值
-                if (list_AvTgt[i].tgt_Mkt_Para_Pn.Trim() != "")
+                if (list_AvTgt[i].tgt_Mkt_Para_Pn.Trim() != ""
+                    && lstBx_Selected_EcoPara.Items.Contains("管网条件"))
                 {
                     //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     //gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    // tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_PnScores = 0;
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_PnScores = 0;
+                    tmpSBP[i].para_PnWeight = wgt_Pn;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_PnScores * tmpSBP[i].para_PnWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Pn = list_AvTgt[i].tgt_Mkt_Para_Pn.Trim();
-                    tmpSBP.para_PnScores = 0;
+                    tmpSBP[i].para_Pn = list_AvTgt[i].tgt_Mkt_Para_Pn.Trim();
+                    tmpSBP[i].para_PnScores = 0;
+                    tmpSBP[i].para_PnWeight = wgt_Pn;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
 
                 //地表地貌求值
-                if (list_AvTgt[i].tgt_Mkt_Para_Sg.Trim() != "")
+                if (list_AvTgt[i].tgt_Mkt_Para_Sg.Trim() != ""
+                    && lstBx_Selected_EcoPara.Items.Contains("地表地貌"))
                 {
                     //values = Convert.ToDouble(list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim());
                     //gradeScore = fMf.FuzzyLarge(6, 1, values);
-                    // tmpSBP.para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
-                    tmpSBP.para_SgScores = 0;
+                    // tmpSBP[i].para_Pc = list_AvTgt[i].tgt_Eng_Para_Pc_Avg.Trim();
+                    tmpSBP[i].para_SgScores = 0;
+                    tmpSBP[i].para_SgWeight = wgt_Sg;
+                    tmpSBP[i].para_TotalScores += tmpSBP[i].para_SgScores * tmpSBP[i].para_SgWeight;
                 }
                 else
                 {
-                    tmpSBP.para_Sg = list_AvTgt[i].tgt_Mkt_Para_Sg.Trim();
-                    tmpSBP.para_SgScores = 0;
+                    tmpSBP[i].para_Sg = list_AvTgt[i].tgt_Mkt_Para_Sg.Trim();
+                    tmpSBP[i].para_SgScores = 0;
+                    tmpSBP[i].para_SgWeight = wgt_Sg;
+                    tmpSBP[i].para_TotalScores += 0;
                 }
                 #endregion
-                list_Sbp.Add(tmpSBP);
+                list_Sbp.Add(tmpSBP[i]);
             }
             return list_Sbp;
         }
         #endregion
 
-        private void btnPDF_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 对计算结果进行排序
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_Sort_Click(object sender, EventArgs e)
         {
-            //PdfGeneratorFrm pdfG = new PdfGeneratorFrm();
-            //pdfG.Generate("核心区");
+            SortedTargetsFrm sBf = new SortedTargetsFrm();
+            if (chkFlag)
+            {
+                List<SortedTargetsParas> lst_SBP = BlockGrade(lst_Tgt);
+                int counter = lst_SBP.Count;
+                lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
+                foreach (SortedTargetsParas sBp in lst_SBP)
+                {
+                    sBp.para_Rank = counter;
+                    counter--;
+                }
+                lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
+                sBf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
+                sBf.Show();
+                btn_GenerateReport.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("尚未进行参数矩阵的检验计算操作，所有参数的权重值为 0 .", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btn_GenerateReport_Click(object sender, EventArgs e)
+        {
             PDFCreator pdfCreator = new PDFCreator();
             pdfCreator.Create("核心区");
         }
@@ -735,6 +840,7 @@ namespace EsofaUI
             lstBx_Selected_EcoPara.Items.Clear();
         }
         #endregion
+
 
     }
 }

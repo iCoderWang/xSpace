@@ -229,11 +229,23 @@
     <Compile Include="RawDataRecorderFrm.Designer.cs">
       <DependentUpon>RawDataRecorderFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SortedBasinsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortedBasinsFrm.Designer.cs">
+      <DependentUpon>SortedBasinsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SortedBlocksFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SortedBlocksFrm.Designer.cs">
       <DependentUpon>SortedBlocksFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortedTargetsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortedTargetsFrm.Designer.cs">
+      <DependentUpon>SortedTargetsFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="TargetAreaParameters.cs">
       <SubType>Form</SubType>
@@ -312,8 +324,14 @@
     <EmbeddedResource Include="RawDataRecorderFrm.resx">
       <DependentUpon>RawDataRecorderFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SortedBasinsFrm.resx">
+      <DependentUpon>SortedBasinsFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SortedBlocksFrm.resx">
       <DependentUpon>SortedBlocksFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SortedTargetsFrm.resx">
+      <DependentUpon>SortedTargetsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TargetAreaParameters.resx">
       <DependentUpon>TargetAreaParameters.cs</DependentUpon>

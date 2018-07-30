@@ -309,7 +309,7 @@ namespace EsofaUI
         /// <param name="filePath"></param>
         public int LoadList(RawDataFrm rawDataFrm, ImportingRawDataBLL ird, string filePath, object objList, out string name)
         {
-            List<SortedBlocksParas> listSbp = new List<SortedBlocksParas>();
+            List<SortedTargetsParas> listSbp = new List<SortedTargetsParas>();
             List<RawData> rawDataList = new List<RawData>();
             List<TargetEntity> targetEntityList = new List<TargetEntity>();
             DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();

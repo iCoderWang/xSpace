@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EsofaUI
 {
-    public partial class SortedBlocksFrm : Form
+    public partial class SortedBasinsFrm : Form
     {
-        public SortedBlocksFrm()
+        public SortedBasinsFrm()
         {
             InitializeComponent();
         }

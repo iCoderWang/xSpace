@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EsofaModel
 {
-    public partial class SortedBlocksParas
+    public partial class SortedBasinsParas
     {
         //定义排名序号属性
         public int para_Rank { get; set; }
@@ -60,11 +60,6 @@ namespace EsofaModel
         public double para_EaWeight { get; set; }
         public double para_EaScores { get; set; }
 
-        //定义字段 含气量 (m3/t) gas Content
-        public string para_Gc { get; set; }
-        public double para_GcWeight { get; set; }
-        public double para_GcScores { get; set; }
-
         //定义字段 资源丰度 (108 m3/km2) resource richness
         public string para_Rr { get; set; }
         public double para_RrWeight { get; set; }
@@ -75,10 +70,7 @@ namespace EsofaModel
         public double para_PorWeight { get; set; }
         public double para_PorScores { get; set; }
 
-        //定义字段 构造复杂程度 structure complexity degree
-        public string para_Scd { get; set; }
-        public double para_ScdWeight { get; set; }
-        public double para_ScdScores { get; set; }
+
 
         //工程参数
 
@@ -86,25 +78,11 @@ namespace EsofaModel
         public string para_Dr { get; set; }
         public double para_DrWeight { get; set; }
         public double para_DrScores { get; set; }
-
-        //定义字段 压力系数 Pressure Coefficient
-        public string para_Pc { get; set; }
-        public double para_PcWeight { get; set; }
-        public double para_PcScores { get; set; }
-
+        
         //定义字段 脆性矿物含量 brittle Mineral Content
         public string para_Bmc { get; set; }
         public double para_BmcWeight { get; set; }
         public double para_BmcScores { get; set; }
-
-
-        //经济参数
-
-        //定义字段 地表地貌 Sg
-        public string para_Sg { get; set; }
-        public double para_SgWeight { get; set; }
-        public double para_SgScores { get; set; }
-
+        
     }
 }
-
