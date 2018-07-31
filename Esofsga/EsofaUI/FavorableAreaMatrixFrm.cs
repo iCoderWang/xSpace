@@ -210,18 +210,18 @@ namespace EsofaUI
 
                 //主力层系 分值
                 tmpSBP[i].para_Ps = list_AvBlk[i].blk_Att_Ps;
-                tmpSBP[i].para_PsScores = sG.Grade(list_AvBlk[i].blk_Att_Ps);
-                tmpSBP[i].para_TotalScores += tmpSBP[i].para_PsScores;
+                //tmpSBP[i].para_PsScores = sG.Grade(list_AvBlk[i].blk_Att_Ps);
+                //tmpSBP[i].para_TotalScores += tmpSBP[i].para_PsScores;
 
                 //保存条件 分值
                 tmpSBP[i].para_Sc = list_AvBlk[i].blk_Att_Para_Sc;
-                tmpSBP[i].para_ScScores = fMf.FuzzyRankScore(list_AvBlk[i].blk_Att_Para_Sc);
-                tmpSBP[i].para_TotalScores += tmpSBP[i].para_ScScores;
+                //tmpSBP[i].para_ScScores = fMf.FuzzyRankScore(list_AvBlk[i].blk_Att_Para_Sc);
+                //tmpSBP[i].para_TotalScores += tmpSBP[i].para_ScScores;
 
                 //地质资源量 (赋值标准没有制定)
                 tmpSBP[i].para_Gr = list_AvBlk[i].blk_Att_Para_Gr;
-                tmpSBP[i].para_GrScores = 0;
-                tmpSBP[i].para_TotalScores += tmpSBP[i].para_GrScores;
+                //tmpSBP[i].para_GrScores = 0;
+                //tmpSBP[i].para_TotalScores += tmpSBP[i].para_GrScores;
 
                 //地质条件
 

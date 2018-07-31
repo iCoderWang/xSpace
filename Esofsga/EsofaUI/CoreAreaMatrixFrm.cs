@@ -241,25 +241,25 @@ namespace EsofaUI
 
                 //主力层系 分值
                 tmpSBP[i].para_Ps = list_AvTgt[i].tgt_Att_Ps;
-                tmpSBP[i].para_PsScores = sG.Grade(list_AvTgt[i].tgt_Att_Ps);
-                tmpSBP[i].para_TotalScores += tmpSBP[i].para_PsScores;
+                //tmpSBP[i].para_PsScores = sG.Grade(list_AvTgt[i].tgt_Att_Ps);
+                //tmpSBP[i].para_TotalScores += tmpSBP[i].para_PsScores;
 
                 //保存条件 分值
                 tmpSBP[i].para_Sc = list_AvTgt[i].tgt_Att_Para_Sc;
-                tmpSBP[i].para_ScScores = fMf.FuzzyRankScore(list_AvTgt[i].tgt_Att_Para_Sc);
-                tmpSBP[i].para_TotalScores += tmpSBP[i].para_ScScores;
+                //tmpSBP[i].para_ScScores = fMf.FuzzyRankScore(list_AvTgt[i].tgt_Att_Para_Sc);
+                //tmpSBP[i].para_TotalScores += tmpSBP[i].para_ScScores;
 
                 //地质资源量 (赋值标准没有制定)
                 tmpSBP[i].para_Gr = list_AvTgt[i].tgt_Att_Para_Gr_Avg;
-                tmpSBP[i].para_GrScores = 0;
-                tmpSBP[i].para_TotalScores += tmpSBP[i].para_GrScores;
+                //tmpSBP[i].para_GrScores = 0;
+                //tmpSBP[i].para_TotalScores += tmpSBP[i].para_GrScores;
 
                 //地质条件
 
                 #region
                 //对富含有机质页岩厚度的平均值进行增大型隶属函数求值
                 if (list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg.Trim() != "" 
-                    && lstBx_Selected_GeoPara.Items.Contains("页岩厚度"))
+                    && lstBx_Selected_GeoPara.Items.Contains("页岩厚度(m)"))
                 {
                     values = Convert.ToDouble(list_AvTgt[i].tgt_Geo_Para_TrRoms_Avg);
                     gradeScore = fMf.FuzzyLarge(1.6, 15, values);

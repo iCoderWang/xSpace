@@ -22,16 +22,16 @@ namespace EsofaModel
 
         //定义字段 主力层系 primary Strata 及赋分属性
         public string para_Ps { get; set; }
-        public double para_PsScores { get; set; }
+       // public double para_PsScores { get; set; }
 
         //定义字段 保存条件 storage Condition
         public string para_Sc { get; set; }
-        public double para_ScScores { get; set; }
+        //public double para_ScScores { get; set; }
 
 
         //定义字段 地质资源量 (万亿方) geological resource
         public string para_Gr { get; set; }
-        public double para_GrScores { get; set; }
+        //public double para_GrScores { get; set; }
 
 
         //地质参数
