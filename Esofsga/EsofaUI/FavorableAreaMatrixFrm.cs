@@ -228,7 +228,7 @@ namespace EsofaUI
                 #region
                 //对富含有机质页岩厚度的平均值进行增大型隶属函数求值
                 if (list_AvBlk[i].blk_Geo_Para_TrRoms.Trim() != ""
-                    && lstBx_Selected_GeoPara.Items.Contains("页岩厚度"))
+                    && lstBx_Selected_GeoPara.Items.Contains("页岩厚度(m)"))
                 {
                     values = Convert.ToDouble(list_AvBlk[i].blk_Geo_Para_TrRoms);
                     gradeScore = fMf.FuzzyLarge(1.6, 15, values);

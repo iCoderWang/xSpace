@@ -65,10 +65,10 @@ namespace EsofaModel
         public double para_RrWeight { get; set; }
         public double para_RrScores { get; set; }
 
-        //定义字段 孔隙度 (%) porosity
-        public string para_Por { get; set; }
-        public double para_PorWeight { get; set; }
-        public double para_PorScores { get; set; }
+        //定义字段 构造复杂度Scd
+        public string para_Scd { get; set; }
+        public double para_ScdWeight { get; set; }
+        public double para_ScdScores { get; set; }
 
 
 
