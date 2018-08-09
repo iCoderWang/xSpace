@@ -107,6 +107,7 @@
     <Compile Include="EncryptConnection.cs" />
     <Compile Include="FuzzyMembershipFunction.cs" />
     <Compile Include="DataSourceToDataTable.cs" />
+    <Compile Include="NaturalBreaksClassification.cs" />
     <Compile Include="MD5Encryption.cs" />
     <Compile Include="ParametersWeightLoader.cs" />
     <Compile Include="PDFCreator.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="TargetListTransfomer.cs" />
     <Compile Include="SqlSyntaxValidating.cs" />
     <Compile Include="SubjectiveGrading.cs" />
+    <Compile Include="TOPSIS.cs" />
     <Compile Include="TreeViewNodesCheckStateSetting.cs" />
   </ItemGroup>
   <ItemGroup>

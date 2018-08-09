@@ -716,20 +716,27 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void btn_Sort_Click(object sender, EventArgs e)
         {
-            SortedTargetsFrm sBf = new SortedTargetsFrm();
+            double[] arr_Scores= null;
+            string[] arr_TgtName = null;
+            //SortedTargetsFrm stf = new SortedTargetsFrm(arr);
             if (chkFlag)
             {
-                List<SortedTargetsParas> lst_SBP = BlockGrade(lst_Tgt);
-                int counter = lst_SBP.Count;
-                lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
-                foreach (SortedTargetsParas sBp in lst_SBP)
+                List<SortedTargetsParas> lst_STP = BlockGrade(lst_Tgt);
+                int counter = lst_STP.Count;
+                arr_Scores = new double[counter];
+                arr_TgtName = new string[counter];
+                lst_STP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
+                foreach (SortedTargetsParas sBp in lst_STP)
                 {
                     sBp.para_Rank = counter;
                     counter--;
                 }
-                lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
-                sBf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
-                sBf.Show();
+                lst_STP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
+                arr_Scores = lst_STP.Select(x => x.para_TotalScores).ToArray();
+                arr_TgtName = lst_STP.Select(x => x.para_Tgt).ToArray();
+                SortedTargetsFrm stf = new SortedTargetsFrm(arr_Scores,arr_TgtName);
+                stf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_STP);
+                stf.Show();
                 btn_GenerateReport.Enabled = true;
             }
             else
