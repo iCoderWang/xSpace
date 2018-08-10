@@ -142,11 +142,15 @@ namespace EsofaUI
 
         private void btn_Sort_Click(object sender, EventArgs e)
         {
-            SortedBasinsFrm sBf = new SortedBasinsFrm();
+            double[] arr_Scores = null;
+            string[] arr_TgtName = null;
+            //SortedBasinsFrm sBf = new SortedBasinsFrm();
             if (chkFlag)
             {
                 List<SortedBasinsParas> lst_SBP = BlockGrade(lst_Bsn);
                 int counter = lst_SBP.Count;
+                arr_Scores = new double[counter];
+                arr_TgtName = new string[counter];
                 lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
                 foreach (SortedBasinsParas sBp in lst_SBP)
                 {
@@ -154,6 +158,9 @@ namespace EsofaUI
                     counter--;
                 }
                 lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
+                arr_Scores = lst_SBP.Select(x => x.para_TotalScores).ToArray();
+                arr_TgtName = lst_SBP.Select(x => x.para_Tgt).ToArray();
+                SortedBasinsFrm sBf = new SortedBasinsFrm(arr_Scores, arr_TgtName);
                 sBf.dgv_Bsn_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
                 sBf.Show();
                 btn_GenerateReport.Enabled = true;

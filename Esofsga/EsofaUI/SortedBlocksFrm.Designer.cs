@@ -62,9 +62,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Classification = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Classify = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Report = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_GenerateReport = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_Blk_Sorted = new System.Windows.Forms.DataGridView();
             this.para_Rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Tgt = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,34 +122,67 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.文件ToolStripMenuItem});
+            this.ToolStripMenuItem_File,
+            this.ToolStripMenuItem_Classification,
+            this.ToolStripMenuItem_Report});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 44);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // 文件ToolStripMenuItem
+            // ToolStripMenuItem_File
             // 
-            this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.另存为ToolStripMenuItem,
-            this.关闭ToolStripMenuItem});
-            this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.文件ToolStripMenuItem.Text = "文件";
+            this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_SaveAs,
+            this.ToolStripMenuItem_Close});
+            this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
+            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 36);
+            this.ToolStripMenuItem_File.Text = "文件";
             // 
-            // 另存为ToolStripMenuItem
+            // ToolStripMenuItem_SaveAs
             // 
-            this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.另存为ToolStripMenuItem.Text = "另存为";
+            this.ToolStripMenuItem_SaveAs.Name = "ToolStripMenuItem_SaveAs";
+            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(189, 38);
+            this.ToolStripMenuItem_SaveAs.Text = "另存为";
             // 
-            // 关闭ToolStripMenuItem
+            // ToolStripMenuItem_Close
             // 
-            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.关闭ToolStripMenuItem.Text = "关闭";
+            this.ToolStripMenuItem_Close.Name = "ToolStripMenuItem_Close";
+            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(189, 38);
+            this.ToolStripMenuItem_Close.Text = "关闭";
+            // 
+            // ToolStripMenuItem_Classification
+            // 
+            this.ToolStripMenuItem_Classification.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Classify});
+            this.ToolStripMenuItem_Classification.Name = "ToolStripMenuItem_Classification";
+            this.ToolStripMenuItem_Classification.Size = new System.Drawing.Size(77, 36);
+            this.ToolStripMenuItem_Classification.Text = "分类";
+            // 
+            // ToolStripMenuItem_Classify
+            // 
+            this.ToolStripMenuItem_Classify.Name = "ToolStripMenuItem_Classify";
+            this.ToolStripMenuItem_Classify.Size = new System.Drawing.Size(239, 38);
+            this.ToolStripMenuItem_Classify.Text = "自然分类法";
+            this.ToolStripMenuItem_Classify.Click += new System.EventHandler(this.ToolStripMenuItem_Classify_Click);
+            // 
+            // ToolStripMenuItem_Report
+            // 
+            this.ToolStripMenuItem_Report.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_GenerateReport});
+            this.ToolStripMenuItem_Report.Name = "ToolStripMenuItem_Report";
+            this.ToolStripMenuItem_Report.Size = new System.Drawing.Size(77, 36);
+            this.ToolStripMenuItem_Report.Text = "报告";
+            // 
+            // ToolStripMenuItem_GenerateReport
+            // 
+            this.ToolStripMenuItem_GenerateReport.Name = "ToolStripMenuItem_GenerateReport";
+            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(214, 38);
+            this.ToolStripMenuItem_GenerateReport.Text = "生成报告";
             // 
             // dgv_Blk_Sorted
             // 
@@ -210,10 +247,11 @@
             this.para_SgWeight,
             this.para_SgScores});
             this.dgv_Blk_Sorted.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Blk_Sorted.Location = new System.Drawing.Point(0, 24);
+            this.dgv_Blk_Sorted.Location = new System.Drawing.Point(0, 44);
+            this.dgv_Blk_Sorted.Margin = new System.Windows.Forms.Padding(6);
             this.dgv_Blk_Sorted.Name = "dgv_Blk_Sorted";
             this.dgv_Blk_Sorted.ReadOnly = true;
-            this.dgv_Blk_Sorted.Size = new System.Drawing.Size(800, 426);
+            this.dgv_Blk_Sorted.Size = new System.Drawing.Size(1264, 681);
             this.dgv_Blk_Sorted.TabIndex = 1;
             // 
             // para_Rank
@@ -225,7 +263,7 @@
             this.para_Rank.Name = "para_Rank";
             this.para_Rank.ReadOnly = true;
             this.para_Rank.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Rank.Width = 37;
+            this.para_Rank.Width = 56;
             // 
             // para_Tgt
             // 
@@ -236,7 +274,7 @@
             this.para_Tgt.Name = "para_Tgt";
             this.para_Tgt.ReadOnly = true;
             this.para_Tgt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Tgt.Width = 37;
+            this.para_Tgt.Width = 56;
             // 
             // para_Bsn
             // 
@@ -245,7 +283,7 @@
             this.para_Bsn.Name = "para_Bsn";
             this.para_Bsn.ReadOnly = true;
             this.para_Bsn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Bsn.Width = 66;
+            this.para_Bsn.Width = 81;
             // 
             // para_TotalScores
             // 
@@ -258,7 +296,7 @@
             this.para_TotalScores.Name = "para_TotalScores";
             this.para_TotalScores.ReadOnly = true;
             this.para_TotalScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_TotalScores.Width = 49;
+            this.para_TotalScores.Width = 76;
             // 
             // para_Ps
             // 
@@ -269,7 +307,7 @@
             this.para_Ps.Name = "para_Ps";
             this.para_Ps.ReadOnly = true;
             this.para_Ps.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Ps.Width = 61;
+            this.para_Ps.Width = 76;
             // 
             // para_Sc
             // 
@@ -280,7 +318,7 @@
             this.para_Sc.Name = "para_Sc";
             this.para_Sc.ReadOnly = true;
             this.para_Sc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Sc.Width = 61;
+            this.para_Sc.Width = 76;
             // 
             // para_Gr
             // 
@@ -289,7 +327,7 @@
             this.para_Gr.Name = "para_Gr";
             this.para_Gr.ReadOnly = true;
             this.para_Gr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Gr.Width = 73;
+            this.para_Gr.Width = 95;
             // 
             // para_StromAt
             // 
@@ -300,7 +338,7 @@
             this.para_StromAt.Name = "para_StromAt";
             this.para_StromAt.ReadOnly = true;
             this.para_StromAt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_StromAt.Width = 37;
+            this.para_StromAt.Width = 56;
             // 
             // para_StromAtWeight
             // 
@@ -312,7 +350,7 @@
             this.para_StromAtWeight.Name = "para_StromAtWeight";
             this.para_StromAtWeight.ReadOnly = true;
             this.para_StromAtWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_StromAtWeight.Width = 61;
+            this.para_StromAtWeight.Width = 76;
             // 
             // para_StromAtScores
             // 
@@ -324,7 +362,7 @@
             this.para_StromAtScores.Name = "para_StromAtScores";
             this.para_StromAtScores.ReadOnly = true;
             this.para_StromAtScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_StromAtScores.Width = 61;
+            this.para_StromAtScores.Width = 76;
             // 
             // para_Toc
             // 
@@ -335,7 +373,6 @@
             this.para_Toc.Name = "para_Toc";
             this.para_Toc.ReadOnly = true;
             this.para_Toc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Toc.Width = 62;
             // 
             // para_TocWeight
             // 
@@ -347,7 +384,7 @@
             this.para_TocWeight.Name = "para_TocWeight";
             this.para_TocWeight.ReadOnly = true;
             this.para_TocWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_TocWeight.Width = 61;
+            this.para_TocWeight.Width = 76;
             // 
             // para_TocScores
             // 
@@ -359,7 +396,7 @@
             this.para_TocScores.Name = "para_TocScores";
             this.para_TocScores.ReadOnly = true;
             this.para_TocScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_TocScores.Width = 61;
+            this.para_TocScores.Width = 76;
             // 
             // para_Kt
             // 
@@ -368,7 +405,7 @@
             this.para_Kt.Name = "para_Kt";
             this.para_Kt.ReadOnly = true;
             this.para_Kt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Kt.Width = 73;
+            this.para_Kt.Width = 95;
             // 
             // para_KtWeight
             // 
@@ -377,7 +414,7 @@
             this.para_KtWeight.Name = "para_KtWeight";
             this.para_KtWeight.ReadOnly = true;
             this.para_KtWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_KtWeight.Width = 66;
+            this.para_KtWeight.Width = 115;
             // 
             // para_KtScores
             // 
@@ -386,7 +423,7 @@
             this.para_KtScores.Name = "para_KtScores";
             this.para_KtScores.ReadOnly = true;
             this.para_KtScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_KtScores.Width = 66;
+            this.para_KtScores.Width = 115;
             // 
             // para_Ro
             // 
@@ -397,7 +434,7 @@
             this.para_Ro.Name = "para_Ro";
             this.para_Ro.ReadOnly = true;
             this.para_Ro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Ro.Width = 62;
+            this.para_Ro.Width = 113;
             // 
             // para_RoWeight
             // 
@@ -409,7 +446,7 @@
             this.para_RoWeight.Name = "para_RoWeight";
             this.para_RoWeight.ReadOnly = true;
             this.para_RoWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_RoWeight.Width = 55;
+            this.para_RoWeight.Width = 95;
             // 
             // para_RoScores
             // 
@@ -421,7 +458,7 @@
             this.para_RoScores.Name = "para_RoScores";
             this.para_RoScores.ReadOnly = true;
             this.para_RoScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_RoScores.Width = 55;
+            this.para_RoScores.Width = 95;
             // 
             // para_Ea
             // 
@@ -432,7 +469,7 @@
             this.para_Ea.Name = "para_Ea";
             this.para_Ea.ReadOnly = true;
             this.para_Ea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Ea.Width = 33;
+            this.para_Ea.Width = 56;
             // 
             // para_EaWeight
             // 
@@ -445,7 +482,7 @@
             this.para_EaWeight.Name = "para_EaWeight";
             this.para_EaWeight.ReadOnly = true;
             this.para_EaWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_EaWeight.Width = 44;
+            this.para_EaWeight.Width = 76;
             // 
             // para_EaScores
             // 
@@ -458,7 +495,7 @@
             this.para_EaScores.Name = "para_EaScores";
             this.para_EaScores.ReadOnly = true;
             this.para_EaScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_EaScores.Width = 44;
+            this.para_EaScores.Width = 76;
             // 
             // para_Gc
             // 
@@ -469,7 +506,7 @@
             this.para_Gc.Name = "para_Gc";
             this.para_Gc.ReadOnly = true;
             this.para_Gc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Gc.Width = 44;
+            this.para_Gc.Width = 76;
             // 
             // para_GcWeight
             // 
@@ -481,7 +518,7 @@
             this.para_GcWeight.Name = "para_GcWeight";
             this.para_GcWeight.ReadOnly = true;
             this.para_GcWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_GcWeight.Width = 55;
+            this.para_GcWeight.Width = 95;
             // 
             // para_GcScores
             // 
@@ -493,7 +530,7 @@
             this.para_GcScores.Name = "para_GcScores";
             this.para_GcScores.ReadOnly = true;
             this.para_GcScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_GcScores.Width = 55;
+            this.para_GcScores.Width = 95;
             // 
             // para_Rr
             // 
@@ -504,7 +541,7 @@
             this.para_Rr.Name = "para_Rr";
             this.para_Rr.ReadOnly = true;
             this.para_Rr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Rr.Width = 33;
+            this.para_Rr.Width = 56;
             // 
             // para_RrWeight
             // 
@@ -516,7 +553,7 @@
             this.para_RrWeight.Name = "para_RrWeight";
             this.para_RrWeight.ReadOnly = true;
             this.para_RrWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_RrWeight.Width = 44;
+            this.para_RrWeight.Width = 76;
             // 
             // para_RrScores
             // 
@@ -528,7 +565,7 @@
             this.para_RrScores.Name = "para_RrScores";
             this.para_RrScores.ReadOnly = true;
             this.para_RrScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_RrScores.Width = 44;
+            this.para_RrScores.Width = 76;
             // 
             // para_Por
             // 
@@ -539,7 +576,7 @@
             this.para_Por.Name = "para_Por";
             this.para_Por.ReadOnly = true;
             this.para_Por.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Por.Width = 44;
+            this.para_Por.Width = 76;
             // 
             // para_PorWeight
             // 
@@ -551,7 +588,7 @@
             this.para_PorWeight.Name = "para_PorWeight";
             this.para_PorWeight.ReadOnly = true;
             this.para_PorWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_PorWeight.Width = 55;
+            this.para_PorWeight.Width = 95;
             // 
             // para_PorScores
             // 
@@ -563,7 +600,7 @@
             this.para_PorScores.Name = "para_PorScores";
             this.para_PorScores.ReadOnly = true;
             this.para_PorScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_PorScores.Width = 55;
+            this.para_PorScores.Width = 95;
             // 
             // para_Scd
             // 
@@ -574,7 +611,7 @@
             this.para_Scd.Name = "para_Scd";
             this.para_Scd.ReadOnly = true;
             this.para_Scd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Scd.Width = 33;
+            this.para_Scd.Width = 56;
             // 
             // para_ScdWeight
             // 
@@ -583,7 +620,7 @@
             this.para_ScdWeight.Name = "para_ScdWeight";
             this.para_ScdWeight.ReadOnly = true;
             this.para_ScdWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_ScdWeight.Width = 44;
+            this.para_ScdWeight.Width = 76;
             // 
             // para_ScdScores
             // 
@@ -595,7 +632,7 @@
             this.para_ScdScores.Name = "para_ScdScores";
             this.para_ScdScores.ReadOnly = true;
             this.para_ScdScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_ScdScores.Width = 44;
+            this.para_ScdScores.Width = 76;
             // 
             // para_Dr
             // 
@@ -606,7 +643,7 @@
             this.para_Dr.Name = "para_Dr";
             this.para_Dr.ReadOnly = true;
             this.para_Dr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Dr.Width = 33;
+            this.para_Dr.Width = 56;
             // 
             // para_DrWeight
             // 
@@ -619,7 +656,7 @@
             this.para_DrWeight.Name = "para_DrWeight";
             this.para_DrWeight.ReadOnly = true;
             this.para_DrWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_DrWeight.Width = 44;
+            this.para_DrWeight.Width = 76;
             // 
             // para_DrScores
             // 
@@ -632,7 +669,7 @@
             this.para_DrScores.Name = "para_DrScores";
             this.para_DrScores.ReadOnly = true;
             this.para_DrScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_DrScores.Width = 44;
+            this.para_DrScores.Width = 76;
             // 
             // para_Pc
             // 
@@ -641,7 +678,7 @@
             this.para_Pc.Name = "para_Pc";
             this.para_Pc.ReadOnly = true;
             this.para_Pc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Pc.Width = 44;
+            this.para_Pc.Width = 76;
             // 
             // para_PcWeight
             // 
@@ -650,7 +687,7 @@
             this.para_PcWeight.Name = "para_PcWeight";
             this.para_PcWeight.ReadOnly = true;
             this.para_PcWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_PcWeight.Width = 55;
+            this.para_PcWeight.Width = 95;
             // 
             // para_PcScores
             // 
@@ -662,7 +699,7 @@
             this.para_PcScores.Name = "para_PcScores";
             this.para_PcScores.ReadOnly = true;
             this.para_PcScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_PcScores.Width = 55;
+            this.para_PcScores.Width = 95;
             // 
             // para_Bmc
             // 
@@ -671,7 +708,7 @@
             this.para_Bmc.Name = "para_Bmc";
             this.para_Bmc.ReadOnly = true;
             this.para_Bmc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Bmc.Width = 44;
+            this.para_Bmc.Width = 76;
             // 
             // para_BmcWeight
             // 
@@ -680,7 +717,7 @@
             this.para_BmcWeight.Name = "para_BmcWeight";
             this.para_BmcWeight.ReadOnly = true;
             this.para_BmcWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_BmcWeight.Width = 55;
+            this.para_BmcWeight.Width = 95;
             // 
             // para_BmcScores
             // 
@@ -689,7 +726,7 @@
             this.para_BmcScores.Name = "para_BmcScores";
             this.para_BmcScores.ReadOnly = true;
             this.para_BmcScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_BmcScores.Width = 55;
+            this.para_BmcScores.Width = 95;
             // 
             // para_Sg
             // 
@@ -698,7 +735,7 @@
             this.para_Sg.Name = "para_Sg";
             this.para_Sg.ReadOnly = true;
             this.para_Sg.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_Sg.Width = 44;
+            this.para_Sg.Width = 76;
             // 
             // para_SgWeight
             // 
@@ -707,7 +744,7 @@
             this.para_SgWeight.Name = "para_SgWeight";
             this.para_SgWeight.ReadOnly = true;
             this.para_SgWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_SgWeight.Width = 55;
+            this.para_SgWeight.Width = 95;
             // 
             // para_SgScores
             // 
@@ -716,16 +753,17 @@
             this.para_SgScores.Name = "para_SgScores";
             this.para_SgScores.ReadOnly = true;
             this.para_SgScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para_SgScores.Width = 55;
+            this.para_SgScores.Width = 95;
             // 
             // SortedBlocksFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1264, 725);
             this.Controls.Add(this.dgv_Blk_Sorted);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SortedBlocksFrm";
             this.Text = "有利区块排序结果";
             this.menuStrip1.ResumeLayout(false);
@@ -739,9 +777,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 另存为ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_File;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAs;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Close;
         public System.Windows.Forms.DataGridView dgv_Blk_Sorted;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Rank;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Tgt;
@@ -789,5 +827,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Sg;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_SgWeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_SgScores;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Classification;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Classify;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Report;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_GenerateReport;
     }
 }

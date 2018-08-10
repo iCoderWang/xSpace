@@ -611,6 +611,7 @@
             this.sideBar_BtnTOPSIS.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.sideBar_BtnTOPSIS.Name = "sideBar_BtnTOPSIS";
             this.sideBar_BtnTOPSIS.Text = "逼近理想解排序法\r\n（TOPSIS）";
+            this.sideBar_BtnTOPSIS.Click += new System.EventHandler(this.sideBar_BtnTOPSIS_Click);
             // 
             // sideBar_BtnFCEM
             // 

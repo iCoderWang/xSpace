@@ -140,13 +140,13 @@
             this.para_PorScores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Scd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_ScdWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.生成报告ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.报告ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.分类ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.另存为ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_GenerateReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Report = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Classify = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Classification = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Tgt_Sorted)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -1029,63 +1029,63 @@
             this.para_ScdWeight.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.para_ScdWeight.Width = 76;
             // 
-            // 生成报告ToolStripMenuItem
+            // ToolStripMenuItem_GenerateReport
             // 
-            this.生成报告ToolStripMenuItem.Name = "生成报告ToolStripMenuItem";
-            this.生成报告ToolStripMenuItem.Size = new System.Drawing.Size(214, 38);
-            this.生成报告ToolStripMenuItem.Text = "生成报告";
+            this.ToolStripMenuItem_GenerateReport.Name = "ToolStripMenuItem_GenerateReport";
+            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_GenerateReport.Text = "生成报告";
             // 
-            // 报告ToolStripMenuItem
+            // ToolStripMenuItem_Report
             // 
-            this.报告ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.生成报告ToolStripMenuItem});
-            this.报告ToolStripMenuItem.Name = "报告ToolStripMenuItem";
-            this.报告ToolStripMenuItem.Size = new System.Drawing.Size(77, 38);
-            this.报告ToolStripMenuItem.Text = "报告";
+            this.ToolStripMenuItem_Report.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_GenerateReport});
+            this.ToolStripMenuItem_Report.Name = "ToolStripMenuItem_Report";
+            this.ToolStripMenuItem_Report.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_Report.Text = "报告";
             // 
-            // ToolStripMenuItem
+            // ToolStripMenuItem_Classify
             // 
-            this.ToolStripMenuItem.Name = "ToolStripMenuItem";
-            this.ToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
-            this.ToolStripMenuItem.Text = "自然分类法";
-            this.ToolStripMenuItem.Click += new System.EventHandler(this.ToolStripMenuItem_Click);
+            this.ToolStripMenuItem_Classify.Name = "ToolStripMenuItem_Classify";
+            this.ToolStripMenuItem_Classify.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_Classify.Text = "自然分类法";
+            this.ToolStripMenuItem_Classify.Click += new System.EventHandler(this.ToolStripMenuItem_Classify_Click);
             // 
-            // 分类ToolStripMenuItem
+            // ToolStripMenuItem_Classification
             // 
-            this.分类ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem});
-            this.分类ToolStripMenuItem.Name = "分类ToolStripMenuItem";
-            this.分类ToolStripMenuItem.Size = new System.Drawing.Size(77, 38);
-            this.分类ToolStripMenuItem.Text = "分类";
+            this.ToolStripMenuItem_Classification.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Classify});
+            this.ToolStripMenuItem_Classification.Name = "ToolStripMenuItem_Classification";
+            this.ToolStripMenuItem_Classification.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_Classification.Text = "分类";
             // 
-            // 关闭ToolStripMenuItem
+            // ToolStripMenuItem_Close
             // 
-            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(189, 38);
-            this.关闭ToolStripMenuItem.Text = "关闭";
+            this.ToolStripMenuItem_Close.Name = "ToolStripMenuItem_Close";
+            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_Close.Text = "关闭";
             // 
-            // 另存为ToolStripMenuItem
+            // ToolStripMenuItem_SaveAs
             // 
-            this.另存为ToolStripMenuItem.Name = "另存为ToolStripMenuItem";
-            this.另存为ToolStripMenuItem.Size = new System.Drawing.Size(189, 38);
-            this.另存为ToolStripMenuItem.Text = "另存为";
+            this.ToolStripMenuItem_SaveAs.Name = "ToolStripMenuItem_SaveAs";
+            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_SaveAs.Text = "另存为";
             // 
-            // 文件ToolStripMenuItem
+            // ToolStripMenuItem_File
             // 
-            this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.另存为ToolStripMenuItem,
-            this.关闭ToolStripMenuItem});
-            this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(77, 38);
-            this.文件ToolStripMenuItem.Text = "文件";
+            this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_SaveAs,
+            this.ToolStripMenuItem_Close});
+            this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
+            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_File.Text = "文件";
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.文件ToolStripMenuItem,
-            this.分类ToolStripMenuItem,
-            this.报告ToolStripMenuItem});
+            this.ToolStripMenuItem_File,
+            this.ToolStripMenuItem_Classification,
+            this.ToolStripMenuItem_Report});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
@@ -1189,13 +1189,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn para_PorScores;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_Scd;
         private System.Windows.Forms.DataGridViewTextBoxColumn para_ScdWeight;
-        private System.Windows.Forms.ToolStripMenuItem 生成报告ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 报告ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 分类ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 另存为ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_GenerateReport;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Report;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Classify;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Classification;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Close;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAs;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_File;
         private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

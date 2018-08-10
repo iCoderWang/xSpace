@@ -495,11 +495,15 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void btn_Sort_Click(object sender, EventArgs e)
         {
-            SortedBlocksFrm sBf = new SortedBlocksFrm();
+            double[] arr_Scores = null;
+            string[] arr_TgtName = null;
+            //SortedBlocksFrm sBf = new SortedBlocksFrm();
             if (chkFlag)
             {
                 List<SortedBlocksParas> lst_SBP = BlockGrade(lst_Blk);
                 int counter = lst_SBP.Count;
+                arr_Scores = new double[counter];
+                arr_TgtName = new string[counter];
                 lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
                 foreach (SortedBlocksParas sBp in lst_SBP)
                 {
@@ -507,8 +511,11 @@ namespace EsofaUI
                     counter--;
                 }
                 lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
-                sBf.dgv_Blk_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
-                sBf.Show();
+                arr_Scores = lst_SBP.Select(x => x.para_TotalScores).ToArray();
+                arr_TgtName = lst_SBP.Select(x => x.para_Tgt).ToArray();
+                SortedBlocksFrm sbf = new SortedBlocksFrm(arr_Scores, arr_TgtName);
+                sbf.dgv_Blk_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
+                sbf.Show();
                 btn_GenerateReport.Enabled = true;
             }
             else

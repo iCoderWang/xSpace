@@ -30,7 +30,7 @@ namespace EsofaUI
             arr_TgtName = names;
         }
 
-        private void ToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void ToolStripMenuItem_Classify_Click(object sender, System.EventArgs e)
         {
             //使用linq根据数组的index对某一个范围内的元素求和
             //double s1 = _arr.Where((num, index) => index > 1 && index <=3).Sum();f
@@ -46,10 +46,10 @@ namespace EsofaUI
             //将二类数据中目标区域名筛选出来
             arr_TgtName.Where((num, index) => index >= s1 && index < arr_TgtName.Length-s2).ToList().ForEach(a => strClass_2.Append(a + ", "));
             //将三类数据中目标区域名筛选出来
-            arr_TgtName.Where((num, index) => index >= arr_TgtName.Length - s2 && index < arr_TgtName.Length-1).ToList().ForEach(a => strClass_3.Append(a + ", "));
+            arr_TgtName.Where((num, index) => index >= arr_TgtName.Length - s2 && index < arr_TgtName.Length).ToList().ForEach(a => strClass_3.Append(a + ", "));
             MessageBox.Show("优等类:\r\n " + strClass_1.ToString() + "; \r\n\r\n中等类：\r\n " + strClass_2.ToString() +
                 "; \r\n\r\n三等类：\r\n " + strClass_3.ToString());
         }
-        
+
     }
 }

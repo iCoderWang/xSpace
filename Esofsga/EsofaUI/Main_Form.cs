@@ -639,7 +639,8 @@ namespace EsofaUI
             //使用含有委托形参的构造函数，创建GradingFrm窗体，从而实现关闭主界面上TabPage的方法传递。
             GradingFrm gradingFrm = new GradingFrm(TabPage_Close); //实现委托传递关闭当前TabPage的方法
             gradingFrm.TopLevel = false;
-            TabPageCreate("层次分析法",gradingFrm);
+            TabPageCreate("层次分析法", gradingFrm);
+            //TabPageCreate("逼近理想解排序法", gradingFrm);
             gradingFrm.Show();
         }
 
@@ -736,7 +737,6 @@ namespace EsofaUI
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
             //workAreaTabPageController.TabPages.Remove (x=>x)
             rawDataFrm.Show();
-
         }
 
         private void sideBar_BtnAddData_Click(object sender, EventArgs e)
@@ -769,6 +769,16 @@ namespace EsofaUI
             workAreaTabPageController.SelectedTabPage.Controls.Add(dbDataQueryFrm);
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
             dbDataQueryFrm.Show();
+        }
+
+        private void sideBar_BtnTOPSIS_Click(object sender, EventArgs e)
+        {
+            //使用含有委托形参的构造函数，创建GradingFrm窗体，从而实现关闭主界面上TabPage的方法传递。
+            GradingFrm gradingFrm = new GradingFrm(TabPage_Close); //实现委托传递关闭当前TabPage的方法
+            gradingFrm.TopLevel = false;
+            //TabPageCreate("层次分析法", gradingFrm);
+            TabPageCreate("逼近理想解排序法", gradingFrm);
+            gradingFrm.Show();
         }
     }
 }
