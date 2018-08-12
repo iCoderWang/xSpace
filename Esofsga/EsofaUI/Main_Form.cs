@@ -211,10 +211,10 @@ namespace EsofaUI
             workAreaTabPageController.TabPages.Add(workAreaTabPageController.SelectedTabPage);
 
             //设置窗体的宽度和新建Page的宽度相等
-            gradingFrm.Width = workAreaTabPageController.Width;
+            gradingFrm.Width = workAreaTabPageController.SelectedTabPage.Width; //Width;
 
             //设置窗体的高度和新建Page的高度相等
-            gradingFrm.Height = workAreaTabPageController.Height;
+            gradingFrm.Height = workAreaTabPageController.SelectedTabPage.Height;
 
             //gradingFrm.dgvView_Target.AutoGenerateColumns = true;
             gradingFrm.dgvView_Target.DataSource = listAV_Te;

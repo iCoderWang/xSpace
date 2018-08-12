@@ -103,6 +103,8 @@ namespace EsofaUI
 
         private void GradingFrm_Load(object sender, EventArgs e)
         {
+            splitContDataZone.SplitterDistance = splitContDataZone.Height - 50;
+            splitCtnerGraFrm.SplitterDistance = 150;
             listAvgTgtEnty = rawDataBLL.GetAvg_List(sql);
             dt = DataSourceToDataTable.GetListToDataTable(listAvgTgtEnty);
             List<string> list_BsnName = new List<string>();
@@ -193,7 +195,18 @@ namespace EsofaUI
                 tgtSn = 0;
             }
         }
+        /*
+         * btnNext和btnCan在界面上位置的固定，是通过使用两个groupbox，即groupBox1 和 gBox_Commands，使它们右Dock在panel2中
+         * 然后再分别把这两个命令按钮Dock在groupBox中，再对groupBox的paint事件进行重写，去掉了其边框效果。
+         */
+        private void groupBox1_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.Clear(this.BackColor);
+        }
 
-       
+        private void gBox_Commands_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.Clear(this.BackColor);
+        }
     }
 }
