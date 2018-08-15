@@ -103,7 +103,9 @@ namespace EsofaUI
 
         private void GradingFrm_Load(object sender, EventArgs e)
         {
-            splitContDataZone.SplitterDistance = splitContDataZone.Height - 50;
+            splitContDataZone.SplitterDistance = splitContDataZone.Height - 60;
+            this.btnCancel.Height = 35;
+            this.btnNext.Height = 35;
             splitCtnerGraFrm.SplitterDistance = 150;
             listAvgTgtEnty = rawDataBLL.GetAvg_List(sql);
             dt = DataSourceToDataTable.GetListToDataTable(listAvgTgtEnty);
