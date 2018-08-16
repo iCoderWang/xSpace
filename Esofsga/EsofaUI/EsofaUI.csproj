@@ -206,12 +206,6 @@
     <Compile Include="GradingFrm.Designer.cs">
       <DependentUpon>GradingFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradingFrm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GradingFrm2.Designer.cs">
-      <DependentUpon>GradingFrm2.cs</DependentUpon>
-    </Compile>
     <Compile Include="PdfGeneratorFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,9 +314,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GradingFrm.resx">
       <DependentUpon>GradingFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GradingFrm2.resx">
-      <DependentUpon>GradingFrm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PdfGeneratorFrm.resx">
       <DependentUpon>PdfGeneratorFrm.cs</DependentUpon>

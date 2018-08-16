@@ -16,69 +16,79 @@ namespace EsofaUI
     
     public partial class GradingFrm : Form
     {
-        //定义委托
-        private DelCloseTabPage _delCloseTabPage;
+        
         public GradingFrm()
         {
             InitializeComponent();
         }
 
         //重载构造函数，用委托做传递参数
-        public GradingFrm(DelCloseTabPage delCloseTabPage)
+        //定义委托
+        private DelCloseTabPage _delCloseTabPage;
+        private string _strTabPageTxt;
+        public GradingFrm(DelCloseTabPage delCloseTabPage,string str)
         {
             this._delCloseTabPage = delCloseTabPage;
+            this._strTabPageTxt = str;
             InitializeComponent();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (tabControlGrading.SelectedTab == tabPageBasin)
+            if (_strTabPageTxt.Equals("层次分析法"))
             {
-                //远景区为当前选定区域 创建远景区矩阵窗体实例
-                //显示远景区矩阵窗体
-                if (lstTgtSelected != null)
+                if (tabControlGrading.SelectedTab == tabPageBasin)
                 {
-                    pamf = new ProspectAreaMatrixFrm(lstBsnSelected);
-                    pamf.Show();
+                    //远景区为当前选定区域 创建远景区矩阵窗体实例
+                    //显示远景区矩阵窗体
+                    if (lstTgtSelected != null)
+                    {
+                        pamf = new ProspectAreaMatrixFrm(lstBsnSelected);
+                        pamf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
-                else
+
+                if (tabControlGrading.SelectedTab == tabPageBlock)
                 {
-                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    //有利区为当前选定区域 创建有利区矩阵窗体实例
+                    //显示有利区矩阵窗体
+                    if (lstTgtSelected.Count != 0)
+                    {
+                        famf = new FavorableAreaMatrixFrm(lstBlkSelected);
+                        famf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                }
+
+                if (tabControlGrading.SelectedTab == tabPageTarget)
+                {
+                    //核心区为当前选定区域 创建核心区矩阵窗体实例
+                    //显示核心区矩阵窗体
+                    if (lstTgtSelected.Count != 0)//lstTgtSelected != null)
+                    {
+                        camf = new CoreAreaMatrixFrm(lstTgtSelected);
+                        camf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
             }
-
-            if (tabControlGrading.SelectedTab == tabPageBlock)
+            if (_strTabPageTxt.Equals("逼近理想解排序法"))
             {
-                //有利区为当前选定区域 创建有利区矩阵窗体实例
-                //显示有利区矩阵窗体
-                if (lstTgtSelected.Count != 0)
-                {
-                    famf = new FavorableAreaMatrixFrm(lstBlkSelected);
-                    famf.Show();
-                }
-                else
-                {
-                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
 
-            }
-
-            if (tabControlGrading.SelectedTab == tabPageTarget)
-            {
-                //核心区为当前选定区域 创建核心区矩阵窗体实例
-                //显示核心区矩阵窗体
-                if (lstTgtSelected.Count != 0)//lstTgtSelected != null)
-                {
-                    camf = new CoreAreaMatrixFrm(lstTgtSelected);
-                    camf.Show();
-                }
-                else
-                {
-                    MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
             }
         }
 
@@ -203,12 +213,12 @@ namespace EsofaUI
          */
         private void groupBox1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.Clear(this.BackColor);
+            e.Graphics.Clear(BackColor);
         }
 
         private void gBox_Commands_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.Clear(this.BackColor);
+            e.Graphics.Clear(BackColor);
         }
     }
 }

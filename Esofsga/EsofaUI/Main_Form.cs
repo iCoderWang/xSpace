@@ -200,7 +200,7 @@ namespace EsofaUI
         /// </summary>
         /// <param name="pageText"></param>
         /// <param name="rawdataFrm"></param>
-        public void TabPageCreate(string pageText, GradingFrm gradingFrm)
+        private void TabPageCreate(string pageText, GradingFrm gradingFrm)
         {
             DataGridViewColumnEditor dgvCE = new DataGridViewColumnEditor();
             List<AverageValuesTargetEntity> listAV_Te = new List<AverageValuesTargetEntity>();
@@ -636,10 +636,11 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void sideBar_BtnAHP_Click(object sender, EventArgs e)
         {
+            string tabPageText = "层次分析法";
             //使用含有委托形参的构造函数，创建GradingFrm窗体，从而实现关闭主界面上TabPage的方法传递。
-            GradingFrm gradingFrm = new GradingFrm(TabPage_Close); //实现委托传递关闭当前TabPage的方法
+            GradingFrm gradingFrm = new GradingFrm(TabPage_Close,tabPageText); //实现委托传递关闭当前TabPage的方法
             gradingFrm.TopLevel = false;
-            TabPageCreate("层次分析法", gradingFrm);
+            TabPageCreate(tabPageText, gradingFrm);
             //TabPageCreate("逼近理想解排序法", gradingFrm);
             gradingFrm.Show();
         }
@@ -773,11 +774,12 @@ namespace EsofaUI
 
         private void sideBar_BtnTOPSIS_Click(object sender, EventArgs e)
         {
+            string tabPageText = "逼近理想解排序法";
             //使用含有委托形参的构造函数，创建GradingFrm窗体，从而实现关闭主界面上TabPage的方法传递。
-            GradingFrm gradingFrm = new GradingFrm(TabPage_Close); //实现委托传递关闭当前TabPage的方法
+            GradingFrm gradingFrm = new GradingFrm(TabPage_Close,tabPageText); //实现委托传递关闭当前TabPage的方法
             gradingFrm.TopLevel = false;
             //TabPageCreate("层次分析法", gradingFrm);
-            TabPageCreate("逼近理想解排序法", gradingFrm);
+            TabPageCreate(tabPageText, gradingFrm);
             gradingFrm.Show();
         }
     }

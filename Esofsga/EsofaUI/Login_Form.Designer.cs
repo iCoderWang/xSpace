@@ -36,14 +36,15 @@
             // 
             // btn_Login
             // 
+            this.btn_Login.AutoSize = true;
             this.btn_Login.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Login.ForeColor = System.Drawing.Color.Transparent;
             this.btn_Login.Image = global::EsofaUI.Properties.Resources.未标题_1;
-            this.btn_Login.Location = new System.Drawing.Point(452, 271);
+            this.btn_Login.Location = new System.Drawing.Point(904, 542);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(68, 34);
+            this.btn_Login.Size = new System.Drawing.Size(136, 68);
             this.btn_Login.TabIndex = 2;
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
@@ -52,38 +53,40 @@
             // 
             this.txtBox_UserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBox_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_UserName.Location = new System.Drawing.Point(407, 149);
+            this.txtBox_UserName.Location = new System.Drawing.Point(814, 298);
             this.txtBox_UserName.Margin = new System.Windows.Forms.Padding(0);
             this.txtBox_UserName.Name = "txtBox_UserName";
-            this.txtBox_UserName.Size = new System.Drawing.Size(176, 35);
+            this.txtBox_UserName.Size = new System.Drawing.Size(350, 62);
             this.txtBox_UserName.TabIndex = 0;
             this.txtBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtBox_UserPwd
             // 
             this.txtBox_UserPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_UserPwd.Location = new System.Drawing.Point(407, 210);
+            this.txtBox_UserPwd.Location = new System.Drawing.Point(814, 420);
+            this.txtBox_UserPwd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtBox_UserPwd.Name = "txtBox_UserPwd";
             this.txtBox_UserPwd.PasswordChar = '*';
-            this.txtBox_UserPwd.Size = new System.Drawing.Size(176, 35);
+            this.txtBox_UserPwd.Size = new System.Drawing.Size(348, 62);
             this.txtBox_UserPwd.TabIndex = 1;
             this.txtBox_UserPwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBox_UserPwd.UseSystemPasswordChar = true;
             // 
             // Login_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackgroundImage = global::EsofaUI.Properties.Resources.Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(700, 465);
+            this.ClientSize = new System.Drawing.Size(1400, 930);
             this.Controls.Add(this.txtBox_UserPwd);
             this.Controls.Add(this.txtBox_UserName);
             this.Controls.Add(this.btn_Login);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
