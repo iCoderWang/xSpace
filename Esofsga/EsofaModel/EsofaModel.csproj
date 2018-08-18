@@ -88,6 +88,7 @@
     <Compile Include="SortedBlocksParas.cs" />
     <Compile Include="SortedTargetsParas.cs" />
     <Compile Include="TargetEntity.cs" />
+    <Compile Include="TopsisTargetDecisionMatrixEntity.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

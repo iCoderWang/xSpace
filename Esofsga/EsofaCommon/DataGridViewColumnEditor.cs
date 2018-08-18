@@ -9,9 +9,9 @@ namespace EsofaCommon
         {
             dgv.AutoGenerateColumns = true;
             //dgv.Name = dgvName;
-            int[] columnsIndex_Basin = new int[] { };
-            int[] columnsIndex_BLock = new int[] { };
-            int[] columnsIndex_Target = new int[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 };
+            //int[] columnsIndex_Basin = new int[] { };
+            //int[] columnsIndex_BLock = new int[] { };
+            //int[] columnsIndex_Target = new int[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29 };
             string[] headerTxt = null;
             if (dgvName == "dgvTarget")
             {
@@ -51,6 +51,34 @@ namespace EsofaCommon
                     "区域勘探度","市场气价","市场需求","交通设施","管网条件","地表地貌","Id" };
                 //定义数组变量，存放参数名
                 headerTxt = viewHeaderTxt;
+            }
+            if(dgvName == "dgvTgt_TDM")
+            {
+                //定义TOPSIS Decision Matrix (TDM) 的 DataGridView的 Column Header Text
+                string[] dgvTgtTDMHeaderTxt = new string[] { "目标区","平均_地质资源量 (万亿方)",
+                    "平均_富有机质页岩厚度", "平均_TOC(%)","干酪根类型","平均_Ro(%)","有效圈定面积(1-4k米深,km^2)",
+                    "平均_含气量 (m^3/t)","平均_资源丰度(亿m^3/km^3)","平均_孔隙度(%)","构造复杂度","顶底板岩性",
+                    "平均_埋深范围","平均_压力系数","渗透率","裂缝发育度","平均_主应力差异系数","平均_脆性矿物含量","水系",
+                    "区域勘探度","市场气价","市场需求","交通设施","管网条件","地表地貌","Id" };
+                //定义数组变量，存放参数名
+                headerTxt = dgvTgtTDMHeaderTxt;
+            }
+            if (dgvName == "dgvBlk_TDM")
+            {
+                string[] dgvBlkTDMHeaderTxt = new string[] { "目标区", "平均_地质资源量 (万亿方)",
+                    "平均_富有机质页岩厚度", "平均_TOC(%)","干酪根类型","平均_Ro(%)","有效圈定面积(1-4k米深,km^2)",
+                    "平均_含气量 (m^3/t)","平均_资源丰度(亿m^3/km^3)","平均_孔隙度(%)","构造复杂度",
+                    "平均_埋深范围","平均_压力系数","平均_脆性矿物含量","地表地貌","Id" };
+                //定义数组变量，存放参数名
+                headerTxt = dgvBlkTDMHeaderTxt;
+            }
+            if (dgvName == "dgvBsn_TDM")
+            {
+                string[] dgvBsnTDMHeaderTxt = new string[] {"目标区", "平均_地质资源量 (万亿方)",
+                    "平均_富有机质页岩厚度", "平均_TOC(%)","干酪根类型","平均_Ro(%)","有效圈定面积(1-4k米深,km^2)",
+                    "平均_资源丰度(亿m^3/km^3)","构造复杂度","平均_埋深范围","平均_脆性矿物含量","Id" };
+                //定义数组变量，存放参数名
+                headerTxt = dgvBsnTDMHeaderTxt;
             }
             //System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
             //watch.Start();

@@ -66,5 +66,21 @@ namespace EsofaCommon
             }
             return dt;
         }
+
+        public static double[,] GetDgvToArray(DataGridView dgv)
+        {
+            DataTable dt = new DataTable();
+            dt = GetDgvToTable(dgv);
+            int col = dt.Columns.Count;
+            double[,] array = new double[dt.Rows.Count, col];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                for (int j = 0; j < dt.Columns.Count; j++)
+                {
+                    array[i, j] = Convert.ToDouble(dt.Rows[i][j]);
+                }
+            }
+            return array;
+        }
     }
 }

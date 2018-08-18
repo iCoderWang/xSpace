@@ -3,12 +3,7 @@ using EsofaModel;
 using EsofaCommon;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EsofaUI
@@ -32,6 +27,20 @@ namespace EsofaUI
             this._strTabPageTxt = str;
             InitializeComponent();
         }
+        //视图数据对应的列标题
+        string[] viewHeaderTxt = new string[] { "目标区", "盆地/区域 ", "主力层系", "保存条件", "平均地质资源量 (万亿方)","平均富有机质页岩厚度",
+            "平均TOC(%)","干酪根类型","平均Ro(%)","有效圈定面积(1-4km深,km^2)","平均含气量 (m^3/t)","平均资源丰度(亿m^3/km^2)",
+            "平均孔隙度(%)","构造复杂度","顶底板岩性","平均埋深范围","平均压力系数","渗透率","裂缝发育度","平均主应力差异系数",
+            "平均脆性矿物含量","水系","区域勘探度","市场气价","市场需求","交通设施","管网条件","地表地貌" };
+
+        DataTable dt = new DataTable();
+        List<AverageValuesTargetEntity> listAvgTgtEnty = null;
+        string sql = "select * from view_target";
+        RawDataBLL rawDataBLL = new RawDataBLL();
+        CoreAreaMatrixFrm camf = null;
+        FavorableAreaMatrixFrm famf = null;
+        ProspectAreaMatrixFrm pamf = null;
+        TargetParametersMatrixFrm tpmf = null;
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -88,7 +97,54 @@ namespace EsofaUI
             }
             if (_strTabPageTxt.Equals("逼近理想解排序法"))
             {
+                if (tabControlGrading.SelectedTab == tabPageBasin)
+                {
+                    //远景区为当前选定区域 创建远景区矩阵窗体实例
+                    //显示远景区矩阵窗体
+                    if (lstTgtSelected != null)
+                    {
+                        pamf = new ProspectAreaMatrixFrm(lstBsnSelected);
+                        pamf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
 
+                if (tabControlGrading.SelectedTab == tabPageBlock)
+                {
+                    //有利区为当前选定区域 创建有利区矩阵窗体实例
+                    //显示有利区矩阵窗体
+                    if (lstTgtSelected.Count != 0)
+                    {
+                        famf = new FavorableAreaMatrixFrm(lstBlkSelected);
+                        famf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                }
+
+                if (tabControlGrading.SelectedTab == tabPageTarget)
+                {
+                    //核心区为当前选定区域 创建核心区矩阵窗体实例
+                    //显示核心区矩阵窗体
+                    if (lstTgtSelected.Count != 0)//lstTgtSelected != null)
+                    {
+                        tpmf = new TargetParametersMatrixFrm(lstTgtSelected);
+                        tpmf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("没有可以用于比较的数据，请先勾选数据。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
             }
         }
 
@@ -96,19 +152,7 @@ namespace EsofaUI
         {
             _delCloseTabPage();
         }
-        //视图数据对应的列标题
-        string[] viewHeaderTxt = new string[] { "目标区", "盆地/区域 ", "主力层系", "保存条件", "平均地质资源量 (万亿方)","平均富有机质页岩厚度",
-            "平均TOC(%)","干酪根类型","平均Ro(%)","有效圈定面积(1-4km深,km^2)","平均含气量 (m^3/t)","平均资源丰度(亿m^3/km^2)",
-            "平均孔隙度(%)","构造复杂度","顶底板岩性","平均埋深范围","平均压力系数","渗透率","裂缝发育度","平均主应力差异系数",
-            "平均脆性矿物含量","水系","区域勘探度","市场气价","市场需求","交通设施","管网条件","地表地貌" };
 
-        DataTable dt = new DataTable();
-        List<AverageValuesTargetEntity> listAvgTgtEnty = null;
-        string sql = "select * from view_target";
-        RawDataBLL rawDataBLL = new RawDataBLL();
-        CoreAreaMatrixFrm camf = null;
-        FavorableAreaMatrixFrm famf = null;
-        ProspectAreaMatrixFrm pamf = null;
 
 
         private void GradingFrm_Load(object sender, EventArgs e)

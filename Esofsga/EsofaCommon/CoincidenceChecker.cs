@@ -1,6 +1,8 @@
 ﻿
 using MathNet.Numerics.LinearAlgebra;
 using MathNet.Numerics.LinearAlgebra.Factorization;
+using System;
+using System.Data;
 using System.Text;
 
 namespace EsofaCommon
@@ -121,6 +123,7 @@ namespace EsofaCommon
             strB.Append("  ******************************************" + "\r\n");
             return normalizedVector;
         }
+
 
     }
 }
