@@ -82,5 +82,57 @@ namespace EsofaCommon
             }
             return array;
         }
+
+        public static double[,] GetDgvToArray(DataGridView dgv,int rowFirst, int columnFirst)
+        {
+            DataTable dt = new DataTable();
+            dt = GetDgvToTable(dgv);
+            int col = dt.Columns.Count;
+            double[,] array = new double[dt.Rows.Count, col- columnFirst];
+            if (columnFirst < dt.Columns.Count)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (columnFirst < dt.Columns.Count)
+                    {
+                        for (int j = 0; j + columnFirst < dt.Columns.Count; j++)
+                        {
+                            array[i, j] = Convert.ToDouble(dt.Rows[i][j + columnFirst]);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("方法 DataSourceToDataTable.GetDgvToArray(DataGridView dgv,int rowFirst, int columnFirst)中，列" +
+                            "的初始值 错误。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("方法 DataSourceToDataTable.GetDgvToArray(DataGridView dgv,int rowFirst, int columnFirst)中，行" +
+                            "的初始值 错误。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            return array;
+        }
+
+        //public static DataTable ConvertArratyToDataTable(double[,] arr)
+        //{
+        //    DataTable dt = new DataTable();
+        //    for (int i = 0; i < arr.GetLength(1); i++)
+        //    {
+        //        DataColumn newColumn = new DataColumn(GetCode(i), arr[0, 0].GetType());
+        //        dt.Columns.Add(newColumn);
+        //    }
+        //    for (int i = 0; i < arr.GetLength(0); i++)
+        //    {
+        //        DataRow newRow = dt.NewRow();
+        //        for (int j = 0; j < arr.GetLength(1); j++)
+        //        {
+        //            newRow[GetCode(j)] = arr[i, j];
+        //        }
+        //        dataSouce.Rows.Add(newRow);
+        //    }
+        //    return dataSouce;
+        //}
     }
 }

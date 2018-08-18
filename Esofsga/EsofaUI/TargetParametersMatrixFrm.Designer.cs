@@ -756,7 +756,7 @@
             this.btn_Next.TabIndex = 3;
             this.btn_Next.Text = "下一步";
             this.btn_Next.UseVisualStyleBackColor = true;
-            this.btn_Next.Click += new System.EventHandler(this.btn_Sort_Click);
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // btnCoincidenceCheck
             // 

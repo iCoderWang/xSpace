@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -727,21 +728,22 @@ namespace EsofaUI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_Sort_Click(object sender, EventArgs e)
+        private void btn_Next_Click(object sender, EventArgs e)
         {
-            double[] arr_Scores = null;
-            string[] arr_TgtName = null;
-            //SortedTargetsFrm stf = new SortedTargetsFrm(arr);
+            List<double> lst_paraWgt = new List<double>();
+            ArrayList lst_TgtName = new ArrayList();
             if (chkFlag)
             {
+                int sn = 0;
                 List<SortedTargetsParas> lst_STP = BlockGrade(lst_Tgt);
                 List<TopsisTargetDecisionMatrixEntity> lst_TTDME = new List<TopsisTargetDecisionMatrixEntity>();
                 foreach (SortedTargetsParas var in lst_STP)
                 {
+                    sn++;
                     lst_TTDME.Add(new TopsisTargetDecisionMatrixEntity
                     {
                         //序号
-                        para_Rank = var.para_Rank,
+                        para_Rank = sn,
                         //区块名称
                         para_Tgt = var.para_Tgt,
                         //地质参数得分
@@ -772,24 +774,61 @@ namespace EsofaUI
                         para_SgScores = var.para_SgScores
                     });
                 }
-                int counter = lst_STP.Count;
-                arr_Scores = new double[counter];
-                arr_TgtName = new string[counter];
-                lst_STP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
-                foreach (SortedTargetsParas sBp in lst_STP)
-                {
-                    sBp.para_Rank = counter;
-                    counter--;
-                }
-                lst_STP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
-                arr_Scores = lst_STP.Select(x => x.para_TotalScores).ToArray();
-                arr_TgtName = lst_STP.Select(x => x.para_Tgt).ToArray();
+                //int counter = lst_STP.Count;
+                ////arr_Scores = new double[counter];
+                double arr_StromAt_Wgt = lst_STP.Select(x => x.para_StromAtWeight).First();
+                double arr_Toc_Wgt = lst_STP.Select(x => x.para_TocWeight).First();
+                double arr_Kt_Wgt = lst_STP.Select(x => x.para_KtWeight).First();
+                double arr_Ro_Wgt = lst_STP.Select(x => x.para_RoWeight).First();
+                double arr_Ea_Wgt = lst_STP.Select(x => x.para_EaWeight).First();
+                double arr_Gc_Wgt = lst_STP.Select(x => x.para_GcWeight).First();
+                double arr_Rr_Wgt = lst_STP.Select(x => x.para_RrWeight).First();
+                double arr_Por_Wgt = lst_STP.Select(x => x.para_PorWeight).First();
+                double arr_Scd_Wgt = lst_STP.Select(x => x.para_ScdWeight).First();
+                double arr_Rfc_Wgt = lst_STP.Select(x => x.para_RfcWeight).First();
+                double arr_Dr_Wgt = lst_STP.Select(x => x.para_DrWeight).First();
+                double arr_Pc_Wgt = lst_STP.Select(x => x.para_PcWeight).First();
+                double arr_Per_Wgt = lst_STP.Select(x => x.para_PerWeight).First();
+                double arr_Fdd_Wgt = lst_STP.Select(x => x.para_FddWeight).First();
+                double arr_Psdc_Wgt = lst_STP.Select(x => x.para_PsdcWeight).First();
+                double arr_Bmc_Wgt = lst_STP.Select(x => x.para_BmcWeight).First();
+                double arr_Ds_Wgt = lst_STP.Select(x => x.para_DsWeight).First();
+                double arr_Led_Wgt = lst_STP.Select(x => x.para_LedWeight).First();
+                double arr_Gp_Wgt = lst_STP.Select(x => x.para_GpWeight).First();
+                double arr_Dmd_Wgt = lst_STP.Select(x => x.para_DmdWeight).First();
+                double arr_Tu_Wgt = lst_STP.Select(x => x.para_TuWeight).First();
+                double arr_Pn_Wgt = lst_STP.Select(x => x.para_PnWeight).First();
+                double arr_Sg_Wgt = lst_STP.Select(x => x.para_SgWeight).First();
+                lst_paraWgt.Add(arr_StromAt_Wgt);
+                lst_paraWgt.Add(arr_Toc_Wgt);
+                lst_paraWgt.Add(arr_Kt_Wgt);
+                lst_paraWgt.Add(arr_Ro_Wgt);
+                lst_paraWgt.Add(arr_Ea_Wgt);
+                lst_paraWgt.Add(arr_Gc_Wgt);
+                lst_paraWgt.Add(arr_Rr_Wgt);
+                lst_paraWgt.Add(arr_Por_Wgt);
+                lst_paraWgt.Add(arr_Scd_Wgt);
+                lst_paraWgt.Add(arr_Rfc_Wgt);
+                lst_paraWgt.Add(arr_Dr_Wgt);
+                lst_paraWgt.Add(arr_Pc_Wgt);
+                lst_paraWgt.Add(arr_Per_Wgt);
+                lst_paraWgt.Add(arr_Fdd_Wgt);
+                lst_paraWgt.Add(arr_Psdc_Wgt);
+                lst_paraWgt.Add(arr_Bmc_Wgt);
+                lst_paraWgt.Add(arr_Ds_Wgt);
+                lst_paraWgt.Add(arr_Led_Wgt);
+                lst_paraWgt.Add(arr_Gp_Wgt);
+                lst_paraWgt.Add(arr_Dmd_Wgt);
+                lst_paraWgt.Add(arr_Tu_Wgt);
+                lst_paraWgt.Add(arr_Pn_Wgt);
+                lst_paraWgt.Add(arr_Sg_Wgt);
+                lst_TgtName.Add(lst_TTDME.Select(x => x.para_Tgt).ToArray());
                 //SortedTargetsFrm stf = new SortedTargetsFrm(arr_Scores, arr_TgtName);
                 //stf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_STP);
                 //stf.Show();
                 //btn_GenerateReport.Enabled = true;
-                TOPSISDecisionMatrixFrm tdm = new TOPSISDecisionMatrixFrm();
-                //tdm.dgv_DecisionMatrix.DataSource = ;
+                TOPSISDecisionMatrixFrm tdm = new TOPSISDecisionMatrixFrm(lst_paraWgt,lst_TgtName);
+                tdm.dgv_DecisionMatrix.DataSource = lst_TTDME;
                 tdm.Show();
             }
             else

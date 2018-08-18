@@ -115,7 +115,7 @@
     <Compile Include="TargetListTransfomer.cs" />
     <Compile Include="SqlSyntaxValidating.cs" />
     <Compile Include="SubjectiveGrading.cs" />
-    <Compile Include="TOPSIS.cs" />
+    <Compile Include="TopsisDecisionMatrixOperation.cs" />
     <Compile Include="TreeViewNodesCheckStateSetting.cs" />
   </ItemGroup>
   <ItemGroup>

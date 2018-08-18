@@ -31,8 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.矩阵运算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.矩阵规范化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenu_Matrix = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_MatrixNormalize = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_DecisionMatrix = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DecisionMatrix)).BeginInit();
@@ -43,26 +43,27 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.矩阵运算ToolStripMenuItem});
+            this.ToolStripMenu_Matrix});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1576, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1576, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // 矩阵运算ToolStripMenuItem
+            // ToolStripMenu_Matrix
             // 
-            this.矩阵运算ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.矩阵规范化ToolStripMenuItem});
-            this.矩阵运算ToolStripMenuItem.Name = "矩阵运算ToolStripMenuItem";
-            this.矩阵运算ToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
-            this.矩阵运算ToolStripMenuItem.Text = "矩阵运算";
+            this.ToolStripMenu_Matrix.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_MatrixNormalize});
+            this.ToolStripMenu_Matrix.Name = "ToolStripMenu_Matrix";
+            this.ToolStripMenu_Matrix.Size = new System.Drawing.Size(127, 38);
+            this.ToolStripMenu_Matrix.Text = "矩阵运算";
             // 
-            // 矩阵规范化ToolStripMenuItem
+            // ToolStripMenuItem_MatrixNormalize
             // 
-            this.矩阵规范化ToolStripMenuItem.Name = "矩阵规范化ToolStripMenuItem";
-            this.矩阵规范化ToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
-            this.矩阵规范化ToolStripMenuItem.Text = "矩阵规范化";
+            this.ToolStripMenuItem_MatrixNormalize.Name = "ToolStripMenuItem_MatrixNormalize";
+            this.ToolStripMenuItem_MatrixNormalize.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_MatrixNormalize.Text = "矩阵规范化";
+            this.ToolStripMenuItem_MatrixNormalize.Click += new System.EventHandler(this.ToolStripMenuItem_MatrixNormalize_Click);
             // 
             // dgv_DecisionMatrix
             // 
@@ -79,13 +80,13 @@
             this.dgv_DecisionMatrix.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DecisionMatrix.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DecisionMatrix.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DecisionMatrix.Location = new System.Drawing.Point(0, 40);
+            this.dgv_DecisionMatrix.Location = new System.Drawing.Point(0, 42);
             this.dgv_DecisionMatrix.Name = "dgv_DecisionMatrix";
             this.dgv_DecisionMatrix.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgv_DecisionMatrix.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DecisionMatrix.RowTemplate.Height = 33;
-            this.dgv_DecisionMatrix.Size = new System.Drawing.Size(1576, 816);
+            this.dgv_DecisionMatrix.Size = new System.Drawing.Size(1576, 814);
             this.dgv_DecisionMatrix.TabIndex = 1;
             // 
             // TOPSISDecisionMatrixFrm
@@ -112,8 +113,8 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 矩阵运算ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 矩阵规范化ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenu_Matrix;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_MatrixNormalize;
         public System.Windows.Forms.DataGridView dgv_DecisionMatrix;
     }
 }
