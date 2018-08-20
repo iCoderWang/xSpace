@@ -168,7 +168,7 @@
             this.toolStripBtn_Copy,
             this.toolStripBtn_Cut,
             this.toolStripBtn_Paste});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 44);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 46);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1468, 25);
@@ -282,7 +282,7 @@
             this.menuStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_Main.Name = "menuStrip_Main";
             this.menuStrip_Main.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 44);
+            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 46);
             this.menuStrip_Main.TabIndex = 0;
             this.menuStrip_Main.Text = "menuStrip1";
             // 
@@ -294,7 +294,7 @@
             this.toolStripSeparator1,
             this.menuSub_Close});
             this.menuMain_File.Name = "menuMain_File";
-            this.menuMain_File.Size = new System.Drawing.Size(103, 36);
+            this.menuMain_File.Size = new System.Drawing.Size(103, 38);
             this.menuMain_File.Text = "文件(F)";
             // 
             // menuSub_Open
@@ -329,7 +329,7 @@
             this.menuSub_Paste,
             this.menuSub_SelectAll});
             this.menuMain_Edit.Name = "menuMain_Edit";
-            this.menuMain_Edit.Size = new System.Drawing.Size(103, 36);
+            this.menuMain_Edit.Size = new System.Drawing.Size(103, 38);
             this.menuMain_Edit.Text = "编辑(E)";
             // 
             // menuSub_Trim
@@ -371,7 +371,7 @@
             this.menuSub_DataQu,
             this.menuSub_DataBr});
             this.menuMain_DataMn.Name = "menuMain_DataMn";
-            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 36);
+            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 38);
             this.menuMain_DataMn.Text = "数据管理(M)";
             // 
             // menuSub_DataIm
@@ -379,14 +379,14 @@
             this.menuSub_DataIm.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataIm.Image")));
             this.menuSub_DataIm.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSub_DataIm.Name = "menuSub_DataIm";
-            this.menuSub_DataIm.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataIm.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataIm.Text = "批量导入(I)";
             this.menuSub_DataIm.Click += new System.EventHandler(this.menuSub_DataIm_Click);
             // 
             // menuSub_DataInput
             // 
             this.menuSub_DataInput.Name = "menuSub_DataInput";
-            this.menuSub_DataInput.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataInput.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataInput.Text = "数据录入(R)";
             // 
             // menuSub_DataMo
@@ -394,21 +394,21 @@
             this.menuSub_DataMo.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataMo.Image")));
             this.menuSub_DataMo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSub_DataMo.Name = "menuSub_DataMo";
-            this.menuSub_DataMo.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataMo.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataMo.Text = "数据编辑(M)";
             this.menuSub_DataMo.Click += new System.EventHandler(this.menuSub_DataMo_Click);
             // 
             // menuSub_DataQu
             // 
             this.menuSub_DataQu.Name = "menuSub_DataQu";
-            this.menuSub_DataQu.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataQu.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataQu.Text = "数据查询(Q)";
             this.menuSub_DataQu.Click += new System.EventHandler(this.menuSub_DataQu_Click);
             // 
             // menuSub_DataBr
             // 
             this.menuSub_DataBr.Name = "menuSub_DataBr";
-            this.menuSub_DataBr.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataBr.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataBr.Text = "数据浏览(B)";
             this.menuSub_DataBr.Click += new System.EventHandler(this.menuSub_DataBr_Click);
             // 
@@ -418,7 +418,7 @@
             this.menuSub_AHP,
             this.menuSub_TOPSIS});
             this.menuMain_DataAn.Name = "menuMain_DataAn";
-            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 36);
+            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 38);
             this.menuMain_DataAn.Text = "数据分析(A)";
             // 
             // menuSub_AHP
@@ -432,6 +432,7 @@
             this.menuSub_TOPSIS.Name = "menuSub_TOPSIS";
             this.menuSub_TOPSIS.Size = new System.Drawing.Size(403, 38);
             this.menuSub_TOPSIS.Text = "逼近理想解分析法(TOPSIS)";
+            this.menuSub_TOPSIS.Click += new System.EventHandler(this.menuSub_TOPSIS_Click);
             // 
             // menuMain_UserMn
             // 
@@ -441,7 +442,7 @@
             this.menuSub_UserDel,
             this.menuSub_UserPm});
             this.menuMain_UserMn.Name = "menuMain_UserMn";
-            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 36);
+            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 38);
             this.menuMain_UserMn.Text = "用户管理(U)";
             // 
             // menuSub_UserQuery
@@ -479,7 +480,7 @@
             this.menuSub_Wel,
             this.menuSub_About});
             this.menuMain_Help.Name = "menuMain_Help";
-            this.menuMain_Help.Size = new System.Drawing.Size(108, 36);
+            this.menuMain_Help.Size = new System.Drawing.Size(108, 38);
             this.menuMain_Help.Text = "帮助(H)";
             // 
             // menuSub_Doc

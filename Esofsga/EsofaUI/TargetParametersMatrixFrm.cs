@@ -221,6 +221,7 @@ namespace EsofaUI
             //sBf.Show();
             #endregion
             chkFlag = true;
+            this.btn_Next.Enabled = true;
         }
         #region
         /// <summary>
@@ -731,7 +732,7 @@ namespace EsofaUI
         private void btn_Next_Click(object sender, EventArgs e)
         {
             List<double> lst_paraWgt = new List<double>();
-            ArrayList lst_TgtName = new ArrayList();
+            List<string> lst_TgtName = new List<string>();
             if (chkFlag)
             {
                 int sn = 0;
@@ -822,7 +823,11 @@ namespace EsofaUI
                 lst_paraWgt.Add(arr_Tu_Wgt);
                 lst_paraWgt.Add(arr_Pn_Wgt);
                 lst_paraWgt.Add(arr_Sg_Wgt);
-                lst_TgtName.Add(lst_TTDME.Select(x => x.para_Tgt).ToArray());
+                //lst_TgtName.Add(lst_TTDME.Select(x => x.para_Tgt).ToArray());
+                foreach(TopsisTargetDecisionMatrixEntity var in lst_TTDME)
+                {
+                    lst_TgtName.Add( var.para_Tgt );
+                }
                 //SortedTargetsFrm stf = new SortedTargetsFrm(arr_Scores, arr_TgtName);
                 //stf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_STP);
                 //stf.Show();
@@ -952,10 +957,22 @@ namespace EsofaUI
 
         private void btn_CustomedMatrix_Click(object sender, EventArgs e)
         {
-            this.dgv_Tgt.ReadOnly = false;
-            this.dgv_Tgt_EcoPara.ReadOnly = false;
-            this.dgv_Tgt_EngPara.ReadOnly = false;
-            this.dgv_Tgt_GeoPara.ReadOnly = false;
+            try
+            {
+                this.dgv_Tgt.ReadOnly = false;
+                this.dgv_Tgt_EcoPara.ReadOnly = false;
+                this.dgv_Tgt_EngPara.ReadOnly = false;
+                this.dgv_Tgt_GeoPara.ReadOnly = false;
+                MessageBox.Show("参数表格处于可编辑状态，只有数字允许被输入！", "信息", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("参数矩阵表格内，只有数字允许被输入！", "警告",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
         }
     }
 }

@@ -782,5 +782,10 @@ namespace EsofaUI
             TabPageCreate(tabPageText, gradingFrm);
             gradingFrm.Show();
         }
+
+        private void menuSub_TOPSIS_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnTOPSIS_Click(sideBar_BtnTOPSIS,e);
+        }
     }
 }

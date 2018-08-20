@@ -24,33 +24,71 @@ namespace EsofaCommon
             Matrix<double> mtb = Matrix<double>.Build.DenseOfArray(arr);
             return mtb.NormalizeColumns(2.0).ToArray();
         }
-
-        public List<double> ToGetPositiveIdealSolution(double[,] arr_ValNormalizedByWgt, 
+        /// <summary>
+        /// 计算出每行的各列对应的元素到 “正理想解” 的距离列表
+        /// 该列表中的每个元素，则是对应的一个区块的求解值
+        /// </summary>
+        /// <param name="arr_ValNormalizedByWgt"></param>
+        /// <param name="lst_MaxVal"></param>
+        /// <returns></returns>
+        public List<double> ToGetDistToPIS(double[,] arr_ValNormalizedByWgt, 
             List<double> lst_MaxVal)
         {
+            //定义 list of Positive Ideal Solution
             List<double> lst_PIS = new List<double>();
+            //定义 distance of Positive Ideal Solution
             double dist_PIS = 0;
-            double sum_ValNormalizedByWgt = 0;
+            //定义 每行的各列的元素值 与对应的列的正理想解的差值 的平方和
+            double sum_Difference = 0;
+            //获取二维数组的列数，当函数GetLength中的参数为 1 时，表示是二维，即列
             int columnCounts = arr_ValNormalizedByWgt.GetLength(1);
+            //获取二维数组的行数，当函数GetLength中的参数为 0 时，表示是一维，即行
             int rowCounts = arr_ValNormalizedByWgt.GetLength(0);
             for(int i = 0; i < rowCounts; i++)
             {
                 for(int j = 0; j < columnCounts; j++)
                 {
-                    sum_ValNormalizedByWgt += Math.Pow((arr_ValNormalizedByWgt[i,j]-lst_MaxVal[j]),2);
+                    sum_Difference += Math.Pow((arr_ValNormalizedByWgt[i,j]-lst_MaxVal[j]),2);
                 }
-                dist_PIS = Math.Sqrt(sum_ValNormalizedByWgt);
+                dist_PIS = Math.Sqrt(sum_Difference);
                 lst_PIS.Add(dist_PIS);
-                sum_ValNormalizedByWgt = 0;
+                sum_Difference = 0;
                 dist_PIS = 0;
             }
             return lst_PIS;
         }
-
-        public double ToGetNegativeIdealSolution(double[,] arr_ValNormalizedByWgt, 
+        /// <summary>
+        /// 计算出每行的各列对应的元素到 “负理想解” 的距离列表
+        /// 该列表中的每个元素，则是对应的一个区块的求解值
+        /// </summary>
+        /// <param name="arr_ValNormalizedByWgt"></param>
+        /// <param name="lst_MinVal"></param>
+        /// <returns></returns>
+        public List<double> ToGetDistToNIS(double[,] arr_ValNormalizedByWgt, 
             List<double> lst_MinVal)
         {
-            return 0;
+            //定义 list of Negative Ideal Solution
+            List<double> lst_NIS = new List<double>();
+            //定义 distance of Negative Ideal Solution
+            double dist_NIS = 0;
+            //定义 每行的各列的元素值 与对应的列的正理想解的差值 的平方和
+            double sum_Difference = 0;
+            //获取二维数组的列数，当函数GetLength中的参数为 1 时，表示是二维，即列
+            int columnCounts = arr_ValNormalizedByWgt.GetLength(1);
+            //获取二维数组的行数，当函数GetLength中的参数为 0 时，表示是一维，即行
+            int rowCounts = arr_ValNormalizedByWgt.GetLength(0);
+            for (int i = 0; i < rowCounts; i++)
+            {
+                for (int j = 0; j < columnCounts; j++)
+                {
+                    sum_Difference += Math.Pow((arr_ValNormalizedByWgt[i, j] - lst_MinVal[j]), 2);
+                }
+                dist_NIS = Math.Sqrt(sum_Difference);
+                lst_NIS.Add(dist_NIS);
+                sum_Difference = 0;
+                dist_NIS = 0;
+            }
+            return lst_NIS;
         }
     }
 }

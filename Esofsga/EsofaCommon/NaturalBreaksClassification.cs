@@ -8,6 +8,13 @@ namespace EsofaCommon
 {
     public partial class NaturalBreaksClassification
     {
+        /// <summary>
+        /// 自然分类法，对排好序的数组根据最小方差值进行分类
+        /// </summary>
+        /// <param name="var">是用于排序的数值构成的数组，比如用于排名的每个区块计算后的总分值由大到小
+        /// 排序后构成的数组</param>
+        /// <param name="session1"></param>
+        /// <param name="session2"></param>
         public void ToClassify(IEnumerable<double> var, out int session1, out int session2)
         {
             session1 = 0;
