@@ -40,7 +40,7 @@ namespace EsofaUI
             //定义用于排序的最终值的列表
             List<double> lst_Ci = new List<double>();
             //定义理想值列表，用于排序
-            List<IdealSolutionByTopsisEntity> lst_ISBTE = new List<IdealSolutionByTopsisEntity>();        
+            List<IdealSolutionByTopsisEntity> lst_ISBTE = new List<IdealSolutionByTopsisEntity>(); 
             double maxVal = 0, minVal = 0;
             TopsisDecisionMatrixOperation tdmo = new TopsisDecisionMatrixOperation();
             //double[,] arr = new double[dgv_DecisionMatrix.RowCount, dgv_DecisionMatrix.ColumnCount - 2];
@@ -95,6 +95,12 @@ namespace EsofaUI
                 var.para_Rank = counter;
                 counter--;
             }
+            lst_ISBTE.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
+            double [] arr_Ci = lst_ISBTE.Select(x => x.para_Ci).ToArray();
+            string [] arr_Tgt = lst_ISBTE.Select(x => x.para_Tgt).ToArray();
+            ResultSortedByTopsisFrm rsbtf = new ResultSortedByTopsisFrm(lst_ISBTE,arr_Ci,arr_Tgt);
+            rsbtf.dgv_SortedByTopsis.DataSource = lst_ISBTE;
+            rsbtf.Show();
         }
 
         private void ToolStripMenuItem_Close_Click(object sender, EventArgs e)

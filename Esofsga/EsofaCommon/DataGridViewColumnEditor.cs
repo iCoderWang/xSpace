@@ -80,6 +80,13 @@ namespace EsofaCommon
                 //定义数组变量，存放参数名
                 headerTxt = dgvBsnTDMHeaderTxt;
             }
+            if (dgvName == "dgv_SortedByTopsis")
+            {
+                string[] dgvTopsisHeaderTxt = new string[] {"目标区",
+                    "正理想解距离(D+)", "负理想解距离(D-)","Ratio=(D-)/[(D-)+(D+)]"};
+                //定义数组变量，存放参数名
+                headerTxt = dgvTopsisHeaderTxt;
+            }
             //System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
             //watch.Start();
             dgv.ColumnHeadersDefaultCellStyle.Alignment= DataGridViewContentAlignment.MiddleCenter;

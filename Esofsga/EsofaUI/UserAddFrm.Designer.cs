@@ -54,20 +54,23 @@
             this.groupBox2.Controls.Add(this.lblConfirmPwd);
             this.groupBox2.Controls.Add(this.lblUserPwd);
             this.groupBox2.Controls.Add(this.lblUserName);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(24, 23);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(274, 160);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Size = new System.Drawing.Size(548, 308);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "添加/删除";
+            this.groupBox2.Text = "添加";
             // 
             // radioBtnComUser
             // 
             this.radioBtnComUser.AutoSize = true;
             this.radioBtnComUser.Checked = true;
-            this.radioBtnComUser.Location = new System.Drawing.Point(168, 131);
+            this.radioBtnComUser.Location = new System.Drawing.Point(336, 252);
+            this.radioBtnComUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.radioBtnComUser.Name = "radioBtnComUser";
-            this.radioBtnComUser.Size = new System.Drawing.Size(73, 17);
+            this.radioBtnComUser.Size = new System.Drawing.Size(127, 29);
             this.radioBtnComUser.TabIndex = 8;
             this.radioBtnComUser.TabStop = true;
             this.radioBtnComUser.Text = "普通用户";
@@ -76,9 +79,10 @@
             // radioBtnManager
             // 
             this.radioBtnManager.AutoSize = true;
-            this.radioBtnManager.Location = new System.Drawing.Point(86, 131);
+            this.radioBtnManager.Location = new System.Drawing.Point(172, 252);
+            this.radioBtnManager.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.radioBtnManager.Name = "radioBtnManager";
-            this.radioBtnManager.Size = new System.Drawing.Size(61, 17);
+            this.radioBtnManager.Size = new System.Drawing.Size(106, 29);
             this.radioBtnManager.TabIndex = 7;
             this.radioBtnManager.TabStop = true;
             this.radioBtnManager.Text = "管理员";
@@ -86,68 +90,76 @@
             // 
             // txtConfirmPwd
             // 
-            this.txtConfirmPwd.Location = new System.Drawing.Point(74, 98);
+            this.txtConfirmPwd.Location = new System.Drawing.Point(148, 188);
+            this.txtConfirmPwd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtConfirmPwd.Name = "txtConfirmPwd";
             this.txtConfirmPwd.PasswordChar = '*';
-            this.txtConfirmPwd.Size = new System.Drawing.Size(167, 20);
+            this.txtConfirmPwd.Size = new System.Drawing.Size(330, 31);
             this.txtConfirmPwd.TabIndex = 6;
             // 
             // txtUserPwd
             // 
-            this.txtUserPwd.Location = new System.Drawing.Point(74, 65);
+            this.txtUserPwd.Location = new System.Drawing.Point(148, 125);
+            this.txtUserPwd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtUserPwd.Name = "txtUserPwd";
             this.txtUserPwd.PasswordChar = '*';
-            this.txtUserPwd.Size = new System.Drawing.Size(167, 20);
+            this.txtUserPwd.Size = new System.Drawing.Size(330, 31);
             this.txtUserPwd.TabIndex = 5;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(74, 26);
+            this.txtUserName.Location = new System.Drawing.Point(148, 50);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(167, 20);
+            this.txtUserName.Size = new System.Drawing.Size(330, 31);
             this.txtUserName.TabIndex = 4;
             // 
             // lblUserType
             // 
             this.lblUserType.AutoSize = true;
-            this.lblUserType.Location = new System.Drawing.Point(13, 133);
+            this.lblUserType.Location = new System.Drawing.Point(26, 256);
+            this.lblUserType.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(67, 13);
+            this.lblUserType.Size = new System.Drawing.Size(117, 25);
             this.lblUserType.TabIndex = 3;
             this.lblUserType.Text = "用户类型：";
             // 
             // lblConfirmPwd
             // 
             this.lblConfirmPwd.AutoSize = true;
-            this.lblConfirmPwd.Location = new System.Drawing.Point(13, 101);
+            this.lblConfirmPwd.Location = new System.Drawing.Point(26, 194);
+            this.lblConfirmPwd.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblConfirmPwd.Name = "lblConfirmPwd";
-            this.lblConfirmPwd.Size = new System.Drawing.Size(67, 13);
+            this.lblConfirmPwd.Size = new System.Drawing.Size(117, 25);
             this.lblConfirmPwd.TabIndex = 2;
             this.lblConfirmPwd.Text = "确认密码：";
             // 
             // lblUserPwd
             // 
             this.lblUserPwd.AutoSize = true;
-            this.lblUserPwd.Location = new System.Drawing.Point(10, 68);
+            this.lblUserPwd.Location = new System.Drawing.Point(20, 131);
+            this.lblUserPwd.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblUserPwd.Name = "lblUserPwd";
-            this.lblUserPwd.Size = new System.Drawing.Size(67, 13);
+            this.lblUserPwd.Size = new System.Drawing.Size(117, 25);
             this.lblUserPwd.TabIndex = 1;
             this.lblUserPwd.Text = "用户密码：";
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(7, 29);
+            this.lblUserName.Location = new System.Drawing.Point(14, 56);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(55, 13);
+            this.lblUserName.Size = new System.Drawing.Size(96, 25);
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "用户名：";
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(211, 261);
+            this.btnAddUser.Location = new System.Drawing.Point(422, 502);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(75, 23);
+            this.btnAddUser.Size = new System.Drawing.Size(150, 44);
             this.btnAddUser.TabIndex = 11;
             this.btnAddUser.Text = "退出";
             this.btnAddUser.UseVisualStyleBackColor = true;
@@ -155,9 +167,10 @@
             // 
             // btn_AddUser
             // 
-            this.btn_AddUser.Location = new System.Drawing.Point(130, 261);
+            this.btn_AddUser.Location = new System.Drawing.Point(260, 502);
+            this.btn_AddUser.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_AddUser.Name = "btn_AddUser";
-            this.btn_AddUser.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddUser.Size = new System.Drawing.Size(150, 44);
             this.btn_AddUser.TabIndex = 10;
             this.btn_AddUser.Text = "添加用户";
             this.btn_AddUser.UseVisualStyleBackColor = true;
@@ -165,12 +178,13 @@
             // 
             // UserAddFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 293);
+            this.ClientSize = new System.Drawing.Size(608, 563);
             this.Controls.Add(this.btn_AddUser);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.groupBox2);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UserAddFrm";
