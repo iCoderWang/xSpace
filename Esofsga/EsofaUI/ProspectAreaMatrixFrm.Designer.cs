@@ -243,7 +243,7 @@
             // btnQuit
             // 
             this.btnQuit.Location = new System.Drawing.Point(720, 769);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(6);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(126, 48);
             this.btnQuit.TabIndex = 1;
@@ -254,7 +254,7 @@
             // btn_GenerateReport
             // 
             this.btn_GenerateReport.Location = new System.Drawing.Point(720, 702);
-            this.btn_GenerateReport.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_GenerateReport.Margin = new System.Windows.Forms.Padding(6);
             this.btn_GenerateReport.Name = "btn_GenerateReport";
             this.btn_GenerateReport.Size = new System.Drawing.Size(126, 48);
             this.btn_GenerateReport.TabIndex = 1;
@@ -264,7 +264,7 @@
             // btn_CoincidenceCheck
             // 
             this.btn_CoincidenceCheck.Location = new System.Drawing.Point(720, 567);
-            this.btn_CoincidenceCheck.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_CoincidenceCheck.Margin = new System.Windows.Forms.Padding(6);
             this.btn_CoincidenceCheck.Name = "btn_CoincidenceCheck";
             this.btn_CoincidenceCheck.Size = new System.Drawing.Size(126, 48);
             this.btn_CoincidenceCheck.TabIndex = 1;
@@ -277,9 +277,9 @@
             this.gBoxEcoPara.Controls.Add(this.dGridViewEcoPara);
             this.gBoxEcoPara.Enabled = false;
             this.gBoxEcoPara.Location = new System.Drawing.Point(392, 506);
-            this.gBoxEcoPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxEcoPara.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxEcoPara.Name = "gBoxEcoPara";
-            this.gBoxEcoPara.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxEcoPara.Padding = new System.Windows.Forms.Padding(6);
             this.gBoxEcoPara.Size = new System.Drawing.Size(264, 321);
             this.gBoxEcoPara.TabIndex = 0;
             this.gBoxEcoPara.TabStop = false;
@@ -290,9 +290,9 @@
             // 
             this.gBoxEngiPara.Controls.Add(this.dgv_Bsn_EngPara);
             this.gBoxEngiPara.Location = new System.Drawing.Point(12, 506);
-            this.gBoxEngiPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxEngiPara.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxEngiPara.Name = "gBoxEngiPara";
-            this.gBoxEngiPara.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxEngiPara.Padding = new System.Windows.Forms.Padding(6);
             this.gBoxEngiPara.Size = new System.Drawing.Size(368, 321);
             this.gBoxEngiPara.TabIndex = 0;
             this.gBoxEngiPara.TabStop = false;
@@ -302,9 +302,9 @@
             // 
             this.gBoxProspectArea.Controls.Add(this.dgv_Bsn);
             this.gBoxProspectArea.Location = new System.Drawing.Point(12, 35);
-            this.gBoxProspectArea.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxProspectArea.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxProspectArea.Name = "gBoxProspectArea";
-            this.gBoxProspectArea.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxProspectArea.Padding = new System.Windows.Forms.Padding(6);
             this.gBoxProspectArea.Size = new System.Drawing.Size(264, 460);
             this.gBoxProspectArea.TabIndex = 0;
             this.gBoxProspectArea.TabStop = false;
@@ -321,9 +321,9 @@
             this.gBoxParaMatrix.Controls.Add(this.gBoxEngiPara);
             this.gBoxParaMatrix.Controls.Add(this.gBoxProspectArea);
             this.gBoxParaMatrix.Location = new System.Drawing.Point(578, 23);
-            this.gBoxParaMatrix.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxParaMatrix.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxParaMatrix.Name = "gBoxParaMatrix";
-            this.gBoxParaMatrix.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gBoxParaMatrix.Padding = new System.Windows.Forms.Padding(6);
             this.gBoxParaMatrix.Size = new System.Drawing.Size(876, 840);
             this.gBoxParaMatrix.TabIndex = 2;
             this.gBoxParaMatrix.TabStop = false;
@@ -332,7 +332,7 @@
             // btn_Sort
             // 
             this.btn_Sort.Location = new System.Drawing.Point(720, 635);
-            this.btn_Sort.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_Sort.Margin = new System.Windows.Forms.Padding(6);
             this.btn_Sort.Name = "btn_Sort";
             this.btn_Sort.Size = new System.Drawing.Size(126, 48);
             this.btn_Sort.TabIndex = 6;
@@ -344,9 +344,9 @@
             // 
             this.groupBox2.Controls.Add(this.dgv_Bsn_GeoPara);
             this.groupBox2.Location = new System.Drawing.Point(286, 35);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox2.Size = new System.Drawing.Size(576, 460);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -503,9 +503,9 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(6, 23);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox3.Size = new System.Drawing.Size(560, 844);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
@@ -583,7 +583,7 @@
             this.lstBx_Selected_EcoPara.FormattingEnabled = true;
             this.lstBx_Selected_EcoPara.ItemHeight = 25;
             this.lstBx_Selected_EcoPara.Location = new System.Drawing.Point(356, 669);
-            this.lstBx_Selected_EcoPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstBx_Selected_EcoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_Selected_EcoPara.Name = "lstBx_Selected_EcoPara";
             this.lstBx_Selected_EcoPara.Size = new System.Drawing.Size(186, 154);
             this.lstBx_Selected_EcoPara.TabIndex = 8;
@@ -594,7 +594,7 @@
             this.lstBx_Selected_GeoPara.FormattingEnabled = true;
             this.lstBx_Selected_GeoPara.ItemHeight = 25;
             this.lstBx_Selected_GeoPara.Location = new System.Drawing.Point(356, 46);
-            this.lstBx_Selected_GeoPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstBx_Selected_GeoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_Selected_GeoPara.Name = "lstBx_Selected_GeoPara";
             this.lstBx_Selected_GeoPara.Size = new System.Drawing.Size(186, 304);
             this.lstBx_Selected_GeoPara.TabIndex = 7;
@@ -608,9 +608,9 @@
             this.groupBox4.Controls.Add(this.lstBx_All_EngPara);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(0, 358);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox4.Size = new System.Drawing.Size(560, 290);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
@@ -636,7 +636,7 @@
             this.lstBx_Selected_EngPara.FormattingEnabled = true;
             this.lstBx_Selected_EngPara.ItemHeight = 25;
             this.lstBx_Selected_EngPara.Location = new System.Drawing.Point(356, 37);
-            this.lstBx_Selected_EngPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstBx_Selected_EngPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_Selected_EngPara.Name = "lstBx_Selected_EngPara";
             this.lstBx_Selected_EngPara.Size = new System.Drawing.Size(186, 229);
             this.lstBx_Selected_EngPara.TabIndex = 5;
@@ -666,7 +666,7 @@
             "埋深(m)",
             "脆性矿物含量(%)"});
             this.lstBx_All_EngPara.Location = new System.Drawing.Point(62, 38);
-            this.lstBx_All_EngPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstBx_All_EngPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_All_EngPara.Name = "lstBx_All_EngPara";
             this.lstBx_All_EngPara.Size = new System.Drawing.Size(186, 229);
             this.lstBx_All_EngPara.TabIndex = 4;
@@ -688,7 +688,7 @@
             this.lstBx_All_EcoPara.FormattingEnabled = true;
             this.lstBx_All_EcoPara.ItemHeight = 25;
             this.lstBx_All_EcoPara.Location = new System.Drawing.Point(62, 669);
-            this.lstBx_All_EcoPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstBx_All_EcoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_All_EcoPara.Name = "lstBx_All_EcoPara";
             this.lstBx_All_EcoPara.Size = new System.Drawing.Size(186, 154);
             this.lstBx_All_EcoPara.TabIndex = 5;
@@ -707,7 +707,7 @@
             "丰度(亿方/km^2)",
             "构造复杂度"});
             this.lstBx_All_GeoPara.Location = new System.Drawing.Point(62, 46);
-            this.lstBx_All_GeoPara.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lstBx_All_GeoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_All_GeoPara.Name = "lstBx_All_GeoPara";
             this.lstBx_All_GeoPara.Size = new System.Drawing.Size(186, 304);
             this.lstBx_All_GeoPara.TabIndex = 3;
@@ -742,7 +742,8 @@
             this.ClientSize = new System.Drawing.Size(1460, 877);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gBoxParaMatrix);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProspectAreaMatrixFrm";
             this.Text = "远景区优选参数体系";
             this.Load += new System.EventHandler(this.ProspectAreaMatrixFrm_Load);
