@@ -16,16 +16,31 @@ namespace EsofaUI
         }
         private List<double> lst_paraWgt;
         private List<string> lst_paraTgt;
-        public TOPSISDecisionMatrixFrm(List<double> lstWgt,List<string> lstTgt)
+        private string strDgvName;
+        public TOPSISDecisionMatrixFrm(List<double> lstWgt,List<string> lstTgt,string dgvName)
         {
             lst_paraWgt = lstWgt;
             lst_paraTgt = lstTgt;
+            strDgvName = dgvName;
             InitializeComponent();
         }
         private void TOPSISDecisionMatrixFrm_Load(object sender, EventArgs e)
         {
             DataGridViewColumnEditor dgvce = new DataGridViewColumnEditor();
-            dgvce.ColumHeaderEdit(this.dgv_DecisionMatrix, "dgvTgt_TDM");
+
+            dgvce.ColumHeaderEdit(this.dgv_DecisionMatrix, strDgvName);
+            if (strDgvName.Contains("dgvBlk_TDM"))
+            {
+                this.Text += "_ _有利区";
+            }
+            if (strDgvName.Contains("dgvBsn_TDM"))
+            {
+                this.Text += "_ _远景区";
+            }
+            if (strDgvName.Contains("dgvTgt_TDM"))
+            {
+                this.Text += "_ _核心区";
+            }
         }
 
         private void ToolStripMenuItem_Sort_Click(object sender, EventArgs e)
@@ -98,7 +113,7 @@ namespace EsofaUI
             lst_ISBTE.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
             double [] arr_Ci = lst_ISBTE.Select(x => x.para_Ci).ToArray();
             string [] arr_Tgt = lst_ISBTE.Select(x => x.para_Tgt).ToArray();
-            ResultSortedByTopsisFrm rsbtf = new ResultSortedByTopsisFrm(lst_ISBTE,arr_Ci,arr_Tgt);
+            ResultSortedByTopsisFrm rsbtf = new ResultSortedByTopsisFrm(lst_ISBTE,arr_Ci,arr_Tgt,strDgvName);
             rsbtf.dgv_SortedByTopsis.DataSource = lst_ISBTE;
             rsbtf.Show();
         }

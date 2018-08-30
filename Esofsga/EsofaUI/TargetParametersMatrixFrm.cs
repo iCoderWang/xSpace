@@ -832,7 +832,7 @@ namespace EsofaUI
                 //stf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_STP);
                 //stf.Show();
                 //btn_GenerateReport.Enabled = true;
-                TOPSISDecisionMatrixFrm tdm = new TOPSISDecisionMatrixFrm(lst_paraWgt,lst_TgtName);
+                TOPSISDecisionMatrixFrm tdm = new TOPSISDecisionMatrixFrm(lst_paraWgt,lst_TgtName, "dgvTgt_TDM");
                 tdm.dgv_DecisionMatrix.DataSource = lst_TTDME;
                 tdm.Show();
             }
@@ -842,11 +842,11 @@ namespace EsofaUI
             }
         }
 
-        private void btn_GenerateReport_Click(object sender, EventArgs e)
-        {
-            PDFCreator pdfCreator = new PDFCreator();
-            pdfCreator.Create("核心区");
-        }
+        //private void btn_GenerateReport_Click(object sender, EventArgs e)
+        //{
+        //    PDFCreator pdfCreator = new PDFCreator();
+        //    pdfCreator.Create("核心区");
+        //}
 
         private void btnQuit_Click(object sender, EventArgs e)
         {

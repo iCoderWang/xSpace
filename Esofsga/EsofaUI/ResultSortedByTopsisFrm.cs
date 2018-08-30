@@ -19,11 +19,13 @@ namespace EsofaUI
         private List<IdealSolutionByTopsisEntity> lst_ISTE;
         private double[] arr_Ci;
         private string[] arr_TgtName;
-        public ResultSortedByTopsisFrm(List<IdealSolutionByTopsisEntity> lst,double [] arr,string [] arrTgt)
+        string strName;
+        public ResultSortedByTopsisFrm(List<IdealSolutionByTopsisEntity> lst,double [] arr,string [] arrTgt,string name)
         {
             lst_ISTE = lst;
             arr_Ci = arr;
             arr_TgtName = arrTgt;
+            strName = name;
             InitializeComponent();
         }
 
@@ -31,6 +33,18 @@ namespace EsofaUI
         {
             DataGridViewColumnEditor dgvce = new DataGridViewColumnEditor();
             dgvce.ColumHeaderEdit(dgv_SortedByTopsis, "dgv_SortedByTopsis");
+            if (strName.Contains("dgvBlk_TDM"))
+            {
+                this.Text += "_ _有利区";
+            }
+            if (strName.Contains("dgvBsn_TDM"))
+            {
+                this.Text += "_ _远景区";
+            }
+            if (strName.Contains("dgvTgt_TDM"))
+            {
+                this.Text += "_ _核心区";
+            }
             //dgv_SortedByTopsis.DataSource = DataSourceToDataTable.GetListToDataTable(lst_ISTE);
         }
 
@@ -64,6 +78,11 @@ namespace EsofaUI
             arr_TgtName.Where((num, index) => index >= arr_TgtName.Length - s2 && index < arr_TgtName.Length).ToList().ForEach(a => strClass_3.Append(a + ", "));
             MessageBox.Show("有利区:\r\n " + strClass_1.ToString() + "; \r\n\r\n一般区：\r\n " + strClass_2.ToString() +
                 "; \r\n\r\n较差区：\r\n " + strClass_3.ToString());
+        }
+
+        private void ToolStripMenuItem_GenerateReport_Click(object sender, EventArgs e)
+        {
+            WordHelper.Create();
         }
     }
 }

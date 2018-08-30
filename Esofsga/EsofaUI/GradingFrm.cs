@@ -41,6 +41,8 @@ namespace EsofaUI
         FavorableAreaMatrixFrm famf = null;
         ProspectAreaMatrixFrm pamf = null;
         TargetParametersMatrixFrm tpmf = null;
+        BlockParametersMatrixFrm blkpmf = null;
+        BasinParametersMatrixFrm bsnpmf = null;
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -103,8 +105,8 @@ namespace EsofaUI
                     //显示远景区矩阵窗体
                     if (lstTgtSelected != null)
                     {
-                        pamf = new ProspectAreaMatrixFrm(lstBsnSelected);
-                        pamf.Show();
+                        bsnpmf = new BasinParametersMatrixFrm(lstBsnSelected);
+                        bsnpmf.Show();
                     }
                     else
                     {
@@ -119,8 +121,8 @@ namespace EsofaUI
                     //显示有利区矩阵窗体
                     if (lstTgtSelected.Count != 0)
                     {
-                        famf = new FavorableAreaMatrixFrm(lstBlkSelected);
-                        famf.Show();
+                        blkpmf = new BlockParametersMatrixFrm(lstBlkSelected);
+                        blkpmf.Show();
                     }
                     else
                     {

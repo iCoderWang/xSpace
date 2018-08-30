@@ -82,6 +82,9 @@
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\MySql.Data.dll</HintPath>
@@ -117,6 +120,7 @@
     <Compile Include="SubjectiveGrading.cs" />
     <Compile Include="TopsisDecisionMatrixOperation.cs" />
     <Compile Include="TreeViewNodesCheckStateSetting.cs" />
+    <Compile Include="WordHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EsofaModel\EsofaModel.csproj">

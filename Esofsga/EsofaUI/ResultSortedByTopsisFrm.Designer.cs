@@ -81,7 +81,7 @@
             // ToolStripMenuItem_Classify
             // 
             this.ToolStripMenuItem_Classify.Name = "ToolStripMenuItem_Classify";
-            this.ToolStripMenuItem_Classify.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_Classify.Size = new System.Drawing.Size(164, 38);
             this.ToolStripMenuItem_Classify.Text = "分类";
             this.ToolStripMenuItem_Classify.Click += new System.EventHandler(this.ToolStripMenuItem_Classify_Click);
             // 
@@ -96,8 +96,9 @@
             // ToolStripMenuItem_GenerateReport
             // 
             this.ToolStripMenuItem_GenerateReport.Name = "ToolStripMenuItem_GenerateReport";
-            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(214, 38);
+            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(324, 38);
             this.ToolStripMenuItem_GenerateReport.Text = "生成报告";
+            this.ToolStripMenuItem_GenerateReport.Click += new System.EventHandler(this.ToolStripMenuItem_GenerateReport_Click);
             // 
             // dgv_SortedByTopsis
             // 

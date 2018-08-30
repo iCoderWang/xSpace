@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle169 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle163 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle164 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle165 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle166 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle167 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle168 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle170 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle171 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle182 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle172 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle173 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle174 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle175 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle176 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle177 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle178 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle179 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle180 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle181 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle183 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle184 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle185 = new System.Windows.Forms.DataGridViewCellStyle();
             this.para_Geo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_Eco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuit = new System.Windows.Forms.Button();
@@ -139,10 +139,10 @@
             // 
             this.para_Geo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Geo.DataPropertyName = "0";
-            dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle75.Format = "N2";
-            dataGridViewCellStyle75.NullValue = "0";
-            this.para_Geo.DefaultCellStyle = dataGridViewCellStyle75;
+            dataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle149.Format = "N2";
+            dataGridViewCellStyle149.NullValue = "0";
+            this.para_Geo.DefaultCellStyle = dataGridViewCellStyle149;
             this.para_Geo.HeaderText = "地质";
             this.para_Geo.Name = "para_Geo";
             this.para_Geo.ReadOnly = true;
@@ -153,10 +153,10 @@
             // 
             this.para_Eco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Eco.DataPropertyName = "2";
-            dataGridViewCellStyle76.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle76.Format = "N2";
-            dataGridViewCellStyle76.NullValue = "0";
-            this.para_Eco.DefaultCellStyle = dataGridViewCellStyle76;
+            dataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle150.Format = "N2";
+            dataGridViewCellStyle150.NullValue = "0";
+            this.para_Eco.DefaultCellStyle = dataGridViewCellStyle150;
             this.para_Eco.HeaderText = "经济";
             this.para_Eco.Name = "para_Eco";
             this.para_Eco.ReadOnly = true;
@@ -165,7 +165,7 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(1110, 762);
+            this.btnQuit.Location = new System.Drawing.Point(1111, 762);
             this.btnQuit.Margin = new System.Windows.Forms.Padding(6);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(126, 48);
@@ -177,7 +177,7 @@
             // gBoxEcoPara
             // 
             this.gBoxEcoPara.Controls.Add(this.dgv_Tgt_EcoPara);
-            this.gBoxEcoPara.Location = new System.Drawing.Point(12, 495);
+            this.gBoxEcoPara.Location = new System.Drawing.Point(13, 495);
             this.gBoxEcoPara.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxEcoPara.Name = "gBoxEcoPara";
             this.gBoxEcoPara.Padding = new System.Windows.Forms.Padding(6);
@@ -190,19 +190,19 @@
             // 
             this.dgv_Tgt_EcoPara.AllowUserToAddRows = false;
             this.dgv_Tgt_EcoPara.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_Tgt_EcoPara.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle77;
+            dataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_Tgt_EcoPara.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle151;
             this.dgv_Tgt_EcoPara.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Tgt_EcoPara.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Tgt_EcoPara.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle78.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle78.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle78.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle78.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Tgt_EcoPara.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle78;
+            dataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle152.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle152.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle152.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle152.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle152.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle152.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Tgt_EcoPara.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle152;
             this.dgv_Tgt_EcoPara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Tgt_EcoPara.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.para_Price,
@@ -210,14 +210,14 @@
             this.para_Infras,
             this.para_PipeNet,
             this.para_GeoGraphy});
-            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle84.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Tgt_EcoPara.DefaultCellStyle = dataGridViewCellStyle84;
+            dataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle158.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle158.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle158.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle158.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle158.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle158.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Tgt_EcoPara.DefaultCellStyle = dataGridViewCellStyle158;
             this.dgv_Tgt_EcoPara.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Tgt_EcoPara.Location = new System.Drawing.Point(6, 30);
             this.dgv_Tgt_EcoPara.Margin = new System.Windows.Forms.Padding(30, 29, 30, 29);
@@ -231,11 +231,11 @@
             // 
             this.para_Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Price.DataPropertyName = "0";
-            dataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle79.Format = "N2";
-            dataGridViewCellStyle79.NullValue = "0";
-            dataGridViewCellStyle79.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.para_Price.DefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle153.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle153.Format = "N2";
+            dataGridViewCellStyle153.NullValue = "0";
+            dataGridViewCellStyle153.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.para_Price.DefaultCellStyle = dataGridViewCellStyle153;
             this.para_Price.HeaderText = "气价";
             this.para_Price.Name = "para_Price";
             this.para_Price.ReadOnly = true;
@@ -246,9 +246,9 @@
             // 
             this.para_Demand.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Demand.DataPropertyName = "1";
-            dataGridViewCellStyle80.Format = "N2";
-            dataGridViewCellStyle80.NullValue = "0";
-            this.para_Demand.DefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle154.Format = "N2";
+            dataGridViewCellStyle154.NullValue = "0";
+            this.para_Demand.DefaultCellStyle = dataGridViewCellStyle154;
             this.para_Demand.HeaderText = "需求";
             this.para_Demand.Name = "para_Demand";
             this.para_Demand.ReadOnly = true;
@@ -259,9 +259,9 @@
             // 
             this.para_Infras.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Infras.DataPropertyName = "2";
-            dataGridViewCellStyle81.Format = "N2";
-            dataGridViewCellStyle81.NullValue = "0";
-            this.para_Infras.DefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle155.Format = "N2";
+            dataGridViewCellStyle155.NullValue = "0";
+            this.para_Infras.DefaultCellStyle = dataGridViewCellStyle155;
             this.para_Infras.HeaderText = "交通";
             this.para_Infras.Name = "para_Infras";
             this.para_Infras.ReadOnly = true;
@@ -272,9 +272,9 @@
             // 
             this.para_PipeNet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_PipeNet.DataPropertyName = "3";
-            dataGridViewCellStyle82.Format = "N2";
-            dataGridViewCellStyle82.NullValue = "0";
-            this.para_PipeNet.DefaultCellStyle = dataGridViewCellStyle82;
+            dataGridViewCellStyle156.Format = "N2";
+            dataGridViewCellStyle156.NullValue = "0";
+            this.para_PipeNet.DefaultCellStyle = dataGridViewCellStyle156;
             this.para_PipeNet.HeaderText = "管网";
             this.para_PipeNet.Name = "para_PipeNet";
             this.para_PipeNet.ReadOnly = true;
@@ -285,11 +285,11 @@
             // 
             this.para_GeoGraphy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_GeoGraphy.DataPropertyName = "4";
-            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle83.Format = "N2";
-            dataGridViewCellStyle83.NullValue = "0";
-            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.para_GeoGraphy.DefaultCellStyle = dataGridViewCellStyle83;
+            dataGridViewCellStyle157.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle157.Format = "N2";
+            dataGridViewCellStyle157.NullValue = "0";
+            dataGridViewCellStyle157.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.para_GeoGraphy.DefaultCellStyle = dataGridViewCellStyle157;
             this.para_GeoGraphy.HeaderText = "地表地貌";
             this.para_GeoGraphy.Name = "para_GeoGraphy";
             this.para_GeoGraphy.ReadOnly = true;
@@ -299,7 +299,7 @@
             // gBoxEngiPara
             // 
             this.gBoxEngiPara.Controls.Add(this.dgv_Tgt_EngPara);
-            this.gBoxEngiPara.Location = new System.Drawing.Point(424, 495);
+            this.gBoxEngiPara.Location = new System.Drawing.Point(425, 495);
             this.gBoxEngiPara.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxEngiPara.Name = "gBoxEngiPara";
             this.gBoxEngiPara.Padding = new System.Windows.Forms.Padding(6);
@@ -312,19 +312,19 @@
             // 
             this.dgv_Tgt_EngPara.AllowUserToAddRows = false;
             this.dgv_Tgt_EngPara.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_Tgt_EngPara.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle85;
+            dataGridViewCellStyle159.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_Tgt_EngPara.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle159;
             this.dgv_Tgt_EngPara.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Tgt_EngPara.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Tgt_EngPara.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle86.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle86.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle86.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Tgt_EngPara.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle86;
+            dataGridViewCellStyle160.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle160.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle160.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle160.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle160.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle160.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle160.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Tgt_EngPara.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle160;
             this.dgv_Tgt_EngPara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Tgt_EngPara.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.para_Dr,
@@ -335,16 +335,16 @@
             this.para_Bmc,
             this.para_Drainage,
             this.para_ExploerLevel});
-            dataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle95.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle95.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle95.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle95.Format = "N2";
-            dataGridViewCellStyle95.NullValue = "0";
-            dataGridViewCellStyle95.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle95.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle95.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Tgt_EngPara.DefaultCellStyle = dataGridViewCellStyle95;
+            dataGridViewCellStyle169.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle169.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle169.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle169.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle169.Format = "N2";
+            dataGridViewCellStyle169.NullValue = "0";
+            dataGridViewCellStyle169.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle169.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle169.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Tgt_EngPara.DefaultCellStyle = dataGridViewCellStyle169;
             this.dgv_Tgt_EngPara.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Tgt_EngPara.Location = new System.Drawing.Point(6, 30);
             this.dgv_Tgt_EngPara.Margin = new System.Windows.Forms.Padding(30, 29, 30, 29);
@@ -357,10 +357,10 @@
             // para_Dr
             // 
             this.para_Dr.DataPropertyName = "0";
-            dataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle87.Format = "N2";
-            dataGridViewCellStyle87.NullValue = "0";
-            this.para_Dr.DefaultCellStyle = dataGridViewCellStyle87;
+            dataGridViewCellStyle161.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle161.Format = "N2";
+            dataGridViewCellStyle161.NullValue = "0";
+            this.para_Dr.DefaultCellStyle = dataGridViewCellStyle161;
             this.para_Dr.HeaderText = "埋深";
             this.para_Dr.Name = "para_Dr";
             this.para_Dr.ReadOnly = true;
@@ -370,10 +370,10 @@
             // para_Pf
             // 
             this.para_Pf.DataPropertyName = "1";
-            dataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle88.Format = "N2";
-            dataGridViewCellStyle88.NullValue = "0";
-            this.para_Pf.DefaultCellStyle = dataGridViewCellStyle88;
+            dataGridViewCellStyle162.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle162.Format = "N2";
+            dataGridViewCellStyle162.NullValue = "0";
+            this.para_Pf.DefaultCellStyle = dataGridViewCellStyle162;
             this.para_Pf.HeaderText = "压力";
             this.para_Pf.Name = "para_Pf";
             this.para_Pf.ReadOnly = true;
@@ -383,10 +383,10 @@
             // para_Permeability
             // 
             this.para_Permeability.DataPropertyName = "2";
-            dataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle89.Format = "N2";
-            dataGridViewCellStyle89.NullValue = "0";
-            this.para_Permeability.DefaultCellStyle = dataGridViewCellStyle89;
+            dataGridViewCellStyle163.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle163.Format = "N2";
+            dataGridViewCellStyle163.NullValue = "0";
+            this.para_Permeability.DefaultCellStyle = dataGridViewCellStyle163;
             this.para_Permeability.HeaderText = "渗透率";
             this.para_Permeability.Name = "para_Permeability";
             this.para_Permeability.ReadOnly = true;
@@ -396,10 +396,10 @@
             // para_Fdd
             // 
             this.para_Fdd.DataPropertyName = "3";
-            dataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle90.Format = "N2";
-            dataGridViewCellStyle90.NullValue = "0";
-            this.para_Fdd.DefaultCellStyle = dataGridViewCellStyle90;
+            dataGridViewCellStyle164.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle164.Format = "N2";
+            dataGridViewCellStyle164.NullValue = "0";
+            this.para_Fdd.DefaultCellStyle = dataGridViewCellStyle164;
             this.para_Fdd.HeaderText = "裂缝发育";
             this.para_Fdd.Name = "para_Fdd";
             this.para_Fdd.ReadOnly = true;
@@ -409,10 +409,10 @@
             // para_Psdf
             // 
             this.para_Psdf.DataPropertyName = "4";
-            dataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle91.Format = "N2";
-            dataGridViewCellStyle91.NullValue = "0";
-            this.para_Psdf.DefaultCellStyle = dataGridViewCellStyle91;
+            dataGridViewCellStyle165.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle165.Format = "N2";
+            dataGridViewCellStyle165.NullValue = "0";
+            this.para_Psdf.DefaultCellStyle = dataGridViewCellStyle165;
             this.para_Psdf.HeaderText = "主应力差";
             this.para_Psdf.Name = "para_Psdf";
             this.para_Psdf.ReadOnly = true;
@@ -422,10 +422,10 @@
             // para_Bmc
             // 
             this.para_Bmc.DataPropertyName = "5";
-            dataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle92.Format = "N2";
-            dataGridViewCellStyle92.NullValue = "0";
-            this.para_Bmc.DefaultCellStyle = dataGridViewCellStyle92;
+            dataGridViewCellStyle166.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle166.Format = "N2";
+            dataGridViewCellStyle166.NullValue = "0";
+            this.para_Bmc.DefaultCellStyle = dataGridViewCellStyle166;
             this.para_Bmc.HeaderText = "脆矿";
             this.para_Bmc.Name = "para_Bmc";
             this.para_Bmc.ReadOnly = true;
@@ -435,10 +435,10 @@
             // para_Drainage
             // 
             this.para_Drainage.DataPropertyName = "6";
-            dataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle93.Format = "N2";
-            dataGridViewCellStyle93.NullValue = "0";
-            this.para_Drainage.DefaultCellStyle = dataGridViewCellStyle93;
+            dataGridViewCellStyle167.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle167.Format = "N2";
+            dataGridViewCellStyle167.NullValue = "0";
+            this.para_Drainage.DefaultCellStyle = dataGridViewCellStyle167;
             this.para_Drainage.HeaderText = "水系";
             this.para_Drainage.Name = "para_Drainage";
             this.para_Drainage.ReadOnly = true;
@@ -447,10 +447,10 @@
             // para_ExploerLevel
             // 
             this.para_ExploerLevel.DataPropertyName = "7";
-            dataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle94.Format = "N2";
-            dataGridViewCellStyle94.NullValue = "0";
-            this.para_ExploerLevel.DefaultCellStyle = dataGridViewCellStyle94;
+            dataGridViewCellStyle168.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle168.Format = "N2";
+            dataGridViewCellStyle168.NullValue = "0";
+            this.para_ExploerLevel.DefaultCellStyle = dataGridViewCellStyle168;
             this.para_ExploerLevel.HeaderText = "勘探程度";
             this.para_ExploerLevel.Name = "para_ExploerLevel";
             this.para_ExploerLevel.ReadOnly = true;
@@ -460,7 +460,7 @@
             // gBoxGeoPara
             // 
             this.gBoxGeoPara.Controls.Add(this.dgv_Tgt_GeoPara);
-            this.gBoxGeoPara.Location = new System.Drawing.Point(424, 24);
+            this.gBoxGeoPara.Location = new System.Drawing.Point(425, 24);
             this.gBoxGeoPara.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxGeoPara.Name = "gBoxGeoPara";
             this.gBoxGeoPara.Padding = new System.Windows.Forms.Padding(6);
@@ -473,19 +473,19 @@
             // 
             this.dgv_Tgt_GeoPara.AllowUserToAddRows = false;
             this.dgv_Tgt_GeoPara.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_Tgt_GeoPara.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle96;
+            dataGridViewCellStyle170.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_Tgt_GeoPara.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle170;
             this.dgv_Tgt_GeoPara.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Tgt_GeoPara.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Tgt_GeoPara.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle97.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle97.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle97.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle97.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle97.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Tgt_GeoPara.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle97;
+            dataGridViewCellStyle171.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle171.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle171.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle171.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle171.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle171.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle171.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Tgt_GeoPara.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle171;
             this.dgv_Tgt_GeoPara.ColumnHeadersHeight = 34;
             this.dgv_Tgt_GeoPara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_Tgt_GeoPara.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -499,14 +499,14 @@
             this.para_Por,
             this.para_Scd,
             this.para_Roof});
-            dataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle108.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle108.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle108.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle108.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle108.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle108.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Tgt_GeoPara.DefaultCellStyle = dataGridViewCellStyle108;
+            dataGridViewCellStyle182.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle182.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle182.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle182.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle182.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle182.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle182.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Tgt_GeoPara.DefaultCellStyle = dataGridViewCellStyle182;
             this.dgv_Tgt_GeoPara.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Tgt_GeoPara.Location = new System.Drawing.Point(6, 30);
             this.dgv_Tgt_GeoPara.Margin = new System.Windows.Forms.Padding(30, 29, 30, 29);
@@ -520,10 +520,10 @@
             // 
             this.para_Strom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Strom.DataPropertyName = "0";
-            dataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle98.Format = "N2";
-            dataGridViewCellStyle98.NullValue = "0";
-            this.para_Strom.DefaultCellStyle = dataGridViewCellStyle98;
+            dataGridViewCellStyle172.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle172.Format = "N2";
+            dataGridViewCellStyle172.NullValue = "0";
+            this.para_Strom.DefaultCellStyle = dataGridViewCellStyle172;
             this.para_Strom.HeaderText = "厚度";
             this.para_Strom.Name = "para_Strom";
             this.para_Strom.ReadOnly = true;
@@ -533,10 +533,10 @@
             // para_Toc
             // 
             this.para_Toc.DataPropertyName = "1";
-            dataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle99.Format = "N2";
-            dataGridViewCellStyle99.NullValue = "0";
-            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle99;
+            dataGridViewCellStyle173.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle173.Format = "N2";
+            dataGridViewCellStyle173.NullValue = "0";
+            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle173;
             this.para_Toc.HeaderText = "含量";
             this.para_Toc.Name = "para_Toc";
             this.para_Toc.ReadOnly = true;
@@ -546,10 +546,10 @@
             // para_OMType
             // 
             this.para_OMType.DataPropertyName = "2";
-            dataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle100.Format = "N2";
-            dataGridViewCellStyle100.NullValue = "0";
-            this.para_OMType.DefaultCellStyle = dataGridViewCellStyle100;
+            dataGridViewCellStyle174.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle174.Format = "N2";
+            dataGridViewCellStyle174.NullValue = "0";
+            this.para_OMType.DefaultCellStyle = dataGridViewCellStyle174;
             this.para_OMType.HeaderText = "类型";
             this.para_OMType.Name = "para_OMType";
             this.para_OMType.ReadOnly = true;
@@ -560,10 +560,10 @@
             // 
             this.para_Ro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Ro.DataPropertyName = "3";
-            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle101.Format = "N2";
-            dataGridViewCellStyle101.NullValue = "0";
-            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle101;
+            dataGridViewCellStyle175.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle175.Format = "N2";
+            dataGridViewCellStyle175.NullValue = "0";
+            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle175;
             this.para_Ro.HeaderText = "成熟度";
             this.para_Ro.Name = "para_Ro";
             this.para_Ro.ReadOnly = true;
@@ -573,10 +573,10 @@
             // para_Ea
             // 
             this.para_Ea.DataPropertyName = "4";
-            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle102.Format = "N2";
-            dataGridViewCellStyle102.NullValue = "0";
-            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle102;
+            dataGridViewCellStyle176.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle176.Format = "N2";
+            dataGridViewCellStyle176.NullValue = "0";
+            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle176;
             this.para_Ea.HeaderText = "面积";
             this.para_Ea.Name = "para_Ea";
             this.para_Ea.ReadOnly = true;
@@ -586,10 +586,10 @@
             // para_Gc
             // 
             this.para_Gc.DataPropertyName = "5";
-            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle103.Format = "N2";
-            dataGridViewCellStyle103.NullValue = "0";
-            this.para_Gc.DefaultCellStyle = dataGridViewCellStyle103;
+            dataGridViewCellStyle177.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle177.Format = "N2";
+            dataGridViewCellStyle177.NullValue = "0";
+            this.para_Gc.DefaultCellStyle = dataGridViewCellStyle177;
             this.para_Gc.HeaderText = "含气量";
             this.para_Gc.Name = "para_Gc";
             this.para_Gc.ReadOnly = true;
@@ -599,10 +599,10 @@
             // para_Rr
             // 
             this.para_Rr.DataPropertyName = "6";
-            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle104.Format = "N2";
-            dataGridViewCellStyle104.NullValue = "0";
-            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle104;
+            dataGridViewCellStyle178.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle178.Format = "N2";
+            dataGridViewCellStyle178.NullValue = "0";
+            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle178;
             this.para_Rr.HeaderText = "丰度";
             this.para_Rr.Name = "para_Rr";
             this.para_Rr.ReadOnly = true;
@@ -612,10 +612,10 @@
             // para_Por
             // 
             this.para_Por.DataPropertyName = "7";
-            dataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle105.Format = "N2";
-            dataGridViewCellStyle105.NullValue = "0";
-            this.para_Por.DefaultCellStyle = dataGridViewCellStyle105;
+            dataGridViewCellStyle179.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle179.Format = "N2";
+            dataGridViewCellStyle179.NullValue = "0";
+            this.para_Por.DefaultCellStyle = dataGridViewCellStyle179;
             this.para_Por.HeaderText = "孔隙度";
             this.para_Por.Name = "para_Por";
             this.para_Por.ReadOnly = true;
@@ -625,10 +625,10 @@
             // para_Scd
             // 
             this.para_Scd.DataPropertyName = "8";
-            dataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle106.Format = "N2";
-            dataGridViewCellStyle106.NullValue = "0";
-            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle106;
+            dataGridViewCellStyle180.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle180.Format = "N2";
+            dataGridViewCellStyle180.NullValue = "0";
+            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle180;
             this.para_Scd.HeaderText = "构造";
             this.para_Scd.Name = "para_Scd";
             this.para_Scd.ReadOnly = true;
@@ -638,10 +638,10 @@
             // para_Roof
             // 
             this.para_Roof.DataPropertyName = "9";
-            dataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle107.Format = "N2";
-            dataGridViewCellStyle107.NullValue = "0";
-            this.para_Roof.DefaultCellStyle = dataGridViewCellStyle107;
+            dataGridViewCellStyle181.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle181.Format = "N2";
+            dataGridViewCellStyle181.NullValue = "0";
+            this.para_Roof.DefaultCellStyle = dataGridViewCellStyle181;
             this.para_Roof.HeaderText = "顶底板";
             this.para_Roof.Name = "para_Roof";
             this.para_Roof.ReadOnly = true;
@@ -651,7 +651,7 @@
             // gBoxCoralArea
             // 
             this.gBoxCoralArea.Controls.Add(this.dgv_Tgt);
-            this.gBoxCoralArea.Location = new System.Drawing.Point(12, 24);
+            this.gBoxCoralArea.Location = new System.Drawing.Point(13, 24);
             this.gBoxCoralArea.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxCoralArea.Name = "gBoxCoralArea";
             this.gBoxCoralArea.Padding = new System.Windows.Forms.Padding(6);
@@ -664,19 +664,19 @@
             // 
             this.dgv_Tgt.AllowUserToAddRows = false;
             this.dgv_Tgt.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_Tgt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle109;
+            dataGridViewCellStyle183.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_Tgt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle183;
             this.dgv_Tgt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Tgt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Tgt.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle110.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle110.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle110.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle110.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle110.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Tgt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle110;
+            dataGridViewCellStyle184.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle184.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle184.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle184.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle184.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle184.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle184.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Tgt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle184;
             this.dgv_Tgt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Tgt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.para_Geo,
@@ -695,10 +695,10 @@
             // 
             this.para_Engi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.para_Engi.DataPropertyName = "1";
-            dataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle111.Format = "N2";
-            dataGridViewCellStyle111.NullValue = "0";
-            this.para_Engi.DefaultCellStyle = dataGridViewCellStyle111;
+            dataGridViewCellStyle185.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle185.Format = "N2";
+            dataGridViewCellStyle185.NullValue = "0";
+            this.para_Engi.DefaultCellStyle = dataGridViewCellStyle185;
             this.para_Engi.HeaderText = "工程";
             this.para_Engi.Name = "para_Engi";
             this.para_Engi.ReadOnly = true;
@@ -716,7 +716,7 @@
             this.gBoxParaMatrix.Controls.Add(this.gBoxEngiPara);
             this.gBoxParaMatrix.Controls.Add(this.gBoxGeoPara);
             this.gBoxParaMatrix.Controls.Add(this.gBoxCoralArea);
-            this.gBoxParaMatrix.Location = new System.Drawing.Point(580, 24);
+            this.gBoxParaMatrix.Location = new System.Drawing.Point(589, 15);
             this.gBoxParaMatrix.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxParaMatrix.Name = "gBoxParaMatrix";
             this.gBoxParaMatrix.Padding = new System.Windows.Forms.Padding(6);
@@ -727,7 +727,7 @@
             // 
             // btn_CustomedMatrix
             // 
-            this.btn_CustomedMatrix.Location = new System.Drawing.Point(1110, 579);
+            this.btn_CustomedMatrix.Location = new System.Drawing.Point(1111, 579);
             this.btn_CustomedMatrix.Margin = new System.Windows.Forms.Padding(6);
             this.btn_CustomedMatrix.Name = "btn_CustomedMatrix";
             this.btn_CustomedMatrix.Size = new System.Drawing.Size(126, 48);
@@ -738,7 +738,7 @@
             // 
             // btn_DefaultMatrix
             // 
-            this.btn_DefaultMatrix.Location = new System.Drawing.Point(1110, 517);
+            this.btn_DefaultMatrix.Location = new System.Drawing.Point(1111, 517);
             this.btn_DefaultMatrix.Margin = new System.Windows.Forms.Padding(6);
             this.btn_DefaultMatrix.Name = "btn_DefaultMatrix";
             this.btn_DefaultMatrix.Size = new System.Drawing.Size(126, 48);
@@ -750,7 +750,7 @@
             // btn_Next
             // 
             this.btn_Next.Enabled = false;
-            this.btn_Next.Location = new System.Drawing.Point(1110, 703);
+            this.btn_Next.Location = new System.Drawing.Point(1111, 703);
             this.btn_Next.Margin = new System.Windows.Forms.Padding(6);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(126, 48);
@@ -761,7 +761,7 @@
             // 
             // btnCoincidenceCheck
             // 
-            this.btnCoincidenceCheck.Location = new System.Drawing.Point(1110, 642);
+            this.btnCoincidenceCheck.Location = new System.Drawing.Point(1111, 642);
             this.btnCoincidenceCheck.Margin = new System.Windows.Forms.Padding(6);
             this.btnCoincidenceCheck.Name = "btnCoincidenceCheck";
             this.btnCoincidenceCheck.Size = new System.Drawing.Size(126, 48);
@@ -777,7 +777,7 @@
             this.btn_Eco_ToLeft.FlatAppearance.BorderSize = 0;
             this.btn_Eco_ToLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Eco_ToLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eco_ToLeft.Location = new System.Drawing.Point(274, 745);
+            this.btn_Eco_ToLeft.Location = new System.Drawing.Point(275, 745);
             this.btn_Eco_ToLeft.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Eco_ToLeft.Name = "btn_Eco_ToLeft";
             this.btn_Eco_ToLeft.Size = new System.Drawing.Size(58, 33);
@@ -793,7 +793,7 @@
             this.btn_Eco_ToRight.FlatAppearance.BorderSize = 0;
             this.btn_Eco_ToRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Eco_ToRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eco_ToRight.Location = new System.Drawing.Point(276, 679);
+            this.btn_Eco_ToRight.Location = new System.Drawing.Point(277, 679);
             this.btn_Eco_ToRight.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Eco_ToRight.Name = "btn_Eco_ToRight";
             this.btn_Eco_ToRight.Size = new System.Drawing.Size(56, 43);
@@ -809,7 +809,7 @@
             this.btn_Geo_ToRight.FlatAppearance.BorderSize = 0;
             this.btn_Geo_ToRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Geo_ToRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Geo_ToRight.Location = new System.Drawing.Point(276, 129);
+            this.btn_Geo_ToRight.Location = new System.Drawing.Point(277, 129);
             this.btn_Geo_ToRight.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Geo_ToRight.Name = "btn_Geo_ToRight";
             this.btn_Geo_ToRight.Size = new System.Drawing.Size(56, 48);
@@ -822,7 +822,7 @@
             // 
             this.lstBx_Selected_EcoPara.FormattingEnabled = true;
             this.lstBx_Selected_EcoPara.ItemHeight = 25;
-            this.lstBx_Selected_EcoPara.Location = new System.Drawing.Point(356, 658);
+            this.lstBx_Selected_EcoPara.Location = new System.Drawing.Point(357, 658);
             this.lstBx_Selected_EcoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_Selected_EcoPara.Name = "lstBx_Selected_EcoPara";
             this.lstBx_Selected_EcoPara.Size = new System.Drawing.Size(186, 154);
@@ -833,7 +833,7 @@
             // 
             this.lstBx_Selected_GeoPara.FormattingEnabled = true;
             this.lstBx_Selected_GeoPara.ItemHeight = 25;
-            this.lstBx_Selected_GeoPara.Location = new System.Drawing.Point(356, 35);
+            this.lstBx_Selected_GeoPara.Location = new System.Drawing.Point(357, 35);
             this.lstBx_Selected_GeoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_Selected_GeoPara.Name = "lstBx_Selected_GeoPara";
             this.lstBx_Selected_GeoPara.Size = new System.Drawing.Size(186, 304);
@@ -847,7 +847,7 @@
             this.groupBox1.Controls.Add(this.btn_Eng_ToRight);
             this.groupBox1.Controls.Add(this.lstBx_All_EngPara);
             this.groupBox1.Controls.Add(this.engParasLbl);
-            this.groupBox1.Location = new System.Drawing.Point(0, 347);
+            this.groupBox1.Location = new System.Drawing.Point(1, 347);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
@@ -862,7 +862,7 @@
             this.btn_Eng_ToLeft.FlatAppearance.BorderSize = 0;
             this.btn_Eng_ToLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Eng_ToLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eng_ToLeft.Location = new System.Drawing.Point(276, 143);
+            this.btn_Eng_ToLeft.Location = new System.Drawing.Point(277, 143);
             this.btn_Eng_ToLeft.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Eng_ToLeft.Name = "btn_Eng_ToLeft";
             this.btn_Eng_ToLeft.Size = new System.Drawing.Size(56, 42);
@@ -875,7 +875,7 @@
             // 
             this.lstBx_Selected_EngPara.FormattingEnabled = true;
             this.lstBx_Selected_EngPara.ItemHeight = 25;
-            this.lstBx_Selected_EngPara.Location = new System.Drawing.Point(356, 26);
+            this.lstBx_Selected_EngPara.Location = new System.Drawing.Point(357, 26);
             this.lstBx_Selected_EngPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_Selected_EngPara.Name = "lstBx_Selected_EngPara";
             this.lstBx_Selected_EngPara.Size = new System.Drawing.Size(186, 229);
@@ -889,7 +889,7 @@
             this.btn_Eng_ToRight.FlatAppearance.BorderSize = 0;
             this.btn_Eng_ToRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Eng_ToRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eng_ToRight.Location = new System.Drawing.Point(276, 77);
+            this.btn_Eng_ToRight.Location = new System.Drawing.Point(277, 77);
             this.btn_Eng_ToRight.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Eng_ToRight.Name = "btn_Eng_ToRight";
             this.btn_Eng_ToRight.Size = new System.Drawing.Size(56, 43);
@@ -911,7 +911,7 @@
             "脆性矿物含量(%)",
             "水系",
             "区域勘探程度"});
-            this.lstBx_All_EngPara.Location = new System.Drawing.Point(62, 27);
+            this.lstBx_All_EngPara.Location = new System.Drawing.Point(63, 27);
             this.lstBx_All_EngPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_All_EngPara.Name = "lstBx_All_EngPara";
             this.lstBx_All_EngPara.Size = new System.Drawing.Size(186, 229);
@@ -921,7 +921,7 @@
             // engParasLbl
             // 
             this.engParasLbl.AutoSize = true;
-            this.engParasLbl.Location = new System.Drawing.Point(12, 85);
+            this.engParasLbl.Location = new System.Drawing.Point(13, 85);
             this.engParasLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.engParasLbl.Name = "engParasLbl";
             this.engParasLbl.Size = new System.Drawing.Size(33, 100);
@@ -935,7 +935,7 @@
             this.btn_Geo_ToLeft.FlatAppearance.BorderSize = 0;
             this.btn_Geo_ToLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Geo_ToLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Geo_ToLeft.Location = new System.Drawing.Point(274, 204);
+            this.btn_Geo_ToLeft.Location = new System.Drawing.Point(275, 204);
             this.btn_Geo_ToLeft.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Geo_ToLeft.Name = "btn_Geo_ToLeft";
             this.btn_Geo_ToLeft.Size = new System.Drawing.Size(58, 45);
@@ -954,7 +954,7 @@
             "交通设施",
             "管网条件",
             "地表地貌"});
-            this.lstBx_All_EcoPara.Location = new System.Drawing.Point(62, 658);
+            this.lstBx_All_EcoPara.Location = new System.Drawing.Point(63, 658);
             this.lstBx_All_EcoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_All_EcoPara.Name = "lstBx_All_EcoPara";
             this.lstBx_All_EcoPara.Size = new System.Drawing.Size(186, 154);
@@ -976,7 +976,7 @@
             "孔隙度(%)",
             "构造复杂度",
             "顶底板岩性"});
-            this.lstBx_All_GeoPara.Location = new System.Drawing.Point(62, 35);
+            this.lstBx_All_GeoPara.Location = new System.Drawing.Point(63, 35);
             this.lstBx_All_GeoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_All_GeoPara.Name = "lstBx_All_GeoPara";
             this.lstBx_All_GeoPara.Size = new System.Drawing.Size(186, 304);
@@ -986,7 +986,7 @@
             // geoParasLbl
             // 
             this.geoParasLbl.AutoSize = true;
-            this.geoParasLbl.Location = new System.Drawing.Point(12, 149);
+            this.geoParasLbl.Location = new System.Drawing.Point(13, 149);
             this.geoParasLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.geoParasLbl.Name = "geoParasLbl";
             this.geoParasLbl.Size = new System.Drawing.Size(33, 100);
@@ -1007,7 +1007,7 @@
             this.gBoxParameters.Controls.Add(this.lstBx_All_GeoPara);
             this.gBoxParameters.Controls.Add(this.ecoParasLbl);
             this.gBoxParameters.Controls.Add(this.geoParasLbl);
-            this.gBoxParameters.Location = new System.Drawing.Point(6, 24);
+            this.gBoxParameters.Location = new System.Drawing.Point(15, 15);
             this.gBoxParameters.Margin = new System.Windows.Forms.Padding(6);
             this.gBoxParameters.Name = "gBoxParameters";
             this.gBoxParameters.Padding = new System.Windows.Forms.Padding(6);
@@ -1019,7 +1019,7 @@
             // ecoParasLbl
             // 
             this.ecoParasLbl.AutoSize = true;
-            this.ecoParasLbl.Location = new System.Drawing.Point(12, 687);
+            this.ecoParasLbl.Location = new System.Drawing.Point(13, 687);
             this.ecoParasLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ecoParasLbl.Name = "ecoParasLbl";
             this.ecoParasLbl.Size = new System.Drawing.Size(33, 100);
@@ -1031,13 +1031,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1839, 876);
+            this.ClientSize = new System.Drawing.Size(1859, 874);
             this.Controls.Add(this.gBoxParaMatrix);
             this.Controls.Add(this.gBoxParameters);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TargetParametersMatrixFrm";
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "TOPSIS核心区参数权重矩阵";
             this.Load += new System.EventHandler(this.TargetParametersMatrixFrm_Load);
             this.gBoxEcoPara.ResumeLayout(false);

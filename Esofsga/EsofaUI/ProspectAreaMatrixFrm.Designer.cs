@@ -253,17 +253,18 @@
             // 
             // btn_GenerateReport
             // 
-            this.btn_GenerateReport.Location = new System.Drawing.Point(720, 702);
+            this.btn_GenerateReport.Location = new System.Drawing.Point(720, 573);
             this.btn_GenerateReport.Margin = new System.Windows.Forms.Padding(6);
             this.btn_GenerateReport.Name = "btn_GenerateReport";
             this.btn_GenerateReport.Size = new System.Drawing.Size(126, 48);
             this.btn_GenerateReport.TabIndex = 1;
             this.btn_GenerateReport.Text = "生成报告";
             this.btn_GenerateReport.UseVisualStyleBackColor = true;
+            this.btn_GenerateReport.Visible = false;
             // 
             // btn_CoincidenceCheck
             // 
-            this.btn_CoincidenceCheck.Location = new System.Drawing.Point(720, 567);
+            this.btn_CoincidenceCheck.Location = new System.Drawing.Point(720, 638);
             this.btn_CoincidenceCheck.Margin = new System.Windows.Forms.Padding(6);
             this.btn_CoincidenceCheck.Name = "btn_CoincidenceCheck";
             this.btn_CoincidenceCheck.Size = new System.Drawing.Size(126, 48);
@@ -331,7 +332,7 @@
             // 
             // btn_Sort
             // 
-            this.btn_Sort.Location = new System.Drawing.Point(720, 635);
+            this.btn_Sort.Location = new System.Drawing.Point(720, 706);
             this.btn_Sort.Margin = new System.Windows.Forms.Padding(6);
             this.btn_Sort.Name = "btn_Sort";
             this.btn_Sort.Size = new System.Drawing.Size(126, 48);

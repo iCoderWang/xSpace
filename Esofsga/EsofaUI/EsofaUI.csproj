@@ -170,6 +170,18 @@
     <Compile Include="AccessChangeFrm.Designer.cs">
       <DependentUpon>AccessChangeFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BasinParametersMatrixFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasinParametersMatrixFrm.Designer.cs">
+      <DependentUpon>BasinParametersMatrixFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlockParametersMatrixFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlockParametersMatrixFrm.Designer.cs">
+      <DependentUpon>BlockParametersMatrixFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConditionalQueryFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +320,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccessChangeFrm.resx">
       <DependentUpon>AccessChangeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasinParametersMatrixFrm.resx">
+      <DependentUpon>BasinParametersMatrixFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlockParametersMatrixFrm.resx">
+      <DependentUpon>BlockParametersMatrixFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConditionalQueryFrm.resx">
       <DependentUpon>ConditionalQueryFrm.cs</DependentUpon>
