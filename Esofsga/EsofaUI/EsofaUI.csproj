@@ -247,6 +247,7 @@
     <Compile Include="ResultSortedByTopsisFrm.Designer.cs">
       <DependentUpon>ResultSortedByTopsisFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="SortedBasinsFrm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -82,7 +82,9 @@ namespace EsofaUI
 
         private void ToolStripMenuItem_GenerateReport_Click(object sender, EventArgs e)
         {
-            WordHelper.Create();
+            WordHelper wh = new WordHelper();
+
+            wh.Create();
         }
     }
 }
