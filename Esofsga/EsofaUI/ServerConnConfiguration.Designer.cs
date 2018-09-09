@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_ServerIp = new System.Windows.Forms.Label();
-            this.lbl_DataBase = new System.Windows.Forms.Label();
-            this.lbl_User = new System.Windows.Forms.Label();
-            this.lbl_Passwd = new System.Windows.Forms.Label();
-            this.txtBox_ServerIp = new System.Windows.Forms.TextBox();
-            this.txtBox_DbName = new System.Windows.Forms.TextBox();
-            this.txtBox_LoginUser = new System.Windows.Forms.TextBox();
             this.txtBox_Passwd = new System.Windows.Forms.TextBox();
+            this.txtBox_LoginUser = new System.Windows.Forms.TextBox();
+            this.txtBox_DbName = new System.Windows.Forms.TextBox();
+            this.txtBox_ServerIp = new System.Windows.Forms.TextBox();
+            this.lbl_Passwd = new System.Windows.Forms.Label();
+            this.lbl_User = new System.Windows.Forms.Label();
+            this.lbl_DataBase = new System.Windows.Forms.Label();
+            this.lbl_ServerIp = new System.Windows.Forms.Label();
             this.btn_Modify = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -60,32 +60,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "连接参数配置";
             // 
-            // lbl_ServerIp
+            // txtBox_Passwd
             // 
-            this.lbl_ServerIp.AutoSize = true;
-            this.lbl_ServerIp.Location = new System.Drawing.Point(25, 75);
-            this.lbl_ServerIp.Name = "lbl_ServerIp";
-            this.lbl_ServerIp.Size = new System.Drawing.Size(137, 29);
-            this.lbl_ServerIp.TabIndex = 0;
-            this.lbl_ServerIp.Text = "服务器 IP：";
+            this.txtBox_Passwd.Location = new System.Drawing.Point(173, 310);
+            this.txtBox_Passwd.Name = "txtBox_Passwd";
+            this.txtBox_Passwd.PasswordChar = '*';
+            this.txtBox_Passwd.Size = new System.Drawing.Size(324, 35);
+            this.txtBox_Passwd.TabIndex = 7;
             // 
-            // lbl_DataBase
+            // txtBox_LoginUser
             // 
-            this.lbl_DataBase.AutoSize = true;
-            this.lbl_DataBase.Location = new System.Drawing.Point(25, 160);
-            this.lbl_DataBase.Name = "lbl_DataBase";
-            this.lbl_DataBase.Size = new System.Drawing.Size(109, 29);
-            this.lbl_DataBase.TabIndex = 1;
-            this.lbl_DataBase.Text = "数据库：";
+            this.txtBox_LoginUser.Location = new System.Drawing.Point(173, 235);
+            this.txtBox_LoginUser.Name = "txtBox_LoginUser";
+            this.txtBox_LoginUser.Size = new System.Drawing.Size(324, 35);
+            this.txtBox_LoginUser.TabIndex = 6;
             // 
-            // lbl_User
+            // txtBox_DbName
             // 
-            this.lbl_User.AutoSize = true;
-            this.lbl_User.Location = new System.Drawing.Point(25, 235);
-            this.lbl_User.Name = "lbl_User";
-            this.lbl_User.Size = new System.Drawing.Size(133, 29);
-            this.lbl_User.TabIndex = 2;
-            this.lbl_User.Text = "登录身份：";
+            this.txtBox_DbName.Location = new System.Drawing.Point(173, 160);
+            this.txtBox_DbName.Name = "txtBox_DbName";
+            this.txtBox_DbName.Size = new System.Drawing.Size(324, 35);
+            this.txtBox_DbName.TabIndex = 5;
+            // 
+            // txtBox_ServerIp
+            // 
+            this.txtBox_ServerIp.Location = new System.Drawing.Point(173, 75);
+            this.txtBox_ServerIp.Name = "txtBox_ServerIp";
+            this.txtBox_ServerIp.Size = new System.Drawing.Size(324, 35);
+            this.txtBox_ServerIp.TabIndex = 4;
             // 
             // lbl_Passwd
             // 
@@ -96,33 +98,32 @@
             this.lbl_Passwd.TabIndex = 3;
             this.lbl_Passwd.Text = "登录密码：";
             // 
-            // txtBox_ServerIp
+            // lbl_User
             // 
-            this.txtBox_ServerIp.Location = new System.Drawing.Point(173, 75);
-            this.txtBox_ServerIp.Name = "txtBox_ServerIp";
-            this.txtBox_ServerIp.Size = new System.Drawing.Size(324, 35);
-            this.txtBox_ServerIp.TabIndex = 4;
+            this.lbl_User.AutoSize = true;
+            this.lbl_User.Location = new System.Drawing.Point(25, 235);
+            this.lbl_User.Name = "lbl_User";
+            this.lbl_User.Size = new System.Drawing.Size(133, 29);
+            this.lbl_User.TabIndex = 2;
+            this.lbl_User.Text = "登录身份：";
             // 
-            // txtBox_DbName
+            // lbl_DataBase
             // 
-            this.txtBox_DbName.Location = new System.Drawing.Point(173, 160);
-            this.txtBox_DbName.Name = "txtBox_DbName";
-            this.txtBox_DbName.Size = new System.Drawing.Size(324, 35);
-            this.txtBox_DbName.TabIndex = 5;
+            this.lbl_DataBase.AutoSize = true;
+            this.lbl_DataBase.Location = new System.Drawing.Point(25, 160);
+            this.lbl_DataBase.Name = "lbl_DataBase";
+            this.lbl_DataBase.Size = new System.Drawing.Size(109, 29);
+            this.lbl_DataBase.TabIndex = 1;
+            this.lbl_DataBase.Text = "数据库：";
             // 
-            // txtBox_LoginUser
+            // lbl_ServerIp
             // 
-            this.txtBox_LoginUser.Location = new System.Drawing.Point(173, 235);
-            this.txtBox_LoginUser.Name = "txtBox_LoginUser";
-            this.txtBox_LoginUser.Size = new System.Drawing.Size(324, 35);
-            this.txtBox_LoginUser.TabIndex = 6;
-            // 
-            // txtBox_Passwd
-            // 
-            this.txtBox_Passwd.Location = new System.Drawing.Point(173, 310);
-            this.txtBox_Passwd.Name = "txtBox_Passwd";
-            this.txtBox_Passwd.Size = new System.Drawing.Size(324, 35);
-            this.txtBox_Passwd.TabIndex = 7;
+            this.lbl_ServerIp.AutoSize = true;
+            this.lbl_ServerIp.Location = new System.Drawing.Point(25, 75);
+            this.lbl_ServerIp.Name = "lbl_ServerIp";
+            this.lbl_ServerIp.Size = new System.Drawing.Size(137, 29);
+            this.lbl_ServerIp.TabIndex = 0;
+            this.lbl_ServerIp.Text = "服务器 IP：";
             // 
             // btn_Modify
             // 

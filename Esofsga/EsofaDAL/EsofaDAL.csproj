@@ -106,8 +106,6 @@
     <Compile Include="ImportingRawDataDAL.cs" />
     <Compile Include="MySqlHelper.cs" />
     <Compile Include="RawDataDAL.cs" />
-    <Compile Include="SqlHelper.cs" />
-    <Compile Include="SqliteHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfoDAL.cs" />
   </ItemGroup>

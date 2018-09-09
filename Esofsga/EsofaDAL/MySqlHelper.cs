@@ -192,7 +192,7 @@ namespace EsofaDAL
                 {
                     if(e.Message.Contains("Unable to connect to any of the specified MySQL hosts"))
                     {
-                        MessageBox.Show("数据库连接字符串错误，请检查数据库连接字符串配置文件。", "警告",
+                        MessageBox.Show("无法成功连接到数据库！，请检查数据库连接参数配置是否正确。", "警告",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return null;
                     }

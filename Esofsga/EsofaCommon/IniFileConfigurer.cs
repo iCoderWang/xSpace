@@ -25,9 +25,10 @@ namespace EsofaCommon
             //string fileName = Path.GetFileNameWithoutExtension(pathStr); //获取INI文件的文件名
             if (File.Exists(pathStr))
             {
+                Encryption ec = new Encryption();
                 fs = new FileStream(pathStr, FileMode.Open,FileAccess.Read);
                 br = new BinaryReader(fs,Encoding.UTF8);
-                conn = br.ReadString();
+                conn = ec.DesDecrypt(br.ReadString(),"W4a5n8g5");
             }
             else
             {
@@ -50,6 +51,7 @@ namespace EsofaCommon
             //private string connStr = "server=127.0.0.1;database=esosb;port=3306;uid=root;pwd=4585;charset=utf8;pooling=true;SslMode = none";
             try
             {
+                Encryption ec = new Encryption();
                 StringBuilder conn = new StringBuilder();
                 string fileName = "ConnConfig.ini";
                 string pathStr = Application.StartupPath +"\\"+fileName; //INI文件的物理地址
@@ -65,7 +67,7 @@ namespace EsofaCommon
                 conn.Append("charset=utf8;pooling=true;SslMode = none");
                 FileStream fs = new FileStream(pathStr, FileMode.Create, FileAccess.Write);
                 BinaryWriter bw = new BinaryWriter(fs, Encoding.UTF8);
-                bw.Write(conn.ToString());
+                bw.Write(ec.DesEncrypt(conn.ToString(),"W4a5n8g5"));
                 bw.Close();
                 fs.Close();
             }
