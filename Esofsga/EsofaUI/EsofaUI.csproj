@@ -7,11 +7,14 @@
     <ProjectGuid>{9C0A970D-937E-416A-90D3-5BA17F58C22F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>EsofaUI</RootNamespace>
-    <AssemblyName>页岩气有利区优选评价系统</AssemblyName>
+    <AssemblyName>Esofa</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,9 +29,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -247,6 +247,12 @@
     <Compile Include="ResultSortedByTopsisFrm.Designer.cs">
       <DependentUpon>ResultSortedByTopsisFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServerConnConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerConnConfiguration.Designer.cs">
+      <DependentUpon>ServerConnConfiguration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="SortedBasinsFrm.cs">
       <SubType>Form</SubType>
@@ -358,6 +364,9 @@
     <EmbeddedResource Include="ResultSortedByTopsisFrm.resx">
       <DependentUpon>ResultSortedByTopsisFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ServerConnConfiguration.resx">
+      <DependentUpon>ServerConnConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SortedBasinsFrm.resx">
       <DependentUpon>SortedBasinsFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,9 +407,6 @@
     <EmbeddedResource Include="UserInfoDataViewFrm.resx">
       <DependentUpon>UserInfoDataViewFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("中国石油勘探开发研究院")]
+[assembly: AssemblyCompany("中国石油勘探开发研究院廊坊分院")]
 [assembly: AssemblyProduct("页岩气有利区优选评价系统")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 // 可以指定所有值，也可以使用以下所示的 "*" 预置版本号和修订号
 // 方法是按如下所示使用“*”: :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2018.05.03.0")]
-[assembly: AssemblyFileVersion("2018.05.03.1")]
+[assembly: AssemblyVersion("2018.09.07.0")]
+[assembly: AssemblyFileVersion("2018.09.07.1")]

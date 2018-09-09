@@ -3,6 +3,8 @@ using System.Data;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 using System.Collections;
+using System.Windows.Forms;
+using EsofaCommon;
 
 namespace EsofaDAL
 {
@@ -14,12 +16,21 @@ namespace EsofaDAL
         /*
          配置你的MYSQL数据库链接字符串如下： 数据库连接字符串
          public static string Conn = "Database='数据库名';Data Source='数据库服务器地址';User Id='数据库用户名';Password='密码';charset='utf8';pooling=true";
-        */
+         <connectionStrings>
+            <add name="conStr" connectionString="server=127.0.0.1;database=esosb;port=3306;uid=root;pwd=4585;charset=utf8;pooling=true;SslMode = none"/>
+            <!--数据库远程连接，不允许使用root用户名，所以，必须要新创建用户。-->
+            <!--使用Workbench导出和导入数据库时，要先在即将导入库的Mysql服务器上创建一个同名的数据库，然后再将已导出的数据库文凭(*.sql)继续导入才能成功。-->
+            <!-- <add name="conStr" connectionString="server=10.3.50.34;database=esosb;port=3306;uid=WangGQ;pwd=W4a5n8g5$%*%;charset=utf8;pooling=true;SslMode = none"/>-->
+          </connectionStrings>
+             
+             
+         */
         //数据库连接字符串
         //public static string Conn = "Database='';Data Source='localhost';User Id='root';Password='4585';charset='utf8';pooling='true'";
-        
+
         //定义静态数据库连接字符串,从配置文件中读取数据库连接字符串
-        private static string connStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
+        //private static string connStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
+        //private static string connStr = "";// IniFileConfigurer.Read();
         //用于缓存参数的 HASH 表
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
 
@@ -34,8 +45,8 @@ namespace EsofaDAL
         public static int ExecuteNonQuery(string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
-            
-            using(MySqlConnection conn = new MySqlConnection(connStr))
+            string connStr = IniFileConfigurer.Read();
+            using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 MySqlCommand cmd = new MySqlCommand();
                 PrepareCommand(cmd, conn, null, cmdType, cmdText, commandParameters);
@@ -57,6 +68,7 @@ namespace EsofaDAL
         public static void ExecuteCommand(string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
+            string connStr = IniFileConfigurer.Read();
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 MySqlCommand cmd = new MySqlCommand();
@@ -83,6 +95,7 @@ namespace EsofaDAL
         public static int ExecuteNonQuery(MySqlTransaction trans, CommandType cmdType, string cmdText,
            params MySqlParameter[] commandParameters)
         {
+            string connStr = IniFileConfigurer.Read();
             using (MySqlCommand cmd = new MySqlCommand())
             {
                 PrepareCommand(cmd, trans.Connection, trans, cmdType, cmdText, commandParameters);
@@ -109,7 +122,7 @@ namespace EsofaDAL
         public static MySqlDataReader ExecuteReader(string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
-            
+            string connStr = IniFileConfigurer.Read();
             //创建一个 MySQLConnection 对象
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
@@ -148,7 +161,7 @@ namespace EsofaDAL
         public static DataTable GetDataTable( string cmdText, CommandType cmdType, 
             params MySqlParameter[] commandParameters)
         {
-            
+            string connStr = IniFileConfigurer.Read();
             //创建一个 MySQLConnection 对象
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
@@ -177,6 +190,12 @@ namespace EsofaDAL
                 }
                 catch (Exception e)
                 {
+                    if(e.Message.Contains("Unable to connect to any of the specified MySQL hosts"))
+                    {
+                        MessageBox.Show("数据库连接字符串错误，请检查数据库连接字符串配置文件。", "警告",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return null;
+                    }
                     throw e;
                 }
             }                
@@ -200,8 +219,8 @@ namespace EsofaDAL
         public static object ExecuteScalar (string connectionString, CommandType cmdType, string cmdText, 
             params MySqlParameter[] commandParameters)
         {
-            
-            using(MySqlConnection connection = new MySqlConnection(connectionString))
+            string connStr = IniFileConfigurer.Read();
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 MySqlCommand cmd = new MySqlCommand();
                 PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);
@@ -229,6 +248,7 @@ namespace EsofaDAL
         public static object ExecuteScalar(MySqlConnection connection, CommandType cmdType, string cmdText, 
             params MySqlParameter[] commandParameters)
         {
+
             using (MySqlCommand cmd = new MySqlCommand())
             {
                 PrepareCommand(cmd, connection, null, cmdType, cmdText, commandParameters);

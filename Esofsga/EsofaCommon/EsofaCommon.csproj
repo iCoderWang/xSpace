@@ -110,6 +110,7 @@
     <Compile Include="EncryptConnection.cs" />
     <Compile Include="FuzzyMembershipFunction.cs" />
     <Compile Include="DataSourceToDataTable.cs" />
+    <Compile Include="IniFileConfigurer.cs" />
     <Compile Include="NaturalBreaksClassification.cs" />
     <Compile Include="MD5Encryption.cs" />
     <Compile Include="ParametersWeightLoader.cs" />
