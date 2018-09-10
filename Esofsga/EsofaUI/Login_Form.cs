@@ -65,7 +65,14 @@ namespace EsofaUI
                                 frmMain.sideBar_BtnAccessChange.Enabled = false;
                                 frmMain.sideBar_BtnUserDel.Enabled = false;
                                 frmMain.sideBar_BtnUserAdd.Enabled = false;
+                                frmMain.sideBar_BtnImport.Enabled = false;
+                                frmMain.sideBar_BtnModify.Enabled = false;
+                                frmMain.sideBar_BtnAddData.Enabled = false;
+                                frmMain.menuSub_DataIm.Enabled = false;
+                                frmMain.menuSub_DataInput.Enabled = false;
+                                frmMain.menuSub_DataMo.Enabled = false;
                                 frmMain.menuMain_UserMn.Enabled = false;
+                                frmMain.menuSub_Open.Enabled = false;
                             }
                             frmMain.Show();
                         }
@@ -86,7 +93,7 @@ namespace EsofaUI
             {
                 return;
             }
-            SetVisibleCore(false);
+            this.SetVisibleCore(false);
             //frmMain.Show();
         }
 

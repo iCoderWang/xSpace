@@ -12,7 +12,7 @@ namespace EsofaCommon
     public partial class SqlSyntaxValidating
     {
         //定义静态数据库连接字符串,从配置文件中读取数据库连接字符串
-        private static string connStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
+        //private static string connStr = ConfigurationManager.ConnectionStrings["conStr"].ConnectionString;
         /// <summary>
         ///   只检查SQL语法，不执行SQL语句。
         /// </summary>
@@ -22,6 +22,7 @@ namespace EsofaCommon
         public  bool ValidateSQL(string sql)
         {
             bool bResult;
+            string connStr = IniFileConfigurer.Read();
             using (MySqlConnection conn = new MySqlConnection(connStr))
             {
                 using (MySqlCommand cmd = new MySqlCommand())

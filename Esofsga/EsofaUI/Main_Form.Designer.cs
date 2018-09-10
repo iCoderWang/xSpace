@@ -49,9 +49,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuSub_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain_Edit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSub_Trim = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_Copy = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSub_Paste = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_SelectAll = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain_DataMn = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_DataIm = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,16 +75,16 @@
             this.panel_WorkSpace = new System.Windows.Forms.Panel();
             this.splitCtner_WorkSpace = new System.Windows.Forms.SplitContainer();
             this.sideBar1 = new DevComponents.DotNetBar.SideBar();
-            this.sideBarPnl_DataAnly = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.sideBar_BtnAHP = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnTOPSIS = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnFCEM = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_DataMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnImport = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnAddData = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnModify = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnQuery = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnBrowse = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBarPnl_DataAnly = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBar_BtnAHP = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnTOPSIS = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnFCEM = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_UserMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnUsersList = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnUserAdd = new DevComponents.DotNetBar.ButtonItem();
@@ -300,45 +298,37 @@
             // menuSub_Open
             // 
             this.menuSub_Open.Name = "menuSub_Open";
-            this.menuSub_Open.Size = new System.Drawing.Size(196, 38);
+            this.menuSub_Open.Size = new System.Drawing.Size(324, 38);
             this.menuSub_Open.Text = "打开(O)";
+            this.menuSub_Open.Click += new System.EventHandler(this.menuSub_Open_Click);
             // 
             // menuSub_Logout
             // 
             this.menuSub_Logout.Name = "menuSub_Logout";
-            this.menuSub_Logout.Size = new System.Drawing.Size(196, 38);
+            this.menuSub_Logout.Size = new System.Drawing.Size(324, 38);
             this.menuSub_Logout.Text = "注销(L)";
+            this.menuSub_Logout.Click += new System.EventHandler(this.menuSub_Logout_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(321, 6);
             // 
             // menuSub_Close
             // 
             this.menuSub_Close.Name = "menuSub_Close";
-            this.menuSub_Close.Size = new System.Drawing.Size(196, 38);
+            this.menuSub_Close.Size = new System.Drawing.Size(324, 38);
             this.menuSub_Close.Text = "关闭(X)";
             this.menuSub_Close.Click += new System.EventHandler(this.MenuSub_Close_Click);
             // 
             // menuMain_Edit
             // 
             this.menuMain_Edit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuSub_Trim,
             this.menuSub_Copy,
-            this.menuSub_Paste,
             this.menuSub_SelectAll});
             this.menuMain_Edit.Name = "menuMain_Edit";
             this.menuMain_Edit.Size = new System.Drawing.Size(103, 38);
             this.menuMain_Edit.Text = "编辑(E)";
-            // 
-            // menuSub_Trim
-            // 
-            this.menuSub_Trim.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_Trim.Image")));
-            this.menuSub_Trim.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuSub_Trim.Name = "menuSub_Trim";
-            this.menuSub_Trim.Size = new System.Drawing.Size(193, 38);
-            this.menuSub_Trim.Text = "剪切(T)";
             // 
             // menuSub_Copy
             // 
@@ -347,14 +337,6 @@
             this.menuSub_Copy.Name = "menuSub_Copy";
             this.menuSub_Copy.Size = new System.Drawing.Size(193, 38);
             this.menuSub_Copy.Text = "复制(C)";
-            // 
-            // menuSub_Paste
-            // 
-            this.menuSub_Paste.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_Paste.Image")));
-            this.menuSub_Paste.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuSub_Paste.Name = "menuSub_Paste";
-            this.menuSub_Paste.Size = new System.Drawing.Size(193, 38);
-            this.menuSub_Paste.Text = "粘贴(P)";
             // 
             // menuSub_SelectAll
             // 
@@ -379,14 +361,14 @@
             this.menuSub_DataIm.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataIm.Image")));
             this.menuSub_DataIm.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSub_DataIm.Name = "menuSub_DataIm";
-            this.menuSub_DataIm.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_DataIm.Size = new System.Drawing.Size(250, 38);
             this.menuSub_DataIm.Text = "批量导入(I)";
             this.menuSub_DataIm.Click += new System.EventHandler(this.menuSub_DataIm_Click);
             // 
             // menuSub_DataInput
             // 
             this.menuSub_DataInput.Name = "menuSub_DataInput";
-            this.menuSub_DataInput.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_DataInput.Size = new System.Drawing.Size(250, 38);
             this.menuSub_DataInput.Text = "数据录入(R)";
             // 
             // menuSub_DataMo
@@ -394,21 +376,21 @@
             this.menuSub_DataMo.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataMo.Image")));
             this.menuSub_DataMo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSub_DataMo.Name = "menuSub_DataMo";
-            this.menuSub_DataMo.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_DataMo.Size = new System.Drawing.Size(250, 38);
             this.menuSub_DataMo.Text = "数据编辑(M)";
             this.menuSub_DataMo.Click += new System.EventHandler(this.menuSub_DataMo_Click);
             // 
             // menuSub_DataQu
             // 
             this.menuSub_DataQu.Name = "menuSub_DataQu";
-            this.menuSub_DataQu.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_DataQu.Size = new System.Drawing.Size(250, 38);
             this.menuSub_DataQu.Text = "数据查询(Q)";
             this.menuSub_DataQu.Click += new System.EventHandler(this.menuSub_DataQu_Click);
             // 
             // menuSub_DataBr
             // 
             this.menuSub_DataBr.Name = "menuSub_DataBr";
-            this.menuSub_DataBr.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_DataBr.Size = new System.Drawing.Size(250, 38);
             this.menuSub_DataBr.Text = "数据浏览(B)";
             this.menuSub_DataBr.Click += new System.EventHandler(this.menuSub_DataBr_Click);
             // 
@@ -574,7 +556,7 @@
             this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
             this.sideBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataAnly;
+            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataMnger;
             this.sideBar1.Location = new System.Drawing.Point(4, 60);
             this.sideBar1.Margin = new System.Windows.Forms.Padding(6);
             this.sideBar1.Name = "sideBar1";
@@ -587,42 +569,6 @@
             this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.sideBar1.TabIndex = 1;
             this.sideBar1.Text = "sideBar1";
-            // 
-            // sideBarPnl_DataAnly
-            // 
-            this.sideBarPnl_DataAnly.FontBold = true;
-            this.sideBarPnl_DataAnly.Name = "sideBarPnl_DataAnly";
-            this.sideBarPnl_DataAnly.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sideBar_BtnAHP,
-            this.sideBar_BtnTOPSIS,
-            this.sideBar_BtnFCEM});
-            this.sideBarPnl_DataAnly.Text = "数据分析";
-            // 
-            // sideBar_BtnAHP
-            // 
-            this.sideBar_BtnAHP.FontUnderline = true;
-            this.sideBar_BtnAHP.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnAHP.Name = "sideBar_BtnAHP";
-            this.sideBar_BtnAHP.Text = "层次分析法\r\n（AHP）";
-            this.sideBar_BtnAHP.Click += new System.EventHandler(this.sideBar_BtnAHP_Click);
-            // 
-            // sideBar_BtnTOPSIS
-            // 
-            this.sideBar_BtnTOPSIS.FontUnderline = true;
-            this.sideBar_BtnTOPSIS.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnTOPSIS.Name = "sideBar_BtnTOPSIS";
-            this.sideBar_BtnTOPSIS.Text = "逼近理想解排序法\r\n（TOPSIS）";
-            this.sideBar_BtnTOPSIS.Click += new System.EventHandler(this.sideBar_BtnTOPSIS_Click);
-            // 
-            // sideBar_BtnFCEM
-            // 
-            this.sideBar_BtnFCEM.Enabled = false;
-            this.sideBar_BtnFCEM.FontUnderline = true;
-            this.sideBar_BtnFCEM.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnFCEM.Name = "sideBar_BtnFCEM";
-            this.sideBar_BtnFCEM.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
-            this.sideBar_BtnFCEM.Text = "模糊综合评判法\r\n（FCEM）";
-            this.sideBar_BtnFCEM.Visible = false;
             // 
             // sideBarPnl_DataMnger
             // 
@@ -676,6 +622,42 @@
             this.sideBar_BtnBrowse.Name = "sideBar_BtnBrowse";
             this.sideBar_BtnBrowse.Text = "数据浏览";
             this.sideBar_BtnBrowse.Click += new System.EventHandler(this.sideBar_BtnBrowse_Click);
+            // 
+            // sideBarPnl_DataAnly
+            // 
+            this.sideBarPnl_DataAnly.FontBold = true;
+            this.sideBarPnl_DataAnly.Name = "sideBarPnl_DataAnly";
+            this.sideBarPnl_DataAnly.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sideBar_BtnAHP,
+            this.sideBar_BtnTOPSIS,
+            this.sideBar_BtnFCEM});
+            this.sideBarPnl_DataAnly.Text = "数据分析";
+            // 
+            // sideBar_BtnAHP
+            // 
+            this.sideBar_BtnAHP.FontUnderline = true;
+            this.sideBar_BtnAHP.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnAHP.Name = "sideBar_BtnAHP";
+            this.sideBar_BtnAHP.Text = "层次分析法\r\n（AHP）";
+            this.sideBar_BtnAHP.Click += new System.EventHandler(this.sideBar_BtnAHP_Click);
+            // 
+            // sideBar_BtnTOPSIS
+            // 
+            this.sideBar_BtnTOPSIS.FontUnderline = true;
+            this.sideBar_BtnTOPSIS.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnTOPSIS.Name = "sideBar_BtnTOPSIS";
+            this.sideBar_BtnTOPSIS.Text = "逼近理想解排序法\r\n（TOPSIS）";
+            this.sideBar_BtnTOPSIS.Click += new System.EventHandler(this.sideBar_BtnTOPSIS_Click);
+            // 
+            // sideBar_BtnFCEM
+            // 
+            this.sideBar_BtnFCEM.Enabled = false;
+            this.sideBar_BtnFCEM.FontUnderline = true;
+            this.sideBar_BtnFCEM.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnFCEM.Name = "sideBar_BtnFCEM";
+            this.sideBar_BtnFCEM.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
+            this.sideBar_BtnFCEM.Text = "模糊综合评判法\r\n（FCEM）";
+            this.sideBar_BtnFCEM.Visible = false;
             // 
             // sideBarPnl_UserMnger
             // 
@@ -843,20 +825,15 @@
         private System.Windows.Forms.SplitContainer splitCtner_WorkSpace;
         private System.Windows.Forms.MenuStrip menuStrip_Main;
         private System.Windows.Forms.ToolStripMenuItem menuMain_File;
-        private System.Windows.Forms.ToolStripMenuItem menuSub_Open;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuSub_Logout;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem menuSub_Close;
         private System.Windows.Forms.ToolStripMenuItem menuMain_Edit;
-        private System.Windows.Forms.ToolStripMenuItem menuSub_Trim;
         private System.Windows.Forms.ToolStripMenuItem menuSub_Copy;
-        private System.Windows.Forms.ToolStripMenuItem menuSub_Paste;
         private System.Windows.Forms.ToolStripMenuItem menuSub_SelectAll;
         private System.Windows.Forms.ToolStripMenuItem menuMain_DataMn;
-        private System.Windows.Forms.ToolStripMenuItem menuSub_DataIm;
         private System.Windows.Forms.ToolStripMenuItem menuSub_DataQu;
-        private System.Windows.Forms.ToolStripMenuItem menuSub_DataMo;
         private System.Windows.Forms.ToolStripMenuItem menuSub_DataBr;
         private System.Windows.Forms.ToolStripMenuItem menuMain_DataAn;
         private System.Windows.Forms.ToolStripMenuItem menuSub_AHP;
@@ -888,7 +865,6 @@
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnFCEM;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnDoc;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnAbout;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnImport;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnQuery;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnBrowse;
         private DevExpress.XtraTab.XtraTabPage tabPage_Welcome;
@@ -896,7 +872,6 @@
         private System.Windows.Forms.Label label2;
         public DevExpress.XtraTab.XtraTabControl workAreaTabPageController;
         private System.Windows.Forms.ToolStripMenuItem menuSub_UserQuery;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnAddData;
         public System.Windows.Forms.Label lbl_UserRole;
         public System.Windows.Forms.Label lbl_UserName;
         public DevComponents.DotNetBar.ButtonItem sideBar_BtnUserAdd;
@@ -904,8 +879,13 @@
         public DevComponents.DotNetBar.ButtonItem sideBar_BtnAccessChange;
         public DevComponents.DotNetBar.ButtonItem sideBar_BtnUsersList;
         public System.Windows.Forms.ToolStripMenuItem menuMain_UserMn;
-        private System.Windows.Forms.ToolStripMenuItem menuSub_DataInput;
-        private DevComponents.DotNetBar.ButtonItem sideBar_BtnModify;
         public System.Windows.Forms.Label lbl_Status;
+        public DevComponents.DotNetBar.ButtonItem sideBar_BtnImport;
+        public DevComponents.DotNetBar.ButtonItem sideBar_BtnAddData;
+        public DevComponents.DotNetBar.ButtonItem sideBar_BtnModify;
+        public System.Windows.Forms.ToolStripMenuItem menuSub_DataIm;
+        public System.Windows.Forms.ToolStripMenuItem menuSub_DataMo;
+        public System.Windows.Forms.ToolStripMenuItem menuSub_DataInput;
+        public System.Windows.Forms.ToolStripMenuItem menuSub_Open;
     }
 }

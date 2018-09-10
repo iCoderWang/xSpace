@@ -23,7 +23,12 @@ namespace EsofaUI
             InitializeComponent();
             lbl_Status.Text = str;
         }
-
+        private Form loginFrm;
+        public Main_Form(Form frm)
+        {
+            InitializeComponent();
+            loginFrm = frm;
+        }
         
 
        public static List<TargetEntity> temTgtList = new List<TargetEntity>();
@@ -786,6 +791,19 @@ namespace EsofaUI
         private void menuSub_TOPSIS_Click(object sender, EventArgs e)
         {
             sideBar_BtnTOPSIS_Click(sideBar_BtnTOPSIS,e);
+        }
+
+        private void menuSub_Logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login_Form lf = new Login_Form();
+            lf.Show();
+            //this.Close();
+        }
+
+        private void menuSub_Open_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnImport_Click(sideBar_BtnImport, e);
         }
     }
 }
