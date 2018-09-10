@@ -250,15 +250,45 @@ namespace EsofaUI
             CoincidenceChecker cc = new CoincidenceChecker();
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
-            Vector<double> vR1 = cc.ArrayLoad(R1, out strB);
+            StringBuilder cRstr = new StringBuilder();
+            string[] cR_arr = null;
+            int flag = 0;
+            string cR1 = null, cR21 = null, cR22 = null, cR23 = null, cR = null;
+            Vector<double> vR1 = cc.ArrayLoad(R1, out strB,out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
-            Vector<double> vR21 = cc.ArrayLoad(R21, out strB) * vR1.ElementAt(0);
+            Vector<double> vR21 = cc.ArrayLoad(R21, out strB, out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
-            Vector<double> vR22 = cc.ArrayLoad(R22, out strB) * vR1.ElementAt(1);
+            Vector<double> vR22 = cc.ArrayLoad(R22, out strB, out cR22) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
-            Vector<double> vR23 = cc.ArrayLoad(R23, out strB) * vR1.ElementAt(2);
+            Vector<double> vR23 = cc.ArrayLoad(R23, out strB, out cR23) * vR1.ElementAt(2);
+            cR_arr = new string[] { cR1, cR21, cR22, cR23 };
             eignFrm.textBox1.Text += "R23: \r\n" + strB.ToString() + "\r\n" + vR21 + "\r\n" + vR22 + "\r\n" + vR23;
+            cRstr.Append("层次单排序结果一致性指标");
+            foreach (string str in cR_arr)
+            {
+                if (Convert.ToDouble(str) >= 0.1)
+                {
+                    flag++;
+                    if (flag == 1)
+                    {
+                        cRstr.Append(" : " + str);
+                    }
+                    else
+                    {
+                        cRstr.Append("," + str);
+                    }
+                }
+            }
+            if (flag != 0)
+            {
+                cRstr.Append(" 大于了 “0.1” 限差。排序结果一致性失败。是否查看详细信息？");
+                flag = 0;
+            }
+            else
+            {
+                cRstr.Append("通过。是否查看详细信息？");
 
+            }
             //从地质条件的参数权重向量 vR21 中对应地对权重变量进行赋值
             wgt_StromAt = Convert.ToDouble(vR21[0].ToString("0.0000"));
             wgt_Toc = Convert.ToDouble(vR21[1].ToString("0.0000"));
@@ -277,20 +307,12 @@ namespace EsofaUI
 
             //从经济条件的参数权重向量中对应地对权重变量进行赋值
             wgt_Sg = Convert.ToDouble(vR23[0].ToString("0.0000"));
-            eignFrm.Show();
-            #region
-            //List<SortedBlocksParas> lst_SBP = BlockGrade(lst_Tgt);
-            //int counter = lst_SBP.Count;
-            //lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
-            //foreach(SortedBlocksParas sBp in lst_SBP)
-            //{
-            //    sBp.para_Rank = counter ;
-            //    counter--;
-            //}
-            //lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
-            //sBf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
-            //sBf.Show();
-            #endregion
+            DialogResult = MessageBox.Show(cRstr.ToString(), "信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (DialogResult == DialogResult.Yes)
+            {
+                eignFrm.Show();
+            }
+            //eignFrm.Show();
             chkFlag = true;
             this.btn_Next.Enabled = true;
         }

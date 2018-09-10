@@ -115,14 +115,44 @@ namespace EsofaUI
             CoincidenceChecker cc = new CoincidenceChecker();
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
-            Vector<double> vR1 = cc.ArrayLoad(R1, out strB);
+            StringBuilder cRstr = new StringBuilder();
+            string[] cR_arr = null;
+            int flag = 0;
+            string cR1 = null, cR21 = null, cR22 = null, cR = null;
+            Vector<double> vR1 = cc.ArrayLoad(R1, out strB, out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
-            Vector<double> vR21 = cc.ArrayLoad(R21, out strB) * vR1.ElementAt(0);
+            Vector<double> vR21 = cc.ArrayLoad(R21, out strB, out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
-            Vector<double> vR22 = cc.ArrayLoad(R22, out strB) * vR1.ElementAt(1);
+            Vector<double> vR22 = cc.ArrayLoad(R22, out strB, out cR22) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
+            cR_arr = new string[] { cR1, cR21, cR22};
             eignFrm.textBox1.Text +=  vR21 + "\r\n" + vR22 + "\r\n" ;
+            cRstr.Append("层次单排序结果一致性指标");
+            foreach (string str in cR_arr)
+            {
+                if (Convert.ToDouble(str) >= 0.1)
+                {
+                    flag++;
+                    if (flag == 1)
+                    {
+                        cRstr.Append(" : " + str);
+                    }
+                    else
+                    {
+                        cRstr.Append("," + str);
+                    }
+                }
+            }
+            if (flag != 0)
+            {
+                cRstr.Append(" 大于了 “0.1” 限差。排序结果一致性失败。是否查看详细信息？");
+                flag = 0;
+            }
+            else
+            {
+                cRstr.Append("通过。是否查看详细信息？");
 
+            }
             //从地质条件的参数权重向量 vR21 中对应地对权重变量进行赋值
             wgt_StromAt = Convert.ToDouble(vR21[0].ToString("0.0000"));
             wgt_Toc = Convert.ToDouble(vR21[1].ToString("0.0000"));
@@ -135,8 +165,12 @@ namespace EsofaUI
             //从工程条件的参数权重向量中对应地对权重变量进行赋值
             wgt_Dr = Convert.ToDouble(vR22[0].ToString("0.0000"));
             wgt_Bmc = Convert.ToDouble(vR22[1].ToString("0.0000"));
-            
-            eignFrm.Show();
+            DialogResult = MessageBox.Show(cRstr.ToString(), "信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (DialogResult == DialogResult.Yes)
+            {
+                eignFrm.Show();
+            }
+            //eignFrm.Show();
             chkFlag = true;
         }
 

@@ -104,23 +104,22 @@ namespace EsofaCommon
         /// 计算特征值和特征向量
         /// </summary>
         /// <param name="arr"></param>
-        public Vector<double> ArrayLoad(double[,] arr, out StringBuilder strB)
+        public Vector<double> ArrayLoad(double[,] arr, out StringBuilder strB, out string cr)
         {
             double maxEigenValue;
             strB = new StringBuilder();
-            //CoincidenceChecker cChecker = new CoincidenceChecker();
-            //Vector<double> eigenVector = cChecker.Caculate(arr, out maxEigenValue);
             Vector<double> eigenVector = Caculate(arr, out maxEigenValue);
             Vector<double> normalizedVector = eigenVector.Normalize(1);
-            //double CR = cChecker.CrGenerate(maxEigenValue, arr);
             double CR = CrGenerate(maxEigenValue, arr);
             strB.Append("  ===============================================" + "\r\n");
             strB.Append("  Maximum Eigenvalue: " + maxEigenValue + "\r\n");
             strB.Append("  ===============================================" + "\r\n");
             strB.Append("  Maximum Eigenvalue's Eigenvector:\r\n" + eigenVector.ToString("#0.000000") + "\r\n");
             strB.Append("  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + "\r\n");
-            strB.Append("  Normalized Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.000000") + "\r\n" + "CR Value is: " + CR.ToString("#0.000") + "\r\n");
+            strB.Append("  Normalized Eigenvalue's Eigenvector:\r\n" + normalizedVector.ToString("#0.000000") + "\r\n" 
+                + "CR Value is: " + CR.ToString("#0.000") + "\r\n");
             strB.Append("  ******************************************" + "\r\n");
+            cr = CR.ToString("#0.000");
             return normalizedVector;
         }
 

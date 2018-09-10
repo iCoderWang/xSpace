@@ -54,13 +54,25 @@ namespace EsofaUI
                 }
             }
             //将一类数据中目标区域名筛选出来
-            arr_TgtName.Where((num,index)=>index>=0 && index<s1).ToList().ForEach(a=>strClass_1.Append(a+", "));
+            //arr_TgtName.Where((num, index) => index >= 0 && index < s1).ToList().ForEach(a => strClass_1.Append(a + "、 "));
+            var favList = arr_TgtName.Where((num, index) => index >= 0 && index < s1).ToList();
+            favList.ForEach(a => { if (a != favList.Last()) { strClass_1.Append(a + "、 "); } else { strClass_1.Append(a); } });
             //将二类数据中目标区域名筛选出来
-            arr_TgtName.Where((num, index) => index >= s1 && index < arr_TgtName.Length-s2).ToList().ForEach(a => strClass_2.Append(a + ", "));
+            var normList = arr_TgtName.Where((num, index) => index >= s1 && index < arr_TgtName.Length - s2).ToList();
+            normList.ForEach(a => { if (a != normList.Last()) { strClass_2.Append(a + "、 "); } else { strClass_2.Append(a); } });
             //将三类数据中目标区域名筛选出来
-            arr_TgtName.Where((num, index) => index >= arr_TgtName.Length - s2 && index < arr_TgtName.Length).ToList().ForEach(a => strClass_3.Append(a + ", "));
-            MessageBox.Show("有利区:\r\n " + strClass_1.ToString() + "; \r\n\r\n一般区：\r\n " + strClass_2.ToString() +
-                "; \r\n\r\n较差区：\r\n " + strClass_3.ToString());
+            var worseList = arr_TgtName.Where((num, index) => index >= arr_TgtName.Length - s2 && index < arr_TgtName.Length).ToList();
+            worseList.ForEach(a => { if (a != worseList.Last()) { strClass_3.Append(a + "、"); } else { strClass_3.Append(a); } });
+            MessageBox.Show("有利区：  " + strClass_1.ToString() + " ; \r\n\r\n一般区：  " + strClass_2.ToString() +
+                " ; \r\n\r\n较差区：  " + strClass_3.ToString() + " ;", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ////将一类数据中目标区域名筛选出来
+            //arr_TgtName.Where((num,index)=>index>=0 && index<s1).ToList().ForEach(a=>strClass_1.Append(a+", "));
+            ////将二类数据中目标区域名筛选出来
+            //arr_TgtName.Where((num, index) => index >= s1 && index < arr_TgtName.Length-s2).ToList().ForEach(a => strClass_2.Append(a + ", "));
+            ////将三类数据中目标区域名筛选出来
+            //arr_TgtName.Where((num, index) => index >= arr_TgtName.Length - s2 && index < arr_TgtName.Length).ToList().ForEach(a => strClass_3.Append(a + ", "));
+            //MessageBox.Show("有利区：  " + strClass_1.ToString() + "; \r\n一般区：  " + strClass_2.ToString() +
+            //    "; \r\n较差区：  " + strClass_3.ToString(), "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }
