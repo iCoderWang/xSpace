@@ -23,13 +23,6 @@ namespace EsofaUI
             InitializeComponent();
             lbl_Status.Text = str;
         }
-        private Form loginFrm;
-        public Main_Form(Form frm)
-        {
-            InitializeComponent();
-            loginFrm = frm;
-        }
-        
 
        public static List<TargetEntity> temTgtList = new List<TargetEntity>();
 
@@ -39,8 +32,6 @@ namespace EsofaUI
          * 赋给Main_Form上的关闭按钮，当该按钮被点击时，关闭当前窗体，以及
          * 被隐藏的主加载窗体，从而用于释放所有被占用资源
         */
-
-
         private void Main_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Environment.Exit(0);
@@ -55,9 +46,7 @@ namespace EsofaUI
         /*
          * 重写xtrTgabControl 控件的关闭按钮功能
          * 当关闭按钮被点击时，用于释放当前tabPage页的资源
-         */
-
-        /*
+         *
          * 调用窗体的关闭按钮功能方法，用于关闭当前窗体，及被隐藏的主加载窗体
          * 用于释放程序所占用的所有资源
          */
@@ -67,12 +56,7 @@ namespace EsofaUI
             //关闭主窗体
             Main_Form_FormClosed(menuSub_Close, null);
         }
-
-        //实例化About_Box对象，用于操作
-        About_Box aboutBox = new About_Box();
-
-        //实例化 UserInfoDataViewFrm 对象，用于操作
-        UserInfoDataViewFrm tempFrm = new UserInfoDataViewFrm();
+        
 
         /// <summary>
         /// 
@@ -81,6 +65,8 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void MenuSub_About_Click(object sender, EventArgs e)
         {
+            //实例化About_Box对象，用于操作
+            About_Box aboutBox = new About_Box();
             //关于界面显示
             aboutBox.Show();
         }
@@ -126,7 +112,7 @@ namespace EsofaUI
             //点击“用户浏览”产生新的用户TabPage，并在该Page上显示后台数据库中
             //所有在册用户的信息
             UserInfoDataViewFrm frmUserInfo = new UserInfoDataViewFrm(TabPage_Close);
-            tempFrm = frmUserInfo;
+            //tempFrm = frmUserInfo;
             //Toplevel属性，用于设置窗体在TabPage上的显示层级
             frmUserInfo.TopLevel = false;
             TabPageCreate("注册用户信息表", frmUserInfo);
@@ -374,218 +360,6 @@ namespace EsofaUI
         }
 
 
-        //public static List<SortedBlocksParas> listBlockPara = new List<SortedBlocksParas>();
-        #region
-        //public void BlockGrade( List<RawData> rawDataList,  List<SortedBlocksParas> tempListSbp)
-        //{
-        //    //定义模糊隶属函数的实例
-        //    FuzzyMembershipFunction fMf = new FuzzyMembershipFunction();
-        //    SubjectiveGrading sG = new SubjectiveGrading();
-        //    //定义求平均值的类实例
-        //    AverageValues avgVal = new AverageValues();
-
-        //    //定义 BlockParametersGrade类型的变量
-        //    SortedBlocksParas  []tempSbp = new SortedBlocksParas [rawDataList.Count] ;
-
-            
-        //    // 定义BlockParametersGrade类型元素的列表变量
-        //    tempListSbp = new List<SortedBlocksParas>();
-
-        //    //定义赋值分数变量
-        //    double gradeScore;
-
-        //    //定义数值和变量
-        //   //double tempSum =0;
-
-        //    //定义数值变量
-        //    double values;
-
-        //    //定义临时字符串
-        //    //string strTemp;
-        //   // rawDataList.IndexOf()
-        //   for (int i = 1; i<rawDataList.Count; i++)
-        //    {
-        //        tempSbp[i] = new SortedBlocksParas();
-        //        //区块名称 没有分值
-        //        tempSbp[i].para_Tgt = rawDataList[i].para_Blk;
-
-        //        //主力层系 分值
-        //        tempSbp[i].para_Ps = rawDataList[i].para_Ps;
-        //        tempSbp[i].para_PsScores = sG.Grade(rawDataList[i].para_Ps);
-
-        //        //保存条件 分值
-        //        tempSbp[i].para_Sc = rawDataList[i].para_Sc;
-        //        tempSbp[i].para_ScScores = sG.Grade(rawDataList[i].para_Sc);
-
-        //        //构造复杂度 分值
-        //        tempSbp[i].para_Scd = rawDataList[i].para_Scd;
-        //        tempSbp[i].para_ScdScores = 80;
-
-        //        //裂缝发育度 分值
-        //        tempSbp[i].para_Fdd = rawDataList[i].para_Fdd;
-        //        tempSbp[i].para_FddScores = sG.Grade(rawDataList[i].para_Fdd);
-
-        //        //地质条件
-        //        //对富含有机质页岩厚度的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_StromAt != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_StromAt.Trim());
-        //            gradeScore = fMf.FuzzyLarge(1.6, 15, values);
-        //            tempSbp[i].para_StromAt = rawDataList[i].para_StromAt;
-        //            tempSbp[i].para_StromAtScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_StromAt = rawDataList[i].para_StromAt;
-        //            tempSbp[i].para_StromAtScores = 0;
-        //        }
-
-        //        //对Toc 的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Toc != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Toc.Trim());
-        //            gradeScore = fMf.FuzzyLarge(1.6, 2, values);
-        //            tempSbp[i].para_Toc = rawDataList[i].para_Toc;
-        //            tempSbp[i].para_TocScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Toc = rawDataList[i].para_Toc;
-        //            tempSbp[i].para_TocScores = 0;
-        //        }
-
-        //        //对Ro 的平均值进行高斯型隶属函数求值
-        //        if (rawDataList[i].para_Ro != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Ro.Trim());
-        //            gradeScore = fMf.FuzzyGussian(values);
-        //            tempSbp[i].para_Ro = rawDataList[i].para_Ro;
-        //            tempSbp[i].para_RoScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Ro = rawDataList[i].para_Ro;
-        //            tempSbp[i].para_RoScores = 0;
-        //        }
-
-        //        //对Ea 的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Ea != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Ea.Trim());
-        //            gradeScore = fMf.FuzzyLarge(1.2, 200, values);
-        //            tempSbp[i].para_Ea = rawDataList[i].para_Ea;
-        //            tempSbp[i].para_EaScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Ea = rawDataList[i].para_Ea;
-        //            tempSbp[i].para_EaScores = 0;
-        //        }
-
-        //        //对Gc 的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Gc != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Gc.Trim());
-        //            gradeScore = fMf.FuzzyLarge(1.6, 2, values);
-        //            tempSbp[i].para_Gc = rawDataList[i].para_Gc;
-        //            tempSbp[i].para_GcScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Gc = rawDataList[i].para_Gc;
-        //            tempSbp[i].para_GcScores = 0;
-        //        }
-
-        //        //对Rr 的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Rr != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Rr.Trim());
-        //            gradeScore = fMf.FuzzyLarge(1, 0.5, values);
-        //            tempSbp[i].para_Rr = rawDataList[i].para_Rr;
-        //            tempSbp[i].para_RrScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Rr = rawDataList[i].para_Rr;
-        //            tempSbp[i].para_RrScores = 0;
-        //        }
-
-        //        //对Por 的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Por != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Por.Trim());
-        //            gradeScore = fMf.FuzzyLarge(1.2, 2, values);
-        //            tempSbp[i].para_Por = rawDataList[i].para_Por;
-        //            tempSbp[i].para_PorScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Por = rawDataList[i].para_Por;
-        //            tempSbp[i].para_PorScores = 0;
-        //        }
-
-        //        //工程条件
-        //        //埋深先计算平均值，然后利用高斯型隶属函数赋分
-        //        if (rawDataList[i].para_Dr != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Dr);
-        //            gradeScore = fMf.FuzzyGussian(values);
-        //            tempSbp[i].para_Ad = rawDataList[i].para_Dr;
-        //            tempSbp[i].para_AdScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Ad = rawDataList[i].para_Dr;
-        //            tempSbp[i].para_AdScores = 0;
-        //        }
-               
-        //        //对Pc 压力系数 的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Pf != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Pf.Trim());
-        //            gradeScore = fMf.FuzzyLarge(6, 1, values);
-        //            tempSbp[i].para_Pc = rawDataList[i].para_Pf;
-        //            tempSbp[i].para_PcScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Pc = rawDataList[i].para_Pf;
-        //            tempSbp[i].para_PcScores = 0;
-        //        }
-
-        //        //对Psdf 主应力差异 的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Psdf != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Psdf.Trim());
-        //            gradeScore = fMf.FuzzySmall(2.15, 0.5, values);
-        //            tempSbp[i].para_Psdf = rawDataList[i].para_Psdf;
-        //            tempSbp[i].para_PsdfScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Psdf = rawDataList[i].para_Psdf;
-        //            tempSbp[i].para_PsdfScores = 0;
-        //        }
-
-        //        //对Bmc  的平均值进行增大型隶属函数求值
-        //        if (rawDataList[i].para_Bmc != "")
-        //        {
-        //            values = avgVal.Calculate(rawDataList[i].para_Bmc.Trim());
-        //            gradeScore = fMf.FuzzyLarge(2.15, 30, values);
-        //            tempSbp[i].para_Bmc = rawDataList[i].para_Bmc;
-        //            tempSbp[i].para_BmcScores = gradeScore;
-        //        }
-        //        else
-        //        {
-        //            tempSbp[i].para_Bmc = rawDataList[i].para_Bmc;
-        //            tempSbp[i].para_BmcScores = 0;
-        //        }
-        //        tempListSbp.Add(tempSbp[i]);
-        //    }
-        //    listBlockPara = tempListSbp;
-        //}
-        #endregion
-
 
         /// <summary>
         /// 
@@ -658,8 +432,8 @@ namespace EsofaUI
         private void sideBar_BtnUserDel_Click(object sender, EventArgs e)
         {
             SideBar_BtnUsersList_Click(sideBar_BtnUsersList,e);
-            tempFrm.btnUserDel.Visible = true;
-            tempFrm = null;
+            //tempFrm.btnUserDel.Visible = true;
+            //tempFrm = null;
         }
 
         private void sideBar_BtnAccessChange_Click(object sender, EventArgs e)
@@ -667,9 +441,9 @@ namespace EsofaUI
             //调用用户信息预览的功能模块
             SideBar_BtnUsersList_Click(sideBar_BtnUsersList, e);
             //关闭当前窗体上的DataGridView多行选择功能
-            tempFrm.userDataGridView.MultiSelect = false;
-            tempFrm.btnUpdate.Visible = true;
-            tempFrm = null;
+            //tempFrm.userDataGridView.MultiSelect = false;
+            //tempFrm.btnUpdate.Visible = true;
+            //tempFrm = null;
         }
 
         private void menuSub_DataIm_Click(object sender, EventArgs e)
@@ -795,13 +569,18 @@ namespace EsofaUI
 
         private void menuSub_Logout_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login_Form lf = new Login_Form();
-            lf.Show();
-            //this.Close();
+            //注销主窗体后，登 录窗体显示出来。
+            Application.Exit();                          
+            System.Diagnostics.Process.Start(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
         }
 
         private void menuSub_Open_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnImport_Click(sideBar_BtnImport, e);
+        }
+
+        private void toolStrip_BtnOpen_Click(object sender, EventArgs e)
         {
             sideBar_BtnImport_Click(sideBar_BtnImport, e);
         }

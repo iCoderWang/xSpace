@@ -130,12 +130,11 @@
             this.lbl_UserRole.AutoSize = true;
             this.lbl_UserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbl_UserRole.Location = new System.Drawing.Point(1340, 67);
+            this.lbl_UserRole.Location = new System.Drawing.Point(1245, 67);
             this.lbl_UserRole.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbl_UserRole.Name = "lbl_UserRole";
-            this.lbl_UserRole.Size = new System.Drawing.Size(79, 29);
+            this.lbl_UserRole.Size = new System.Drawing.Size(0, 29);
             this.lbl_UserRole.TabIndex = 3;
-            this.lbl_UserRole.Text = "label4";
             this.lbl_UserRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_UserName
@@ -144,12 +143,11 @@
             this.lbl_UserName.AutoSize = true;
             this.lbl_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbl_UserName.Location = new System.Drawing.Point(1190, 67);
+            this.lbl_UserName.Location = new System.Drawing.Point(1350, 67);
             this.lbl_UserName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbl_UserName.Name = "lbl_UserName";
-            this.lbl_UserName.Size = new System.Drawing.Size(79, 29);
+            this.lbl_UserName.Size = new System.Drawing.Size(0, 29);
             this.lbl_UserName.TabIndex = 2;
-            this.lbl_UserName.Text = "label3";
             this.lbl_UserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStrip1
@@ -166,24 +164,26 @@
             this.toolStripBtn_Copy,
             this.toolStripBtn_Cut,
             this.toolStripBtn_Paste});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 46);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 44);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1468, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1468, 38);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStrip_BtnOpen
             // 
+            this.toolStrip_BtnOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStrip_BtnOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStrip_BtnOpen.Image = ((System.Drawing.Image)(resources.GetObject("toolStrip_BtnOpen.Image")));
             this.toolStrip_BtnOpen.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStrip_BtnOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStrip_BtnOpen.Name = "toolStrip_BtnOpen";
-            this.toolStrip_BtnOpen.Size = new System.Drawing.Size(23, 22);
+            this.toolStrip_BtnOpen.Size = new System.Drawing.Size(23, 35);
             this.toolStrip_BtnOpen.Tag = "";
             this.toolStrip_BtnOpen.ToolTipText = "打开";
+            this.toolStrip_BtnOpen.Click += new System.EventHandler(this.toolStrip_BtnOpen_Click);
             // 
             // toolStripBtn_Save
             // 
@@ -192,7 +192,7 @@
             this.toolStripBtn_Save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Save.Name = "toolStripBtn_Save";
-            this.toolStripBtn_Save.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_Save.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_Save.ToolTipText = "保存";
             // 
             // toolStripBtn_Print
@@ -202,7 +202,7 @@
             this.toolStripBtn_Print.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Print.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Print.Name = "toolStripBtn_Print";
-            this.toolStripBtn_Print.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_Print.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_Print.ToolTipText = "打印";
             // 
             // toolStripBtn_DataImport
@@ -212,7 +212,7 @@
             this.toolStripBtn_DataImport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_DataImport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_DataImport.Name = "toolStripBtn_DataImport";
-            this.toolStripBtn_DataImport.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_DataImport.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_DataImport.ToolTipText = "导入数据";
             this.toolStripBtn_DataImport.Click += new System.EventHandler(this.toolStripBtn_DataImport_Click);
             // 
@@ -223,7 +223,7 @@
             this.toolStripBtn_DataModify.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_DataModify.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_DataModify.Name = "toolStripBtn_DataModify";
-            this.toolStripBtn_DataModify.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_DataModify.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_DataModify.ToolTipText = "编辑数据";
             this.toolStripBtn_DataModify.Click += new System.EventHandler(this.toolStripBtn_DataModify_Click);
             // 
@@ -234,7 +234,7 @@
             this.toolStripBtn_DataDel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_DataDel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_DataDel.Name = "toolStripBtn_DataDel";
-            this.toolStripBtn_DataDel.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_DataDel.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_DataDel.ToolTipText = "删除数据";
             // 
             // toolStripBtn_Copy
@@ -244,7 +244,7 @@
             this.toolStripBtn_Copy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Copy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Copy.Name = "toolStripBtn_Copy";
-            this.toolStripBtn_Copy.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_Copy.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_Copy.ToolTipText = "复制";
             // 
             // toolStripBtn_Cut
@@ -254,7 +254,7 @@
             this.toolStripBtn_Cut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Cut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Cut.Name = "toolStripBtn_Cut";
-            this.toolStripBtn_Cut.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_Cut.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_Cut.ToolTipText = "剪切";
             // 
             // toolStripBtn_Paste
@@ -264,7 +264,7 @@
             this.toolStripBtn_Paste.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Paste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Paste.Name = "toolStripBtn_Paste";
-            this.toolStripBtn_Paste.Size = new System.Drawing.Size(23, 22);
+            this.toolStripBtn_Paste.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_Paste.ToolTipText = "粘贴";
             // 
             // menuStrip_Main
@@ -280,7 +280,7 @@
             this.menuStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_Main.Name = "menuStrip_Main";
             this.menuStrip_Main.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 46);
+            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 44);
             this.menuStrip_Main.TabIndex = 0;
             this.menuStrip_Main.Text = "menuStrip1";
             // 
@@ -292,32 +292,32 @@
             this.toolStripSeparator1,
             this.menuSub_Close});
             this.menuMain_File.Name = "menuMain_File";
-            this.menuMain_File.Size = new System.Drawing.Size(103, 38);
+            this.menuMain_File.Size = new System.Drawing.Size(103, 36);
             this.menuMain_File.Text = "文件(F)";
             // 
             // menuSub_Open
             // 
             this.menuSub_Open.Name = "menuSub_Open";
-            this.menuSub_Open.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_Open.Size = new System.Drawing.Size(196, 38);
             this.menuSub_Open.Text = "打开(O)";
             this.menuSub_Open.Click += new System.EventHandler(this.menuSub_Open_Click);
             // 
             // menuSub_Logout
             // 
             this.menuSub_Logout.Name = "menuSub_Logout";
-            this.menuSub_Logout.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_Logout.Size = new System.Drawing.Size(196, 38);
             this.menuSub_Logout.Text = "注销(L)";
             this.menuSub_Logout.Click += new System.EventHandler(this.menuSub_Logout_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(321, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
             // 
             // menuSub_Close
             // 
             this.menuSub_Close.Name = "menuSub_Close";
-            this.menuSub_Close.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_Close.Size = new System.Drawing.Size(196, 38);
             this.menuSub_Close.Text = "关闭(X)";
             this.menuSub_Close.Click += new System.EventHandler(this.MenuSub_Close_Click);
             // 
@@ -327,7 +327,7 @@
             this.menuSub_Copy,
             this.menuSub_SelectAll});
             this.menuMain_Edit.Name = "menuMain_Edit";
-            this.menuMain_Edit.Size = new System.Drawing.Size(103, 38);
+            this.menuMain_Edit.Size = new System.Drawing.Size(103, 36);
             this.menuMain_Edit.Text = "编辑(E)";
             // 
             // menuSub_Copy
@@ -353,7 +353,7 @@
             this.menuSub_DataQu,
             this.menuSub_DataBr});
             this.menuMain_DataMn.Name = "menuMain_DataMn";
-            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 38);
+            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 36);
             this.menuMain_DataMn.Text = "数据管理(M)";
             // 
             // menuSub_DataIm
@@ -400,7 +400,7 @@
             this.menuSub_AHP,
             this.menuSub_TOPSIS});
             this.menuMain_DataAn.Name = "menuMain_DataAn";
-            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 38);
+            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 36);
             this.menuMain_DataAn.Text = "数据分析(A)";
             // 
             // menuSub_AHP
@@ -424,7 +424,7 @@
             this.menuSub_UserDel,
             this.menuSub_UserPm});
             this.menuMain_UserMn.Name = "menuMain_UserMn";
-            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 38);
+            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 36);
             this.menuMain_UserMn.Text = "用户管理(U)";
             // 
             // menuSub_UserQuery
@@ -462,7 +462,7 @@
             this.menuSub_Wel,
             this.menuSub_About});
             this.menuMain_Help.Name = "menuMain_Help";
-            this.menuMain_Help.Size = new System.Drawing.Size(108, 38);
+            this.menuMain_Help.Size = new System.Drawing.Size(108, 36);
             this.menuMain_Help.Text = "帮助(H)";
             // 
             // menuSub_Doc
@@ -845,7 +845,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuSub_Doc;
         private System.Windows.Forms.ToolStripMenuItem menuSub_About;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStrip_BtnOpen;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Save;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Print;
         private System.Windows.Forms.ToolStripButton toolStripBtn_DataImport;
@@ -887,5 +886,6 @@
         public System.Windows.Forms.ToolStripMenuItem menuSub_DataMo;
         public System.Windows.Forms.ToolStripMenuItem menuSub_DataInput;
         public System.Windows.Forms.ToolStripMenuItem menuSub_Open;
+        public System.Windows.Forms.ToolStripButton toolStrip_BtnOpen;
     }
 }

@@ -36,7 +36,36 @@ namespace EsofaUI
                 (3).只能在程序创建任何窗体前调用该方法，否则会引发InvalidOperationException异常.
              */
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Form());
+            //Application.Run(new Login_Form());
+            Login_Form lf = new Login_Form();
+            lf.ShowDialog();
+            if (lf.DialogResult.Equals(DialogResult.OK))
+            {
+                Main_Form mf = new Main_Form();
+                mf.lbl_UserName.Text = lf.userName;
+                mf.lbl_UserRole.Text = lf.user_Role;
+                if (lf.user_Role == "普通用户")
+                {
+                    mf.sideBar_BtnUsersList.Enabled = false;
+                    mf.sideBar_BtnAccessChange.Enabled = false;
+                    mf.sideBar_BtnUserDel.Enabled = false;
+                    mf.sideBar_BtnUserAdd.Enabled = false;
+                    mf.sideBar_BtnImport.Enabled = false;
+                    mf.sideBar_BtnModify.Enabled = false;
+                    mf.sideBar_BtnAddData.Enabled = false;
+                    mf.menuSub_DataIm.Enabled = false;
+                    mf.menuSub_DataInput.Enabled = false;
+                    mf.menuSub_DataMo.Enabled = false;
+                    mf.menuMain_UserMn.Enabled = false;
+                    mf.menuSub_Open.Enabled = false;
+                    mf.toolStrip_BtnOpen.Enabled = false;
+                }
+                Application.Run(mf);
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

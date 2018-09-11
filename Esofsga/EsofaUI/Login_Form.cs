@@ -12,12 +12,12 @@ namespace EsofaUI
     public partial class Login_Form : Form
     {
         
-        Main_Form frmMain = new Main_Form();
+        
         public Login_Form()
         {
             InitializeComponent();
         }
-
+        public string userName, user_Role;
         private void btn_Login_Click(object sender, EventArgs e)
         {
             string pathStr = Application.StartupPath + "\\"+"ConnConfig.ini"; //INI文件的物理地址
@@ -27,18 +27,14 @@ namespace EsofaUI
                    "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else
-            {
-                string connStr = IniFileConfigurer.Read();
-            }
             try
             {
                 UserInfoBLL uib = new UserInfoBLL();
                 List<UserInfo> list_Ui = new List<UserInfo>();
-                string userName;
+               // string userName;
                 string userPwd;
                 string user_Pwd;
-                string user_Role;
+                //string user_Role;
                 userName = txtBox_UserName.Text.Trim();
                 userPwd = txtBox_UserPwd.Text.Trim();
                 if (userName == "" || userPwd == "")
@@ -56,25 +52,8 @@ namespace EsofaUI
                         user_Role = list_Ui[0].UserType;
                         if (userPwd == user_Pwd)
                         {
-                            SetVisibleCore(false);
-                            frmMain.lbl_UserName.Text = userName;
-                            frmMain.lbl_UserRole.Text = user_Role;
-                            if (user_Role == "普通用户")
-                            {
-                                frmMain.sideBar_BtnUsersList.Enabled = false;
-                                frmMain.sideBar_BtnAccessChange.Enabled = false;
-                                frmMain.sideBar_BtnUserDel.Enabled = false;
-                                frmMain.sideBar_BtnUserAdd.Enabled = false;
-                                frmMain.sideBar_BtnImport.Enabled = false;
-                                frmMain.sideBar_BtnModify.Enabled = false;
-                                frmMain.sideBar_BtnAddData.Enabled = false;
-                                frmMain.menuSub_DataIm.Enabled = false;
-                                frmMain.menuSub_DataInput.Enabled = false;
-                                frmMain.menuSub_DataMo.Enabled = false;
-                                frmMain.menuMain_UserMn.Enabled = false;
-                                frmMain.menuSub_Open.Enabled = false;
-                            }
-                            frmMain.Show();
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
                         }
                         else
                         {
@@ -93,7 +72,7 @@ namespace EsofaUI
             {
                 return;
             }
-            this.SetVisibleCore(false);
+            //this.SetVisibleCore(false);
             //frmMain.Show();
         }
 
