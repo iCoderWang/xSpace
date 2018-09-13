@@ -38,9 +38,7 @@
             this.toolStripBtn_Print = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtn_DataImport = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtn_DataModify = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtn_DataDel = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtn_Copy = new System.Windows.Forms.ToolStripButton();
-            this.toolStripBtn_Cut = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtn_Paste = new System.Windows.Forms.ToolStripButton();
             this.menuStrip_Main = new System.Windows.Forms.MenuStrip();
             this.menuMain_File = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,9 +158,7 @@
             this.toolStripBtn_Print,
             this.toolStripBtn_DataImport,
             this.toolStripBtn_DataModify,
-            this.toolStripBtn_DataDel,
             this.toolStripBtn_Copy,
-            this.toolStripBtn_Cut,
             this.toolStripBtn_Paste});
             this.toolStrip1.Location = new System.Drawing.Point(0, 44);
             this.toolStrip1.Name = "toolStrip1";
@@ -194,6 +190,7 @@
             this.toolStripBtn_Save.Name = "toolStripBtn_Save";
             this.toolStripBtn_Save.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_Save.ToolTipText = "保存";
+            this.toolStripBtn_Save.Click += new System.EventHandler(this.toolStripBtn_Save_Click);
             // 
             // toolStripBtn_Print
             // 
@@ -227,16 +224,6 @@
             this.toolStripBtn_DataModify.ToolTipText = "编辑数据";
             this.toolStripBtn_DataModify.Click += new System.EventHandler(this.toolStripBtn_DataModify_Click);
             // 
-            // toolStripBtn_DataDel
-            // 
-            this.toolStripBtn_DataDel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtn_DataDel.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtn_DataDel.Image")));
-            this.toolStripBtn_DataDel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtn_DataDel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtn_DataDel.Name = "toolStripBtn_DataDel";
-            this.toolStripBtn_DataDel.Size = new System.Drawing.Size(23, 35);
-            this.toolStripBtn_DataDel.ToolTipText = "删除数据";
-            // 
             // toolStripBtn_Copy
             // 
             this.toolStripBtn_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -246,16 +233,6 @@
             this.toolStripBtn_Copy.Name = "toolStripBtn_Copy";
             this.toolStripBtn_Copy.Size = new System.Drawing.Size(23, 35);
             this.toolStripBtn_Copy.ToolTipText = "复制";
-            // 
-            // toolStripBtn_Cut
-            // 
-            this.toolStripBtn_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripBtn_Cut.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtn_Cut.Image")));
-            this.toolStripBtn_Cut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripBtn_Cut.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripBtn_Cut.Name = "toolStripBtn_Cut";
-            this.toolStripBtn_Cut.Size = new System.Drawing.Size(23, 35);
-            this.toolStripBtn_Cut.ToolTipText = "剪切";
             // 
             // toolStripBtn_Paste
             // 
@@ -504,6 +481,7 @@
             this.lbl_Status.Size = new System.Drawing.Size(70, 25);
             this.lbl_Status.TabIndex = 1;
             this.lbl_Status.Text = "label3";
+            this.lbl_Status.Visible = false;
             // 
             // statusStrip1
             // 
@@ -847,11 +825,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Save;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Print;
-        private System.Windows.Forms.ToolStripButton toolStripBtn_DataImport;
-        private System.Windows.Forms.ToolStripButton toolStripBtn_DataModify;
-        private System.Windows.Forms.ToolStripButton toolStripBtn_DataDel;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Copy;
-        private System.Windows.Forms.ToolStripButton toolStripBtn_Cut;
         private System.Windows.Forms.ToolStripButton toolStripBtn_Paste;
         private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.SideBar sideBar1;
@@ -887,5 +861,7 @@
         public System.Windows.Forms.ToolStripMenuItem menuSub_DataInput;
         public System.Windows.Forms.ToolStripMenuItem menuSub_Open;
         public System.Windows.Forms.ToolStripButton toolStrip_BtnOpen;
+        public System.Windows.Forms.ToolStripButton toolStripBtn_DataImport;
+        public System.Windows.Forms.ToolStripButton toolStripBtn_DataModify;
     }
 }

@@ -179,34 +179,12 @@
         QmCC
 </value>
   </data>
-  <data name="toolStripBtn_DataDel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAEOSURBVDhPpVO9igIxGLQ+LHyRa06wsF0RfQWLa5QUWqyJ
-        T2J72PoS14ib1UpstbQRVDYRfAHN5Gc9wsblcGAg+b6ZIflCKg7XRVwTnPYkZz8Zj7fyd3Rz1HtVRx86
-        a3niuhx/ZSmby5Tdywgd9NZqoBozX1jCmbUanNKxLBAFCb21GrwdoIrvXSFb08Z/hgi9tRoIPiGKXf8Z
-        BWdTK9EQCe2IFWva7RO402UZH2CWnH6LNf08L4ZV9HaDiOz7rftu0K5rsQLWphYRXVBHK5wBehA6wujM
-        jjogNAP0fMNf5qcKzSBLWBIKyc1AaAbHDflAvzRAHTc4gyKzYx4S+kzo+QY/UAcARd8Z9dfPGJEH9h8q
-        CaMnRBAAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="toolStripBtn_Copy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAABzSURBVDhP7Y1BCsAgDAT9Ux8oSE75g0/zqI/ooS2BVVJr
         tYLHDiwKyU5MDRGdrVhrD3mdcxtW28jSGzJj5tCVjAQxxv0hkUEvKaUi0EF9fNV7XySZKYFQS6YEOhn5
         o94XaH7BIoEO6nMCVO4sEXwNKsCYC+FNtUFOMl3EAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="toolStripBtn_Cut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAEkSURBVDhPpZK/SsNQFMYjqFCpiJN0qo/Rdyid6iAUcREf
-        QBDcAvlDkiF0DiJ0s3QWH0Nw0Flc1E19gfg78hkjbf6APzjc+53vnHvuDXHKZFm2EUXRvuQSvu/3Xdfd
-        lFwNRWd5nq9JFljOPMlqKDoKguBUsoDcCd6xZDVxHO9Q/Eb0lHLCMNyzHM/bVaoez/NuaFhI2q2uyd1K
-        NsPEQw7IiRExtD2HTGQ3k6Zph6YP4pl44st/Eluy28HES5us6VdKt4fG8c8BvP9A6XZw3XUa70oH3NtP
-        JrsZms7V/Ejzg+15xoXs1VA0IGZMf2d9IRZJkmyju+znrK/yZsRAbb+YwbQpk/q2mpZV6xXY6VZge1tN
-        fxtQ5xX8+wYky9/gzzurPcf5Ah1U2h56KoaWAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="toolStripBtn_Paste.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -299,7 +277,7 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>75</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

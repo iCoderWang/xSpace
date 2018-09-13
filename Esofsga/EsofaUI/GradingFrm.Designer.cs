@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("盆地/区域");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("盆地/区域");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitCtnerGraFrm = new System.Windows.Forms.SplitContainer();
             this.treeViewGrad = new System.Windows.Forms.TreeView();
             this.splitContDataZone = new System.Windows.Forms.SplitContainer();
@@ -73,7 +73,7 @@
             this.splitCtnerGraFrm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitCtnerGraFrm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitCtnerGraFrm.Location = new System.Drawing.Point(2, 2);
-            this.splitCtnerGraFrm.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.splitCtnerGraFrm.Margin = new System.Windows.Forms.Padding(6);
             this.splitCtnerGraFrm.Name = "splitCtnerGraFrm";
             // 
             // splitCtnerGraFrm.Panel1
@@ -84,7 +84,7 @@
             // splitCtnerGraFrm.Panel2
             // 
             this.splitCtnerGraFrm.Panel2.Controls.Add(this.splitContDataZone);
-            this.splitCtnerGraFrm.Panel2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitCtnerGraFrm.Panel2.Padding = new System.Windows.Forms.Padding(2);
             this.splitCtnerGraFrm.Panel2MinSize = 80;
             this.splitCtnerGraFrm.Size = new System.Drawing.Size(1172, 671);
             this.splitCtnerGraFrm.SplitterDistance = 159;
@@ -96,12 +96,12 @@
             this.treeViewGrad.CheckBoxes = true;
             this.treeViewGrad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewGrad.Location = new System.Drawing.Point(0, 0);
-            this.treeViewGrad.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.treeViewGrad.Margin = new System.Windows.Forms.Padding(6);
             this.treeViewGrad.Name = "treeViewGrad";
-            treeNode2.Name = "para_Bsn";
-            treeNode2.Text = "盆地/区域";
+            treeNode3.Name = "para_Bsn";
+            treeNode3.Text = "盆地/区域";
             this.treeViewGrad.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode3});
             this.treeViewGrad.Size = new System.Drawing.Size(157, 669);
             this.treeViewGrad.TabIndex = 0;
             this.treeViewGrad.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeViewGrad_AfterCheck);
@@ -112,7 +112,7 @@
             this.splitContDataZone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContDataZone.IsSplitterFixed = true;
             this.splitContDataZone.Location = new System.Drawing.Point(2, 2);
-            this.splitContDataZone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.splitContDataZone.Margin = new System.Windows.Forms.Padding(6);
             this.splitContDataZone.Name = "splitContDataZone";
             this.splitContDataZone.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -136,7 +136,7 @@
             this.tabControlGrading.Controls.Add(this.tabPageBasin);
             this.tabControlGrading.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlGrading.Location = new System.Drawing.Point(0, 0);
-            this.tabControlGrading.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlGrading.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlGrading.Multiline = true;
             this.tabControlGrading.Name = "tabControlGrading";
             this.tabControlGrading.SelectedIndex = 0;
@@ -147,9 +147,9 @@
             // 
             this.tabPageTarget.Controls.Add(this.dgvView_Target);
             this.tabPageTarget.Location = new System.Drawing.Point(8, 39);
-            this.tabPageTarget.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageTarget.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageTarget.Name = "tabPageTarget";
-            this.tabPageTarget.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageTarget.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageTarget.Size = new System.Drawing.Size(988, 527);
             this.tabPageTarget.TabIndex = 2;
             this.tabPageTarget.Text = "核心区";
@@ -161,22 +161,22 @@
             this.dgvView_Target.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvView_Target.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvView_Target.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvView_Target.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvView_Target.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvView_Target.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView_Target.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvView_Target.Location = new System.Drawing.Point(2, 2);
-            this.dgvView_Target.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvView_Target.Margin = new System.Windows.Forms.Padding(2);
             this.dgvView_Target.Name = "dgvView_Target";
             this.dgvView_Target.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvView_Target.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvView_Target.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvView_Target.Size = new System.Drawing.Size(984, 523);
             this.dgvView_Target.TabIndex = 0;
             // 
@@ -184,10 +184,10 @@
             // 
             this.tabPageBlock.Controls.Add(this.dgvView_Block);
             this.tabPageBlock.Location = new System.Drawing.Point(8, 39);
-            this.tabPageBlock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageBlock.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageBlock.Name = "tabPageBlock";
-            this.tabPageBlock.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageBlock.Size = new System.Drawing.Size(984, 524);
+            this.tabPageBlock.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageBlock.Size = new System.Drawing.Size(988, 527);
             this.tabPageBlock.TabIndex = 1;
             this.tabPageBlock.Text = "有利区";
             this.tabPageBlock.UseVisualStyleBackColor = true;
@@ -198,33 +198,33 @@
             this.dgvView_Block.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvView_Block.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvView_Block.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvView_Block.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvView_Block.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvView_Block.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView_Block.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvView_Block.Location = new System.Drawing.Point(2, 2);
-            this.dgvView_Block.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvView_Block.Margin = new System.Windows.Forms.Padding(2);
             this.dgvView_Block.Name = "dgvView_Block";
             this.dgvView_Block.ReadOnly = true;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvView_Block.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvView_Block.Size = new System.Drawing.Size(980, 520);
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvView_Block.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvView_Block.Size = new System.Drawing.Size(984, 523);
             this.dgvView_Block.TabIndex = 0;
             // 
             // tabPageBasin
             // 
             this.tabPageBasin.Controls.Add(this.dgvView_Basin);
             this.tabPageBasin.Location = new System.Drawing.Point(8, 39);
-            this.tabPageBasin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageBasin.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageBasin.Name = "tabPageBasin";
-            this.tabPageBasin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageBasin.Size = new System.Drawing.Size(984, 524);
+            this.tabPageBasin.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPageBasin.Size = new System.Drawing.Size(988, 527);
             this.tabPageBasin.TabIndex = 0;
             this.tabPageBasin.Text = "远景区";
             this.tabPageBasin.UseVisualStyleBackColor = true;
@@ -235,23 +235,23 @@
             this.dgvView_Basin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvView_Basin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvView_Basin.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvView_Basin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvView_Basin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvView_Basin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView_Basin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvView_Basin.Location = new System.Drawing.Point(2, 2);
-            this.dgvView_Basin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvView_Basin.Margin = new System.Windows.Forms.Padding(2);
             this.dgvView_Basin.Name = "dgvView_Basin";
             this.dgvView_Basin.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvView_Basin.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvView_Basin.Size = new System.Drawing.Size(980, 520);
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvView_Basin.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvView_Basin.Size = new System.Drawing.Size(984, 523);
             this.dgvView_Basin.TabIndex = 0;
             // 
             // groupBox1
@@ -299,7 +299,7 @@
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnCancel.Location = new System.Drawing.Point(22, 24);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(112, 35);
             this.btnCancel.TabIndex = 1;
@@ -315,10 +315,10 @@
             this.ClientSize = new System.Drawing.Size(1176, 675);
             this.Controls.Add(this.splitCtnerGraFrm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(400, 301);
             this.Name = "GradingFrm";
-            this.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "区域分级";
             this.Load += new System.EventHandler(this.GradingFrm_Load);
@@ -349,16 +349,16 @@
         private System.Windows.Forms.SplitContainer splitCtnerGraFrm;
         private System.Windows.Forms.TreeView treeViewGrad;
         private System.Windows.Forms.SplitContainer splitContDataZone;
-        private System.Windows.Forms.TabControl tabControlGrading;
-        private System.Windows.Forms.TabPage tabPageTarget;
         public System.Windows.Forms.DataGridView dgvView_Target;
-        private System.Windows.Forms.TabPage tabPageBlock;
         public System.Windows.Forms.DataGridView dgvView_Block;
-        private System.Windows.Forms.TabPage tabPageBasin;
         public System.Windows.Forms.DataGridView dgvView_Basin;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.GroupBox gBox_Commands;
         private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TabControl tabControlGrading;
+        public System.Windows.Forms.TabPage tabPageTarget;
+        public System.Windows.Forms.TabPage tabPageBlock;
+        public System.Windows.Forms.TabPage tabPageBasin;
     }
 }

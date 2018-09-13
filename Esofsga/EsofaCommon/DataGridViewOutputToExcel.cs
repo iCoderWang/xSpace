@@ -10,78 +10,59 @@ namespace EsofaCommon
 {
     public class DataGridViewOutputToExcel
     {
-        private void OutputAsExcelFile(DataGridView dgv)
+        public void Dgv2Excel(DataGridView dgv)
         {
-            //将datagridView中的数据导出到一张表中
-            DataTable tempTable = (DataTable)dgv.DataSource;
-            //导出信息到Excel表
-            Microsoft.Office.Interop.Excel.ApplicationClass myExcel;
-            Microsoft.Office.Interop.Excel.Workbooks myWorkBooks;
-            Microsoft.Office.Interop.Excel.Workbook myWorkBook;
-            Microsoft.Office.Interop.Excel.Worksheet myWorkSheet;
-            char myColumns;
-            Microsoft.Office.Interop.Excel.Range myRange;
-            object[,] myData = new object[500, 35];
-            int i, j;//j代表行,i代表列
-            myExcel = new Microsoft.Office.Interop.Excel.ApplicationClass();
-            //显示EXCEL
-            myExcel.Visible = true;
-            if (myExcel == null)
+            string fileName = "";
+            string saveFileName = "";
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.DefaultExt = "xlsx";
+            saveDialog.Filter = "Excel文件|*.xlsx;*.xls";
+            saveDialog.FileName = fileName;
+            saveDialog.ShowDialog();
+            saveFileName = saveDialog.FileName;
+            if (saveFileName.IndexOf(":") < 0)//被点了取消
             {
-                MessageBox.Show("本地Excel程序无法启动!请检查您的Microsoft Office正确安装并能正常使用", "提示");
+                return;
+            } 
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+            if (xlApp == null)
+            {
+                MessageBox.Show("无法创建Excel对象，您的电脑可能未安装Excel。","警告",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
-            myWorkBooks = myExcel.Workbooks;
-            myWorkBook = myWorkBooks.Add(System.Reflection.Missing.Value);
-            myWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)myWorkBook.Worksheets[1];
-            myColumns = (char)(tempTable.Columns.Count + 64);//设置列
-            myRange = myWorkSheet.get_Range("A1", myColumns.ToString() + "5");//设置列宽
-            int count = 0;
-            //设置列名
-            foreach (DataColumn myNewColumn in tempTable.Columns)
+            Microsoft.Office.Interop.Excel.Workbooks workbooks = xlApp.Workbooks;
+            Microsoft.Office.Interop.Excel.Workbook workbook = workbooks.Add(Microsoft.Office.Interop.Excel.XlWBATemplate.xlWBATWorksheet);
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[1];//取得sheet1 
+            //写入标题             
+            for (int i = 0; i < dgv.ColumnCount; i++)
             {
-                myData[0, count] = myNewColumn.ColumnName;
-                count = count + 1;
+                worksheet.Cells[1, i + 1] = dgv.Columns[i].HeaderText;
             }
-            //输出datagridview中的数据记录并放在一个二维数组中
-            j = 1;
-            int rows = 0;
-            foreach (DataRow myRow in tempTable.Rows)//循环行
+            //写入数值
+            for (int r = 0; r < dgv.Rows.Count; r++)
             {
-                if (dgv.Rows[rows].Cells[0].EditedFormattedValue.ToString() == "True")
+                for (int i = 0; i < dgv.ColumnCount; i++)
                 {
-                    for (i = 0; i < tempTable.Columns.Count; i++)//循环列
-                    {
-                        switch (tempTable.Columns[i].DataType.Name)   //根据不同数据类型分别处理
-                        {
-                            case "Decimal":
-                                myData[j, i] = ((decimal)myRow[tempTable.Columns[i].ColumnName]).ToString("0.00") + ",";
-                                break;
-                            //case "int":
-                            //    myData[j, i] = ((decimal)myRow[tempTable.Columns[i].ColumnName]).ToString("0") + ",";
-                            //    break;
-                            case "Double":
-                                myData[j, i] = ((double)myRow[tempTable.Columns[i].ColumnName]).ToString("0.00");
-                                break;
-                            case "DateTime":
-                                myData[j, i] = ((DateTime)myRow[tempTable.Columns[i].ColumnName]).ToShortDateString() + "',";
-                                break;
-                            default:
-                                myData[j, i] = "'" + myRow[tempTable.Columns[i].ColumnName].ToString();
-                                break;
-                        }
-
-                        // myData[j, i] = myRow[i].ToString();
-                    }
-                    j++;
-
+                    worksheet.Cells[r + 2, i + 1] = dgv.Rows[r].Cells[i].Value;
                 }
-                rows = rows + 1;
+                System.Windows.Forms.Application.DoEvents();
             }
-            //将二维数组中的数据写到Excel中
-            myRange = myRange.get_Resize(tempTable.Rows.Count + 1, tempTable.Columns.Count);//创建列和行
-            myRange.Value2 = myData;
-            myRange.EntireColumn.AutoFit();
+            worksheet.Columns.EntireColumn.AutoFit();//列宽自适应
+            MessageBox.Show(fileName + "资料保存成功", "提示", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            if (saveFileName != "")
+            {
+                try
+                {
+                    workbook.Saved = true;
+                    workbook.SaveCopyAs(saveFileName);  //fileSaved = true;                 
+                }
+                catch (Exception ex)
+                {//fileSaved = false;                      
+                    MessageBox.Show("导出文件时出错,文件可能正被打开！\n" + ex.Message);
+                }
+            }
+            xlApp.Quit();
+            GC.Collect();//强行销毁           
         }
     }
 }

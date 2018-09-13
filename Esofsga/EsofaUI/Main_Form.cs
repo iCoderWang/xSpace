@@ -326,7 +326,7 @@ namespace EsofaUI
             }
             return flag;
         }
-
+        DbDataQueryFrm ddqf= null;
         /// <summary>
         /// 查询数据窗口，数据从数据库获得
         /// </summary>
@@ -335,6 +335,7 @@ namespace EsofaUI
         private void sideBar_BtnQuery_Click(object sender, EventArgs e)
         {
             DbDataQueryFrm dbDataQueryFrm = new DbDataQueryFrm(TabPage_Close);
+            ddqf = dbDataQueryFrm;
             dbDataQueryFrm.TopLevel = false;
             dbDataQueryFrm.tlStripBtn_MultiDel.Visible = false;
             dbDataQueryFrm.tlStripBtn_SingleDel.Visible = false;
@@ -407,7 +408,7 @@ namespace EsofaUI
 
         }
 
-       
+        GradingFrm gf = null;
         /// <summary>
         /// 加载AHP分析窗体，主要内容是对数据的选择性加载
         /// </summary>
@@ -418,6 +419,7 @@ namespace EsofaUI
             string tabPageText = "层次分析法";
             //使用含有委托形参的构造函数，创建GradingFrm窗体，从而实现关闭主界面上TabPage的方法传递。
             GradingFrm gradingFrm = new GradingFrm(TabPage_Close,tabPageText); //实现委托传递关闭当前TabPage的方法
+            gf = gradingFrm;
             gradingFrm.TopLevel = false;
             TabPageCreate(tabPageText, gradingFrm);
             //TabPageCreate("逼近理想解排序法", gradingFrm);
@@ -465,10 +467,11 @@ namespace EsofaUI
         {
             sideBar_BtnBrowse_Click(sideBar_BtnBrowse,e);
         }
-
+        DbDataQueryFrm dqf = null;
         private void sideBar_BtnModify_Click(object sender, EventArgs e)
         {
             DbDataQueryFrm dbDataQueryFrm = new DbDataQueryFrm(TabPage_Close);
+            dqf = dbDataQueryFrm;
             //lbl_Status.Text = "选中行数："+ (dbDataQueryFrm.rowCounter).ToString();
             dbDataQueryFrm.tlStrip_ChkBox.Enabled = true;
             dbDataQueryFrm.tlStrip_ChkBox.Visible = true;
@@ -499,10 +502,11 @@ namespace EsofaUI
         {
             sideBar_BtnModify_Click(sideBar_BtnModify, e);
         }
-
+        RawDataFrm rdf = null;
         private void sideBar_BtnBrowse_Click(object sender, EventArgs e)
         {
             RawDataFrm rawDataFrm = new RawDataFrm(TabPage_Close);
+            rdf = rawDataFrm;
             rawDataFrm.TopLevel = false;
             XtraTabPage tabPage = new XtraTabPage();
             rawDataFrm.Width = workAreaTabPageController.Width - 5;
@@ -556,6 +560,7 @@ namespace EsofaUI
             string tabPageText = "逼近理想解排序法";
             //使用含有委托形参的构造函数，创建GradingFrm窗体，从而实现关闭主界面上TabPage的方法传递。
             GradingFrm gradingFrm = new GradingFrm(TabPage_Close,tabPageText); //实现委托传递关闭当前TabPage的方法
+            gf = gradingFrm;
             gradingFrm.TopLevel = false;
             //TabPageCreate("层次分析法", gradingFrm);
             TabPageCreate(tabPageText, gradingFrm);
@@ -583,6 +588,53 @@ namespace EsofaUI
         private void toolStrip_BtnOpen_Click(object sender, EventArgs e)
         {
             sideBar_BtnImport_Click(sideBar_BtnImport, e);
+        }
+
+        private void toolStripBtn_Save_Click(object sender, EventArgs e)
+        {
+            DataGridViewOutputToExcel dgvoe = new DataGridViewOutputToExcel();
+            //ddqf为null时，表示其在内存中并没有被分配空间，所以，其是否等于null要用 == 来判断，而equals（null）是比较的内存地址，所以
+            //会报错。即ddqf.equals(null)肯定会报错。
+            if (ddqf != null)
+            {
+                //dgvoe.OutputAsExcelFile(ddqf.dgv_DbQuery);
+                dgvoe.Dgv2Excel(ddqf.dgv_DbQuery);
+                ddqf = null;
+            }
+            else if(rdf !=null)
+            {
+                //dgvoe.OutputAsExcelFile(rdf.rawDataGridView);
+                dgvoe.Dgv2Excel(rdf.rawDataGridView);
+                rdf = null;
+            }
+            else if (gf != null)
+            {
+                if (gf.tabControlGrading.SelectedTab.Equals(gf.tabPageBasin))
+                {
+                    //dgvoe.OutputAsExcelFile(gf.dgvView_Basin);
+                    dgvoe.Dgv2Excel(gf.dgvView_Basin);
+                }
+                if (gf.tabControlGrading.SelectedTab.Equals(gf.tabPageBlock))
+                {
+                    //dgvoe.OutputAsExcelFile(gf.dgvView_Block);
+                    dgvoe.Dgv2Excel(gf.dgvView_Block);
+                }
+                if (gf.tabControlGrading.SelectedTab.Equals(gf.tabPageTarget))
+                {
+                    //dgvoe.OutputAsExcelFile(gf.dgvView_Target);
+                    dgvoe.Dgv2Excel(gf.dgvView_Target);
+                }
+                gf = null;
+            }
+            else if(dqf != null)
+            {
+                dgvoe.Dgv2Excel(dqf.dgv_DbQuery);
+                dqf = null;
+            }
+            else
+            {
+                MessageBox.Show("没有可用来存储的数据对象。","信息",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
     }
 }

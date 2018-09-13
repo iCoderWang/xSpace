@@ -59,6 +59,9 @@ namespace EsofaUI
                     mf.menuMain_UserMn.Enabled = false;
                     mf.menuSub_Open.Enabled = false;
                     mf.toolStrip_BtnOpen.Enabled = false;
+                    mf.toolStripBtn_DataImport.Enabled = false;
+                    mf.toolStripBtn_DataModify.Enabled = false;
+
                 }
                 Application.Run(mf);
             }
