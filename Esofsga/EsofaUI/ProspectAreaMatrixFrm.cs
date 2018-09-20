@@ -118,7 +118,7 @@ namespace EsofaUI
             StringBuilder cRstr = new StringBuilder();
             string[] cR_arr = null;
             int flag = 0;
-            string cR1 = null, cR21 = null, cR22 = null, cR = null;
+            string cR1 = null, cR21 = null, cR22 = null;// cR = null;
             Vector<double> vR1 = cc.ArrayLoad(R1, out strB, out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
             Vector<double> vR21 = cc.ArrayLoad(R21, out strB, out cR21) * vR1.ElementAt(0);

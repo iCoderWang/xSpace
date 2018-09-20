@@ -101,7 +101,8 @@ namespace EsofaUI
             }
             //workAreaTabPageController.TabPages.Add("New page added");
         }
-
+        UserInfoDataViewFrm frmUserInfo;
+        private string strTabTitle = "浏览用户";
         /// <summary>
         /// 
         /// </summary>
@@ -111,13 +112,14 @@ namespace EsofaUI
         {
             //点击“用户浏览”产生新的用户TabPage，并在该Page上显示后台数据库中
             //所有在册用户的信息
-            UserInfoDataViewFrm frmUserInfo = new UserInfoDataViewFrm(TabPage_Close);
+            frmUserInfo = new UserInfoDataViewFrm(TabPage_Close);
             //tempFrm = frmUserInfo;
             //Toplevel属性，用于设置窗体在TabPage上的显示层级
             frmUserInfo.TopLevel = false;
-            TabPageCreate("注册用户信息表", frmUserInfo);
+            TabPageCreate(strTabTitle, frmUserInfo);
             LoadList(frmUserInfo);
             frmUserInfo.Show();
+            strTabTitle = "浏览用户";
         }
 
         private void sideBar_BtnUserAdd_Click(object sender, EventArgs e)
@@ -125,7 +127,7 @@ namespace EsofaUI
             //使用委托，通过构造函数，将主窗体的TabPage_Close方法传递给子窗体 UserAddFrm
             UserAddFrm frmUserAdd = new UserAddFrm(TabPage_Close);
             frmUserAdd.TopLevel = false;
-            TabPageCreate("注册用户信息表",frmUserAdd);
+            TabPageCreate("增加用户",frmUserAdd);
             frmUserAdd.Show();
         }
 
@@ -433,19 +435,21 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void sideBar_BtnUserDel_Click(object sender, EventArgs e)
         {
+            strTabTitle = "删除用户";
             SideBar_BtnUsersList_Click(sideBar_BtnUsersList,e);
-            //tempFrm.btnUserDel.Visible = true;
-            //tempFrm = null;
+            frmUserInfo.btnUserDel.Visible = true;
+            frmUserInfo = null;
         }
 
         private void sideBar_BtnAccessChange_Click(object sender, EventArgs e)
         {
+            strTabTitle = "权限变更";
             //调用用户信息预览的功能模块
             SideBar_BtnUsersList_Click(sideBar_BtnUsersList, e);
             //关闭当前窗体上的DataGridView多行选择功能
-            //tempFrm.userDataGridView.MultiSelect = false;
-            //tempFrm.btnUpdate.Visible = true;
-            //tempFrm = null;
+            frmUserInfo.userDataGridView.MultiSelect = false;
+            frmUserInfo.btnUpdate.Visible = true;
+            frmUserInfo = null;
         }
 
         private void menuSub_DataIm_Click(object sender, EventArgs e)

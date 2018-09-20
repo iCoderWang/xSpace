@@ -45,9 +45,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.userDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(3, 7);
+            this.groupBox1.Location = new System.Drawing.Point(6, 13);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(445, 269);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(890, 517);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -63,10 +65,11 @@
             this.UserPwd,
             this.UserType});
             this.userDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userDataGridView.Location = new System.Drawing.Point(3, 16);
+            this.userDataGridView.Location = new System.Drawing.Point(6, 30);
+            this.userDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.userDataGridView.Name = "userDataGridView";
             this.userDataGridView.ReadOnly = true;
-            this.userDataGridView.Size = new System.Drawing.Size(439, 250);
+            this.userDataGridView.Size = new System.Drawing.Size(878, 481);
             this.userDataGridView.TabIndex = 0;
             this.userDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.userDataGridView_CellFormatting);
             // 
@@ -106,9 +109,10 @@
             // 
             // btnQuite
             // 
-            this.btnQuite.Location = new System.Drawing.Point(370, 330);
+            this.btnQuite.Location = new System.Drawing.Point(740, 635);
+            this.btnQuite.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnQuite.Name = "btnQuite";
-            this.btnQuite.Size = new System.Drawing.Size(75, 25);
+            this.btnQuite.Size = new System.Drawing.Size(150, 48);
             this.btnQuite.TabIndex = 12;
             this.btnQuite.Text = "退出";
             this.btnQuite.UseVisualStyleBackColor = true;
@@ -116,9 +120,10 @@
             // 
             // btnUserDel
             // 
-            this.btnUserDel.Location = new System.Drawing.Point(289, 330);
+            this.btnUserDel.Location = new System.Drawing.Point(578, 635);
+            this.btnUserDel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnUserDel.Name = "btnUserDel";
-            this.btnUserDel.Size = new System.Drawing.Size(75, 25);
+            this.btnUserDel.Size = new System.Drawing.Size(150, 48);
             this.btnUserDel.TabIndex = 13;
             this.btnUserDel.Text = "删除";
             this.btnUserDel.UseVisualStyleBackColor = true;
@@ -127,9 +132,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(289, 330);
+            this.btnUpdate.Location = new System.Drawing.Point(578, 635);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 25);
+            this.btnUpdate.Size = new System.Drawing.Size(150, 48);
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "权限变更";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -138,15 +144,16 @@
             // 
             // UserInfoDataViewFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 365);
+            this.ClientSize = new System.Drawing.Size(916, 702);
             this.ControlBox = false;
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnUserDel);
             this.Controls.Add(this.btnQuite);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UserInfoDataViewFrm";

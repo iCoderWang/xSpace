@@ -160,10 +160,10 @@
             this.toolStripBtn_DataModify,
             this.toolStripBtn_Copy,
             this.toolStripBtn_Paste});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 44);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 46);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1468, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1468, 25);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
@@ -176,7 +176,7 @@
             this.toolStrip_BtnOpen.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStrip_BtnOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStrip_BtnOpen.Name = "toolStrip_BtnOpen";
-            this.toolStrip_BtnOpen.Size = new System.Drawing.Size(23, 35);
+            this.toolStrip_BtnOpen.Size = new System.Drawing.Size(23, 22);
             this.toolStrip_BtnOpen.Tag = "";
             this.toolStrip_BtnOpen.ToolTipText = "打开";
             this.toolStrip_BtnOpen.Click += new System.EventHandler(this.toolStrip_BtnOpen_Click);
@@ -188,7 +188,7 @@
             this.toolStripBtn_Save.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Save.Name = "toolStripBtn_Save";
-            this.toolStripBtn_Save.Size = new System.Drawing.Size(23, 35);
+            this.toolStripBtn_Save.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_Save.ToolTipText = "保存";
             this.toolStripBtn_Save.Click += new System.EventHandler(this.toolStripBtn_Save_Click);
             // 
@@ -199,7 +199,7 @@
             this.toolStripBtn_Print.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Print.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Print.Name = "toolStripBtn_Print";
-            this.toolStripBtn_Print.Size = new System.Drawing.Size(23, 35);
+            this.toolStripBtn_Print.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_Print.ToolTipText = "打印";
             // 
             // toolStripBtn_DataImport
@@ -209,7 +209,7 @@
             this.toolStripBtn_DataImport.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_DataImport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_DataImport.Name = "toolStripBtn_DataImport";
-            this.toolStripBtn_DataImport.Size = new System.Drawing.Size(23, 35);
+            this.toolStripBtn_DataImport.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_DataImport.ToolTipText = "导入数据";
             this.toolStripBtn_DataImport.Click += new System.EventHandler(this.toolStripBtn_DataImport_Click);
             // 
@@ -220,7 +220,7 @@
             this.toolStripBtn_DataModify.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_DataModify.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_DataModify.Name = "toolStripBtn_DataModify";
-            this.toolStripBtn_DataModify.Size = new System.Drawing.Size(23, 35);
+            this.toolStripBtn_DataModify.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_DataModify.ToolTipText = "编辑数据";
             this.toolStripBtn_DataModify.Click += new System.EventHandler(this.toolStripBtn_DataModify_Click);
             // 
@@ -231,7 +231,7 @@
             this.toolStripBtn_Copy.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Copy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Copy.Name = "toolStripBtn_Copy";
-            this.toolStripBtn_Copy.Size = new System.Drawing.Size(23, 35);
+            this.toolStripBtn_Copy.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_Copy.ToolTipText = "复制";
             // 
             // toolStripBtn_Paste
@@ -241,7 +241,7 @@
             this.toolStripBtn_Paste.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripBtn_Paste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtn_Paste.Name = "toolStripBtn_Paste";
-            this.toolStripBtn_Paste.Size = new System.Drawing.Size(23, 35);
+            this.toolStripBtn_Paste.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtn_Paste.ToolTipText = "粘贴";
             // 
             // menuStrip_Main
@@ -257,7 +257,7 @@
             this.menuStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_Main.Name = "menuStrip_Main";
             this.menuStrip_Main.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 44);
+            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 46);
             this.menuStrip_Main.TabIndex = 0;
             this.menuStrip_Main.Text = "menuStrip1";
             // 
@@ -269,7 +269,7 @@
             this.toolStripSeparator1,
             this.menuSub_Close});
             this.menuMain_File.Name = "menuMain_File";
-            this.menuMain_File.Size = new System.Drawing.Size(103, 36);
+            this.menuMain_File.Size = new System.Drawing.Size(103, 38);
             this.menuMain_File.Text = "文件(F)";
             // 
             // menuSub_Open
@@ -304,7 +304,7 @@
             this.menuSub_Copy,
             this.menuSub_SelectAll});
             this.menuMain_Edit.Name = "menuMain_Edit";
-            this.menuMain_Edit.Size = new System.Drawing.Size(103, 36);
+            this.menuMain_Edit.Size = new System.Drawing.Size(103, 38);
             this.menuMain_Edit.Text = "编辑(E)";
             // 
             // menuSub_Copy
@@ -330,7 +330,7 @@
             this.menuSub_DataQu,
             this.menuSub_DataBr});
             this.menuMain_DataMn.Name = "menuMain_DataMn";
-            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 36);
+            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 38);
             this.menuMain_DataMn.Text = "数据管理(M)";
             // 
             // menuSub_DataIm
@@ -338,14 +338,14 @@
             this.menuSub_DataIm.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataIm.Image")));
             this.menuSub_DataIm.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSub_DataIm.Name = "menuSub_DataIm";
-            this.menuSub_DataIm.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataIm.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataIm.Text = "批量导入(I)";
             this.menuSub_DataIm.Click += new System.EventHandler(this.menuSub_DataIm_Click);
             // 
             // menuSub_DataInput
             // 
             this.menuSub_DataInput.Name = "menuSub_DataInput";
-            this.menuSub_DataInput.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataInput.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataInput.Text = "数据录入(R)";
             // 
             // menuSub_DataMo
@@ -353,21 +353,21 @@
             this.menuSub_DataMo.Image = ((System.Drawing.Image)(resources.GetObject("menuSub_DataMo.Image")));
             this.menuSub_DataMo.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuSub_DataMo.Name = "menuSub_DataMo";
-            this.menuSub_DataMo.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataMo.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataMo.Text = "数据编辑(M)";
             this.menuSub_DataMo.Click += new System.EventHandler(this.menuSub_DataMo_Click);
             // 
             // menuSub_DataQu
             // 
             this.menuSub_DataQu.Name = "menuSub_DataQu";
-            this.menuSub_DataQu.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataQu.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataQu.Text = "数据查询(Q)";
             this.menuSub_DataQu.Click += new System.EventHandler(this.menuSub_DataQu_Click);
             // 
             // menuSub_DataBr
             // 
             this.menuSub_DataBr.Name = "menuSub_DataBr";
-            this.menuSub_DataBr.Size = new System.Drawing.Size(250, 38);
+            this.menuSub_DataBr.Size = new System.Drawing.Size(324, 38);
             this.menuSub_DataBr.Text = "数据浏览(B)";
             this.menuSub_DataBr.Click += new System.EventHandler(this.menuSub_DataBr_Click);
             // 
@@ -377,7 +377,7 @@
             this.menuSub_AHP,
             this.menuSub_TOPSIS});
             this.menuMain_DataAn.Name = "menuMain_DataAn";
-            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 36);
+            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 38);
             this.menuMain_DataAn.Text = "数据分析(A)";
             // 
             // menuSub_AHP
@@ -401,34 +401,34 @@
             this.menuSub_UserDel,
             this.menuSub_UserPm});
             this.menuMain_UserMn.Name = "menuMain_UserMn";
-            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 36);
+            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 38);
             this.menuMain_UserMn.Text = "用户管理(U)";
             // 
             // menuSub_UserQuery
             // 
             this.menuSub_UserQuery.Name = "menuSub_UserQuery";
-            this.menuSub_UserQuery.Size = new System.Drawing.Size(246, 38);
-            this.menuSub_UserQuery.Text = "用户浏览(Q)";
+            this.menuSub_UserQuery.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_UserQuery.Text = "浏览用户(Q)";
             this.menuSub_UserQuery.Click += new System.EventHandler(this.MenuSub_UserQuery_Click);
             // 
             // menuSub_UserAdd
             // 
             this.menuSub_UserAdd.Name = "menuSub_UserAdd";
-            this.menuSub_UserAdd.Size = new System.Drawing.Size(246, 38);
+            this.menuSub_UserAdd.Size = new System.Drawing.Size(324, 38);
             this.menuSub_UserAdd.Text = "添加用户(N)";
             this.menuSub_UserAdd.Click += new System.EventHandler(this.menuSub_UserAdd_Click);
             // 
             // menuSub_UserDel
             // 
             this.menuSub_UserDel.Name = "menuSub_UserDel";
-            this.menuSub_UserDel.Size = new System.Drawing.Size(246, 38);
+            this.menuSub_UserDel.Size = new System.Drawing.Size(324, 38);
             this.menuSub_UserDel.Text = "删除用户(D)";
             this.menuSub_UserDel.Click += new System.EventHandler(this.menuSub_UserDel_Click);
             // 
             // menuSub_UserPm
             // 
             this.menuSub_UserPm.Name = "menuSub_UserPm";
-            this.menuSub_UserPm.Size = new System.Drawing.Size(246, 38);
+            this.menuSub_UserPm.Size = new System.Drawing.Size(324, 38);
             this.menuSub_UserPm.Text = "权限管理(P)";
             this.menuSub_UserPm.Click += new System.EventHandler(this.menuSub_UserPm_Click);
             // 
@@ -439,7 +439,7 @@
             this.menuSub_Wel,
             this.menuSub_About});
             this.menuMain_Help.Name = "menuMain_Help";
-            this.menuMain_Help.Size = new System.Drawing.Size(108, 36);
+            this.menuMain_Help.Size = new System.Drawing.Size(108, 38);
             this.menuMain_Help.Text = "帮助(H)";
             // 
             // menuSub_Doc
@@ -534,7 +534,7 @@
             this.sideBar1.AccessibleRole = System.Windows.Forms.AccessibleRole.ToolBar;
             this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
             this.sideBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideBar1.ExpandedPanel = this.sideBarPnl_DataMnger;
+            this.sideBar1.ExpandedPanel = this.sideBarPnl_UserMnger;
             this.sideBar1.Location = new System.Drawing.Point(4, 60);
             this.sideBar1.Margin = new System.Windows.Forms.Padding(6);
             this.sideBar1.Name = "sideBar1";
@@ -654,7 +654,7 @@
             this.sideBar_BtnUsersList.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.sideBar_BtnUsersList.Name = "sideBar_BtnUsersList";
             this.sideBar_BtnUsersList.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUsersList.Text = "用户浏览";
+            this.sideBar_BtnUsersList.Text = "浏览用户";
             this.sideBar_BtnUsersList.Click += new System.EventHandler(this.SideBar_BtnUsersList_Click);
             // 
             // sideBar_BtnUserAdd

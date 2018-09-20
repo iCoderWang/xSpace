@@ -168,7 +168,7 @@ namespace EsofaUI
             StringBuilder cRstr = new StringBuilder();
             string[] cR_arr = null;
             int flag = 0;
-            string cR1 = null, cR21 = null, cR22 = null, cR23 = null, cR = null;
+            string cR1 = null, cR21 = null, cR22 = null, cR23 = null;// cR = null;
             double[,] dgv_R1 = DataSourceToDataTable.GetDgvToArray(this.dgv_Tgt);
             double[,] dgv_R21 = DataSourceToDataTable.GetDgvToArray(this.dgv_Tgt_GeoPara);
             double[,] dgv_R22 = DataSourceToDataTable.GetDgvToArray(this.dgv_Tgt_EngPara);
