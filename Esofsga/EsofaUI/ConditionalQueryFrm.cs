@@ -143,53 +143,62 @@ namespace EsofaUI
         }
 
         private void cmbBox_Paras_SelectedValueChanged(object sender, EventArgs e)
-        {          
-            this.listBox_Values.Items.Clear();
-            int indexItem = cmbBox_Paras.SelectedIndex;
-           // object obj = null;
-            List<object> list = new List<object>();
-            if (dgvName.Equals("dgvView"))
+        {
+            try
             {
-                //List<object>变量和List<实体类>变量之间的相互转换
-                //示例：List<UIData> datalist = null;
-                //示例：datalist.ConvertAll<object>(input => input as object);
-                //操作： AverageValuesTargetEntity 实体类 转化为 object 类，ConverAll<目的类型>，这个目的类型可以省略
-                //list = listAvgTgtEnty.ConvertAll(s=> s as object);
-                //操作：  object 类 转化为AverageValuesTargetEntity 实体类，ConverAll<目的类型>，这个目的类型可以省略
-                //list.ConvertAll(s=> s as AverageValuesTargetEntity);
-                foreach (AverageValuesTargetEntity avte in listAvgTgtEnty)
+                this.listBox_Values.Items.Clear();
+                int indexItem = cmbBox_Paras.SelectedIndex;
+                // object obj = null;
+                List<object> list = new List<object>();
+                if (dgvName.Equals("dgvView"))
                 {
-                    //利用反射机制，将string类型的值转变为变量，变获取 对象变量(avte)中对应的该名称属性的值。
-                    Type tp = avte.GetType(); //获取对象(obj) avte 的变量类型为： AverageValuesTargeEntity
-                    //对字符串（属性 Property）即 parasAvgTE[indexItem]进行判断，发现属性(Property)的属性(Attribute),
-                    //并提供对属性(Property)的访问，比如获取该属性的值 （.GetValue( 对象 (obj))）
-                    System.Reflection.PropertyInfo pi = tp.GetProperty(parasAvgTgtEnty[indexItem].Trim());
-                    // pi.GetVaue(avte); 语句是获得对象avte的属性 parasAvgTE[indexItem] 所对应的值 
-                    //下面的判断语句是为了剔除重复值 
-                    if (!listBox_Values.Items.Contains((pi.GetValue(avte)).ToString()))
+                    //List<object>变量和List<实体类>变量之间的相互转换
+                    //示例：List<UIData> datalist = null;
+                    //示例：datalist.ConvertAll<object>(input => input as object);
+                    //操作： AverageValuesTargetEntity 实体类 转化为 object 类，ConverAll<目的类型>，这个目的类型可以省略
+                    //list = listAvgTgtEnty.ConvertAll(s=> s as object);
+                    //操作：  object 类 转化为AverageValuesTargetEntity 实体类，ConverAll<目的类型>，这个目的类型可以省略
+                    //list.ConvertAll(s=> s as AverageValuesTargetEntity);
+                    foreach (AverageValuesTargetEntity avte in listAvgTgtEnty)
                     {
-                        listBox_Values.Items.Add((pi.GetValue(avte)).ToString());
+                        //利用反射机制，将string类型的值转变为变量，变获取 对象变量(avte)中对应的该名称属性的值。
+                        Type tp = avte.GetType(); //获取对象(obj) avte 的变量类型为： AverageValuesTargeEntity
+                                                  //对字符串（属性 Property）即 parasAvgTE[indexItem]进行判断，发现属性(Property)的属性(Attribute),
+                                                  //并提供对属性(Property)的访问，比如获取该属性的值 （.GetValue( 对象 (obj))）
+                        System.Reflection.PropertyInfo pi = tp.GetProperty(parasAvgTgtEnty[indexItem].Trim());
+                        // pi.GetVaue(avte); 语句是获得对象avte的属性 parasAvgTE[indexItem] 所对应的值 
+                        //下面的判断语句是为了剔除重复值 
+                        if (!listBox_Values.Items.Contains((pi.GetValue(avte)).ToString()))
+                        {
+                            listBox_Values.Items.Add((pi.GetValue(avte)).ToString());
+                        }
+                    }
+                }
+                if (dgvName.Equals("dgvTarget"))
+                {
+                    //list = listTgtEnty.ConvertAll(s => s as object);
+                    foreach (TargetEntity te in listTgtEnty)
+                    {
+                        //利用反射机制，将string类型的值转变为变量，变获取 对象变量(avte)中对应的该名称属性的值。
+                        Type tp = te.GetType(); //获取对象(obj) avte 的变量类型为： AverageValuesTargeEntity
+                                                //对字符串（属性 Property）即 parasAvgTE[indexItem]进行判断，发现属性(Property)的属性(Attribute),
+                                                //并提供对属性(Property)的访问，比如获取该属性的值 （.GetValue( 对象 (obj))）
+                        System.Reflection.PropertyInfo pi = tp.GetProperty(parasTgtEnty[indexItem].Trim());
+                        // pi.GetVaue(avte); 语句是获得对象avte的属性 parasAvgTE[indexItem] 所对应的值 
+                        //下面的判断语句是为了剔除重复值 
+                        if (!listBox_Values.Items.Contains((pi.GetValue(te)).ToString()))
+                        {
+                            listBox_Values.Items.Add((pi.GetValue(te)).ToString());
+                        }
                     }
                 }
             }
-            if (dgvName.Equals("dgvTarget"))
+            catch
             {
-                //list = listTgtEnty.ConvertAll(s => s as object);
-                foreach (TargetEntity te in listTgtEnty)
-                {
-                    //利用反射机制，将string类型的值转变为变量，变获取 对象变量(avte)中对应的该名称属性的值。
-                    Type tp = te.GetType(); //获取对象(obj) avte 的变量类型为： AverageValuesTargeEntity
-                                              //对字符串（属性 Property）即 parasAvgTE[indexItem]进行判断，发现属性(Property)的属性(Attribute),
-                                              //并提供对属性(Property)的访问，比如获取该属性的值 （.GetValue( 对象 (obj))）
-                    System.Reflection.PropertyInfo pi = tp.GetProperty(parasTgtEnty[indexItem].Trim());
-                    // pi.GetVaue(avte); 语句是获得对象avte的属性 parasAvgTE[indexItem] 所对应的值 
-                    //下面的判断语句是为了剔除重复值 
-                    if (!listBox_Values.Items.Contains((pi.GetValue(te)).ToString()))
-                    {
-                        listBox_Values.Items.Add((pi.GetValue(te)).ToString());
-                    }
-                }
+                MessageBox.Show("数据错误！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
         }
 
         private void btn_ExitCmd_Click(object sender, EventArgs e)

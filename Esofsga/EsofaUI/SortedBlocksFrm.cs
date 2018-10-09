@@ -78,5 +78,10 @@ namespace EsofaUI
             //MessageBox.Show("有利区：  " + strClass_1.ToString() + "; \r\n一般区：  " + strClass_2.ToString() +
             //    "; \r\n较差区：  " + strClass_3.ToString(), "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void ToolStripMenuItem_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

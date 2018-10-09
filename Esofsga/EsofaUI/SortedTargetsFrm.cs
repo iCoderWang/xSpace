@@ -75,5 +75,9 @@ namespace EsofaUI
             //    "; \r\n较差区：  " + strClass_3.ToString(), "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void ToolStripMenuItem_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

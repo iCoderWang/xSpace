@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Runtime.InteropServices;
+using MSWord = Microsoft.Office.Interop.Word;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
 using EsofaBLL;
@@ -639,6 +638,58 @@ namespace EsofaUI
             {
                 MessageBox.Show("没有可用来存储的数据对象。","信息",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
+        }
+
+        private MSWord.Application m_word;
+        private void sideBar_BtnDoc_Click(object sender, EventArgs e)
+        {
+            //MSWord.Application m_word;
+            //MSWord.Document m_doc;
+            m_word = new MSWord.Application();
+            Object filename = "页岩气选区评价系统软件使用说明.docx";
+            Object filefullname = System.Windows.Forms.Application.StartupPath + "\\页岩气选区评价系统软件使用说明.docx";
+            Object confirmConversions = Type.Missing;
+            Object readOnly = Type.Missing;
+            Object addToRecentFiles = Type.Missing;
+            Object passwordDocument = Type.Missing;
+            Object passwordTemplate = Type.Missing;
+            Object revert = Type.Missing;
+            Object writePasswordDocument = Type.Missing;
+            Object writePasswordTemplate = Type.Missing;
+            Object format = Type.Missing;
+            Object encoding = Type.Missing;
+            Object visible = Type.Missing;
+            Object openConflictDocument = Type.Missing;
+            Object openAndRepair = Type.Missing;
+            Object documentDirection = Type.Missing;
+            Object noEncodingDialog = Type.Missing;
+
+            //for (int i = 1; i <= m_word.Documents.Count; i++)
+            //{
+            //    String str = m_word.Documents[i].FullName.ToString();
+            //    if (str == filefullname.ToString())
+            //    {
+            //        MessageBox.Show("请勿重复打开该文档");
+            //        return;
+            //    }
+            //}
+            try
+            {
+                m_word.Documents.Open(ref filefullname,
+                    ref confirmConversions, ref readOnly, ref addToRecentFiles,
+                    ref passwordDocument, ref passwordTemplate, ref revert,
+                    ref writePasswordDocument, ref writePasswordTemplate,
+                    ref format, ref encoding, ref visible, ref openConflictDocument,
+                    ref openAndRepair, ref documentDirection, ref noEncodingDialog
+                    );
+                m_word.Visible = true;
+            }
+            catch //(System.Exception ex)
+            {
+                MessageBox.Show("打开Word文档出错");
+            }
+
+
         }
     }
 }

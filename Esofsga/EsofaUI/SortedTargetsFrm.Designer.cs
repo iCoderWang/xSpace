@@ -762,11 +762,11 @@
             this.para_SgWeight,
             this.para_SgScores});
             this.dgv_Tgt_Sorted.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Tgt_Sorted.Location = new System.Drawing.Point(0, 46);
+            this.dgv_Tgt_Sorted.Location = new System.Drawing.Point(0, 44);
             this.dgv_Tgt_Sorted.Margin = new System.Windows.Forms.Padding(6);
             this.dgv_Tgt_Sorted.Name = "dgv_Tgt_Sorted";
             this.dgv_Tgt_Sorted.ReadOnly = true;
-            this.dgv_Tgt_Sorted.Size = new System.Drawing.Size(1024, 567);
+            this.dgv_Tgt_Sorted.Size = new System.Drawing.Size(1024, 569);
             this.dgv_Tgt_Sorted.TabIndex = 5;
             // 
             // para_StromAtScores
@@ -1032,7 +1032,7 @@
             // ToolStripMenuItem_GenerateReport
             // 
             this.ToolStripMenuItem_GenerateReport.Name = "ToolStripMenuItem_GenerateReport";
-            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(214, 38);
             this.ToolStripMenuItem_GenerateReport.Text = "生成报告";
             // 
             // ToolStripMenuItem_Report
@@ -1040,13 +1040,13 @@
             this.ToolStripMenuItem_Report.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_GenerateReport});
             this.ToolStripMenuItem_Report.Name = "ToolStripMenuItem_Report";
-            this.ToolStripMenuItem_Report.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_Report.Size = new System.Drawing.Size(77, 36);
             this.ToolStripMenuItem_Report.Text = "报告";
             // 
             // ToolStripMenuItem_Classify
             // 
             this.ToolStripMenuItem_Classify.Name = "ToolStripMenuItem_Classify";
-            this.ToolStripMenuItem_Classify.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_Classify.Size = new System.Drawing.Size(239, 38);
             this.ToolStripMenuItem_Classify.Text = "自然分类法";
             this.ToolStripMenuItem_Classify.Click += new System.EventHandler(this.ToolStripMenuItem_Classify_Click);
             // 
@@ -1055,7 +1055,7 @@
             this.ToolStripMenuItem_Classification.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_Classify});
             this.ToolStripMenuItem_Classification.Name = "ToolStripMenuItem_Classification";
-            this.ToolStripMenuItem_Classification.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_Classification.Size = new System.Drawing.Size(77, 36);
             this.ToolStripMenuItem_Classification.Text = "分类";
             // 
             // ToolStripMenuItem_Close
@@ -1063,6 +1063,7 @@
             this.ToolStripMenuItem_Close.Name = "ToolStripMenuItem_Close";
             this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(324, 38);
             this.ToolStripMenuItem_Close.Text = "关闭";
+            this.ToolStripMenuItem_Close.Click += new System.EventHandler(this.ToolStripMenuItem_Close_Click);
             // 
             // ToolStripMenuItem_SaveAs
             // 
@@ -1076,7 +1077,7 @@
             this.ToolStripMenuItem_SaveAs,
             this.ToolStripMenuItem_Close});
             this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
-            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 36);
             this.ToolStripMenuItem_File.Text = "文件";
             // 
             // menuStrip1
@@ -1089,7 +1090,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1024, 46);
+            this.menuStrip1.Size = new System.Drawing.Size(1024, 44);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
