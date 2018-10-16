@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MSWord = Microsoft.Office.Interop.Word;
+using Excel = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
 using EsofaBLL;
@@ -686,10 +687,27 @@ namespace EsofaUI
             }
             catch //(System.Exception ex)
             {
-                MessageBox.Show("打开Word文档出错");
+                MessageBox.Show("打开Word文档出错!","错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
 
+        }
+
+        private void sideBar_BtnDataFormat_Click(object sender, EventArgs e)
+        {
+            //Microsoft.Office.Interop.Excel.Application
+            //Object filename = "页岩气选区评价系统软件使用说明.docx";
+            Object filefullname = System.Windows.Forms.Application.StartupPath + "\\Standard Data Format_Example.xlsx";
+            Excel.Application excel =new Excel.Application(); //引用Excel对象 
+            Excel.Workbook book =
+            excel.Application.Workbooks.Add(filefullname);
+            //引用Excel工作簿 
+            excel.Visible = true; //使Excel可视 
+        }
+
+        private void menuSub_DataFormat_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnDataFormat_Click(sideBar_BtnDataFormat, e);
         }
     }
 }

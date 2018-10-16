@@ -357,7 +357,7 @@ namespace EsofaCommon
             }
             catch (System.IndexOutOfRangeException)
             {
-                MessageBox.Show("源文凭数据格式不正确，请检查。","警告",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("源文件数据格式不正确，请检查。","警告",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return null;
             }
             

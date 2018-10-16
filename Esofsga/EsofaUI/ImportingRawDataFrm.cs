@@ -42,13 +42,10 @@ namespace EsofaUI
             {
                 //对当前窗体进行卸载并释放资源
                 Dispose();
-                 if(rdoBtnTarget.Checked == true)
-                {
-                    List<TargetEntity> targetEntityList = new List<TargetEntity>();
-                    object objList = targetEntityList;
-                    _del(filePath, objList);
-                    // _del(filePath, targetEntityList.ConvertAll<object>(x => (object)x));
-                }
+                List<TargetEntity> targetEntityList = new List<TargetEntity>();
+                object objList = targetEntityList;
+                _del(filePath, objList);
+                // _del(filePath, targetEntityList.ConvertAll<object>(x => (object)x));
             }
             else
             {

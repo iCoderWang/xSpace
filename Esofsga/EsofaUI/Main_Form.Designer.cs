@@ -64,8 +64,8 @@
             this.menuSub_UserDel = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_UserPm = new System.Windows.Forms.ToolStripMenuItem();
             this.menuMain_Help = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuSub_DataFormat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_Doc = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSub_Wel = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSub_About = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_StatusBar = new System.Windows.Forms.Panel();
             this.lbl_Status = new System.Windows.Forms.Label();
@@ -73,11 +73,10 @@
             this.panel_WorkSpace = new System.Windows.Forms.Panel();
             this.splitCtner_WorkSpace = new System.Windows.Forms.SplitContainer();
             this.sideBar1 = new DevComponents.DotNetBar.SideBar();
-            this.sideBarPnl_UserMnger = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.sideBar_BtnUsersList = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnUserAdd = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnUserDel = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnAccessChange = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBarPnl_Help = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBar_BtnDataFormat = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnDoc = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnAbout = new DevComponents.DotNetBar.ButtonItem();
             this.sideBarPnl_DataMnger = new DevComponents.DotNetBar.SideBarPanelItem();
             this.sideBar_BtnImport = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnAddData = new DevComponents.DotNetBar.ButtonItem();
@@ -88,9 +87,11 @@
             this.sideBar_BtnAHP = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnTOPSIS = new DevComponents.DotNetBar.ButtonItem();
             this.sideBar_BtnFCEM = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBarPnl_Help = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.sideBar_BtnDoc = new DevComponents.DotNetBar.ButtonItem();
-            this.sideBar_BtnAbout = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBarPnl_UserMnger = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.sideBar_BtnUsersList = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnUserAdd = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnUserDel = new DevComponents.DotNetBar.ButtonItem();
+            this.sideBar_BtnAccessChange = new DevComponents.DotNetBar.ButtonItem();
             this.label1 = new System.Windows.Forms.Label();
             this.workAreaTabPageController = new DevExpress.XtraTab.XtraTabControl();
             this.tabPage_Welcome = new DevExpress.XtraTab.XtraTabPage();
@@ -160,7 +161,7 @@
             this.toolStripBtn_DataModify,
             this.toolStripBtn_Copy,
             this.toolStripBtn_Paste});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 44);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 46);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1468, 25);
@@ -257,7 +258,7 @@
             this.menuStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_Main.Name = "menuStrip_Main";
             this.menuStrip_Main.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 44);
+            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 46);
             this.menuStrip_Main.TabIndex = 0;
             this.menuStrip_Main.Text = "menuStrip1";
             // 
@@ -269,7 +270,7 @@
             this.toolStripSeparator1,
             this.menuSub_Close});
             this.menuMain_File.Name = "menuMain_File";
-            this.menuMain_File.Size = new System.Drawing.Size(103, 36);
+            this.menuMain_File.Size = new System.Drawing.Size(103, 38);
             this.menuMain_File.Text = "文件(F)";
             // 
             // menuSub_Open
@@ -304,7 +305,7 @@
             this.menuSub_Copy,
             this.menuSub_SelectAll});
             this.menuMain_Edit.Name = "menuMain_Edit";
-            this.menuMain_Edit.Size = new System.Drawing.Size(103, 36);
+            this.menuMain_Edit.Size = new System.Drawing.Size(103, 38);
             this.menuMain_Edit.Text = "编辑(E)";
             // 
             // menuSub_Copy
@@ -330,7 +331,7 @@
             this.menuSub_DataQu,
             this.menuSub_DataBr});
             this.menuMain_DataMn.Name = "menuMain_DataMn";
-            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 36);
+            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 38);
             this.menuMain_DataMn.Text = "数据管理(M)";
             // 
             // menuSub_DataIm
@@ -377,7 +378,7 @@
             this.menuSub_AHP,
             this.menuSub_TOPSIS});
             this.menuMain_DataAn.Name = "menuMain_DataAn";
-            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 36);
+            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 38);
             this.menuMain_DataAn.Text = "数据分析(A)";
             // 
             // menuSub_AHP
@@ -401,7 +402,7 @@
             this.menuSub_UserDel,
             this.menuSub_UserPm});
             this.menuMain_UserMn.Name = "menuMain_UserMn";
-            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 36);
+            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 38);
             this.menuMain_UserMn.Text = "用户管理(U)";
             // 
             // menuSub_UserQuery
@@ -434,30 +435,33 @@
             // 
             // menuMain_Help
             // 
+            this.menuMain_Help.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.menuMain_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuSub_DataFormat,
             this.menuSub_Doc,
-            this.menuSub_Wel,
             this.menuSub_About});
             this.menuMain_Help.Name = "menuMain_Help";
-            this.menuMain_Help.Size = new System.Drawing.Size(108, 36);
+            this.menuMain_Help.Size = new System.Drawing.Size(108, 38);
             this.menuMain_Help.Text = "帮助(H)";
+            // 
+            // menuSub_DataFormat
+            // 
+            this.menuSub_DataFormat.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.menuSub_DataFormat.Name = "menuSub_DataFormat";
+            this.menuSub_DataFormat.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_DataFormat.Text = "数据格式(F)";
+            this.menuSub_DataFormat.Click += new System.EventHandler(this.menuSub_DataFormat_Click);
             // 
             // menuSub_Doc
             // 
             this.menuSub_Doc.Name = "menuSub_Doc";
-            this.menuSub_Doc.Size = new System.Drawing.Size(200, 38);
-            this.menuSub_Doc.Text = "文档(D)";
-            // 
-            // menuSub_Wel
-            // 
-            this.menuSub_Wel.Name = "menuSub_Wel";
-            this.menuSub_Wel.Size = new System.Drawing.Size(200, 38);
-            this.menuSub_Wel.Text = "欢迎(W)";
+            this.menuSub_Doc.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_Doc.Text = "帮助文档(D)";
             // 
             // menuSub_About
             // 
             this.menuSub_About.Name = "menuSub_About";
-            this.menuSub_About.Size = new System.Drawing.Size(200, 38);
+            this.menuSub_About.Size = new System.Drawing.Size(324, 38);
             this.menuSub_About.Text = "关于(A)";
             this.menuSub_About.Click += new System.EventHandler(this.MenuSub_About_Click);
             // 
@@ -548,52 +552,39 @@
             this.sideBar1.TabIndex = 1;
             this.sideBar1.Text = "sideBar1";
             // 
-            // sideBarPnl_UserMnger
+            // sideBarPnl_Help
             // 
-            this.sideBarPnl_UserMnger.FontBold = true;
-            this.sideBarPnl_UserMnger.Name = "sideBarPnl_UserMnger";
-            this.sideBarPnl_UserMnger.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sideBar_BtnUsersList,
-            this.sideBar_BtnUserAdd,
-            this.sideBar_BtnUserDel,
-            this.sideBar_BtnAccessChange});
-            this.sideBarPnl_UserMnger.Text = "用户管理";
+            this.sideBarPnl_Help.FontBold = true;
+            this.sideBarPnl_Help.Name = "sideBarPnl_Help";
+            this.sideBarPnl_Help.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sideBar_BtnDataFormat,
+            this.sideBar_BtnDoc,
+            this.sideBar_BtnAbout});
+            this.sideBarPnl_Help.Text = "帮助";
             // 
-            // sideBar_BtnUsersList
+            // sideBar_BtnDataFormat
             // 
-            this.sideBar_BtnUsersList.FontUnderline = true;
-            this.sideBar_BtnUsersList.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUsersList.Name = "sideBar_BtnUsersList";
-            this.sideBar_BtnUsersList.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUsersList.Text = "浏览用户";
-            this.sideBar_BtnUsersList.Click += new System.EventHandler(this.SideBar_BtnUsersList_Click);
+            this.sideBar_BtnDataFormat.FontUnderline = true;
+            this.sideBar_BtnDataFormat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnDataFormat.Name = "sideBar_BtnDataFormat";
+            this.sideBar_BtnDataFormat.Text = "数据格式";
+            this.sideBar_BtnDataFormat.Click += new System.EventHandler(this.sideBar_BtnDataFormat_Click);
             // 
-            // sideBar_BtnUserAdd
+            // sideBar_BtnDoc
             // 
-            this.sideBar_BtnUserAdd.FontUnderline = true;
-            this.sideBar_BtnUserAdd.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUserAdd.Name = "sideBar_BtnUserAdd";
-            this.sideBar_BtnUserAdd.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUserAdd.Text = "添加用户";
-            this.sideBar_BtnUserAdd.Click += new System.EventHandler(this.sideBar_BtnUserAdd_Click);
+            this.sideBar_BtnDoc.FontUnderline = true;
+            this.sideBar_BtnDoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnDoc.Name = "sideBar_BtnDoc";
+            this.sideBar_BtnDoc.Text = "帮助文档";
+            this.sideBar_BtnDoc.Click += new System.EventHandler(this.sideBar_BtnDoc_Click);
             // 
-            // sideBar_BtnUserDel
+            // sideBar_BtnAbout
             // 
-            this.sideBar_BtnUserDel.FontUnderline = true;
-            this.sideBar_BtnUserDel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnUserDel.Name = "sideBar_BtnUserDel";
-            this.sideBar_BtnUserDel.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnUserDel.Text = "删除用户";
-            this.sideBar_BtnUserDel.Click += new System.EventHandler(this.sideBar_BtnUserDel_Click);
-            // 
-            // sideBar_BtnAccessChange
-            // 
-            this.sideBar_BtnAccessChange.FontUnderline = true;
-            this.sideBar_BtnAccessChange.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnAccessChange.Name = "sideBar_BtnAccessChange";
-            this.sideBar_BtnAccessChange.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
-            this.sideBar_BtnAccessChange.Text = "权限管理";
-            this.sideBar_BtnAccessChange.Click += new System.EventHandler(this.sideBar_BtnAccessChange_Click);
+            this.sideBar_BtnAbout.FontUnderline = true;
+            this.sideBar_BtnAbout.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnAbout.Name = "sideBar_BtnAbout";
+            this.sideBar_BtnAbout.Text = "关于";
+            this.sideBar_BtnAbout.Click += new System.EventHandler(this.SideBar_BtnAbout_Click);
             // 
             // sideBarPnl_DataMnger
             // 
@@ -684,30 +675,52 @@
             this.sideBar_BtnFCEM.Text = "模糊综合评判法\r\n（FCEM）";
             this.sideBar_BtnFCEM.Visible = false;
             // 
-            // sideBarPnl_Help
+            // sideBarPnl_UserMnger
             // 
-            this.sideBarPnl_Help.FontBold = true;
-            this.sideBarPnl_Help.Name = "sideBarPnl_Help";
-            this.sideBarPnl_Help.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sideBar_BtnDoc,
-            this.sideBar_BtnAbout});
-            this.sideBarPnl_Help.Text = "帮助";
+            this.sideBarPnl_UserMnger.FontBold = true;
+            this.sideBarPnl_UserMnger.Name = "sideBarPnl_UserMnger";
+            this.sideBarPnl_UserMnger.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sideBar_BtnUsersList,
+            this.sideBar_BtnUserAdd,
+            this.sideBar_BtnUserDel,
+            this.sideBar_BtnAccessChange});
+            this.sideBarPnl_UserMnger.Text = "用户管理";
             // 
-            // sideBar_BtnDoc
+            // sideBar_BtnUsersList
             // 
-            this.sideBar_BtnDoc.FontUnderline = true;
-            this.sideBar_BtnDoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnDoc.Name = "sideBar_BtnDoc";
-            this.sideBar_BtnDoc.Text = "帮助文档";
-            this.sideBar_BtnDoc.Click += new System.EventHandler(this.sideBar_BtnDoc_Click);
+            this.sideBar_BtnUsersList.FontUnderline = true;
+            this.sideBar_BtnUsersList.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnUsersList.Name = "sideBar_BtnUsersList";
+            this.sideBar_BtnUsersList.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnUsersList.Text = "浏览用户";
+            this.sideBar_BtnUsersList.Click += new System.EventHandler(this.SideBar_BtnUsersList_Click);
             // 
-            // sideBar_BtnAbout
+            // sideBar_BtnUserAdd
             // 
-            this.sideBar_BtnAbout.FontUnderline = true;
-            this.sideBar_BtnAbout.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.sideBar_BtnAbout.Name = "sideBar_BtnAbout";
-            this.sideBar_BtnAbout.Text = "关于";
-            this.sideBar_BtnAbout.Click += new System.EventHandler(this.SideBar_BtnAbout_Click);
+            this.sideBar_BtnUserAdd.FontUnderline = true;
+            this.sideBar_BtnUserAdd.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnUserAdd.Name = "sideBar_BtnUserAdd";
+            this.sideBar_BtnUserAdd.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnUserAdd.Text = "添加用户";
+            this.sideBar_BtnUserAdd.Click += new System.EventHandler(this.sideBar_BtnUserAdd_Click);
+            // 
+            // sideBar_BtnUserDel
+            // 
+            this.sideBar_BtnUserDel.FontUnderline = true;
+            this.sideBar_BtnUserDel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnUserDel.Name = "sideBar_BtnUserDel";
+            this.sideBar_BtnUserDel.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnUserDel.Text = "删除用户";
+            this.sideBar_BtnUserDel.Click += new System.EventHandler(this.sideBar_BtnUserDel_Click);
+            // 
+            // sideBar_BtnAccessChange
+            // 
+            this.sideBar_BtnAccessChange.FontUnderline = true;
+            this.sideBar_BtnAccessChange.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.sideBar_BtnAccessChange.Name = "sideBar_BtnAccessChange";
+            this.sideBar_BtnAccessChange.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(6);
+            this.sideBar_BtnAccessChange.Text = "权限管理";
+            this.sideBar_BtnAccessChange.Click += new System.EventHandler(this.sideBar_BtnAccessChange_Click);
             // 
             // label1
             // 
@@ -842,7 +855,7 @@
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnQuery;
         private DevComponents.DotNetBar.ButtonItem sideBar_BtnBrowse;
         private DevExpress.XtraTab.XtraTabPage tabPage_Welcome;
-        private System.Windows.Forms.ToolStripMenuItem menuSub_Wel;
+        private System.Windows.Forms.ToolStripMenuItem menuSub_DataFormat;
         private System.Windows.Forms.Label label2;
         public DevExpress.XtraTab.XtraTabControl workAreaTabPageController;
         private System.Windows.Forms.ToolStripMenuItem menuSub_UserQuery;
@@ -864,5 +877,6 @@
         public System.Windows.Forms.ToolStripButton toolStrip_BtnOpen;
         public System.Windows.Forms.ToolStripButton toolStripBtn_DataImport;
         public System.Windows.Forms.ToolStripButton toolStripBtn_DataModify;
+        private DevComponents.DotNetBar.ButtonItem sideBar_BtnDataFormat;
     }
 }
