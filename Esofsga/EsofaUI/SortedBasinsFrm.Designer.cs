@@ -128,13 +128,13 @@
             // ToolStripMenuItem_SaveAs
             // 
             this.ToolStripMenuItem_SaveAs.Name = "ToolStripMenuItem_SaveAs";
-            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(189, 38);
             this.ToolStripMenuItem_SaveAs.Text = "另存为";
             // 
             // ToolStripMenuItem_Close
             // 
             this.ToolStripMenuItem_Close.Name = "ToolStripMenuItem_Close";
-            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(189, 38);
             this.ToolStripMenuItem_Close.Text = "关闭";
             this.ToolStripMenuItem_Close.Click += new System.EventHandler(this.ToolStripMenuItem_Close_Click);
             // 
@@ -164,8 +164,9 @@
             // ToolStripMenuItem_Generate
             // 
             this.ToolStripMenuItem_Generate.Name = "ToolStripMenuItem_Generate";
-            this.ToolStripMenuItem_Generate.Size = new System.Drawing.Size(214, 38);
+            this.ToolStripMenuItem_Generate.Size = new System.Drawing.Size(324, 38);
             this.ToolStripMenuItem_Generate.Text = "生成报告";
+            this.ToolStripMenuItem_Generate.Click += new System.EventHandler(this.ToolStripMenuItem_Generate_Click);
             // 
             // dgv_Bsn_Sorted
             // 

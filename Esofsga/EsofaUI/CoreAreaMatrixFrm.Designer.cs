@@ -738,6 +738,7 @@
             // 
             // btn_Sort
             // 
+            this.btn_Sort.Enabled = false;
             this.btn_Sort.Location = new System.Drawing.Point(1110, 712);
             this.btn_Sort.Margin = new System.Windows.Forms.Padding(6);
             this.btn_Sort.Name = "btn_Sort";

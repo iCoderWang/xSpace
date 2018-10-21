@@ -84,6 +84,7 @@
     <Compile Include="BlockParametersGrade.cs" />
     <Compile Include="IdealSolutionByTopsisEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicValues.cs" />
     <Compile Include="RawData.cs" />
     <Compile Include="SortedBasinsParas.cs" />
     <Compile Include="SortedBlocksParas.cs" />
