@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsofaBLL", "EsofaBLL\EsofaB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsofaDAL", "EsofaDAL\EsofaDAL.csproj", "{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Esofsga Setup", "Esofsga Setup\Esofsga Setup.vdproj", "{5E55D6A6-815D-4FCA-9A73-460B046A5131}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,12 @@ Global
 		{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}.Release|x64.Build.0 = Release|x64
 		{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}.Release|x86.ActiveCfg = Release|x86
 		{AF54E69B-5563-4C80-8B71-E6E623BDDFE8}.Release|x86.Build.0 = Release|x86
+		{5E55D6A6-815D-4FCA-9A73-460B046A5131}.Debug|Any CPU.ActiveCfg = Debug
+		{5E55D6A6-815D-4FCA-9A73-460B046A5131}.Debug|x64.ActiveCfg = Debug
+		{5E55D6A6-815D-4FCA-9A73-460B046A5131}.Debug|x86.ActiveCfg = Debug
+		{5E55D6A6-815D-4FCA-9A73-460B046A5131}.Release|Any CPU.ActiveCfg = Release
+		{5E55D6A6-815D-4FCA-9A73-460B046A5131}.Release|x64.ActiveCfg = Release
+		{5E55D6A6-815D-4FCA-9A73-460B046A5131}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

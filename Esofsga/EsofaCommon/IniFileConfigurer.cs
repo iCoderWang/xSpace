@@ -19,7 +19,8 @@ namespace EsofaCommon
         public static string Read()
         {
             string conn="";
-            string pathStr = Application.StartupPath +"\\"+ "ConnConfig.ini"; //INI文件的物理地址
+            //string pathStr = Application.StartupPath +"\\"+ "ConnConfig.ini"; //INI文件的物理地址
+            string pathStr = System.Environment.CurrentDirectory + "\\" + "ConnConfig.ini"; //INI文件的物理地址
             FileStream fs = null;
             BinaryReader br = null;
             //string fileName = Path.GetFileNameWithoutExtension(pathStr); //获取INI文件的文件名
@@ -54,7 +55,8 @@ namespace EsofaCommon
                 Encryption ec = new Encryption();
                 StringBuilder conn = new StringBuilder();
                 string fileName = "ConnConfig.ini";
-                string pathStr = Application.StartupPath +"\\"+fileName; //INI文件的物理地址
+                //string pathStr = Application.StartupPath +"\\"+fileName; //INI文件的物理地址
+                string pathStr = System.Environment.CurrentDirectory + "\\" + fileName; //INI文件的物理地址
                 conn.Append("server=");
                 conn.Append(serverIp + ";");
                 conn.Append("database=");
