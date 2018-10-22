@@ -24,6 +24,9 @@ namespace EsofaCommon
         /// <param name="strPath">文件目录</param>
         public void CreateWord(string strPath)
         {
+            //SaveFileDialog sfd = new SaveFileDialog();
+            //sfd.Filter = "Word File|*.docx|(*.*)|*.*";
+            //sfd.Title = "保存文件";
             //实例化word应用对象    
             _wordDocument = this._wordApplication.Documents.Add(ref Nothing, ref Nothing, ref Nothing, ref Nothing);
             //页面设置

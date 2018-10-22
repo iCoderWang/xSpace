@@ -978,7 +978,7 @@
             "丰度(亿方/km^2)",
             "孔隙度(%)",
             "构造复杂度",
-            "顶底板岩性"});
+            "顶底板条件"});
             this.lstBx_All_GeoPara.Location = new System.Drawing.Point(63, 35);
             this.lstBx_All_GeoPara.Margin = new System.Windows.Forms.Padding(6);
             this.lstBx_All_GeoPara.Name = "lstBx_All_GeoPara";

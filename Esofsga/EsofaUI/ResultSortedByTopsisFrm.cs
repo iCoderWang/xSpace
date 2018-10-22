@@ -89,7 +89,7 @@ namespace EsofaUI
             WordHelper wh = new WordHelper();
             SaveFileDialog sfd = new SaveFileDialog();
             string blkGrad="";
-            sfd.Filter = "Word File|*.docx|(*.*)|*.*";
+            sfd.Filter = "Word File|*.doc|(*.*)|*.*";
             sfd.Title = "保存文件";
             //sfd.ShowDialog();
             StringBuilder strBlocks = new StringBuilder();
