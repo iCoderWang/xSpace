@@ -120,15 +120,52 @@ namespace EsofaUI
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
             StringBuilder cRstr = new StringBuilder();
+            PublicValues.dgv_GEE = dgv_Bsn;
+            PublicValues.dgv_Geo = dgv_Bsn_GeoPara;
+            PublicValues.dgv_Eng = dgv_Bsn_EngPara;
+            //PublicValues.dgv_Eco = dgv_Tgt_EcoPara;
             string[] cR_arr = null;
             int flag = 0;
             string cR1 = null, cR21 = null, cR22 = null;// cR = null;
             Vector<double> vR1 = cc.ArrayLoad(R1, out strB,out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
+            foreach (double dbl in vR1)
+            {
+                if (dbl != vR1.Last())
+                {
+                    PublicValues.GEE_Wgt += dbl.ToString() + ",";
+                }
+                else
+                {
+                    PublicValues.GEE_Wgt += dbl.ToString() + ";";
+                }
+            }
             Vector<double> vR21 = cc.ArrayLoad(R21, out strB , out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
+            foreach (double dbl in vR21)
+            {
+                if (dbl != vR21.Last())
+                {
+                    PublicValues.GeoWgt += dbl.ToString() + ",";
+                }
+                else
+                {
+                    PublicValues.GeoWgt += dbl.ToString() + ";";
+                }
+            }
             Vector<double> vR22 = cc.ArrayLoad(R22, out strB, out cR22) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
+            foreach (double dbl in vR22)
+            {
+                if (dbl != vR22.Last())
+                {
+                    PublicValues.EngWgt += dbl.ToString() + ",";
+                }
+                else
+                {
+                    PublicValues.EngWgt += dbl.ToString() + ";";
+                }
+            }
             cR_arr = new string[] { cR1, cR21, cR22 };
             eignFrm.textBox1.Text += vR21 + "\r\n" + vR22 + "\r\n";
             cRstr.Append("层次单排序结果一致性指标");
@@ -179,42 +216,51 @@ namespace EsofaUI
             this.btn_Next.Enabled = true;
         }
 
-        //private void btn_Sort_Click(object sender, EventArgs e)
-        //{
-        //    double[] arr_Scores = null;
-        //    string[] arr_TgtName = null;
-        //    //SortedBasinsFrm sBf = new SortedBasinsFrm();
-        //    if (chkFlag)
-        //    {
-        //        List<SortedBasinsParas> lst_SBP = BlockGrade(lst_Bsn);
-        //        int counter = lst_SBP.Count;
-        //        arr_Scores = new double[counter];
-        //        arr_TgtName = new string[counter];
-        //        lst_SBP.Sort((x, y) => x.para_TotalScores.CompareTo(y.para_TotalScores));
-        //        foreach (SortedBasinsParas sBp in lst_SBP)
-        //        {
-        //            sBp.para_Rank = counter;
-        //            counter--;
-        //        }
-        //        lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
-        //        arr_Scores = lst_SBP.Select(x => x.para_TotalScores).ToArray();
-        //        arr_TgtName = lst_SBP.Select(x => x.para_Tgt).ToArray();
-        //        SortedBasinsFrm sBf = new SortedBasinsFrm(arr_Scores, arr_TgtName);
-        //        sBf.dgv_Bsn_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
-        //        sBf.Show();
-        //        //btn_GenerateReport.Enabled = true;
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("尚未进行参数矩阵的检验计算操作，所有参数的权重值为 0 .", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //}
-
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
             List<double> lst_paraWgt = new List<double>();
             List<string> lst_BlkName = new List<string>();
+            int counterFlag = 0;
+            //SortedTargetsFrm stf = new SortedTargetsFrm(arr);
+            foreach (string str in lstBx_Selected_GeoPara.Items)
+            {
+                counterFlag++;
+                if (counterFlag != lstBx_Selected_GeoPara.Items.Count)
+                {
+                    PublicValues.GeoParas += str + ",";
+                }
+                else
+                {
+                    PublicValues.GeoParas += str + ";";
+                }
+            }
+            counterFlag = 0;
+            foreach (string str in lstBx_Selected_EngPara.Items)
+            {
+                counterFlag++;
+                if (counterFlag != lstBx_Selected_EngPara.Items.Count)
+                {
+                    PublicValues.EngParas += str + ",";
+                }
+                else
+                {
+                    PublicValues.EngParas += str + ";";
+                }
+            }
+            //counterFlag = 0;
+            //foreach (string str in lstBx_Selected_EcoPara.Items)
+            //{
+            //    counterFlag++;
+            //    if (counterFlag != lstBx_Selected_EcoPara.Items.Count)
+            //    {
+            //        PublicValues.EcoParas += str + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.EcoParas += str + ";";
+            //    }
+            //}
             if (chkFlag)
             {
                 int sn = 0;

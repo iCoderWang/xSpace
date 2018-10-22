@@ -166,6 +166,10 @@ namespace EsofaUI
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
             StringBuilder cRstr = new StringBuilder();
+            PublicValues.dgv_GEE = dgv_Tgt;
+            PublicValues.dgv_Geo = dgv_Tgt_GeoPara;
+            PublicValues.dgv_Eng = dgv_Tgt_EngPara;
+            PublicValues.dgv_Eco = dgv_Tgt_EcoPara;
             string[] cR_arr = null;
             int flag = 0;
             string cR1 = null, cR21 = null, cR22 = null, cR23 = null;// cR = null;
@@ -175,13 +179,57 @@ namespace EsofaUI
             double[,] dgv_R23 = DataSourceToDataTable.GetDgvToArray(this.dgv_Tgt_EcoPara);
             Vector<double> vR1 = cc.ArrayLoad(dgv_R1, out strB,out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
+            foreach (double dbl in vR1)
+            {
+                if (dbl != vR1.Last())
+                {
+                    PublicValues.GEE_Wgt += dbl.ToString() + ",";
+                }
+                else
+                {
+                    PublicValues.GEE_Wgt += dbl.ToString() + ";";
+                }
+            }
             Vector<double> vR21 = cc.ArrayLoad(dgv_R21, out strB,out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
+            foreach (double dbl in vR21)
+            {
+                if (dbl != vR21.Last())
+                {
+                    PublicValues.GeoWgt += dbl.ToString() + ",";
+                }
+                else
+                {
+                    PublicValues.GeoWgt += dbl.ToString() + ";";
+                }
+            }
             Vector<double> vR22 = cc.ArrayLoad(dgv_R22, out strB,out cR22) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
+            foreach (double dbl in vR22)
+            {
+                if (dbl != vR22.Last())
+                {
+                    PublicValues.EngWgt += dbl.ToString() + ",";
+                }
+                else
+                {
+                    PublicValues.EngWgt += dbl.ToString() + ";";
+                }
+            }
             Vector<double> vR23 = cc.ArrayLoad(dgv_R23, out strB,out cR23) * vR1.ElementAt(2);
             cR_arr = new string[] { cR1, cR21, cR22, cR23 };
             eignFrm.textBox1.Text += "R23: \r\n" + strB.ToString() + "\r\n" + vR21 + "\r\n" + vR22 + "\r\n" + vR23;
+            foreach (double dbl in vR23)
+            {
+                if (dbl != vR23.Last())
+                {
+                    PublicValues.EcoWgt += dbl.ToString() + ",";
+                }
+                else
+                {
+                    PublicValues.EcoWgt += dbl.ToString() + ";";
+                }
+            }
             cRstr.Append("层次单排序结果一致性指标");
             foreach (string str in cR_arr)
             {
@@ -755,6 +803,46 @@ namespace EsofaUI
         {
             List<double> lst_paraWgt = new List<double>();
             List<string> lst_TgtName = new List<string>();
+            int counterFlag = 0;
+            //SortedTargetsFrm stf = new SortedTargetsFrm(arr);
+            foreach (string str in lstBx_Selected_GeoPara.Items)
+            {
+                counterFlag++;
+                if (counterFlag != lstBx_Selected_GeoPara.Items.Count)
+                {
+                    PublicValues.GeoParas += str + ",";
+                }
+                else
+                {
+                    PublicValues.GeoParas += str + ";";
+                }
+            }
+            counterFlag = 0;
+            foreach (string str in lstBx_Selected_EngPara.Items)
+            {
+                counterFlag++;
+                if (counterFlag != lstBx_Selected_EngPara.Items.Count)
+                {
+                    PublicValues.EngParas += str + ",";
+                }
+                else
+                {
+                    PublicValues.EngParas += str + ";";
+                }
+            }
+            counterFlag = 0;
+            foreach (string str in lstBx_Selected_EcoPara.Items)
+            {
+                counterFlag++;
+                if (counterFlag != lstBx_Selected_EcoPara.Items.Count)
+                {
+                    PublicValues.EcoParas += str + ",";
+                }
+                else
+                {
+                    PublicValues.EcoParas += str + ";";
+                }
+            }
             if (chkFlag)
             {
                 int sn = 0;
@@ -864,11 +952,7 @@ namespace EsofaUI
             }
         }
 
-        //private void btn_GenerateReport_Click(object sender, EventArgs e)
-        //{
-        //    PDFCreator pdfCreator = new PDFCreator();
-        //    pdfCreator.Create("核心区");
-        //}
+
 
         private void btnQuit_Click(object sender, EventArgs e)
         {

@@ -374,6 +374,7 @@
             this.btn_CustomedMatrix.TabIndex = 10;
             this.btn_CustomedMatrix.Text = "自定义矩阵";
             this.btn_CustomedMatrix.UseVisualStyleBackColor = true;
+            this.btn_CustomedMatrix.Visible = false;
             this.btn_CustomedMatrix.Click += new System.EventHandler(this.btn_CustomedMatrix_Click);
             // 
             // btn_DefaultMatrix
@@ -385,6 +386,7 @@
             this.btn_DefaultMatrix.TabIndex = 9;
             this.btn_DefaultMatrix.Text = "默认矩阵";
             this.btn_DefaultMatrix.UseVisualStyleBackColor = true;
+            this.btn_DefaultMatrix.Visible = false;
             this.btn_DefaultMatrix.Click += new System.EventHandler(this.btn_DefaultMatrix_Click);
             // 
             // btn_Next
