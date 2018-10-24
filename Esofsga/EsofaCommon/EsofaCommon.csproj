@@ -107,6 +107,7 @@
     <Compile Include="DataAssignment.cs" />
     <Compile Include="DataGridViewColumnEditor.cs" />
     <Compile Include="DataGridViewOutputToExcel.cs" />
+    <Compile Include="DrawGraph.cs" />
     <Compile Include="EncryptConnection.cs" />
     <Compile Include="FuzzyMembershipFunction.cs" />
     <Compile Include="DataSourceToDataTable.cs" />

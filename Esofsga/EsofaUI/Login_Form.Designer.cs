@@ -37,6 +37,9 @@
             // 
             // btn_Login
             // 
+            this.btn_Login.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Login.AutoSize = true;
             this.btn_Login.BackColor = System.Drawing.Color.Transparent;
             this.btn_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -52,6 +55,9 @@
             // 
             // txtBox_UserName
             // 
+            this.txtBox_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBox_UserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBox_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_UserName.Location = new System.Drawing.Point(814, 298);
@@ -63,6 +69,9 @@
             // 
             // txtBox_UserPwd
             // 
+            this.txtBox_UserPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBox_UserPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox_UserPwd.Location = new System.Drawing.Point(814, 420);
             this.txtBox_UserPwd.Margin = new System.Windows.Forms.Padding(6);
@@ -92,8 +101,8 @@
             // 
             // Login_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackgroundImage = global::EsofaUI.Properties.Resources.Login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
