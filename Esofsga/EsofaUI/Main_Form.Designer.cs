@@ -457,6 +457,7 @@
             this.menuSub_Doc.Name = "menuSub_Doc";
             this.menuSub_Doc.Size = new System.Drawing.Size(324, 38);
             this.menuSub_Doc.Text = "帮助文档(D)";
+            this.menuSub_Doc.Click += new System.EventHandler(this.menuSub_Doc_Click);
             // 
             // menuSub_About
             // 
@@ -726,7 +727,7 @@
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(4, 0);

@@ -648,7 +648,7 @@ namespace EsofaUI
             //MSWord.Document m_doc;
             m_word = new MSWord.Application();
             Object filename = "页岩气选区评价系统软件使用说明.docx";
-            Object filefullname = System.Windows.Forms.Application.StartupPath + "\\页岩气选区评价系统软件使用说明.docx";
+            Object filefullname = System.Windows.Forms.Application.StartupPath + "\\Help.docx";
             Object confirmConversions = Type.Missing;
             Object readOnly = Type.Missing;
             Object addToRecentFiles = Type.Missing;
@@ -708,6 +708,11 @@ namespace EsofaUI
         private void menuSub_DataFormat_Click(object sender, EventArgs e)
         {
             sideBar_BtnDataFormat_Click(sideBar_BtnDataFormat, e);
+        }
+
+        private void menuSub_Doc_Click(object sender, EventArgs e)
+        {
+            sideBar_BtnDoc_Click(sideBar_BtnDoc, e);
         }
     }
 }
