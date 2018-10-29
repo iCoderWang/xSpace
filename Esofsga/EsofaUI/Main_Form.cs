@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using MSWord = Microsoft.Office.Interop.Word;
-using Excel = Microsoft.Office.Interop.Excel;
+using MsExcel = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
 using EsofaBLL;
@@ -698,9 +698,8 @@ namespace EsofaUI
             //Microsoft.Office.Interop.Excel.Application
             //Object filename = "页岩气选区评价系统软件使用说明.docx";
             Object filefullname = System.Windows.Forms.Application.StartupPath + "\\Standard Data Format_Example.xlsx";
-            Excel.Application excel =new Excel.Application(); //引用Excel对象 
-            Excel.Workbook book =
-            excel.Application.Workbooks.Add(filefullname);
+            MsExcel.Application excel =new MsExcel.Application(); //引用Excel对象 
+            MsExcel.Workbook book = excel.Application.Workbooks.Add(filefullname);
             //引用Excel工作簿 
             excel.Visible = true; //使Excel可视 
         }
