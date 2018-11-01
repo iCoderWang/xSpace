@@ -7,22 +7,65 @@ using System.Text;
 using System.Linq;
 using System.Drawing;
 using MyWord = Microsoft.Office.Interop.Word;
+using MyImage = System.Drawing.Imaging;
 
 
 namespace EsofaUI
 {
     public partial class SortedTargetsFrm : Form
     {
-        public SortedTargetsFrm()
+        //private static FrmSingleton frm = null;
+        //private FrmSingleton()
+        //{
+        //    InitializeComponent();
+        //}
+
+        //public static FrmSingleton CreateInstrance()
+        //{
+        //    if (frm == null || frm.IsDisposed)
+        //    {
+        //        frm = new FrmSingleton();
+        //    }
+        //    return frm;
+        //}
+        #region 单例模式实现
+        private static SortedTargetsFrm frm = null;
+   
+        private SortedTargetsFrm()
         {
             InitializeComponent();
         }
         private List<SortedTargetsParas> lst_STP;
-        public SortedTargetsFrm(List<SortedTargetsParas> list)
+        private SortedTargetsFrm(List<SortedTargetsParas> list)
         {
             InitializeComponent();
             lst_STP = list;
         }
+        public static SortedTargetsFrm CreateInstance()
+        {
+            if(frm == null || frm.IsDisposed)
+            {
+                frm = new SortedTargetsFrm();
+            }
+            return frm;
+        }
+        public static SortedTargetsFrm CreateInstance(List<SortedTargetsParas> list)
+        {
+            if (frm == null || frm.IsDisposed)
+            {
+                frm = new SortedTargetsFrm(list);
+            }
+            return frm;
+        }
+        public static SortedTargetsFrm CreateInstance(double[] scores, string[] names)
+        {
+            if (frm == null || frm.IsDisposed)
+            {
+                frm = new SortedTargetsFrm(scores,names);
+            }
+            return frm;
+        }
+#endregion
 
         private double[] arr_TotalScores;
         private string[] arr_TgtName;
@@ -30,7 +73,7 @@ namespace EsofaUI
         StringBuilder strClass_2 = new StringBuilder();
         StringBuilder strClass_3 = new StringBuilder();
         //private string strBlocks;
-        public SortedTargetsFrm(double[] scores,string [] names )
+        private SortedTargetsFrm(double[] scores,string [] names )
         {
             InitializeComponent();
             arr_TotalScores = scores;
@@ -41,6 +84,9 @@ namespace EsofaUI
         {
             //使用linq根据数组的index对某一个范围内的元素求和
             //double s1 = _arr.Where((num, index) => index > 1 && index <=3).Sum();f
+            strClass_1.Clear();
+            strClass_2.Clear();
+            strClass_3.Clear();
             int s1 = 0, s2 = 0;           
             NaturalBreaksClassification nbc = new NaturalBreaksClassification();
             //对排序结果进行分类，并返回出三类值中的第一类的数量和第3类的数量
@@ -72,6 +118,26 @@ namespace EsofaUI
 
         private void ToolStripMenuItem_Close_Click(object sender, EventArgs e)
         {
+            //PublicValues.GEE_Wgt = null;
+            //PublicValues.GeoParas = null;
+            //PublicValues.ArrGeoParas = null;
+            //PublicValues.GeoWgt = null;
+            //PublicValues.ArrGeoWgt = null;
+            //PublicValues.DicGeoP_W = null;
+            //PublicValues.EngParas = null;
+            //PublicValues.ArrEngParas = null;
+            //PublicValues.EngWgt = null;
+            //PublicValues.ArrEngWgt = null;
+            //PublicValues.DicEngP_W = null;
+            //PublicValues.EcoParas = null;
+            //PublicValues.ArrEcoParas = null;
+            //PublicValues.EcoWgt = null;
+            //PublicValues.ArrEcoWgt = null;
+            //PublicValues.DicEcoP_W = null;
+            //PublicValues.dgv_Geo = null;
+            //PublicValues.dgv_GEE = null;
+            //PublicValues.dgv_Eng = null;
+            //PublicValues.dgv_Eco = null;
             this.Close();
         }
 
@@ -81,9 +147,69 @@ namespace EsofaUI
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Word File|*.doc|(*.*)|*.*";
             sfd.Title = "保存文件";
-            //sfd.ShowDialog();
             StringBuilder strBlocks = new StringBuilder();
-            foreach(string str in arr_TgtName)
+            double dbVal;
+            List<double> wgtGeo = new List<double>();
+            List<double> wgtEng = new List<double>();
+            List<double> wgtEco = new List<double>();
+            DrawGraph dgGeo = null;
+            Bitmap bmGeo = null;
+            string bmGeoPath = null;
+            DrawGraph dgEng = null;
+            Bitmap bmEng = null;
+            string bmEngPath = null;
+            DrawGraph dgEco = null;
+            Bitmap bmEco = null;
+            string bmEcoPath = null;
+            //对地质参数用画图类的构造函数进行实例化
+            if (PublicValues.ArrGeoParas.Length != 0)
+            {
+                foreach (string str in PublicValues.ArrGeoParas)
+                {
+                    PublicValues.DicGeoP_W.TryGetValue(str, out dbVal);
+                    wgtGeo.Add(dbVal);
+                }
+                dgGeo = new DrawGraph(PublicValues.ArrGeoParas, wgtGeo.ToArray(), "参数", "权重值", "黑体", 180);
+                bmGeo = dgGeo.DrawBarGraph();
+                bmGeoPath = System.Windows.Forms.Application.StartupPath + "\\geoWgtBar.jpeg";
+                bmGeo.Save(bmGeoPath, MyImage.ImageFormat.Jpeg);
+            }
+            
+
+            //对工程参数用画图类的构造函数进行实例化
+            if(PublicValues.ArrEngParas.Length != 0)
+            {
+                foreach (string str in PublicValues.ArrEngParas)
+                {
+                    PublicValues.DicEngP_W.TryGetValue(str, out dbVal);
+                    wgtEng.Add(dbVal);
+                }
+                dgEng = new DrawGraph(PublicValues.ArrEngParas, wgtEng.ToArray(), "参数", "权重值", "黑体", 180);
+                bmEng = dgEng.DrawBarGraph();
+                bmEngPath = System.Windows.Forms.Application.StartupPath + "\\engWgtBar.jpeg";
+                bmEng.Save(bmEngPath, MyImage.ImageFormat.Jpeg);
+            }
+            
+
+            // 对经济参数用画图类的构造函数进行实例化
+            if(PublicValues.ArrEcoParas.Length != 0)
+            {
+                foreach (string str in PublicValues.ArrEcoParas)
+                {
+                    PublicValues.DicEcoP_W.TryGetValue(str, out dbVal);
+                    wgtEco.Add(dbVal);
+                }
+                dgEco = new DrawGraph(PublicValues.ArrEcoParas, wgtEco.ToArray(), "参数", "权重值", "黑体", 180);
+                bmEco = dgEco.DrawBarGraph();
+                bmEcoPath = System.Windows.Forms.Application.StartupPath + "\\ecoWgtBar.jpeg";
+                bmEco.Save(bmEcoPath, MyImage.ImageFormat.Jpeg);
+            }
+            
+
+
+            bool isOpen = false;
+            bool flag = true;
+            foreach (string str in arr_TgtName)
             {
                 if (str != arr_TgtName.Last())
                 {
@@ -94,9 +220,10 @@ namespace EsofaUI
                     strBlocks.Append(str + ";");
                 }
             }
+            string strFileName = null;
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                string strFileName = sfd.FileName;
+                strFileName = sfd.FileName;
                 wh.CreateWord(strFileName);
                 wh.InsertText("页岩气选区评价结果分析", 18, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphCenter,0);
                 wh.NewLine();
@@ -110,21 +237,47 @@ namespace EsofaUI
                 wh.NewLine();
                 wh.InsertText("2.1.1、评价参数", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
-                wh.InsertText(PublicValues.GeoParas, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                if (PublicValues.ArrGeoParas.Length != 0)
+                {
+                    wh.InsertText(PublicValues.GeoParas, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
+                else
+                {
+                    wh.InsertText("没有地质参数参与评价。", 10, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }               
                 wh.NewLine();
                 wh.InsertText("2.1.2、判断矩阵", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
-                wh.DGV2Word(PublicValues.dgv_Geo);
+                flag = wh.DGV2Word(PublicValues.dgv_Geo);
+                if(flag == false)
+                {
+                    return;
+                }
                 //wh.NewLine();
                 wh.InsertText("2.1.3、地质参数权重", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
-                wh.InsertText(PublicValues.GeoWgt, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                //wh.InsertText(PublicValues.GeoWgt, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                if(PublicValues.ArrGeoParas.Length != 0)
+                {
+                    wh.InsertPicture(bmGeoPath);
+                }
+                else
+                {
+                    wh.InsertText("没有地质参数参与评价。", 10, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
                 wh.NewLine();
                 wh.InsertText("2.2、工程因素", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
                 wh.NewLine();
                 wh.InsertText("2.2.1、评价参数", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
-                wh.InsertText(PublicValues.EngParas, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                if (PublicValues.ArrEngParas.Length != 0)
+                {
+                    wh.InsertText(PublicValues.EngParas, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
+                else
+                {
+                    wh.InsertText("没有工程参数参与评价。", 10, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
                 wh.NewLine();
                 wh.InsertText("2.2.2、判断矩阵", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
@@ -132,13 +285,28 @@ namespace EsofaUI
                 //wh.NewLine();
                 wh.InsertText("2.2.3、工程参数权重", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
-                wh.InsertText(PublicValues.EngWgt, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                //wh.InsertText(PublicValues.EngWgt, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                if (PublicValues.ArrEngParas.Length != 0)
+                {
+                    wh.InsertPicture(bmEngPath);
+                }
+                else
+                {
+                    wh.InsertText("没有工程参数参与评价。", 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
                 wh.NewLine();
                 wh.InsertText("2.3、经济因素", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
                 wh.NewLine();
                 wh.InsertText("2.3.1、评价参数", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
-                wh.InsertText(PublicValues.EcoParas, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                if (PublicValues.ArrEcoParas.Length != 0)
+                {
+                    wh.InsertText(PublicValues.EcoParas, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
+                else
+                {
+                    wh.InsertText("没有经济参数参与评价。", 10, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
                 wh.NewLine();
                 wh.InsertText("2.3.2、判断矩阵", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
@@ -146,7 +314,16 @@ namespace EsofaUI
                 //wh.NewLine();
                 wh.InsertText("2.3.3、经济参数权重", 14, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 25);
                 wh.NewLine();
-                wh.InsertText(PublicValues.EcoWgt, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                //wh.InsertText(PublicValues.EcoWgt, 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                if (PublicValues.ArrEcoParas.Length != 0)
+                {
+                    wh.InsertPicture(bmEcoPath);
+                }
+                else
+                {
+                    wh.InsertText("没有经济参数参与评价。", 10, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                }
+                
                 wh.NewLine();
                 wh.InsertText("三、评价结果", 16, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft,0);
                 wh.NewLine();
@@ -164,6 +341,10 @@ namespace EsofaUI
                     wh.InsertText("3.3、较差区", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
                     wh.NewLine();
                     wh.InsertText("Null", 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                    wh.NewLine();
+                    wh.InsertText("3.4、排序结果汇总", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
+                    wh.NewLine();
+                    wh.InsertText("Null", 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
                 }
                 else
                 {
@@ -176,21 +357,92 @@ namespace EsofaUI
                     wh.InsertText("3.3、较差区", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
                     wh.NewLine();
                     wh.InsertText(strClass_3.ToString(), 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                    wh.NewLine();
+                    //wh.InsertText("3.4、排序结果汇总", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
+                    //wh.NewLine();
+                    //wh.DGV2Word(this.dgv_Tgt_Sorted,"权重");
                 }
-                wh.SaveWord(strFileName);
+                isOpen = wh.SaveWord(strFileName);
+                if(isOpen == false)
+                {
+                    return;
+                }
             }
-            MessageBox.Show("报告已完成。", "信息",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            PublicValues.GEE_Wgt = null;
-            PublicValues.GeoWgt = null;
-            PublicValues.EngWgt = null;
-            PublicValues.EcoWgt = null;
-            PublicValues.GeoParas = null;
-            PublicValues.EngParas = null;
-            PublicValues.EcoParas = null;
-            PublicValues.dgv_Geo = null;
-            PublicValues.dgv_GEE = null;
-            PublicValues.dgv_Eng = null;
-            PublicValues.dgv_Eco = null;
+            DialogResult dr = MessageBox.Show("报告已完成，是否打开该报告？。", "信息",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            if (dr == DialogResult.Yes)
+            {
+                wh.OpenWordDoc(strFileName);
+            }
+            else
+            {
+                wh.QuitWordApp(strFileName);
+            }
+
+        }
+        ExcelHelper eh = new ExcelHelper();
+        private void ToolStripMenuItem_SaveAs_Click(object sender, EventArgs e)
+        {
+            string fileName = eh.DialogSaveExcel();
+            bool flag = eh.Dgv2Excel(this.dgv_Tgt_Sorted,fileName);
+            if(flag)
+            {
+                DialogResult dr = MessageBox.Show("数据另存已完成，是否打开？","信息",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+                if(dr == DialogResult.Yes)
+                {
+                    eh.OpenExcel(fileName);
+                }
+                return;
+            }
+            else
+            {
+                MessageBox.Show("数据另存失败！");
+                //eh.QuitExcelApp(fileName, k);
+                return;
+
+            }
+        }
+
+        private void ToolStripMenuItem_SaveAsbyWeight_Click(object sender, EventArgs e)
+        {
+            string fileName = eh.DialogSaveExcel();
+            bool flag = eh.Dgv2Excel(this.dgv_Tgt_Sorted,"权重",fileName);
+            if (flag)
+            {
+                DialogResult dr = MessageBox.Show("数据另存已完成，是否打开？", "信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
+                {
+                    eh.OpenExcel(fileName);
+                }
+                return;
+            }
+            else
+            {
+                MessageBox.Show("数据另存失败！");
+                //eh.QuitExcelApp(fileName, k);
+                return;
+
+            }
+        }
+
+        private void ToolStripMenuItem_SaveAsbyScores_Click(object sender, EventArgs e)
+        {
+            string fileName = eh.DialogSaveExcel();
+            bool flag = eh.Dgv2Excel(this.dgv_Tgt_Sorted,"总分值",fileName);
+            if (flag)
+            {
+                DialogResult dr = MessageBox.Show("数据另存已完成，是否打开？", "信息", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
+                {
+                    eh.OpenExcel(fileName);
+                }
+                return;
+            }
+            else
+            {
+                MessageBox.Show("数据另存失败！");
+                return;
+
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using EsofaBLL;
 using EsofaModel;
 using EsofaCommon;
 using System.Collections;
+using System.IO;
 
 namespace EsofaUI
 {
@@ -646,24 +647,30 @@ namespace EsofaUI
         {
             //MSWord.Application m_word;
             //MSWord.Document m_doc;
-            m_word = new MSWord.Application();
-            Object filename = "页岩气选区评价系统软件使用说明.docx";
+            m_word = new MSWord.ApplicationClass();
+            //Object filename = "页岩气选区评价系统软件使用说明.docx";
             Object filefullname = System.Windows.Forms.Application.StartupPath + "\\Help.docx";
-            Object confirmConversions = Type.Missing;
-            Object readOnly = Type.Missing;
-            Object addToRecentFiles = Type.Missing;
-            Object passwordDocument = Type.Missing;
-            Object passwordTemplate = Type.Missing;
-            Object revert = Type.Missing;
-            Object writePasswordDocument = Type.Missing;
-            Object writePasswordTemplate = Type.Missing;
-            Object format = Type.Missing;
-            Object encoding = Type.Missing;
-            Object visible = Type.Missing;
-            Object openConflictDocument = Type.Missing;
-            Object openAndRepair = Type.Missing;
-            Object documentDirection = Type.Missing;
-            Object noEncodingDialog = Type.Missing;
+            if (!File.Exists((string)filefullname))
+            {
+                MessageBox.Show("源文件不存在或已被删除。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            #region 注释掉的word另一种方法功能中的变量定义代码
+            //Object confirmConversions = Type.Missing;
+            //Object readOnly = Type.Missing;
+            //Object addToRecentFiles = Type.Missing;
+            //Object passwordDocument = Type.Missing;
+            //Object passwordTemplate = Type.Missing;
+            //Object revert = Type.Missing;
+            //Object writePasswordDocument = Type.Missing;
+            //Object writePasswordTemplate = Type.Missing;
+            //Object format = Type.Missing;
+            //Object encoding = Type.Missing;
+            //Object visible = Type.Missing;
+            //Object openConflictDocument = Type.Missing;
+            //Object openAndRepair = Type.Missing;
+            //Object documentDirection = Type.Missing;
+            //Object noEncodingDialog = Type.Missing;
 
             //for (int i = 1; i <= m_word.Documents.Count; i++)
             //{
@@ -674,20 +681,27 @@ namespace EsofaUI
             //        return;
             //    }
             //}
+            #endregion
             try
             {
-                m_word.Documents.Open(ref filefullname,
-                    ref confirmConversions, ref readOnly, ref addToRecentFiles,
-                    ref passwordDocument, ref passwordTemplate, ref revert,
-                    ref writePasswordDocument, ref writePasswordTemplate,
-                    ref format, ref encoding, ref visible, ref openConflictDocument,
-                    ref openAndRepair, ref documentDirection, ref noEncodingDialog
-                    );
+                #region 注释掉的word另一种方法功能代码
+                //m_word.Documents.Open(ref filefullname,
+                //    ref confirmConversions, ref readOnly, ref addToRecentFiles,
+                //    ref passwordDocument, ref passwordTemplate, ref revert,
+                //    ref writePasswordDocument, ref writePasswordTemplate,
+                //    ref format, ref encoding, ref visible, ref openConflictDocument,
+                //    ref openAndRepair, ref documentDirection, ref noEncodingDialog
+                //    );
+                #endregion
+                m_word.Documents.Add(ref filefullname);
                 m_word.Visible = true;
             }
             catch //(System.Exception ex)
             {
-                MessageBox.Show("打开Word文档出错!","错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                //MessageBox.Show("打开Word文档出错!","错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Office程序调用出错，请确认是否安装了Office2013或更新的版本。", "信息",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
 
 
@@ -697,11 +711,26 @@ namespace EsofaUI
         {
             //Microsoft.Office.Interop.Excel.Application
             //Object filename = "页岩气选区评价系统软件使用说明.docx";
-            Object filefullname = System.Windows.Forms.Application.StartupPath + "\\Standard Data Format_Example.xlsx";
-            MsExcel.Application excel =new MsExcel.Application(); //引用Excel对象 
-            MsExcel.Workbook book = excel.Application.Workbooks.Add(filefullname);
-            //引用Excel工作簿 
-            excel.Visible = true; //使Excel可视 
+            try
+            {
+                Object filefullname = System.Windows.Forms.Application.StartupPath + "\\Standard Data Format_Example.xlsx";
+                if (!File.Exists((string)filefullname))
+                {
+                    MessageBox.Show("源文件不存在或已被删除。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                MsExcel.Application excel = new MsExcel.ApplicationClass(); //引用Excel对象 
+                MsExcel.Workbook book = excel.Application.Workbooks.Add(filefullname);
+                //引用Excel工作簿 
+                excel.Visible = true; //使Excel可视 
+            }
+            catch
+            {
+                MessageBox.Show("Office程序调用出错，请确认是否安装了Office2013或更新的版本。", "信息",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
         }
 
         private void menuSub_DataFormat_Click(object sender, EventArgs e)

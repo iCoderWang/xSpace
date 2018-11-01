@@ -3,8 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Threading;
-using System.util;
-using System.Resources;
+using System.Diagnostics;
 using MsWord=Microsoft.Office.Interop.Word;
 
 namespace EsofaCommon
@@ -17,7 +16,41 @@ namespace EsofaCommon
         /// <summary>word 文件对象 </summary>    
         MsWord.Document _wordDocument = new MsWord.Document();
         Object Nothing = System.Reflection.Missing.Value;
-       
+
+        /// <summary>
+        /// 打开一个现存的word文档
+        /// </summary>
+        /// <param name="strPath"></param>
+        public void OpenWordDoc(string strPath)
+        {
+            MsWord.Application app = new MsWord.Application();
+            app.Visible = true;
+            app.Documents.Open((object) strPath);
+        }
+
+        /// <summary>
+        /// 退出当前的word应用程序
+        /// </summary>
+        public void QuitWordApp(string fileName)
+        {
+            _wordDocument.Close();// ref Nothing, ref Nothing, ref Nothing);
+            _wordApplication.Quit();
+            //杀死打开的word进程
+            Process myPro = new Process();
+            Process[] wordPro = Process.GetProcessesByName("winword");
+            foreach (Process pro in wordPro) //这里是找到那些没有界面的Word进程
+            {
+                IntPtr ip = pro.MainWindowHandle;
+
+                string str = pro.MainWindowTitle; //发现程序中打开跟用户自己打开的区别就在这个属性
+               //用户打开的str 是文件的名称，程序中打开的就是空字符串
+                if (str == fileName)
+                {
+                    pro.Kill();
+                }
+            }
+        }
+
         /// <summary>
         /// 创建word应用对象 
         /// </summary>
@@ -75,7 +108,9 @@ namespace EsofaCommon
             object myNothing = System.Reflection.Missing.Value;
             //图片居中显示    
             this._wordApplication.Selection.ParagraphFormat.Alignment = MsWord.WdParagraphAlignment.wdAlignParagraphCenter;
-            this._wordApplication.Application.Selection.InlineShapes.AddPicture(pPictureFileName, ref myNothing, ref myNothing, ref myNothing);
+            this._wordApplication.Application.Selection.InlineShapes.AddPicture(pPictureFileName);//, ref myNothing, ref myNothing, ref myNothing);
+            //object unit = MsWord.WdUnits.wdStory;
+            _wordApplication.Selection.EndKey();// ref unit, ref Nothing);
         }
 
 
@@ -83,7 +118,7 @@ namespace EsofaCommon
         /// 保存文件
         /// </summary>
         /// <param name="pFileName">传入路径和保存的文件名称</param>
-        public void SaveWord(string pFileName)
+        public bool SaveWord(string pFileName)
         {
             //object Nothing = System.Reflection.Missing.Value;
             object fileName = pFileName;
@@ -91,15 +126,31 @@ namespace EsofaCommon
             try
             {
                 this._wordDocument.SaveAs(ref fileName, ref fileFormat, ref Nothing, ref Nothing, ref Nothing, ref Nothing,
-                    ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing,
-                    ref Nothing, ref Nothing);
-                _wordDocument.Close();// ref Nothing, ref Nothing, ref Nothing);
-                _wordApplication.Quit();
+                        ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing, ref Nothing,
+                        ref Nothing, ref Nothing);
+                return true;
+               
             }
             catch(Exception e)
             {
                 //throw new Exception("导出word文档失败!");
-                MessageBox.Show(e.Message);
+                if(e.Message.Contains("Word 无法保存此文件，因为它已在别处打开。"))
+                {
+                    MessageBox.Show("文件处于打开状态，请关闭文件后再进行保存。","警告",
+                        MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
+                    return false;
+                }
+                else
+                {
+                    MessageBox.Show(e.Message);
+                    return false;
+                }
+               
+            }
+            finally
+            {
+                QuitWordApp((string)fileName);
             }
         }
 
@@ -109,8 +160,7 @@ namespace EsofaCommon
         /// 使用Interop.Word.dll将DataGridView导出到Word
         /// </summary>
         /// <param name="dGV"></param>
-        /*保会通财务软件公司*/
-        public void DGV2Word(DataGridView dGV)//,int paragraphCounter)
+        public bool DGV2Word(DataGridView dGV)//,int paragraphCounter)
         {
             MsWord.Table mytable;
             //声明Word表格
@@ -118,7 +168,7 @@ namespace EsofaCommon
             if (dGV == null)
             {
                 MessageBox.Show("参数值被归零，请重新检验矩阵，然后再次排序。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                return false;
             }
             //_wordApplication.Selection.TypeParagraph();
             mysel = _wordApplication.Selection;
@@ -153,6 +203,89 @@ namespace EsofaCommon
             GC.Collect();
             object unit = MsWord.WdUnits.wdStory;
             _wordApplication.Selection.EndKey(ref unit,ref Nothing);
+            return true;
+            //_wordDocument.Content.InsertAfter("\n");
+        }
+        /// <summary>
+        /// 根据选择条件，输出表格。定制品，专供排序结果输出权重和评分结果使用。
+        /// </summary>
+        /// <param name="dGV"></param>
+        /// <param name="keywords"></param>
+        /// <returns></returns>
+        public bool DGV2Word(DataGridView dGV,string keyword)//,int paragraphCounter)
+        {
+            MsWord.Table mytable;
+            //声明Word表格
+            MsWord.Selection mysel;
+            if (dGV == null)
+            {
+                MessageBox.Show("参数值被归零，请重新检验矩阵，然后再次排序。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            //_wordApplication.Selection.TypeParagraph();
+            mysel = _wordApplication.Selection;
+            object defaultTable = MsWord.WdDefaultTableBehavior.wdWord8TableBehavior;
+            object autoFit = MsWord.WdAutoFitBehavior.wdAutoFitContent;
+            int clmnCount = 0;
+            for (int i = 0; i < dGV.ColumnCount; i++)
+            {
+                if (dGV.Columns[i].HeaderText.Contains("排序") ||
+                    dGV.Columns[i].HeaderText.Contains("区块") ||
+                    dGV.Columns[i].HeaderText.Contains("总分值") ||
+                    dGV.Columns[i].HeaderText.Contains(keyword))
+                {
+                    clmnCount++;
+                }
+            }
+            //将数据生成Word表格文件
+            mytable = _wordDocument.Tables.Add(mysel.Range, dGV.RowCount, clmnCount, ref defaultTable, ref autoFit);
+            //设置列宽
+            //mytable.Columns.AutoFit();
+            _wordApplication.Selection.Cells.VerticalAlignment = MsWord.WdCellVerticalAlignment.wdCellAlignVerticalCenter;//垂直居中
+            _wordApplication.Selection.ParagraphFormat.Alignment = MsWord.WdParagraphAlignment.wdAlignParagraphCenter;//水平居中
+            mytable.Borders.InsideLineStyle = MsWord.WdLineStyle.wdLineStyleSingle;
+            mytable.Borders.OutsideLineStyle = MsWord.WdLineStyle.wdLineStyleSingle;
+
+            //输出列标题数据
+            for (int i = 0, j = 0; i < dGV.ColumnCount; i++)
+            {
+                if (dGV.Columns[i].HeaderText.Contains("排序")||
+                    dGV.Columns[i].HeaderText.Contains("区块")||
+                    dGV.Columns[i].HeaderText.Contains("总分值")||
+                    dGV.Columns[i].HeaderText.Contains(keyword))
+                {
+                    mytable.Cell(1, j + 1).Range.Font.Size = 8;
+                    mytable.Cell(1, j + 1).Range.InsertAfter(dGV.Columns[i].HeaderText);
+                    j++;
+                }
+                
+            }
+            //输出控件中的记录
+            for (int i = 0; i < dGV.RowCount; i++)
+            {
+                for (int j = 0, k = 0; j < dGV.ColumnCount; j++)
+                {
+                    if (dGV.Columns[j].HeaderText.Contains("排序") ||dGV.Columns[j].HeaderText.Contains("区块"))
+                    {
+                        mytable.Cell(i + 2, k + 1).Range.Font.Size = 8;
+                        mytable.Cell(i + 2, k + 1).Range.InsertAfter(dGV[j, i].FormattedValue.ToString());
+                        k++;
+                    }
+                    if (dGV.Columns[j].HeaderText.Contains("总分值") ||dGV.Columns[j].HeaderText.Contains(keyword))
+                    {
+                        mytable.Cell(i + 2, k+ 1).Range.Font.Size = 8;
+                        mytable.Cell(i + 2, k+ 1).Range.InsertAfter(string.Format (dGV[j, i].FormattedValue.ToString(),"#.###"));
+                        k++;
+                        //mytable.Cell(i + 2, j + 1).Range.InsertAfter(dGV[j, i]);
+                    }
+                    
+                }
+            }
+            //mytable.Columns.AutoFit();
+            GC.Collect();
+            object unit = MsWord.WdUnits.wdStory;
+            _wordApplication.Selection.EndKey(ref unit, ref Nothing);
+            return true;
             //_wordDocument.Content.InsertAfter("\n");
         }
         #endregion

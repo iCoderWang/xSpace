@@ -119,7 +119,7 @@
             this.MinimizeBox = false;
             this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "页岩气选区评价系统";
+            this.Text = "页岩气有利区优选评价系统";
             this.ResumeLayout(false);
             this.PerformLayout();
 

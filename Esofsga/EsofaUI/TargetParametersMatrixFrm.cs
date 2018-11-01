@@ -192,6 +192,7 @@ namespace EsofaUI
             }
             Vector<double> vR21 = cc.ArrayLoad(dgv_R21, out strB,out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
+            //PublicValues.ArrGeoWgt = vR21.ToArray();
             foreach (double dbl in vR21)
             {
                 if (dbl != vR21.Last())
@@ -805,12 +806,15 @@ namespace EsofaUI
             List<string> lst_TgtName = new List<string>();
             int counterFlag = 0;
             //SortedTargetsFrm stf = new SortedTargetsFrm(arr);
+            
             foreach (string str in lstBx_Selected_GeoPara.Items)
             {
+                //PublicValues.ArrGeoParas[counterFlag] = str;
                 counterFlag++;
                 if (counterFlag != lstBx_Selected_GeoPara.Items.Count)
                 {
                     PublicValues.GeoParas += str + ",";
+                    
                 }
                 else
                 {

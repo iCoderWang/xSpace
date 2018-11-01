@@ -161,7 +161,7 @@
             this.toolStripBtn_DataModify,
             this.toolStripBtn_Copy,
             this.toolStripBtn_Paste});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 46);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 44);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1468, 25);
@@ -258,7 +258,7 @@
             this.menuStrip_Main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_Main.Name = "menuStrip_Main";
             this.menuStrip_Main.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 46);
+            this.menuStrip_Main.Size = new System.Drawing.Size(1468, 44);
             this.menuStrip_Main.TabIndex = 0;
             this.menuStrip_Main.Text = "menuStrip1";
             // 
@@ -270,7 +270,7 @@
             this.toolStripSeparator1,
             this.menuSub_Close});
             this.menuMain_File.Name = "menuMain_File";
-            this.menuMain_File.Size = new System.Drawing.Size(103, 38);
+            this.menuMain_File.Size = new System.Drawing.Size(103, 36);
             this.menuMain_File.Text = "文件(F)";
             // 
             // menuSub_Open
@@ -305,7 +305,7 @@
             this.menuSub_Copy,
             this.menuSub_SelectAll});
             this.menuMain_Edit.Name = "menuMain_Edit";
-            this.menuMain_Edit.Size = new System.Drawing.Size(103, 38);
+            this.menuMain_Edit.Size = new System.Drawing.Size(103, 36);
             this.menuMain_Edit.Text = "编辑(E)";
             // 
             // menuSub_Copy
@@ -331,7 +331,7 @@
             this.menuSub_DataQu,
             this.menuSub_DataBr});
             this.menuMain_DataMn.Name = "menuMain_DataMn";
-            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 38);
+            this.menuMain_DataMn.Size = new System.Drawing.Size(163, 36);
             this.menuMain_DataMn.Text = "数据管理(M)";
             // 
             // menuSub_DataIm
@@ -378,7 +378,7 @@
             this.menuSub_AHP,
             this.menuSub_TOPSIS});
             this.menuMain_DataAn.Name = "menuMain_DataAn";
-            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 38);
+            this.menuMain_DataAn.Size = new System.Drawing.Size(156, 36);
             this.menuMain_DataAn.Text = "数据分析(A)";
             // 
             // menuSub_AHP
@@ -402,7 +402,7 @@
             this.menuSub_UserDel,
             this.menuSub_UserPm});
             this.menuMain_UserMn.Name = "menuMain_UserMn";
-            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 38);
+            this.menuMain_UserMn.Size = new System.Drawing.Size(157, 36);
             this.menuMain_UserMn.Text = "用户管理(U)";
             // 
             // menuSub_UserQuery
@@ -441,28 +441,28 @@
             this.menuSub_Doc,
             this.menuSub_About});
             this.menuMain_Help.Name = "menuMain_Help";
-            this.menuMain_Help.Size = new System.Drawing.Size(108, 38);
+            this.menuMain_Help.Size = new System.Drawing.Size(108, 36);
             this.menuMain_Help.Text = "帮助(H)";
             // 
             // menuSub_DataFormat
             // 
             this.menuSub_DataFormat.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.menuSub_DataFormat.Name = "menuSub_DataFormat";
-            this.menuSub_DataFormat.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_DataFormat.Size = new System.Drawing.Size(245, 38);
             this.menuSub_DataFormat.Text = "数据格式(F)";
             this.menuSub_DataFormat.Click += new System.EventHandler(this.menuSub_DataFormat_Click);
             // 
             // menuSub_Doc
             // 
             this.menuSub_Doc.Name = "menuSub_Doc";
-            this.menuSub_Doc.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_Doc.Size = new System.Drawing.Size(245, 38);
             this.menuSub_Doc.Text = "帮助文档(D)";
             this.menuSub_Doc.Click += new System.EventHandler(this.menuSub_Doc_Click);
             // 
             // menuSub_About
             // 
             this.menuSub_About.Name = "menuSub_About";
-            this.menuSub_About.Size = new System.Drawing.Size(324, 38);
+            this.menuSub_About.Size = new System.Drawing.Size(245, 38);
             this.menuSub_About.Text = "关于(A)";
             this.menuSub_About.Click += new System.EventHandler(this.MenuSub_About_Click);
             // 
@@ -786,7 +786,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Main_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "页岩气区块评价系统";
+            this.Text = "页岩气有利区优选评价系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Form_FormClosed);
             this.menu_Panel.ResumeLayout(false);

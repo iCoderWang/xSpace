@@ -48,7 +48,7 @@ namespace EsofaCommon
                 System.Windows.Forms.Application.DoEvents();
             }
             worksheet.Columns.EntireColumn.AutoFit();//列宽自适应
-            MessageBox.Show(fileName + "资料保存成功", "提示", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show( "数据另存完成。", "提示", MessageBoxButtons.OK,MessageBoxIcon.Information);
             if (saveFileName != "")
             {
                 try
