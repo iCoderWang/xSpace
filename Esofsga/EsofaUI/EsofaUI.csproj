@@ -223,12 +223,6 @@
     <Compile Include="GradingFrm.Designer.cs">
       <DependentUpon>GradingFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PdfGeneratorFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PdfGeneratorFrm.Designer.cs">
-      <DependentUpon>PdfGeneratorFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -357,9 +351,6 @@
     <EmbeddedResource Include="GradingFrm.resx">
       <DependentUpon>GradingFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PdfGeneratorFrm.resx">
-      <DependentUpon>PdfGeneratorFrm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ProspectAreaMatrixFrm.resx">
       <DependentUpon>ProspectAreaMatrixFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -414,7 +405,6 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest">
       <SubType>Designer</SubType>

@@ -35,8 +35,10 @@ namespace EsofaCommon
         /// </summary>
         public void QuitWordApp(string fileName)
         {
-            _wordDocument.Close();// ref Nothing, ref Nothing, ref Nothing);
+            //_wordDocument.Close();// ref Nothing, ref Nothing, ref Nothing);
             _wordApplication.Quit();
+            Marshal.ReleaseComObject((object)_wordDocument);
+            Marshal.ReleaseComObject((object)_wordApplication);
         }
 
         /// <summary>

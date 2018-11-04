@@ -10,20 +10,39 @@ namespace EsofaUI
 {
     public partial class TOPSISDecisionMatrixFrm : Form
     {
-        public TOPSISDecisionMatrixFrm()
-        {
-            InitializeComponent();
-        }
+        private static TOPSISDecisionMatrixFrm frm;
         private List<double> lst_paraWgt;
         private List<string> lst_paraTgt;
         private string strDgvName;
-        public TOPSISDecisionMatrixFrm(List<double> lstWgt,List<string> lstTgt,string dgvName)
+        private TOPSISDecisionMatrixFrm()
+        {
+            InitializeComponent();
+        }
+        private TOPSISDecisionMatrixFrm(List<double> lstWgt,List<string> lstTgt,string dgvName)
         {
             lst_paraWgt = lstWgt;
             lst_paraTgt = lstTgt;
             strDgvName = dgvName;
             InitializeComponent();
         }
+
+        public static TOPSISDecisionMatrixFrm CreateInstance()
+        {
+            if(frm == null || frm.IsDisposed)
+            {
+                frm = new TOPSISDecisionMatrixFrm();
+            }
+            return frm;
+        }
+        public static TOPSISDecisionMatrixFrm CreateInstance(List<double> lstWgt, List<string> lstTgt, string dgvName)
+        {
+            if(frm == null || frm.IsDisposed)
+            {
+                frm = new TOPSISDecisionMatrixFrm(lstWgt, lstTgt, dgvName);
+            }
+            return frm;
+        }
+
         private void TOPSISDecisionMatrixFrm_Load(object sender, EventArgs e)
         {
             DataGridViewColumnEditor dgvce = new DataGridViewColumnEditor();
@@ -113,7 +132,7 @@ namespace EsofaUI
             lst_ISBTE.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
             double [] arr_Ci = lst_ISBTE.Select(x => x.para_Ci).ToArray();
             string [] arr_Tgt = lst_ISBTE.Select(x => x.para_Tgt).ToArray();
-            ResultSortedByTopsisFrm rsbtf = new ResultSortedByTopsisFrm(lst_ISBTE,arr_Ci,arr_Tgt,strDgvName);
+            ResultSortedByTopsisFrm rsbtf = ResultSortedByTopsisFrm.CreateInstance(lst_ISBTE,arr_Ci,arr_Tgt,strDgvName);
             rsbtf.dgv_SortedByTopsis.DataSource = lst_ISBTE;
             rsbtf.Show();
         }

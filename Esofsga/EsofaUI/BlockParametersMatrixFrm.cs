@@ -30,6 +30,13 @@ namespace EsofaUI
         double[,] R21;
         double[,] R22;
         double[,] R23;
+
+        //******************************************************//
+        string[] geoParasAll;
+        string[] engParasAll;
+        string[] ecoParasAll;
+        //******************************************************//
+
         /// <summary>
         /// 加载有利区参数矩阵
         /// </summary>
@@ -37,6 +44,24 @@ namespace EsofaUI
         /// <param name="e"></param>
         private void BlockParametersMatrixFrm_Load(object sender, EventArgs e)
         {
+            //******************************************************//
+            geoParasAll = new string[lstBx_All_GeoPara.Items.Count];
+            engParasAll = new string[lstBx_All_EngPara.Items.Count];
+            ecoParasAll = new string[lstBx_All_EcoPara.Items.Count];
+            for (int i = 0; i < lstBx_All_GeoPara.Items.Count; i++)
+            {
+                geoParasAll[i] = (string)lstBx_All_GeoPara.Items[i];
+                if (i < lstBx_All_EngPara.Items.Count)
+                {
+                    engParasAll[i] = (string)lstBx_All_EngPara.Items[i];
+                }
+                if (i < lstBx_All_EcoPara.Items.Count)
+                {
+                    ecoParasAll[i] = (string)lstBx_All_EcoPara.Items[i];
+                }
+            }
+            //******************************************************//
+
             MatrixLoad();
         }
         private void MatrixLoad()
@@ -131,9 +156,15 @@ namespace EsofaUI
             List<double> lst_paraWgt = new List<double>();
             List<string> lst_BlkName = new List<string>();
             int counterFlag = 0;
+            //******************************************************//
+            PublicValues.GeoParas = "";
+            PublicValues.EngParas = "";
+            PublicValues.EcoParas = "";
             //SortedTargetsFrm stf = new SortedTargetsFrm(arr);
+            PublicValues.ArrGeoParas = new string[lstBx_Selected_GeoPara.Items.Count];
             foreach (string str in lstBx_Selected_GeoPara.Items)
             {
+                PublicValues.ArrGeoParas[counterFlag] = str;
                 counterFlag++;
                 if (counterFlag != lstBx_Selected_GeoPara.Items.Count)
                 {
@@ -144,9 +175,30 @@ namespace EsofaUI
                     PublicValues.GeoParas += str + ";";
                 }
             }
+
+            //将所有参数对应的权重值赋值给对应的参数，并形成一个字典变量，以供后面绘图时调用
+            //此目的是为了绘制柱状图时，所用参数对应 相应的权重值
+            PublicValues.DicGeoP_W = new Dictionary<string, double>();
+            PublicValues.DicEngP_W = new Dictionary<string, double>();
+            PublicValues.DicEcoP_W = new Dictionary<string, double>();
+            for (int i = 0; i < geoParasAll.Length; i++)
+            {
+                PublicValues.DicGeoP_W.Add(geoParasAll[i], (double)PublicValues.ArrGeoWgt[i]);
+                if (i < engParasAll.Length)
+                {
+                    PublicValues.DicEngP_W.Add(engParasAll[i], (double)PublicValues.ArrEngWgt[i]);
+                }
+                if (i < ecoParasAll.Length)
+                {
+                    PublicValues.DicEcoP_W.Add(ecoParasAll[i], (double)PublicValues.ArrEcoWgt[i]);
+                }
+            }
+
             counterFlag = 0;
+            PublicValues.ArrEngParas = new string[lstBx_Selected_EngPara.Items.Count];
             foreach (string str in lstBx_Selected_EngPara.Items)
             {
+                PublicValues.ArrEngParas[counterFlag] = str;
                 counterFlag++;
                 if (counterFlag != lstBx_Selected_EngPara.Items.Count)
                 {
@@ -158,8 +210,10 @@ namespace EsofaUI
                 }
             }
             counterFlag = 0;
+            PublicValues.ArrEcoParas = new string[lstBx_Selected_EcoPara.Items.Count];
             foreach (string str in lstBx_Selected_EcoPara.Items)
             {
+                PublicValues.ArrEcoParas[counterFlag] = str;
                 counterFlag++;
                 if (counterFlag != lstBx_Selected_EcoPara.Items.Count)
                 {
@@ -170,6 +224,7 @@ namespace EsofaUI
                     PublicValues.EcoParas += str + ";";
                 }
             }
+            //******************************************************//
             if (chkFlag)
             {
                 int sn = 0;
@@ -269,7 +324,7 @@ namespace EsofaUI
                 //stf.dgv_Tgt_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_STP);
                 //stf.Show();
                 //btn_GenerateReport.Enabled = true;
-                TOPSISDecisionMatrixFrm tdm = new TOPSISDecisionMatrixFrm(lst_paraWgt, lst_BlkName, "dgvBlk_TDM");
+                TOPSISDecisionMatrixFrm tdm = TOPSISDecisionMatrixFrm.CreateInstance(lst_paraWgt, lst_BlkName, "dgvBlk_TDM");
                 tdm.dgv_DecisionMatrix.DataSource = lst_TTDME;
                 tdm.Show();
             }

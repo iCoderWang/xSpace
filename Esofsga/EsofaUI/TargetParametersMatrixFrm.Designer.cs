@@ -1043,6 +1043,7 @@
             this.Name = "TargetParametersMatrixFrm";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "TOPSIS核心区参数权重矩阵";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TargetParametersMatrixFrm_FormClosing);
             this.Load += new System.EventHandler(this.TargetParametersMatrixFrm_Load);
             this.gBoxEcoPara.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Tgt_EcoPara)).EndInit();

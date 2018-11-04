@@ -30,7 +30,9 @@ namespace EsofaUI
         //}
         #region 单例模式实现
         private static SortedTargetsFrm frm = null;
-   
+        private double[] arr_TotalScores;
+        private string[] arr_TgtName;
+
         private SortedTargetsFrm()
         {
             InitializeComponent();
@@ -67,8 +69,6 @@ namespace EsofaUI
         }
 #endregion
 
-        private double[] arr_TotalScores;
-        private string[] arr_TgtName;
         StringBuilder strClass_1 = new StringBuilder();
         StringBuilder strClass_2 = new StringBuilder();
         StringBuilder strClass_3 = new StringBuilder();
@@ -129,6 +129,8 @@ namespace EsofaUI
             sfd.Filter = "Word File|*.doc|(*.*)|*.*";
             sfd.Title = "保存文件";
             StringBuilder strBlocks = new StringBuilder();
+
+            //******************************************************************//
             double dbVal;
             List<double> wgtGeo = new List<double>();
             List<double> wgtEng = new List<double>();
@@ -186,10 +188,10 @@ namespace EsofaUI
                 bmEco.Save(bmEcoPath, MyImage.ImageFormat.Jpeg);
             }
             
-
-
             bool isOpen = false;
             bool flag = true;
+            //******************************************************************//
+
             foreach (string str in arr_TgtName)
             {
                 if (str != arr_TgtName.Last())

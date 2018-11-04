@@ -29,10 +29,12 @@ namespace EsofaUI
         double[,] R21;
         double[,] R22;
         double[,] R23;
+        //******************************************************//
         string[] geoParasAll;
         string[] engParasAll;
         string[] ecoParasAll;
-        
+        //******************************************************//
+
         /// <summary>
         /// 加载核心区参数矩阵
         /// </summary>
@@ -42,6 +44,8 @@ namespace EsofaUI
         {
             //调用通用方法模块中的数据加载方法，将数组里的数据加载到datagridview的cell中
             ParametersWeightLoader paraWeightLoader = new ParametersWeightLoader();
+
+            //******************************************************//
             geoParasAll = new string[lstBx_All_GeoPara.Items.Count];
             engParasAll = new string[lstBx_All_EngPara.Items.Count];
             ecoParasAll = new string[lstBx_All_EcoPara.Items.Count];
@@ -57,6 +61,9 @@ namespace EsofaUI
                     ecoParasAll[i] = (string)lstBx_All_EcoPara.Items[i];
                 }
             }
+
+            //******************************************************//
+
             //创建DataTable变量，用于中间转载数据
             DataTable dt = new DataTable();
             
@@ -195,13 +202,19 @@ namespace EsofaUI
             //}           
             Vector<double> vR21 = cc.ArrayLoad(R21, out strB, out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
+
+            //******************************************************//
             PublicValues.ArrGeoWgt = new double[vR21.ToArray().Length];
             PublicValues.ArrGeoWgt = vR21.ToArray();
+            //******************************************************//
 
             Vector<double> vR22 = cc.ArrayLoad(R22, out strB, out cR22) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
+
+            //******************************************************//
             PublicValues.ArrEngWgt = new double[vR22.ToArray().Length];
             PublicValues.ArrEngWgt = vR22.ToArray();
+            //******************************************************//
             //foreach (double dbl in vR22)
             //{
             //    if (dbl != vR22.Last())
@@ -216,8 +229,11 @@ namespace EsofaUI
             Vector<double> vR23 = cc.ArrayLoad(R23, out strB, out cR23) * vR1.ElementAt(2);
             cR_arr = new string[] { cR1, cR21, cR22, cR23 };
             eignFrm.textBox1.Text += "R23: \r\n" + strB.ToString() + "\r\n"+ vR21 + "\r\n" + vR22 + "\r\n" + vR23;
+
+            //******************************************************//
             PublicValues.ArrEcoWgt = new double[vR23.ToArray().Length];
             PublicValues.ArrEcoWgt = vR23.ToArray();
+            //******************************************************//
             //foreach (double dbl in vR23)
             //{
             //    if (dbl != vR23.Last())
@@ -839,15 +855,6 @@ namespace EsofaUI
                     PublicValues.DicEcoP_W.Add(ecoParasAll[i], (double)PublicValues.ArrEcoWgt[i]);
                 }
             }
-            //for (int i = 0; i < lstBx_All_EngPara.Items.Count; i++)
-            //{
-            //    PublicValues.DicEngP_W.Add((string)lstBx_All_EngPara.Items[i], PublicValues.ArrEngWgt[i]);
-            //}
-            //for (int i = 0; i < lstBx_All_EcoPara.Items.Count; i++)
-            //{
-            //    PublicValues.DicEcoP_W.Add((string)lstBx_All_EcoPara.Items[i], PublicValues.ArrEcoWgt[i]);
-            //}
-
 
             counterFlag = 0;
             PublicValues.ArrEngParas = new string[lstBx_Selected_EngPara.Items.Count];

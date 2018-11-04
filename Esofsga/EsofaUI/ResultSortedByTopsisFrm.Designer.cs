@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAsbyWeight = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAsbyScores = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_NaturalBreaks = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Classify = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,16 +62,43 @@
             // ToolStripMenuItem_File
             // 
             this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_SaveAs,
+            this.ToolStripMenuItem_SaveAsbyWeight,
+            this.ToolStripMenuItem_SaveAsbyScores,
             this.ToolStripMenuItem_Close});
             this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
             this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 38);
             this.ToolStripMenuItem_File.Text = "文件";
             // 
+            // ToolStripMenuItem_SaveAs
+            // 
+            this.ToolStripMenuItem_SaveAs.Name = "ToolStripMenuItem_SaveAs";
+            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAs.Text = "保存";
+            this.ToolStripMenuItem_SaveAs.Click += new System.EventHandler(this.ToolStripMenuItem_SaveAs_Click);
+            // 
+            // ToolStripMenuItem_SaveAsbyWeight
+            // 
+            this.ToolStripMenuItem_SaveAsbyWeight.Name = "ToolStripMenuItem_SaveAsbyWeight";
+            this.ToolStripMenuItem_SaveAsbyWeight.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAsbyWeight.Text = "另存为“权重”表格";
+            this.ToolStripMenuItem_SaveAsbyWeight.Visible = false;
+            this.ToolStripMenuItem_SaveAsbyWeight.Click += new System.EventHandler(this.ToolStripMenuItem_SaveAsbyWeight_Click);
+            // 
+            // ToolStripMenuItem_SaveAsbyScores
+            // 
+            this.ToolStripMenuItem_SaveAsbyScores.Name = "ToolStripMenuItem_SaveAsbyScores";
+            this.ToolStripMenuItem_SaveAsbyScores.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAsbyScores.Text = "另存为“总分值”表格";
+            this.ToolStripMenuItem_SaveAsbyScores.Visible = false;
+            this.ToolStripMenuItem_SaveAsbyScores.Click += new System.EventHandler(this.ToolStripMenuItem_SaveAsbyScores_Click);
+            // 
             // ToolStripMenuItem_Close
             // 
             this.ToolStripMenuItem_Close.Name = "ToolStripMenuItem_Close";
-            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(164, 38);
+            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(332, 38);
             this.ToolStripMenuItem_Close.Text = "关闭";
+            this.ToolStripMenuItem_Close.Click += new System.EventHandler(this.ToolStripMenuItem_Close_Click);
             // 
             // ToolStripMenuItem_NaturalBreaks
             // 
@@ -96,7 +126,7 @@
             // ToolStripMenuItem_GenerateReport
             // 
             this.ToolStripMenuItem_GenerateReport.Name = "ToolStripMenuItem_GenerateReport";
-            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_GenerateReport.Size = new System.Drawing.Size(214, 38);
             this.ToolStripMenuItem_GenerateReport.Text = "生成报告";
             this.ToolStripMenuItem_GenerateReport.Click += new System.EventHandler(this.ToolStripMenuItem_GenerateReport_Click);
             // 
@@ -135,6 +165,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ResultSortedByTopsisFrm";
             this.Text = "TOPSIS方法排序结果";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ResultSortedByTopsisFrm_FormClosing);
             this.Load += new System.EventHandler(this.ResultSortedByTopsisFrm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -154,5 +185,8 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Report;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_GenerateReport;
         public System.Windows.Forms.DataGridView dgv_SortedByTopsis;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAs;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAsbyWeight;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAsbyScores;
     }
 }

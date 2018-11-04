@@ -33,6 +33,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem_File = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_SaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAsbyWeight = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAsbyScores = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Close = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenu_Matrix = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Sort = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +53,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 2, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1332, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1332, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,21 +61,37 @@
             // 
             this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_SaveAs,
+            this.ToolStripMenuItem_SaveAsbyWeight,
+            this.ToolStripMenuItem_SaveAsbyScores,
             this.ToolStripMenuItem_Close});
             this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
-            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 36);
+            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 38);
             this.ToolStripMenuItem_File.Text = "文件";
             // 
             // ToolStripMenuItem_SaveAs
             // 
             this.ToolStripMenuItem_SaveAs.Name = "ToolStripMenuItem_SaveAs";
-            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(189, 38);
-            this.ToolStripMenuItem_SaveAs.Text = "另存为";
+            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAs.Text = "保存";
+            // 
+            // ToolStripMenuItem_SaveAsbyWeight
+            // 
+            this.ToolStripMenuItem_SaveAsbyWeight.Name = "ToolStripMenuItem_SaveAsbyWeight";
+            this.ToolStripMenuItem_SaveAsbyWeight.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAsbyWeight.Text = "另存为“权重”表格";
+            this.ToolStripMenuItem_SaveAsbyWeight.Visible = false;
+            // 
+            // ToolStripMenuItem_SaveAsbyScores
+            // 
+            this.ToolStripMenuItem_SaveAsbyScores.Name = "ToolStripMenuItem_SaveAsbyScores";
+            this.ToolStripMenuItem_SaveAsbyScores.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAsbyScores.Text = "另存为“总分值”表格";
+            this.ToolStripMenuItem_SaveAsbyScores.Visible = false;
             // 
             // ToolStripMenuItem_Close
             // 
             this.ToolStripMenuItem_Close.Name = "ToolStripMenuItem_Close";
-            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(189, 38);
+            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(332, 38);
             this.ToolStripMenuItem_Close.Text = "关闭";
             this.ToolStripMenuItem_Close.Click += new System.EventHandler(this.ToolStripMenuItem_Close_Click);
             // 
@@ -82,7 +100,7 @@
             this.ToolStripMenu_Matrix.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_Sort});
             this.ToolStripMenu_Matrix.Name = "ToolStripMenu_Matrix";
-            this.ToolStripMenu_Matrix.Size = new System.Drawing.Size(127, 36);
+            this.ToolStripMenu_Matrix.Size = new System.Drawing.Size(127, 38);
             this.ToolStripMenu_Matrix.Text = "矩阵运算";
             // 
             // ToolStripMenuItem_Sort
@@ -108,13 +126,13 @@
             this.dgv_DecisionMatrix.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DecisionMatrix.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DecisionMatrix.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DecisionMatrix.Location = new System.Drawing.Point(0, 40);
+            this.dgv_DecisionMatrix.Location = new System.Drawing.Point(0, 42);
             this.dgv_DecisionMatrix.Name = "dgv_DecisionMatrix";
             this.dgv_DecisionMatrix.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgv_DecisionMatrix.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DecisionMatrix.RowTemplate.Height = 33;
-            this.dgv_DecisionMatrix.Size = new System.Drawing.Size(1332, 526);
+            this.dgv_DecisionMatrix.Size = new System.Drawing.Size(1332, 524);
             this.dgv_DecisionMatrix.TabIndex = 1;
             // 
             // TOPSISDecisionMatrixFrm
@@ -147,5 +165,7 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_File;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Close;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAs;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAsbyWeight;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAsbyScores;
     }
 }
