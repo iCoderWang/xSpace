@@ -118,26 +118,7 @@ namespace EsofaUI
 
         private void ToolStripMenuItem_Close_Click(object sender, EventArgs e)
         {
-            //PublicValues.GEE_Wgt = null;
-            //PublicValues.GeoParas = null;
-            //PublicValues.ArrGeoParas = null;
-            //PublicValues.GeoWgt = null;
-            //PublicValues.ArrGeoWgt = null;
-            //PublicValues.DicGeoP_W = null;
-            //PublicValues.EngParas = null;
-            //PublicValues.ArrEngParas = null;
-            //PublicValues.EngWgt = null;
-            //PublicValues.ArrEngWgt = null;
-            //PublicValues.DicEngP_W = null;
-            //PublicValues.EcoParas = null;
-            //PublicValues.ArrEcoParas = null;
-            //PublicValues.EcoWgt = null;
-            //PublicValues.ArrEcoWgt = null;
-            //PublicValues.DicEcoP_W = null;
-            //PublicValues.dgv_Geo = null;
-            //PublicValues.dgv_GEE = null;
-            //PublicValues.dgv_Eng = null;
-            //PublicValues.dgv_Eco = null;
+            GC.Collect();
             this.Close();
         }
 
@@ -342,9 +323,9 @@ namespace EsofaUI
                     wh.NewLine();
                     wh.InsertText("Null", 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
                     wh.NewLine();
-                    wh.InsertText("3.4、排序结果汇总", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
-                    wh.NewLine();
-                    wh.InsertText("Null", 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
+                    //wh.InsertText("3.4、排序结果汇总", 14, 1, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 20);
+                    //wh.NewLine();
+                    //wh.InsertText("Null", 12, 0, "SimHei", MyWord.WdParagraphAlignment.wdAlignParagraphLeft, 30);
                 }
                 else
                 {
@@ -420,7 +401,6 @@ namespace EsofaUI
                 MessageBox.Show("数据另存失败！");
                 //eh.QuitExcelApp(fileName, k);
                 return;
-
             }
         }
 
@@ -441,8 +421,12 @@ namespace EsofaUI
             {
                 MessageBox.Show("数据另存失败！");
                 return;
-
             }
+        }
+
+        private void SortedTargetsFrm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GC.Collect();
         }
     }
 }

@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.para_BmcWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_PsdcScores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_PsdcWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -166,9 +166,9 @@
             // para_PsdcScores
             // 
             this.para_PsdcScores.DataPropertyName = "para_PsdcScores";
-            dataGridViewCellStyle71.Format = "N2";
-            dataGridViewCellStyle71.NullValue = null;
-            this.para_PsdcScores.DefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.para_PsdcScores.DefaultCellStyle = dataGridViewCellStyle1;
             this.para_PsdcScores.HeaderText = "主应力差分值";
             this.para_PsdcScores.Name = "para_PsdcScores";
             this.para_PsdcScores.ReadOnly = true;
@@ -196,9 +196,9 @@
             // para_FddScores
             // 
             this.para_FddScores.DataPropertyName = "para_FddScores";
-            dataGridViewCellStyle72.Format = "N2";
-            dataGridViewCellStyle72.NullValue = null;
-            this.para_FddScores.DefaultCellStyle = dataGridViewCellStyle72;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.para_FddScores.DefaultCellStyle = dataGridViewCellStyle2;
             this.para_FddScores.HeaderText = "裂缝发育分值";
             this.para_FddScores.Name = "para_FddScores";
             this.para_FddScores.ReadOnly = true;
@@ -253,9 +253,9 @@
             // para_PcScores
             // 
             this.para_PcScores.DataPropertyName = "para_PcScores";
-            dataGridViewCellStyle73.Format = "N2";
-            dataGridViewCellStyle73.NullValue = null;
-            this.para_PcScores.DefaultCellStyle = dataGridViewCellStyle73;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.para_PcScores.DefaultCellStyle = dataGridViewCellStyle3;
             this.para_PcScores.HeaderText = "压力系数分值";
             this.para_PcScores.Name = "para_PcScores";
             this.para_PcScores.ReadOnly = true;
@@ -283,10 +283,10 @@
             // para_DrScores
             // 
             this.para_DrScores.DataPropertyName = "para_DrScores";
-            dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle74.Format = "N2";
-            dataGridViewCellStyle74.NullValue = null;
-            this.para_DrScores.DefaultCellStyle = dataGridViewCellStyle74;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.para_DrScores.DefaultCellStyle = dataGridViewCellStyle4;
             this.para_DrScores.HeaderText = "埋深分值";
             this.para_DrScores.Name = "para_DrScores";
             this.para_DrScores.ReadOnly = true;
@@ -296,10 +296,10 @@
             // para_DrWeight
             // 
             this.para_DrWeight.DataPropertyName = "para_DrWeight";
-            dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle75.Format = "N6";
-            dataGridViewCellStyle75.NullValue = null;
-            this.para_DrWeight.DefaultCellStyle = dataGridViewCellStyle75;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N6";
+            dataGridViewCellStyle5.NullValue = null;
+            this.para_DrWeight.DefaultCellStyle = dataGridViewCellStyle5;
             this.para_DrWeight.HeaderText = "埋深权重";
             this.para_DrWeight.Name = "para_DrWeight";
             this.para_DrWeight.ReadOnly = true;
@@ -309,8 +309,8 @@
             // para_Dr
             // 
             this.para_Dr.DataPropertyName = "para_Dr";
-            dataGridViewCellStyle76.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Dr.DefaultCellStyle = dataGridViewCellStyle76;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Dr.DefaultCellStyle = dataGridViewCellStyle6;
             this.para_Dr.HeaderText = "埋深";
             this.para_Dr.Name = "para_Dr";
             this.para_Dr.ReadOnly = true;
@@ -554,9 +554,9 @@
             // para_ScdScores
             // 
             this.para_ScdScores.DataPropertyName = "para_ScdScores";
-            dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle77.Format = "N2";
-            this.para_ScdScores.DefaultCellStyle = dataGridViewCellStyle77;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "N2";
+            this.para_ScdScores.DefaultCellStyle = dataGridViewCellStyle7;
             this.para_ScdScores.HeaderText = "构造分值";
             this.para_ScdScores.Name = "para_ScdScores";
             this.para_ScdScores.ReadOnly = true;
@@ -566,8 +566,8 @@
             // para_Toc
             // 
             this.para_Toc.DataPropertyName = "para_Toc";
-            dataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle78;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Toc.DefaultCellStyle = dataGridViewCellStyle8;
             this.para_Toc.HeaderText = "含量(Toc)";
             this.para_Toc.Name = "para_Toc";
             this.para_Toc.ReadOnly = true;
@@ -576,9 +576,9 @@
             // para_StromAtWeight
             // 
             this.para_StromAtWeight.DataPropertyName = "para_StromAtWeight";
-            dataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle79.Format = "N6";
-            this.para_StromAtWeight.DefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "N6";
+            this.para_StromAtWeight.DefaultCellStyle = dataGridViewCellStyle9;
             this.para_StromAtWeight.HeaderText = "厚度权重";
             this.para_StromAtWeight.Name = "para_StromAtWeight";
             this.para_StromAtWeight.ReadOnly = true;
@@ -588,8 +588,8 @@
             // para_StromAt
             // 
             this.para_StromAt.DataPropertyName = "para_StromAt";
-            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_StromAt.DefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_StromAt.DefaultCellStyle = dataGridViewCellStyle10;
             this.para_StromAt.HeaderText = "厚度";
             this.para_StromAt.Name = "para_StromAt";
             this.para_StromAt.ReadOnly = true;
@@ -608,8 +608,8 @@
             // para_Sc
             // 
             this.para_Sc.DataPropertyName = "para_Sc";
-            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Sc.DefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Sc.DefaultCellStyle = dataGridViewCellStyle11;
             this.para_Sc.HeaderText = "保存条件";
             this.para_Sc.Name = "para_Sc";
             this.para_Sc.ReadOnly = true;
@@ -619,8 +619,8 @@
             // para_Ps
             // 
             this.para_Ps.DataPropertyName = "para_Ps";
-            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Ps.DefaultCellStyle = dataGridViewCellStyle82;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Ps.DefaultCellStyle = dataGridViewCellStyle12;
             this.para_Ps.HeaderText = "主力层系";
             this.para_Ps.Name = "para_Ps";
             this.para_Ps.ReadOnly = true;
@@ -630,10 +630,10 @@
             // para_TotalScores
             // 
             this.para_TotalScores.DataPropertyName = "para_TotalScores";
-            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle83.Format = "N2";
-            dataGridViewCellStyle83.NullValue = null;
-            this.para_TotalScores.DefaultCellStyle = dataGridViewCellStyle83;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Format = "N2";
+            dataGridViewCellStyle13.NullValue = null;
+            this.para_TotalScores.DefaultCellStyle = dataGridViewCellStyle13;
             this.para_TotalScores.HeaderText = "总分值";
             this.para_TotalScores.Name = "para_TotalScores";
             this.para_TotalScores.ReadOnly = true;
@@ -652,8 +652,8 @@
             // para_Tgt
             // 
             this.para_Tgt.DataPropertyName = "para_Tgt";
-            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Tgt.DefaultCellStyle = dataGridViewCellStyle84;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Tgt.DefaultCellStyle = dataGridViewCellStyle14;
             this.para_Tgt.HeaderText = "区块";
             this.para_Tgt.Name = "para_Tgt";
             this.para_Tgt.ReadOnly = true;
@@ -663,8 +663,8 @@
             // para_Rank
             // 
             this.para_Rank.DataPropertyName = "para_Rank";
-            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Rank.DefaultCellStyle = dataGridViewCellStyle85;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Rank.DefaultCellStyle = dataGridViewCellStyle15;
             this.para_Rank.HeaderText = "排序";
             this.para_Rank.Name = "para_Rank";
             this.para_Rank.ReadOnly = true;
@@ -677,14 +677,14 @@
             this.dgv_Tgt_Sorted.AllowUserToDeleteRows = false;
             this.dgv_Tgt_Sorted.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_Tgt_Sorted.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle86.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle86.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle86.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Tgt_Sorted.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle86;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Tgt_Sorted.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgv_Tgt_Sorted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Tgt_Sorted.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.para_Rank,
@@ -774,9 +774,9 @@
             // para_StromAtScores
             // 
             this.para_StromAtScores.DataPropertyName = "para_StromAtScores";
-            dataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle87.Format = "N2";
-            this.para_StromAtScores.DefaultCellStyle = dataGridViewCellStyle87;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.Format = "N2";
+            this.para_StromAtScores.DefaultCellStyle = dataGridViewCellStyle17;
             this.para_StromAtScores.HeaderText = "厚度分值";
             this.para_StromAtScores.Name = "para_StromAtScores";
             this.para_StromAtScores.ReadOnly = true;
@@ -786,9 +786,9 @@
             // para_TocWeight
             // 
             this.para_TocWeight.DataPropertyName = "para_TocWeight";
-            dataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle88.Format = "N6";
-            this.para_TocWeight.DefaultCellStyle = dataGridViewCellStyle88;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.Format = "N6";
+            this.para_TocWeight.DefaultCellStyle = dataGridViewCellStyle18;
             this.para_TocWeight.HeaderText = "含量权重";
             this.para_TocWeight.Name = "para_TocWeight";
             this.para_TocWeight.ReadOnly = true;
@@ -798,9 +798,9 @@
             // para_TocScores
             // 
             this.para_TocScores.DataPropertyName = "para_TocScores";
-            dataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle89.Format = "N2";
-            this.para_TocScores.DefaultCellStyle = dataGridViewCellStyle89;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.Format = "N2";
+            this.para_TocScores.DefaultCellStyle = dataGridViewCellStyle19;
             this.para_TocScores.HeaderText = "含量分值";
             this.para_TocScores.Name = "para_TocScores";
             this.para_TocScores.ReadOnly = true;
@@ -837,8 +837,8 @@
             // para_Ro
             // 
             this.para_Ro.DataPropertyName = "para_Ro";
-            dataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle90;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Ro.DefaultCellStyle = dataGridViewCellStyle20;
             this.para_Ro.HeaderText = "成熟度(Ro)";
             this.para_Ro.Name = "para_Ro";
             this.para_Ro.ReadOnly = true;
@@ -848,9 +848,9 @@
             // para_RoWeight
             // 
             this.para_RoWeight.DataPropertyName = "para_RoWeight";
-            dataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle91.Format = "N6";
-            this.para_RoWeight.DefaultCellStyle = dataGridViewCellStyle91;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.Format = "N6";
+            this.para_RoWeight.DefaultCellStyle = dataGridViewCellStyle21;
             this.para_RoWeight.HeaderText = "成熟度权重";
             this.para_RoWeight.Name = "para_RoWeight";
             this.para_RoWeight.ReadOnly = true;
@@ -860,9 +860,9 @@
             // para_RoScores
             // 
             this.para_RoScores.DataPropertyName = "para_RoScores";
-            dataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle92.Format = "N2";
-            this.para_RoScores.DefaultCellStyle = dataGridViewCellStyle92;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.Format = "N2";
+            this.para_RoScores.DefaultCellStyle = dataGridViewCellStyle22;
             this.para_RoScores.HeaderText = "成熟度分值";
             this.para_RoScores.Name = "para_RoScores";
             this.para_RoScores.ReadOnly = true;
@@ -872,8 +872,8 @@
             // para_Ea
             // 
             this.para_Ea.DataPropertyName = "para_Ea";
-            dataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle93;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Ea.DefaultCellStyle = dataGridViewCellStyle23;
             this.para_Ea.HeaderText = "面积";
             this.para_Ea.Name = "para_Ea";
             this.para_Ea.ReadOnly = true;
@@ -883,10 +883,10 @@
             // para_EaWeight
             // 
             this.para_EaWeight.DataPropertyName = "para_EaWeight";
-            dataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle94.Format = "N6";
-            dataGridViewCellStyle94.NullValue = null;
-            this.para_EaWeight.DefaultCellStyle = dataGridViewCellStyle94;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.Format = "N6";
+            dataGridViewCellStyle24.NullValue = null;
+            this.para_EaWeight.DefaultCellStyle = dataGridViewCellStyle24;
             this.para_EaWeight.HeaderText = "面积权重";
             this.para_EaWeight.Name = "para_EaWeight";
             this.para_EaWeight.ReadOnly = true;
@@ -896,10 +896,10 @@
             // para_EaScores
             // 
             this.para_EaScores.DataPropertyName = "para_EaScores";
-            dataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle95.Format = "N2";
-            dataGridViewCellStyle95.NullValue = null;
-            this.para_EaScores.DefaultCellStyle = dataGridViewCellStyle95;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.Format = "N2";
+            dataGridViewCellStyle25.NullValue = null;
+            this.para_EaScores.DefaultCellStyle = dataGridViewCellStyle25;
             this.para_EaScores.HeaderText = "面积分值";
             this.para_EaScores.Name = "para_EaScores";
             this.para_EaScores.ReadOnly = true;
@@ -909,8 +909,8 @@
             // para_Gc
             // 
             this.para_Gc.DataPropertyName = "para_Gc";
-            dataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Gc.DefaultCellStyle = dataGridViewCellStyle96;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Gc.DefaultCellStyle = dataGridViewCellStyle26;
             this.para_Gc.HeaderText = "含气量";
             this.para_Gc.Name = "para_Gc";
             this.para_Gc.ReadOnly = true;
@@ -920,9 +920,9 @@
             // para_GcWeight
             // 
             this.para_GcWeight.DataPropertyName = "para_GcWeight";
-            dataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle97.Format = "N6";
-            this.para_GcWeight.DefaultCellStyle = dataGridViewCellStyle97;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.Format = "N6";
+            this.para_GcWeight.DefaultCellStyle = dataGridViewCellStyle27;
             this.para_GcWeight.HeaderText = "含气量权重";
             this.para_GcWeight.Name = "para_GcWeight";
             this.para_GcWeight.ReadOnly = true;
@@ -932,9 +932,9 @@
             // para_GcScores
             // 
             this.para_GcScores.DataPropertyName = "para_GcScores";
-            dataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle98.Format = "N2";
-            this.para_GcScores.DefaultCellStyle = dataGridViewCellStyle98;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.Format = "N2";
+            this.para_GcScores.DefaultCellStyle = dataGridViewCellStyle28;
             this.para_GcScores.HeaderText = "含气量分值";
             this.para_GcScores.Name = "para_GcScores";
             this.para_GcScores.ReadOnly = true;
@@ -944,8 +944,8 @@
             // para_Rr
             // 
             this.para_Rr.DataPropertyName = "para_Rr";
-            dataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle99;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Rr.DefaultCellStyle = dataGridViewCellStyle29;
             this.para_Rr.HeaderText = "丰度";
             this.para_Rr.Name = "para_Rr";
             this.para_Rr.ReadOnly = true;
@@ -955,9 +955,9 @@
             // para_RrWeight
             // 
             this.para_RrWeight.DataPropertyName = "para_RrWeight";
-            dataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle100.Format = "N6";
-            this.para_RrWeight.DefaultCellStyle = dataGridViewCellStyle100;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.Format = "N6";
+            this.para_RrWeight.DefaultCellStyle = dataGridViewCellStyle30;
             this.para_RrWeight.HeaderText = "丰度权重";
             this.para_RrWeight.Name = "para_RrWeight";
             this.para_RrWeight.ReadOnly = true;
@@ -967,9 +967,9 @@
             // para_RrScores
             // 
             this.para_RrScores.DataPropertyName = "para_RrScores";
-            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle101.Format = "N2";
-            this.para_RrScores.DefaultCellStyle = dataGridViewCellStyle101;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.Format = "N2";
+            this.para_RrScores.DefaultCellStyle = dataGridViewCellStyle31;
             this.para_RrScores.HeaderText = "丰度分值";
             this.para_RrScores.Name = "para_RrScores";
             this.para_RrScores.ReadOnly = true;
@@ -979,8 +979,8 @@
             // para_Por
             // 
             this.para_Por.DataPropertyName = "para_Por";
-            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Por.DefaultCellStyle = dataGridViewCellStyle102;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Por.DefaultCellStyle = dataGridViewCellStyle32;
             this.para_Por.HeaderText = "孔隙度";
             this.para_Por.Name = "para_Por";
             this.para_Por.ReadOnly = true;
@@ -990,9 +990,9 @@
             // para_PorWeight
             // 
             this.para_PorWeight.DataPropertyName = "para_PorWeight";
-            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle103.Format = "N6";
-            this.para_PorWeight.DefaultCellStyle = dataGridViewCellStyle103;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.Format = "N6";
+            this.para_PorWeight.DefaultCellStyle = dataGridViewCellStyle33;
             this.para_PorWeight.HeaderText = "孔隙度权重";
             this.para_PorWeight.Name = "para_PorWeight";
             this.para_PorWeight.ReadOnly = true;
@@ -1002,9 +1002,9 @@
             // para_PorScores
             // 
             this.para_PorScores.DataPropertyName = "para_PorScores";
-            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle104.Format = "N2";
-            this.para_PorScores.DefaultCellStyle = dataGridViewCellStyle104;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.Format = "N2";
+            this.para_PorScores.DefaultCellStyle = dataGridViewCellStyle34;
             this.para_PorScores.HeaderText = "孔隙度分值";
             this.para_PorScores.Name = "para_PorScores";
             this.para_PorScores.ReadOnly = true;
@@ -1014,8 +1014,8 @@
             // para_Scd
             // 
             this.para_Scd.DataPropertyName = "para_Scd";
-            dataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle105;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.para_Scd.DefaultCellStyle = dataGridViewCellStyle35;
             this.para_Scd.HeaderText = "构造";
             this.para_Scd.Name = "para_Scd";
             this.para_Scd.ReadOnly = true;
@@ -1123,6 +1123,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "SortedTargetsFrm";
             this.Text = "核心区块排序结果";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SortedTargetsFrm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Tgt_Sorted)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

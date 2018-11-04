@@ -77,8 +77,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasinEntityBLL.cs" />
-    <Compile Include="BlockEntityBLL.cs" />
     <Compile Include="ImportingRawDataBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RawDataBLL.cs" />
@@ -98,6 +96,9 @@
       <Project>{c13ca4ac-8aaa-41a6-948e-bece6bce33fa}</Project>
       <Name>EsofaModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

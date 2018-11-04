@@ -29,6 +29,13 @@ namespace EsofaUI
         double[,] R1;
         double[,] R21;
         double[,] R22;
+
+        //***********************************************************//
+        string[] geoParasAll;
+        string[] engParasAll;
+        //string[] ecoParasAll;
+        //***********************************************************//
+
         /// <summary>
         /// 加载远景区参数矩阵
         /// </summary>
@@ -38,6 +45,25 @@ namespace EsofaUI
         {
             //调用通用方法模块中的数据加载方法，将数组里的数据加载到datagridview的cell中
             ParametersWeightLoader paraWeightLoader = new ParametersWeightLoader();
+
+            //***********************************************************//
+            geoParasAll = new string[lstBx_All_GeoPara.Items.Count];
+            engParasAll = new string[lstBx_All_EngPara.Items.Count];
+            //ecoParasAll = new string[lstBx_All_EcoPara.Items.Count];
+            for (int i = 0; i < lstBx_All_GeoPara.Items.Count; i++)
+            {
+                geoParasAll[i] = (string)lstBx_All_GeoPara.Items[i];
+                if (i < lstBx_All_EngPara.Items.Count)
+                {
+                    engParasAll[i] = (string)lstBx_All_EngPara.Items[i];
+                }
+                //if (i < lstBx_All_EcoPara.Items.Count)
+                //{
+                //    ecoParasAll[i] = (string)lstBx_All_EcoPara.Items[i];
+                //}
+            }
+            //***********************************************************//
+
 
             //创建DataTable变量，用于中间转载数据
             DataTable dt = new DataTable();
@@ -116,7 +142,7 @@ namespace EsofaUI
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
             StringBuilder cRstr = new StringBuilder();
-            PublicValues.dgv_GEE = dgv_Bsn;
+            //PublicValues.dgv_GEE = dgv_Bsn;
             PublicValues.dgv_Geo = dgv_Bsn_GeoPara;
             PublicValues.dgv_Eng = dgv_Bsn_EngPara;
             //PublicValues.dgv_Eco = dgv_Blk_EcoPara;
@@ -125,43 +151,60 @@ namespace EsofaUI
             string cR1 = null, cR21 = null, cR22 = null;// cR = null;
             Vector<double> vR1 = cc.ArrayLoad(R1, out strB, out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
-            foreach (double dbl in vR1)
-            {
-                if (dbl != vR1.Last())
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString() + ";";
-                }
-            }
+
+
+            //foreach (double dbl in vR1)
+            //{
+            //    if (dbl != vR1.Last())
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString() + ";";
+            //    }
+            //}
             Vector<double> vR21 = cc.ArrayLoad(R21, out strB, out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
-            foreach (double dbl in vR21)
-            {
-                if (dbl != vR21.Last())
-                {
-                    PublicValues.GeoWgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.GeoWgt += dbl.ToString() + ";";
-                }
-            }
+
+
+            //***********************************************************//
+            PublicValues.ArrGeoWgt = new double[vR21.ToArray().Length];
+            PublicValues.ArrGeoWgt = vR21.ToArray();
+            //***********************************************************//
+
+            //foreach (double dbl in vR21)
+            //{
+            //    if (dbl != vR21.Last())
+            //    {
+            //        PublicValues.GeoWgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.GeoWgt += dbl.ToString() + ";";
+            //    }
+            //}
             Vector<double> vR22 = cc.ArrayLoad(R22, out strB, out cR22) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
-            foreach (double dbl in vR22)
-            {
-                if (dbl != vR22.Last())
-                {
-                    PublicValues.EngWgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.EngWgt += dbl.ToString() + ";";
-                }
-            }
+
+
+            //***********************************************************//
+            PublicValues.ArrEngWgt = new double[vR22.ToArray().Length];
+            PublicValues.ArrEngWgt = vR22.ToArray();
+            //***********************************************************//
+
+
+            //foreach (double dbl in vR22)
+            //{
+            //    if (dbl != vR22.Last())
+            //    {
+            //        PublicValues.EngWgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.EngWgt += dbl.ToString() + ";";
+            //    }
+            //}
             cR_arr = new string[] { cR1, cR21, cR22};
             eignFrm.textBox1.Text +=  vR21 + "\r\n" + vR22 + "\r\n" ;
             cRstr.Append("层次单排序结果一致性指标");
@@ -218,9 +261,16 @@ namespace EsofaUI
             string[] arr_TgtName = null;
             //SortedBasinsFrm sBf = new SortedBasinsFrm();
             int counterFlag = 0;
-            //SortedTargetsFrm stf = new SortedTargetsFrm(arr);
+            //***********************************************************//
+            PublicValues.GeoParas = "";
+            PublicValues.EngParas = "";
+            PublicValues.EcoParas = "";
+            PublicValues.ArrGeoParas = new string[lstBx_Selected_GeoPara.Items.Count];
+            //***********************************************************//
+
             foreach (string str in lstBx_Selected_GeoPara.Items)
             {
+                PublicValues.ArrGeoParas[counterFlag] = str;
                 counterFlag++;
                 if (counterFlag != lstBx_Selected_GeoPara.Items.Count)
                 {
@@ -231,9 +281,30 @@ namespace EsofaUI
                     PublicValues.GeoParas += str + ";";
                 }
             }
+            //将所有参数对应的权重值赋值给对应的参数，并形成一个字典变量，以供后面绘图时调用
+            //此目的是为了绘制柱状图时，所用参数对应 相应的权重值
+            PublicValues.DicGeoP_W = new Dictionary<string, double>();
+            PublicValues.DicEngP_W = new Dictionary<string, double>();
+            //PublicValues.DicEcoP_W = new Dictionary<string, double>();
+            for (int i = 0; i < geoParasAll.Length; i++)
+            {
+                PublicValues.DicGeoP_W.Add(geoParasAll[i], (double)PublicValues.ArrGeoWgt[i]);
+                if (i < engParasAll.Length)
+                {
+                    PublicValues.DicEngP_W.Add(engParasAll[i], (double)PublicValues.ArrEngWgt[i]);
+                }
+                //if (i < ecoParasAll.Length)
+                //{
+                //    PublicValues.DicEcoP_W.Add(ecoParasAll[i], (double)PublicValues.ArrEcoWgt[i]);
+                //}
+            }
+
+
             counterFlag = 0;
+            PublicValues.ArrEngParas = new string[lstBx_Selected_EngPara.Items.Count];
             foreach (string str in lstBx_Selected_EngPara.Items)
             {
+                PublicValues.ArrEngParas[counterFlag] = str;
                 counterFlag++;
                 if (counterFlag != lstBx_Selected_EngPara.Items.Count)
                 {
@@ -244,6 +315,11 @@ namespace EsofaUI
                     PublicValues.EngParas += str + ";";
                 }
             }
+
+            //***********************************************************//
+
+
+
             if (chkFlag)
             {
                 List<SortedBasinsParas> lst_SBP = BlockGrade(lst_Bsn);
@@ -259,7 +335,7 @@ namespace EsofaUI
                 lst_SBP.Sort((x, y) => x.para_Rank.CompareTo(y.para_Rank));
                 arr_Scores = lst_SBP.Select(x => x.para_TotalScores).ToArray();
                 arr_TgtName = lst_SBP.Select(x => x.para_Tgt).ToArray();
-                SortedBasinsFrm sBf = new SortedBasinsFrm(arr_Scores, arr_TgtName);
+                SortedBasinsFrm sBf = SortedBasinsFrm.CreateInstance(arr_Scores, arr_TgtName);
                 sBf.dgv_Bsn_Sorted.DataSource = DataSourceToDataTable.GetListToDataTable(lst_SBP);
                 sBf.Show();
                 btn_GenerateReport.Enabled = true;
@@ -496,6 +572,25 @@ namespace EsofaUI
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
+            PublicValues.GeoParas = null;
+            PublicValues.ArrGeoParas = null;
+            PublicValues.GeoWgt = null;
+            PublicValues.ArrGeoWgt = null;
+            PublicValues.DicGeoP_W = null;
+            PublicValues.EngParas = null;
+            PublicValues.ArrEngParas = null;
+            PublicValues.EngWgt = null;
+            PublicValues.ArrEngWgt = null;
+            PublicValues.DicEngP_W = null;
+            PublicValues.EcoParas = null;
+            PublicValues.ArrEcoParas = null;
+            PublicValues.EcoWgt = null;
+            PublicValues.ArrEcoWgt = null;
+            PublicValues.DicEcoP_W = null;
+            PublicValues.dgv_Geo = null;
+            //PublicValues.dgv_GEE = null;
+            PublicValues.dgv_Eng = null;
+            PublicValues.dgv_Eco = null;
             this.Close();
         }
         #region
@@ -590,5 +685,27 @@ namespace EsofaUI
         }
         #endregion
 
+        private void ProspectAreaMatrixFrm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            PublicValues.GeoParas = null;
+            PublicValues.ArrGeoParas = null;
+            PublicValues.GeoWgt = null;
+            PublicValues.ArrGeoWgt = null;
+            PublicValues.DicGeoP_W = null;
+            PublicValues.EngParas = null;
+            PublicValues.ArrEngParas = null;
+            PublicValues.EngWgt = null;
+            PublicValues.ArrEngWgt = null;
+            PublicValues.DicEngP_W = null;
+            PublicValues.EcoParas = null;
+            PublicValues.ArrEcoParas = null;
+            PublicValues.EcoWgt = null;
+            PublicValues.ArrEcoWgt = null;
+            PublicValues.DicEcoP_W = null;
+            PublicValues.dgv_Geo = null;
+            //PublicValues.dgv_GEE = null;
+            PublicValues.dgv_Eng = null;
+            PublicValues.dgv_Eco = null;
+        }
     }
 }

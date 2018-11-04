@@ -205,17 +205,17 @@ namespace EsofaUI
                 wh.SaveWord(strFileName);
             }
             MessageBox.Show("报告已完成。", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            PublicValues.GEE_Wgt = null;
-            PublicValues.GeoWgt = null;
-            PublicValues.EngWgt = null;
-            PublicValues.EcoWgt = null;
-            PublicValues.GeoParas = null;
-            PublicValues.EngParas = null;
-            PublicValues.EcoParas = null;
-            PublicValues.dgv_Geo = null;
-            PublicValues.dgv_GEE = null;
-            PublicValues.dgv_Eng = null;
-            PublicValues.dgv_Eco = null;
+            //PublicValues.GEE_Wgt = null;
+            //PublicValues.GeoWgt = null;
+            //PublicValues.EngWgt = null;
+            //PublicValues.EcoWgt = null;
+            //PublicValues.GeoParas = null;
+            //PublicValues.EngParas = null;
+            //PublicValues.EcoParas = null;
+            //PublicValues.dgv_Geo = null;
+            //PublicValues.dgv_GEE = null;
+            //PublicValues.dgv_Eng = null;
+            //PublicValues.dgv_Eco = null;
         }
     }
 }

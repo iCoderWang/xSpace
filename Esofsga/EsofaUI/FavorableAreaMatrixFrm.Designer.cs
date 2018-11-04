@@ -341,7 +341,7 @@
             this.btn_GenerateReport.Text = "生成报告";
             this.btn_GenerateReport.UseVisualStyleBackColor = true;
             this.btn_GenerateReport.Visible = false;
-            this.btn_GenerateReport.Click += new System.EventHandler(this.btn_GenerateReport_Click);
+            //this.btn_GenerateReport.Click += new System.EventHandler(this.btn_GenerateReport_Click);
             // 
             // btn_CoincidenceCheck
             // 
@@ -843,6 +843,7 @@
             this.MinimizeBox = false;
             this.Name = "FavorableAreaMatrixFrm";
             this.Text = "有利区优选参数体系";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FavorableAreaMatrixFrm_FormClosing);
             this.Load += new System.EventHandler(this.FavorableAreaMatrixFrm_Load);
             this.gBoxParaMatrix.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

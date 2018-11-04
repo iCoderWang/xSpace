@@ -21,8 +21,8 @@ namespace EsofaModel
         public static double [] ArrEngWgt = null;
         public static string EcoWgt = null;
         public static double [] ArrEcoWgt = null;
-        public static string GEE_Wgt = null;
-        public static DataGridView dgv_GEE = null;
+        //public static string GEE_Wgt = null;
+        //public static DataGridView dgv_GEE = null;
         public static DataGridView dgv_Geo = null;
         public static DataGridView dgv_Eng = null;
         public static DataGridView dgv_Eco = null;

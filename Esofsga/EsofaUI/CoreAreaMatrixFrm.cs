@@ -173,7 +173,7 @@ namespace EsofaUI
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
             StringBuilder cRstr = new StringBuilder();
-            PublicValues.dgv_GEE = dgv_Tgt;
+            //PublicValues.dgv_GEE = dgv_Tgt;
             PublicValues.dgv_Geo = dgv_Tgt_GeoPara;
             PublicValues.dgv_Eng = dgv_Tgt_EngPara;
             PublicValues.dgv_Eco = dgv_Tgt_EcoPara;
@@ -182,17 +182,17 @@ namespace EsofaUI
             string cR1 = null, cR21 = null, cR22 = null, cR23 = null;// cR=null;
            Vector<double> vR1 = cc.ArrayLoad(R1, out strB, out cR1);
             eignFrm.textBox1.Text += "R1: \r\n"+strB.ToString() + "\r\n\r\n";
-            foreach(double dbl in vR1)
-            {
-                if(dbl != vR1.Last())
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString()+",";
-                }
-                else
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString() + ";";
-                }
-            }           
+            //foreach(double dbl in vR1)
+            //{
+            //    if(dbl != vR1.Last())
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString()+",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString() + ";";
+            //    }
+            //}           
             Vector<double> vR21 = cc.ArrayLoad(R21, out strB, out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
             PublicValues.ArrGeoWgt = new double[vR21.ToArray().Length];
@@ -202,33 +202,33 @@ namespace EsofaUI
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
             PublicValues.ArrEngWgt = new double[vR22.ToArray().Length];
             PublicValues.ArrEngWgt = vR22.ToArray();
-            foreach (double dbl in vR22)
-            {
-                if (dbl != vR22.Last())
-                {
-                    PublicValues.EngWgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.EngWgt += dbl.ToString() + ";";
-                }
-            }
+            //foreach (double dbl in vR22)
+            //{
+            //    if (dbl != vR22.Last())
+            //    {
+            //        PublicValues.EngWgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.EngWgt += dbl.ToString() + ";";
+            //    }
+            //}
             Vector<double> vR23 = cc.ArrayLoad(R23, out strB, out cR23) * vR1.ElementAt(2);
             cR_arr = new string[] { cR1, cR21, cR22, cR23 };
             eignFrm.textBox1.Text += "R23: \r\n" + strB.ToString() + "\r\n"+ vR21 + "\r\n" + vR22 + "\r\n" + vR23;
             PublicValues.ArrEcoWgt = new double[vR23.ToArray().Length];
             PublicValues.ArrEcoWgt = vR23.ToArray();
-            foreach (double dbl in vR23)
-            {
-                if (dbl != vR23.Last())
-                {
-                    PublicValues.EcoWgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.EcoWgt += dbl.ToString() + ";";
-                }
-            }
+            //foreach (double dbl in vR23)
+            //{
+            //    if (dbl != vR23.Last())
+            //    {
+            //        PublicValues.EcoWgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.EcoWgt += dbl.ToString() + ";";
+            //    }
+            //}
             cRstr.Append("层次单排序结果一致性指标");
             foreach(string str in cR_arr)
             {
@@ -821,6 +821,7 @@ namespace EsofaUI
                     PublicValues.GeoParas += str + ";";
                 }
             }
+            
             //将所有参数对应的权重值赋值给对应的参数，并形成一个字典变量，以供后面绘图时调用
             //此目的是为了绘制柱状图时，所用参数对应 相应的权重值
             PublicValues.DicGeoP_W = new Dictionary<string, double>();
@@ -913,7 +914,7 @@ namespace EsofaUI
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            PublicValues.GEE_Wgt = null;
+            //PublicValues.GEE_Wgt = null;
             PublicValues.GeoParas = null;
             PublicValues.ArrGeoParas = null;
             PublicValues.GeoWgt = null;
@@ -930,7 +931,7 @@ namespace EsofaUI
             PublicValues.ArrEcoWgt = null;
             PublicValues.DicEcoP_W = null;
             PublicValues.dgv_Geo = null;
-            PublicValues.dgv_GEE = null;
+            //PublicValues.dgv_GEE = null;
             PublicValues.dgv_Eng = null;
             PublicValues.dgv_Eco = null;
             this.Close();
@@ -1031,7 +1032,7 @@ namespace EsofaUI
 
         private void CoreAreaMatrixFrm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            PublicValues.GEE_Wgt = null;
+            //PublicValues.GEE_Wgt = null;
             PublicValues.GeoParas = null;
             PublicValues.ArrGeoParas = null;
             PublicValues.GeoWgt = null;
@@ -1048,7 +1049,7 @@ namespace EsofaUI
             PublicValues.ArrEcoWgt = null;
             PublicValues.DicEcoP_W = null;
             PublicValues.dgv_Geo = null;
-            PublicValues.dgv_GEE = null;
+            //PublicValues.dgv_GEE = null;
             PublicValues.dgv_Eng = null;
             PublicValues.dgv_Eco = null;
         }

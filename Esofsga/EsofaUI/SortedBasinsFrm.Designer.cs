@@ -98,6 +98,8 @@
             this.para_Bmc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_BmcWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.para_BmcScores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ToolStripMenuItem_SaveAsbyWeight = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_SaveAsbyScores = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Bsn_Sorted)).BeginInit();
             this.SuspendLayout();
@@ -112,7 +114,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1600, 46);
+            this.menuStrip1.Size = new System.Drawing.Size(1600, 44);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -120,21 +122,24 @@
             // 
             this.ToolStripMenuItem_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_SaveAs,
+            this.ToolStripMenuItem_SaveAsbyWeight,
+            this.ToolStripMenuItem_SaveAsbyScores,
             this.ToolStripMenuItem_Close});
             this.ToolStripMenuItem_File.Name = "ToolStripMenuItem_File";
-            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_File.Size = new System.Drawing.Size(77, 36);
             this.ToolStripMenuItem_File.Text = "文件";
             // 
             // ToolStripMenuItem_SaveAs
             // 
             this.ToolStripMenuItem_SaveAs.Name = "ToolStripMenuItem_SaveAs";
-            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(189, 38);
-            this.ToolStripMenuItem_SaveAs.Text = "另存为";
+            this.ToolStripMenuItem_SaveAs.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAs.Text = "保存";
+            this.ToolStripMenuItem_SaveAs.Click += new System.EventHandler(this.ToolStripMenuItem_SaveAs_Click);
             // 
             // ToolStripMenuItem_Close
             // 
             this.ToolStripMenuItem_Close.Name = "ToolStripMenuItem_Close";
-            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(189, 38);
+            this.ToolStripMenuItem_Close.Size = new System.Drawing.Size(332, 38);
             this.ToolStripMenuItem_Close.Text = "关闭";
             this.ToolStripMenuItem_Close.Click += new System.EventHandler(this.ToolStripMenuItem_Close_Click);
             // 
@@ -143,7 +148,7 @@
             this.ToolStripMenuItem_Classification.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_Classify});
             this.ToolStripMenuItem_Classification.Name = "ToolStripMenuItem_Classification";
-            this.ToolStripMenuItem_Classification.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_Classification.Size = new System.Drawing.Size(77, 36);
             this.ToolStripMenuItem_Classification.Text = "分类";
             // 
             // ToolStripMenuItem_Classify
@@ -158,13 +163,13 @@
             this.ToolStripMenuItem_Report.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_Generate});
             this.ToolStripMenuItem_Report.Name = "ToolStripMenuItem_Report";
-            this.ToolStripMenuItem_Report.Size = new System.Drawing.Size(77, 38);
+            this.ToolStripMenuItem_Report.Size = new System.Drawing.Size(77, 36);
             this.ToolStripMenuItem_Report.Text = "报告";
             // 
             // ToolStripMenuItem_Generate
             // 
             this.ToolStripMenuItem_Generate.Name = "ToolStripMenuItem_Generate";
-            this.ToolStripMenuItem_Generate.Size = new System.Drawing.Size(324, 38);
+            this.ToolStripMenuItem_Generate.Size = new System.Drawing.Size(214, 38);
             this.ToolStripMenuItem_Generate.Text = "生成报告";
             this.ToolStripMenuItem_Generate.Click += new System.EventHandler(this.ToolStripMenuItem_Generate_Click);
             // 
@@ -219,11 +224,11 @@
             this.para_BmcWeight,
             this.para_BmcScores});
             this.dgv_Bsn_Sorted.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Bsn_Sorted.Location = new System.Drawing.Point(0, 46);
+            this.dgv_Bsn_Sorted.Location = new System.Drawing.Point(0, 44);
             this.dgv_Bsn_Sorted.Margin = new System.Windows.Forms.Padding(6);
             this.dgv_Bsn_Sorted.Name = "dgv_Bsn_Sorted";
             this.dgv_Bsn_Sorted.ReadOnly = true;
-            this.dgv_Bsn_Sorted.Size = new System.Drawing.Size(1600, 819);
+            this.dgv_Bsn_Sorted.Size = new System.Drawing.Size(1600, 821);
             this.dgv_Bsn_Sorted.TabIndex = 2;
             // 
             // para_Rank
@@ -604,6 +609,20 @@
             this.para_BmcScores.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.para_BmcScores.Width = 95;
             // 
+            // ToolStripMenuItem_SaveAsbyWeight
+            // 
+            this.ToolStripMenuItem_SaveAsbyWeight.Name = "ToolStripMenuItem_SaveAsbyWeight";
+            this.ToolStripMenuItem_SaveAsbyWeight.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAsbyWeight.Text = "另存为“权重”表格";
+            this.ToolStripMenuItem_SaveAsbyWeight.Click += new System.EventHandler(this.ToolStripMenuItem_SaveAsbyWeight_Click);
+            // 
+            // ToolStripMenuItem_SaveAsbyScores
+            // 
+            this.ToolStripMenuItem_SaveAsbyScores.Name = "ToolStripMenuItem_SaveAsbyScores";
+            this.ToolStripMenuItem_SaveAsbyScores.Size = new System.Drawing.Size(332, 38);
+            this.ToolStripMenuItem_SaveAsbyScores.Text = "另存为“总分值”表格";
+            this.ToolStripMenuItem_SaveAsbyScores.Click += new System.EventHandler(this.ToolStripMenuItem_SaveAsbyScores_Click);
+            // 
             // SortedBasinsFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -614,6 +633,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "SortedBasinsFrm";
             this.Text = "远景区块排序结果";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SortedBasinsFrm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Bsn_Sorted)).EndInit();
@@ -667,5 +687,7 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Classify;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Report;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Generate;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAsbyWeight;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_SaveAsbyScores;
     }
 }

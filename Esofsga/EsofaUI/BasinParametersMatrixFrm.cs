@@ -120,7 +120,7 @@ namespace EsofaUI
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
             StringBuilder cRstr = new StringBuilder();
-            PublicValues.dgv_GEE = dgv_Bsn;
+            //PublicValues.dgv_GEE = dgv_Bsn;
             PublicValues.dgv_Geo = dgv_Bsn_GeoPara;
             PublicValues.dgv_Eng = dgv_Bsn_EngPara;
             //PublicValues.dgv_Eco = dgv_Tgt_EcoPara;
@@ -129,17 +129,17 @@ namespace EsofaUI
             string cR1 = null, cR21 = null, cR22 = null;// cR = null;
             Vector<double> vR1 = cc.ArrayLoad(R1, out strB,out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
-            foreach (double dbl in vR1)
-            {
-                if (dbl != vR1.Last())
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString() + ";";
-                }
-            }
+            //foreach (double dbl in vR1)
+            //{
+            //    if (dbl != vR1.Last())
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString() + ";";
+            //    }
+            //}
             Vector<double> vR21 = cc.ArrayLoad(R21, out strB , out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
             foreach (double dbl in vR21)

@@ -11,7 +11,7 @@ namespace EsofaCommon
         [DllImport("User32.dll", CharSet = CharSet.Auto)]
         public static extern int GetWindowThreadProcessId(IntPtr hwnd, out int ID);  
         //MsExcel.Application xlApp = new MsExcel.Application();
-        int k = 0;
+        //int k = 0;
         //MsExcel.Workbooks workbooks = xlApp.Workbooks;
         //MsExcel.Workbook workbook = workbooks.Add(MsExcel.XlWBATemplate.xlWBATWorksheet);
         /// <summary>
@@ -26,28 +26,17 @@ namespace EsofaCommon
             {
                 MsExcel.Workbook workbook = app.Application.Workbooks.Open(saveFileName);
                 app.Visible = true;
-            }          
+            }
+            //app.Quit();
         }
 
-        public void QuitExcelApp(string fileName,int t)
+        public void QuitExcelApp(MsExcel.Application xlApp, int pid)
         {
             xlApp.Quit();
             //杀死打开的Excel进程
             Process myPro = new Process();
-            Process excelPro = Process.GetProcessById(t);
+            Process excelPro = Process.GetProcessById(pid);
             excelPro.Kill();
-            //Process[] excelPro = Process.g;
-            //foreach (Process pro in excelPro) //这里是找到那些没有界面的Word进程
-            //{
-            //    //IntPtr ip = pro.MainWindowHandle;
-
-            //    //string str = pro.MainWindowTitle; //发现程序中打开跟用户自己打开的区别就在这个属性
-            //                                      //用户打开的str 是文件的名称，程序中打开的就是空字符串
-            //    //if (str == fileName)
-            //    //{
-            //        pro.Kill();
-            //    //}
-            //}
         }
         public string DialogSaveExcel()
         {
@@ -66,17 +55,9 @@ namespace EsofaCommon
         /// <param name="dgv"></param>
         public bool Dgv2Excel(DataGridView dgv, string saveFileName)
         {
-            //string fileName = "";
             MsExcel.Application xlApp = new MsExcel.Application();
-            //string saveFileName = "";
-            //SaveFileDialog saveDialog = new SaveFileDialog();
-            //saveDialog.DefaultExt = "xlsx";
-            //saveDialog.Filter = "Excel文件|*.xlsx;*.xls";
-            ////saveDialog.FileName = fileName;
-            //saveDialog.ShowDialog();
-            //saveFileName = saveDialog.FileName;
             IntPtr t = new IntPtr(xlApp.Hwnd);
-            //int k = 0;
+            int k = 0;
             GetWindowThreadProcessId(t, out k);
             if (saveFileName.IndexOf(":") < 0)//被点了取消
             {
@@ -124,7 +105,7 @@ namespace EsofaCommon
             {
                 workbook.Close();
                 workbooks.Close();
-                QuitExcelApp(saveFileName, k);
+                QuitExcelApp(xlApp, k);
             }
             
         }
@@ -140,7 +121,9 @@ namespace EsofaCommon
         {
             //string fileName = "";
             MsExcel.Application xlApp = new MsExcel.Application();
-           
+            IntPtr t = new IntPtr(xlApp.Hwnd);
+            int k = 0;
+            GetWindowThreadProcessId(t, out k);
             if (saveFileName.IndexOf(":") < 0)//被点了取消
             {
                 return false;
@@ -241,7 +224,7 @@ namespace EsofaCommon
             {
                 workbook.Close();
                 workbooks.Close();
-                QuitExcelApp(saveFileName,k);
+                QuitExcelApp(xlApp,k);
             }
         }
 

@@ -2,14 +2,16 @@
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using System.Threading;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 using MsWord=Microsoft.Office.Interop.Word;
 
 namespace EsofaCommon
 {
     public partial class WordHelper
     {
+        //[DllImport("User32.dll", CharSet = CharSet.Auto)]
+        //public static extern int GetWindowThreadProcessId(IntPtr hwnd, out int ID);
         /// <summary>word 应用对象 </summary>     
         MsWord.Application _wordApplication = new MsWord.Application();
 
@@ -35,20 +37,6 @@ namespace EsofaCommon
         {
             _wordDocument.Close();// ref Nothing, ref Nothing, ref Nothing);
             _wordApplication.Quit();
-            //杀死打开的word进程
-            Process myPro = new Process();
-            Process[] wordPro = Process.GetProcessesByName("winword");
-            foreach (Process pro in wordPro) //这里是找到那些没有界面的Word进程
-            {
-                IntPtr ip = pro.MainWindowHandle;
-
-                string str = pro.MainWindowTitle; //发现程序中打开跟用户自己打开的区别就在这个属性
-               //用户打开的str 是文件的名称，程序中打开的就是空字符串
-                if (str == fileName)
-                {
-                    pro.Kill();
-                }
-            }
         }
 
         /// <summary>

@@ -291,7 +291,7 @@ namespace EsofaUI
             EigenValues eignFrm = new EigenValues();
             StringBuilder strB = new StringBuilder();
             StringBuilder cRstr = new StringBuilder();
-            PublicValues.dgv_GEE = dgv_Blk;
+            //PublicValues.dgv_GEE = dgv_Blk;
             PublicValues.dgv_Geo = dgv_Blk_GeoPara;
             PublicValues.dgv_Eng = dgv_Blk_EngPara;
             PublicValues.dgv_Eco = dgv_Blk_EcoPara;
@@ -300,57 +300,64 @@ namespace EsofaUI
             string cR1 = null, cR21 = null, cR22 = null, cR23 = null;// cR = null;
             Vector<double> vR1 = cc.ArrayLoad(R1, out strB,out cR1);
             eignFrm.textBox1.Text += "R1: \r\n" + strB.ToString() + "\r\n\r\n";
-            foreach (double dbl in vR1)
-            {
-                if (dbl != vR1.Last())
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.GEE_Wgt += dbl.ToString() + ";";
-                }
-            }
+            //foreach (double dbl in vR1)
+            //{
+            //    if (dbl != vR1.Last())
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.GEE_Wgt += dbl.ToString() + ";";
+            //    }
+            //}
             Vector<double> vR21 = cc.ArrayLoad(R21, out strB, out cR21) * vR1.ElementAt(0);
             eignFrm.textBox1.Text += "R21: \r\n" + strB.ToString() + "\r\n\r\n";
-            foreach (double dbl in vR21)
-            {
-                if (dbl != vR21.Last())
-                {
-                    PublicValues.GeoWgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.GeoWgt += dbl.ToString() + ";";
-                }
-            }
+            PublicValues.ArrGeoWgt = new double[vR21.ToArray().Length];
+            PublicValues.ArrGeoWgt = vR21.ToArray();
+
+            //foreach (double dbl in vR21)
+            //{
+            //    if (dbl != vR21.Last())
+            //    {
+            //        PublicValues.GeoWgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.GeoWgt += dbl.ToString() + ";";
+            //    }
+            //}
             Vector<double> vR22 = cc.ArrayLoad(R22, out strB, out cR22) * vR1.ElementAt(1);
             eignFrm.textBox1.Text += "R22: \r\n" + strB.ToString() + "\r\n\r\n";
-            foreach (double dbl in vR22)
-            {
-                if (dbl != vR22.Last())
-                {
-                    PublicValues.EngWgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.EngWgt += dbl.ToString() + ";";
-                }
-            }
+            PublicValues.ArrEngWgt = new double[vR22.ToArray().Length];
+            PublicValues.ArrEngWgt = vR22.ToArray();
+            //foreach (double dbl in vR22)
+            //{
+            //    if (dbl != vR22.Last())
+            //    {
+            //        PublicValues.EngWgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.EngWgt += dbl.ToString() + ";";
+            //    }
+            //}
             Vector<double> vR23 = cc.ArrayLoad(R23, out strB, out cR23) * vR1.ElementAt(2);
             cR_arr = new string[] { cR1, cR21, cR22, cR23 };
             eignFrm.textBox1.Text += "R23: \r\n" + strB.ToString() + "\r\n" + vR21 + "\r\n" + vR22 + "\r\n" + vR23;
-            foreach (double dbl in vR23)
-            {
-                if (dbl != vR23.Last())
-                {
-                    PublicValues.EcoWgt += dbl.ToString() + ",";
-                }
-                else
-                {
-                    PublicValues.EcoWgt += dbl.ToString() + ";";
-                }
-            }
+            PublicValues.ArrEcoWgt = new double[vR23.ToArray().Length];
+            PublicValues.ArrEcoWgt = vR23.ToArray();
+            //foreach (double dbl in vR23)
+            //{
+            //    if (dbl != vR23.Last())
+            //    {
+            //        PublicValues.EcoWgt += dbl.ToString() + ",";
+            //    }
+            //    else
+            //    {
+            //        PublicValues.EcoWgt += dbl.ToString() + ";";
+            //    }
+            //}
             cRstr.Append("层次单排序结果一致性指标");
             foreach (string str in cR_arr)
             {

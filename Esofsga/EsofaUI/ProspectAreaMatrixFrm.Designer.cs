@@ -748,6 +748,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProspectAreaMatrixFrm";
             this.Text = "远景区优选参数体系";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProspectAreaMatrixFrm_FormClosing);
             this.Load += new System.EventHandler(this.ProspectAreaMatrixFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Bsn_EngPara)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridViewEcoPara)).EndInit();
