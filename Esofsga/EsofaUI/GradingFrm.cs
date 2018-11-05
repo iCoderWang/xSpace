@@ -87,7 +87,7 @@ namespace EsofaUI
                     //显示核心区矩阵窗体
                     if (lstTgtSelected.Count != 0)//lstTgtSelected != null)
                     {
-                        camf = new CoreAreaMatrixFrm(lstTgtSelected);
+                        camf = CoreAreaMatrixFrm.CreateInstance(lstTgtSelected);
                         camf.Show();
                     }
                     else

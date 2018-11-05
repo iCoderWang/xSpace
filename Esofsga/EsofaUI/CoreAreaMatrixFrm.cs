@@ -13,17 +13,40 @@ namespace EsofaUI
 {
     public partial class CoreAreaMatrixFrm : Form
     {
-        public CoreAreaMatrixFrm()
+        #region 单例模式 Singleton
+
+        private static CoreAreaMatrixFrm frm;
+        private List<AverageValuesTargetEntity> lst_Tgt;
+        private CoreAreaMatrixFrm()
         {
             InitializeComponent();
         }
-
-        private List<AverageValuesTargetEntity> lst_Tgt;
-        public CoreAreaMatrixFrm(List<AverageValuesTargetEntity> list)
+        
+        private CoreAreaMatrixFrm(List<AverageValuesTargetEntity> list)
         {
             InitializeComponent();
             lst_Tgt = list;
         }
+
+        public static CoreAreaMatrixFrm CreateInstance()
+        {
+            if(frm == null || frm.IsDisposed)
+            {
+                frm = new CoreAreaMatrixFrm();
+            }
+            return frm;
+        }
+
+        public static CoreAreaMatrixFrm CreateInstance(List<AverageValuesTargetEntity> list)
+        {
+            if(frm == null || frm.IsDisposed)
+            {
+                frm = new CoreAreaMatrixFrm(list);
+            }
+            return frm;
+        }
+
+        #endregion
 
         double[,] R1;
         double[,] R21;
