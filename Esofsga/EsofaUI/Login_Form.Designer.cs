@@ -33,8 +33,8 @@
             this.txtBox_UserName = new System.Windows.Forms.TextBox();
             this.txtBox_UserPwd = new System.Windows.Forms.TextBox();
             this.btn_Configuration = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Login
@@ -49,10 +49,10 @@
             this.btn_Login.FlatAppearance.BorderSize = 0;
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Login.Location = new System.Drawing.Point(906, 536);
+            this.btn_Login.Location = new System.Drawing.Point(916, 544);
             this.btn_Login.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(136, 68);
+            this.btn_Login.Size = new System.Drawing.Size(137, 68);
             this.btn_Login.TabIndex = 2;
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
@@ -63,60 +63,80 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBox_UserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtBox_UserName, 3);
             this.txtBox_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_UserName.Location = new System.Drawing.Point(816, 302);
+            this.txtBox_UserName.Location = new System.Drawing.Point(819, 299);
             this.txtBox_UserName.Margin = new System.Windows.Forms.Padding(0);
             this.txtBox_UserName.Name = "txtBox_UserName";
-            this.txtBox_UserName.Size = new System.Drawing.Size(350, 62);
+            this.txtBox_UserName.Size = new System.Drawing.Size(343, 62);
             this.txtBox_UserName.TabIndex = 0;
             this.txtBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtBox_UserPwd
             // 
-            this.txtBox_UserPwd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtBox_UserPwd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtBox_UserPwd, 3);
             this.txtBox_UserPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_UserPwd.Location = new System.Drawing.Point(818, 428);
+            this.txtBox_UserPwd.Location = new System.Drawing.Point(825, 425);
             this.txtBox_UserPwd.Margin = new System.Windows.Forms.Padding(6);
             this.txtBox_UserPwd.Name = "txtBox_UserPwd";
             this.txtBox_UserPwd.PasswordChar = '*';
-            this.txtBox_UserPwd.Size = new System.Drawing.Size(348, 62);
+            this.txtBox_UserPwd.Size = new System.Drawing.Size(331, 62);
             this.txtBox_UserPwd.TabIndex = 1;
             this.txtBox_UserPwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBox_UserPwd.UseSystemPasswordChar = true;
             // 
             // btn_Configuration
             // 
-            this.btn_Configuration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Configuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Configuration.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btn_Configuration.FlatAppearance.BorderSize = 0;
             this.btn_Configuration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btn_Configuration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Configuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Configuration.ForeColor = System.Drawing.Color.White;
-            this.btn_Configuration.Location = new System.Drawing.Point(1205, 865);
+            this.btn_Configuration.Location = new System.Drawing.Point(1162, 863);
             this.btn_Configuration.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Configuration.Name = "btn_Configuration";
-            this.btn_Configuration.Size = new System.Drawing.Size(186, 56);
+            this.btn_Configuration.Size = new System.Drawing.Size(228, 53);
             this.btn_Configuration.TabIndex = 3;
             this.btn_Configuration.Text = "服务器连接设置";
             this.btn_Configuration.UseVisualStyleBackColor = false;
             this.btn_Configuration.Click += new System.EventHandler(this.btn_Configuration_Click);
             // 
-            // pictureBox1
+            // tableLayoutPanel1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::EsofaUI.Properties.Resources.Login;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1400, 930);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.BackgroundImage = global::EsofaUI.Properties.Resources.Login;
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.73196F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.714286F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.928571F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.785714F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.785714F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.28572F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.6389208F));
+            this.tableLayoutPanel1.Controls.Add(this.txtBox_UserPwd, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtBox_UserName, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Login, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Configuration, 5, 7);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 9;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.14965F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.444047F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.490289F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.073954F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.382636F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.320385F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.98925F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.698925F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.397849F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1400, 930);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // Login_Form
             // 
@@ -125,11 +145,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1400, 930);
-            this.Controls.Add(this.btn_Configuration);
-            this.Controls.Add(this.txtBox_UserPwd);
-            this.Controls.Add(this.txtBox_UserName);
-            this.Controls.Add(this.btn_Login);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -141,9 +157,9 @@
             this.Text = "页岩气有利区优选评价系统";
             this.Load += new System.EventHandler(this.Login_Form_Load);
             this.SizeChanged += new System.EventHandler(this.Login_Form_SizeChanged);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -153,7 +169,7 @@
         private System.Windows.Forms.TextBox txtBox_UserName;
         private System.Windows.Forms.TextBox txtBox_UserPwd;
         private System.Windows.Forms.Button btn_Configuration;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

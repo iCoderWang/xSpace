@@ -93,7 +93,7 @@ namespace EsofaUI
             //frmMain.Show();
         }
 
- 
+
         private void btn_Configuration_Click(object sender, EventArgs e)
         {
             ServerConnConfiguration sccf = new ServerConnConfiguration();
