@@ -95,7 +95,7 @@ namespace EsofaUI
                                                                {1,7,1 } };
             R22 = blkEngiWeight_R22;
             ////定义核心区区块(分层方法中的 第二层)经济条件参数的权重矩阵数据
-            double[,] blkEcoWeight_R23 = { { 7 } };
+            double[,] blkEcoWeight_R23 = { {1} };
             R23 = blkEcoWeight_R23;
             //调用通用数据加载方法，返回DataTable类型数据表格
             dt = paraWeightLoader.ParaWeightLoad(blkAreaWeight_R1);

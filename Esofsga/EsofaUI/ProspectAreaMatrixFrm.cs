@@ -69,8 +69,8 @@ namespace EsofaUI
             DataTable dt = new DataTable();
 
             //定义有利区区块(分层方法中的 第一层)参数的权重矩阵数据
-            double[,] bsnAreaWeight_R1 = {  {1,3 },
-                                                               {1/3.0,1} };
+            double[,] bsnAreaWeight_R1 = {  {1,7},
+                                                               {1/7.0,1} };
             R1 = bsnAreaWeight_R1;
             //定义有利区区块(分层方法中的 第二层)地质条件参数的权重矩阵数据
             double[,] bsnGeoWeight_R21 = { {1,3,7,3,3,1,1 },
@@ -83,7 +83,7 @@ namespace EsofaUI
             R21 = bsnGeoWeight_R21;
 
             ////定义有利区区块(分层方法中的 第二层)工程条件参数的权重矩阵数据
-            double[,] bsnEngiWeight_R22 = { {1,1 },{1,1 } };
+            double[,] bsnEngiWeight_R22 = { {1,3 },{1/3.0,1 } };
             R22 = bsnEngiWeight_R22;
 
             //调用通用数据加载方法，返回DataTable类型数据表格
