@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBox_UserName = new System.Windows.Forms.TextBox();
             this.txtBox_UserPwd = new System.Windows.Forms.TextBox();
+            this.txtBox_UserName = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_Configuration = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
@@ -71,21 +71,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1428, 1066);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // txtBox_UserName
-            // 
-            this.txtBox_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBox_UserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel1.SetColumnSpan(this.txtBox_UserName, 3);
-            this.txtBox_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_UserName.Location = new System.Drawing.Point(925, 453);
-            this.txtBox_UserName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtBox_UserName.Name = "txtBox_UserName";
-            this.txtBox_UserName.Size = new System.Drawing.Size(280, 49);
-            this.txtBox_UserName.TabIndex = 0;
-            this.txtBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // txtBox_UserPwd
             // 
             this.txtBox_UserPwd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -100,6 +85,21 @@
             this.txtBox_UserPwd.TabIndex = 1;
             this.txtBox_UserPwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBox_UserPwd.UseSystemPasswordChar = true;
+            // 
+            // txtBox_UserName
+            // 
+            this.txtBox_UserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBox_UserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel1.SetColumnSpan(this.txtBox_UserName, 3);
+            this.txtBox_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_UserName.Location = new System.Drawing.Point(925, 453);
+            this.txtBox_UserName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtBox_UserName.Name = "txtBox_UserName";
+            this.txtBox_UserName.Size = new System.Drawing.Size(280, 49);
+            this.txtBox_UserName.TabIndex = 0;
+            this.txtBox_UserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_Login
             // 
